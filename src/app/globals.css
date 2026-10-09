@@ -1,0 +1,559 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ============================================================
+   IAL CHEM — token contract (terminal-core)
+   Canvas: neutral near-black · one accent · hairlines · dot grid
+   ============================================================ */
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elev: var(--elev);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-acc: var(--acc);
+  --color-on-acc: var(--on-acc);
+  --color-code: var(--code);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-read: var(--font-read-face), var(--font-geist-sans), sans-serif;
+}
+
+/* ---------- THEMES (data-theme on <html>) ---------- */
+
+:root,
+[data-theme="midnight"] {
+  --bg: #111111;            /* neutral near-black, no blue cast */
+  --surface: #161616;
+  --elev: #1c1c1c;
+  --fg: #fafafa;            /* off-white, never pure white */
+  --muted: #9ca3af;         /* mid gray */
+  --faint: #6f7278;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --code: rgba(255, 255, 255, 0.045);
+  --dot: rgba(255, 255, 255, 0.055);
+  --nav-bg: rgba(17, 17, 17, 0.72);
+  --sel: rgba(245, 101, 74, 0.16);
+}
+
+[data-theme="carbon"] {
+  --bg: #0b0b0c;
+  --surface: #101012;
+  --elev: #161618;
+  --fg: #f4f4f5;
+  --muted: #94969c;
+  --faint: #67696f;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.15);
+  --code: rgba(255, 255, 255, 0.04);
+  --dot: rgba(255, 255, 255, 0.05);
+  --nav-bg: rgba(11, 11, 12, 0.72);
+  --sel: rgba(245, 101, 74, 0.15);
+}
+
+[data-theme="paper"] {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --elev: #f2f2f1;
+  --fg: #161616;
+  --muted: #5c5f66;
+  --faint: #909399;
+  --line: rgba(0, 0, 0, 0.11);
+  --line-strong: rgba(0, 0, 0, 0.20);
+  --code: rgba(0, 0, 0, 0.045);
+  --dot: rgba(0, 0, 0, 0.075);
+  --nav-bg: rgba(250, 250, 250, 0.78);
+  --sel: rgba(200, 60, 30, 0.10);
+}
+
+[data-theme="sepia"] {
+  --bg: #f4eee1;
+  --surface: #faf6ec;
+  --elev: #ece4d2;
+  --fg: #2c261b;
+  --muted: #6d6353;
+  --faint: #9b9080;
+  --line: rgba(60, 45, 20, 0.14);
+  --line-strong: rgba(60, 45, 20, 0.24);
+  --code: rgba(60, 45, 20, 0.05);
+  --dot: rgba(60, 45, 20, 0.09);
+  --nav-bg: rgba(244, 238, 225, 0.80);
+  --sel: rgba(180, 70, 30, 0.12);
+}
+
+/* ---------- ACCENTS (data-accent on <html>) ---------- */
+
+:root, [data-accent="coral"] { --acc: #F5654A; --on-acc: #17100d; }
+[data-accent="amber"]        { --acc: #e6a23c; --on-acc: #171104; }
+[data-accent="mint"]         { --acc: #3ecf8e; --on-acc: #07150f; }
+[data-accent="rose"]         { --acc: #ef5d80; --on-acc: #190a10; }
+[data-accent="violet"]       { --acc: #a78bfa; --on-acc: #0d0916; }
+[data-accent="cyan"]         { --acc: #38d5ee; --on-acc: #041418; }
+
+/* ---------- READING VARIABLES (driven by the Control Room) ---------- */
+
+:root {
+  --content-max: 720px;
+  --content-lh: 1.65;
+  --content-fs: 16px;
+  --font-read-face: var(--font-geist-sans);
+}
+
+/* ---------- BASE ---------- */
+
+html { scroll-behavior: smooth; }
+html[data-motion="reduced"] { scroll-behavior: auto; }
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* the barely-visible dot grid texture */
+.dotgrid {
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+}
+
+::selection {
+  background: var(--sel);
+  color: var(--fg);
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--acc);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* thin scrollbars, terminal-flavored */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 4px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- TYPE HELPERS ---------- */
+
+.eyebrow {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: var(--acc);
+  font-weight: 500;
+}
+
+.mono {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+.serif-accent {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* reading surface — controlled by the Control Room */
+.reading {
+  font-family: var(--font-read-face);
+  font-size: var(--content-fs);
+  line-height: var(--content-lh);
+  max-width: var(--content-max);
+}
+
+.reading p { margin: 0; }
+
+/* Lora runs optically smaller than Geist at the same px — a +4.5% size
+   compensation keeps the serif face on the same visual scale
+   (data-font is set by the Control Room + the no-FOUC init script) */
+html[data-font="serif"] .reading {
+  font-size: calc(var(--content-fs) * 1.045);
+}
+
+/* the accent caret follows the theme everywhere you type */
+input, textarea { caret-color: var(--acc); }
+
+/* focus mode: dim blocks until hovered / focused */
+[data-focusmode="on"] .focus-block {
+  opacity: 0.36;
+  transition: opacity 200ms ease;
+}
+[data-focusmode="on"] .focus-block:hover,
+[data-focusmode="on"] .focus-block:focus-within {
+  opacity: 1;
+}
+
+/* ---------- MOTION ---------- */
+
+.t-fast { transition: all 160ms cubic-bezier(0.4, 0, 0.2, 1); }
+.t-med  { transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion="normal"]) *,
+  html:not([data-motion="normal"]) *::before,
+  html:not([data-motion="normal"]) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- ORNAMENT / TERMINAL LIFE ---------- */
+
+@keyframes e-blink {
+  0%, 88%, 100% { opacity: 1; }
+  92%, 96% { opacity: 0.25; }
+}
+.e-blink { animation: e-blink 4.2s steps(1, end) infinite; }
+
+@keyframes caret {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret { animation: caret 1.1s steps(1, end) infinite; }
+
+/* ---------- FLASHCARD FLIP ---------- */
+
+.flip-scene { perspective: 1600px; }
+.flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 380ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.flip-scene.is-flipped .flip-inner { transform: rotateX(180deg); }
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-face.back { transform: rotateX(180deg); }
+html[data-motion="reduced"] .flip-inner { transition-duration: 0.01ms; }
+
+/* ---------- MISC ---------- */
+
+kbd.kbd {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--muted);
+  background: var(--code);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   TOPIC READING EXPERIENCE — student-first, editorial voice
+   ============================================================ */
+
+/* small-caps kicker label (metadata voice) */
+.kicker {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--acc);
+  font-weight: 500;
+}
+
+/* display serif for topic + section titles */
+.display-serif {
+  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* giant outlined numeral behind the topic masthead */
+.ghost-numeral {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--line-strong);
+  opacity: 0.6;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* fixed reading-progress hairline (topic pages) */
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  z-index: 70;
+  background: var(--acc);
+  pointer-events: none;
+}
+
+/* editorial drop cap on a section's opening paragraph */
+.reading-lead::first-letter {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 600;
+  float: left;
+  font-size: 3.05em;
+  line-height: 0.82;
+  padding: 0.08em 0.14em 0 0;
+  color: var(--acc);
+}
+
+/* comfortable measure + ragged-right body text */
+.reading p { text-wrap: pretty; }
+.reading li { text-wrap: pretty; }
+
+/* callout card carries a whisper of the accent */
+.callout {
+  background: color-mix(in srgb, var(--acc) 4%, var(--surface));
+}
+
+/* worked-example step timeline */
+.steps { position: relative; }
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 12.5px;
+  top: 18px;
+  bottom: 18px;
+  width: 1px;
+  background: var(--line);
+}
+.step-dot {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--elev);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--fg);
+}
+
+/* equations set like display math */
+.equation-display {
+  font-variant-numeric: tabular-nums lining-nums;
+  text-align: center;
+}
+
+/* refined data table: mono headers, hairline rows */
+.reading-table th {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-weight: 500;
+}
+
+/* figures: pick the raster variant that matches the active theme family
+   (light artwork for paper/sepia, dark artwork for midnight/carbon) */
+.fig-dark { display: none; }
+[data-theme="midnight"] .fig-light,
+[data-theme="carbon"] .fig-light { display: none; }
+[data-theme="midnight"] .fig-dark,
+[data-theme="carbon"] .fig-dark { display: block; }
+
+/* ============================================================
+   UI MODES — one product, two ways to work
+   terminal (default) · lab   [data-uimode on <html>]
+   Terminal is the control desk (mono, hairlines, dot grid).
+   Lab is a glass instrument panel (defined in modes.css).
+   ============================================================ */
+
+:root {
+  --font-playfair: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-lora: "Lora", Georgia, "Times New Roman", serif;
+  --font-grotesk: "Space Grotesk", var(--font-geist-sans), ui-sans-serif, sans-serif;
+  --card-shadow: none;
+}
+
+/* shadcn compat vars — mapped onto the token system */
+:root {
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--surface);
+  --card-foreground: var(--fg);
+  --popover: var(--elev);
+  --popover-foreground: var(--fg);
+  --primary: var(--acc);
+  --primary-foreground: var(--on-acc);
+  --secondary: var(--elev);
+  --secondary-foreground: var(--fg);
+  --mutedc: var(--elev);
+  --muted-foreground: var(--muted);
+  --accent: var(--elev);
+  --accent-foreground: var(--fg);
+  --destructive: #e5484d;
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--acc);
+  --radius: 0.5rem;
+}
+
+/* ============================================================
+   HOMEPAGE — the topics on a doodled margin
+   Ornament budget: pure-SVG doodles + compositor-only CSS motion
+   (independent `translate` keyframes so placement transforms are
+   never clobbered). The global reduced-motion kill switch above
+   freezes every CSS animation in one stroke.
+   ============================================================ */
+
+/* ---------- entrance reveals (armed by JS only) ---------- */
+
+.reveal-armed [data-reveal] { opacity: 0; transform: translateY(16px); }
+.reveal-armed [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 640ms cubic-bezier(0.2, 0.6, 0.2, 1),
+    transform 640ms cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+/* ---------- doodled margin ---------- */
+
+.doodle-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  color: var(--fg);
+}
+.doodle {
+  position: absolute;
+  color: var(--fg);
+  opacity: 0.075;
+}
+.doodle-acc { color: var(--acc); opacity: 0.11; }
+.doodle-float {
+  animation: doodle-float var(--dd, 12s) ease-in-out var(--ddl, 0s) infinite alternate;
+}
+/* animates the independent `translate` property so the inline
+   translate(-50%,-50%) rotate() placement is never clobbered */
+@keyframes doodle-float {
+  from { translate: 0 -5px; }
+  to   { translate: 0 6px; }
+}
+
+/* whole-page micro tile — notebook doodles at whisper level,
+   theme-adaptive via the same mask trick as the old dot wash */
+.doodle-tile {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  background-color: var(--fg);
+  opacity: 0.042;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='42' cy='48' rx='22' ry='9' transform='rotate(24 42 48)'/%3E%3Cellipse cx='42' cy='48' rx='22' ry='9' transform='rotate(-24 42 48)'/%3E%3Ccircle cx='42' cy='48' r='2.5' fill='%23000' stroke='none'/%3E%3Cpath d='M175.3 111 L158 101 L140.7 111 L140.7 131 L158 141 L175.3 131 Z'/%3E%3Ccircle cx='158' cy='121' r='10'/%3E%3Cpath d='M60 176 V188 M54 182 H66'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='42' cy='48' rx='22' ry='9' transform='rotate(24 42 48)'/%3E%3Cellipse cx='42' cy='48' rx='22' ry='9' transform='rotate(-24 42 48)'/%3E%3Ccircle cx='42' cy='48' r='2.5' fill='%23000' stroke='none'/%3E%3Cpath d='M175.3 111 L158 101 L140.7 111 L140.7 131 L158 141 L175.3 131 Z'/%3E%3Ccircle cx='158' cy='121' r='10'/%3E%3Cpath d='M60 176 V188 M54 182 H66'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-size: 240px 240px;
+  mask-size: 240px 240px;
+}
+
+/* ---------- simple topic rows ---------- */
+
+.row-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  max-width: 100%;
+  background: var(--acc);
+}
+
+/* decorative homepage layers never reach paper */
+@media print {
+  .doodle-field, .doodle-tile { display: none !important; }
+  /* print what the visitor never scrolled to */
+  .reveal-armed [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* ============================================================
+   PRINT — ink-friendly revision sheets
+   Chrome (nav / footer / fabs / TOCs / tools) opts out via the
+   `print:hidden` utility in JSX; beforeprint expands every
+   collapsed spec point so nothing is lost on paper.
+   ============================================================ */
+
+@media print {
+  /* paper-white token override — whatever the on-screen theme */
+  [data-theme] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --elev: #ffffff;
+    --fg: #000000;
+    --muted: #3d3d3d;
+    --faint: #6b6b6b;
+    --line: #d9d9d9;
+    --line-strong: #b9b9b9;
+    --code: #f2f2f2;
+    --dot: transparent;
+    --nav-bg: #ffffff;
+  }
+
+  /* neutralise textures + glass */
+  .dotgrid { background-image: none !important; }
+  [data-uimode="lab"] .app-root::before { display: none !important; }
+  [data-uimode="lab"] {
+    --glass-bg: transparent;
+    --glass-bg-strong: #f6f6f6;
+    --glass-line: #d9d9d9;
+    --glass-line-strong: #b9b9b9;
+    --lab-nav-bg: #ffffff;
+    --card-shadow: none;
+    --glow: none;
+  }
+
+  /* gradient text prints as solid accent (clipped gradients don't print) */
+  .lab-grad,
+  [data-uimode="lab"] .serif-accent {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: var(--acc) !important;
+  }
+
+  /* decorative numerals: keep the masthead folio, drop the giant ghosts */
+  .sec-giant { display: none !important; }
+  .ghost-numeral { -webkit-text-stroke: 0; color: #c5c5c5 !important; opacity: 1; }
+  .mast-num { color: #b9b9b9 !important; }
+
+  /* always print the light figure variants — dark artwork wastes ink */
+  .fig-dark { display: none !important; }
+  .fig-light { display: block !important; }
+
+  /* blocks stay whole; headings keep their sections */
+  .blk, .spec-point, .bullet-card, figure { break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; }
+  section { break-inside: auto; }
+
+  a { text-decoration: none !important; color: inherit !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

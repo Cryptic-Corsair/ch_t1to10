@@ -1,0 +1,470 @@
+/* ============================================================
+   UI MODE DESIGN SYSTEMS — two interfaces, two different sites
+   terminal : control desk chrome + warm reading room (globals.css base)
+   lab      → STUDIO : a glassmorphic instrument panel
+   Each layer owns: chrome, shape language, type voice, texture,
+   block rendering, motion feel. [data-uimode] on <html>.
+   ============================================================ */
+
+/* ────────────────────────────────────────────────────────────
+   LAB — a glassmorphic instrument panel
+   Floating glass nav pill, aurora glow field, Space Grotesk
+   display, gradient type, pill chrome, glass blocks.
+   ──────────────────────────────────────────────────────────── */
+
+html[data-uimode="lab"] {
+  --dot: transparent;
+  --glass-bg: color-mix(in srgb, var(--fg) 4.5%, transparent);
+  --glass-bg-strong: color-mix(in srgb, var(--fg) 8%, transparent);
+  --glass-line: color-mix(in srgb, var(--fg) 12%, transparent);
+  --glass-line-strong: color-mix(in srgb, var(--fg) 22%, transparent);
+  --lab-nav-bg: color-mix(in srgb, var(--bg) 55%, transparent);
+  --card-shadow: 0 24px 70px -30px rgb(0 0 0 / 0.55);
+  --glow: 0 0 0 1px color-mix(in srgb, var(--acc) 38%, transparent),
+          0 10px 44px -10px color-mix(in srgb, var(--acc) 55%, transparent);
+}
+
+/* aurora glow field behind everything */
+.app-root { position: relative; }
+[data-uimode="lab"] .app-root { isolation: isolate; }
+[data-uimode="lab"] .app-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(640px 460px at 10% -6%, color-mix(in srgb, var(--acc) 17%, transparent), transparent 70%),
+    radial-gradient(760px 560px at 92% 4%, rgb(56 213 238 / 0.09), transparent 72%),
+    radial-gradient(1000px 720px at 46% 112%, color-mix(in srgb, var(--acc) 13%, transparent), transparent 74%);
+}
+
+/* glass helpers */
+.lab-glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.lab-glass-strong {
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-line-strong);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+.lab-nav {
+  background: var(--lab-nav-bg);
+  border: 1px solid var(--glass-line);
+  backdrop-filter: blur(20px) saturate(1.35);
+  -webkit-backdrop-filter: blur(20px) saturate(1.35);
+  box-shadow: 0 18px 50px -22px rgb(0 0 0 / 0.6), inset 0 1px 0 color-mix(in srgb, var(--fg) 8%, transparent);
+}
+.lab-grad {
+  background: linear-gradient(100deg, var(--fg) 10%, var(--acc) 68%, color-mix(in srgb, var(--acc) 45%, #38d5ee) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lab-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--acc) 40%, transparent);
+  background: color-mix(in srgb, var(--acc) 10%, transparent);
+  color: var(--acc);
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+}
+.lab-num-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--acc);
+  border: 1px solid color-mix(in srgb, var(--acc) 40%, transparent);
+  background: color-mix(in srgb, var(--acc) 10%, transparent);
+  box-shadow: 0 0 22px -6px color-mix(in srgb, var(--acc) 50%, transparent);
+}
+
+/* display voice → Space Grotesk */
+[data-uimode="lab"] main h1,
+[data-uimode="lab"] main h2,
+[data-uimode="lab"] .display-serif {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+[data-uimode="lab"] .serif-accent {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  background: linear-gradient(100deg, var(--acc), color-mix(in srgb, var(--acc) 40%, #38d5ee));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+[data-uimode="lab"] .eyebrow,
+[data-uimode="lab"] .kicker {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+}
+[data-uimode="lab"] .nav-link {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+[data-uimode="lab"] .nav-link:hover { background: var(--glass-bg-strong); }
+[data-uimode="lab"] .nav-brand {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* pill everything */
+[data-uimode="lab"] .rounded-xl { border-radius: 22px; }
+[data-uimode="lab"] .rounded-2xl { border-radius: 26px; }
+[data-uimode="lab"] .rounded-lg { border-radius: 16px; }
+[data-uimode="lab"] .rounded-md { border-radius: 12px; }
+[data-uimode="lab"] .btn-solid,
+[data-uimode="lab"] .btn-ghost,
+[data-uimode="lab"] .btn-subtle {
+  border-radius: 999px;
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+[data-uimode="lab"] .btn-solid { box-shadow: var(--glow); }
+[data-uimode="lab"] .btn-solid:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent), 0 14px 54px -10px color-mix(in srgb, var(--acc) 70%, transparent); }
+[data-uimode="lab"] .btn-ghost {
+  background: var(--glass-bg);
+  border-color: var(--glass-line-strong);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+[data-uimode="lab"] .btn-ghost:hover { border-color: color-mix(in srgb, var(--acc) 45%, transparent); }
+[data-uimode="lab"] .chip { border-radius: 999px; font-family: var(--font-grotesk), sans-serif; }
+[data-uimode="lab"] .stat-num { font-family: var(--font-grotesk), sans-serif; font-weight: 700; }
+[data-uimode="lab"] .ghost-numeral { display: none; }
+[data-uimode="lab"] .reading-lead::first-letter {
+  font-family: inherit;
+  font-weight: inherit;
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+}
+
+/* glass cards / cells (used via cardCell helper) */
+[data-uimode="lab"] .cell-glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  border-radius: 22px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 200ms ease, border-color 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+[data-uimode="lab"] .cell-glass:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--acc) 42%, transparent);
+  box-shadow: 0 20px 60px -24px color-mix(in srgb, var(--acc) 40%, transparent);
+}
+
+/* glass blocks */
+[data-uimode="lab"] .blk-def,
+[data-uimode="lab"] .blk-eq,
+[data-uimode="lab"] .blk-callout,
+[data-uimode="lab"] .blk-worked,
+[data-uimode="lab"] .blk-table,
+[data-uimode="lab"] .blk-fig {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+[data-uimode="lab"] .blk-eq { box-shadow: 0 0 60px -30px color-mix(in srgb, var(--acc) 55%, transparent); }
+[data-uimode="lab"] .blk-eq .blk-eq-bar { background: transparent; border-bottom-color: var(--glass-line); }
+[data-uimode="lab"] .blk-callout { border-left: 3px solid var(--acc); }
+[data-uimode="lab"] .blk-table thead tr { background: transparent; }
+[data-uimode="lab"] .blk-table th { font-family: var(--font-grotesk), sans-serif; }
+[data-uimode="lab"] .steps::before { background: var(--glass-line-strong); }
+[data-uimode="lab"] .step-dot {
+  background: var(--glass-bg-strong);
+  border-color: var(--glass-line-strong);
+  font-family: var(--font-grotesk), sans-serif;
+}
+
+/* reading progress → gradient beam */
+[data-uimode="lab"] .read-progress {
+  height: 3px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, var(--acc), color-mix(in srgb, var(--acc) 40%, #38d5ee));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--acc) 60%, transparent);
+}
+
+/* fixed pill nav needs body offset */
+[data-uimode="lab"] main { padding-top: 86px; }
+
+/* lab footer */
+.lab-footer {
+  border: 1px solid var(--glass-line);
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* shared: section head needs relative positioning for sec-giant */
+.sec-head { position: relative; }
+
+/* sections: giant ghost numeral above each section header (Studio only)
+   — the one thing carried over from the removed Print interface */
+.sec-giant { display: none; }
+[data-uimode="lab"] .sec-giant {
+  display: block;
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  font-size: clamp(72px, 10vw, 128px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--fg) 30%, transparent),
+    color-mix(in srgb, var(--fg) 8%, transparent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+  margin-bottom: 2px;
+}
+
+/* ---------- cross-mode refinements ---------- */
+
+/* LAB: glass hover for shared list rows */
+[data-uimode="lab"] .topic-row:hover,
+[data-uimode="lab"] .topic-row:focus-visible {
+  background: var(--glass-bg-strong);
+}
+[data-uimode="lab"] .read-progress { top: 0; }
+
+/* LAB: reading-table rows keep glass */
+[data-uimode="lab"] .reading-table tbody tr:hover { background: var(--glass-bg-strong); }
+
+/* ────────────────────────────────────────────────────────────
+   HOMEPAGE MODE SKINS — topics on a doodled margin
+   (shared bases live in globals.css)
+   ──────────────────────────────────────────────────────────── */
+
+/* Studio: doodles a touch louder (glass panels blur them beautifully) */
+[data-uimode="lab"] .doodle { opacity: 0.09; }
+/* Focus: the control desk keeps its hairline calm — doodles whisper */
+[data-uimode="terminal"] .doodle { opacity: 0.06; }
+
+/* ────────────────────────────────────────────────────────────
+   TERMINAL — the warm reading room (topic pages)
+   The control desk stays on the homepage; inside a topic the
+   voice warms up: numeral rail masthead, meta progress dots,
+   Dia-style pill chips, soft rounded cards, floating contents.
+   ──────────────────────────────────────────────────────────── */
+
+/* giant italic numeral in the topic masthead (like a journal folio) */
+.mast-num {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(88px, 11vw, 148px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: color-mix(in srgb, var(--acc) 55%, transparent);
+  user-select: none;
+}
+
+/* accent dash above each section header */
+.warm-dash {
+  width: 26px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--acc);
+}
+
+/* popover entrance for the floating contents */
+@keyframes toc-pop {
+  from { transform: translateY(8px) scale(0.98); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+/* the Aa control-room fab yields to the contents bubble on topic pages */
+html[data-uimode="terminal"][data-page="topic"] .fab-ctl { bottom: 5.5rem; }
+
+/* warm list dots — round bullets instead of diamonds while reading
+   (plain lists outside bullet cards, e.g. legacy outlines) */
+[data-uimode="terminal"] .stream-warm ul > li > span[aria-hidden] {
+  width: 7px;
+  height: 7px;
+  margin-top: 0.58em;
+  rotate: 0deg;
+  border-radius: 999px;
+  background: var(--acc);
+}
+
+/* ── background cards ─────────────────────────────────────────
+   Note groups (definitions + bullets) float as one soft card on
+   the canvas; rows are separated by hairlines, explanations hang
+   from a thin rail, lead terms are bold. */
+[data-uimode="terminal"] .bullet-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 24px;
+}
+[data-uimode="terminal"] .bullet-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+}
+[data-uimode="terminal"] .bullet-row + .bullet-row {
+  border-top: 1px solid var(--line);           /* hairline between entries */
+}
+
+/* the round accent bullet */
+[data-uimode="terminal"] .bullet-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.62em;
+  border-radius: 999px;
+  background: var(--acc);
+}
+
+/* accent ordinal for ordered rows */
+[data-uimode="terminal"] .bullet-num {
+  flex: none;
+  width: 24px;
+  padding-top: 3px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--acc);
+}
+
+/* bold lead term of a bullet */
+[data-uimode="terminal"] .bullet-term {
+  font-weight: 600;
+  color: var(--fg);
+}
+[data-uimode="terminal"] .bullet-text {
+  color: color-mix(in srgb, var(--fg) 88%, transparent);
+}
+
+/* the thin rail an explanation hangs from */
+[data-uimode="terminal"] .rail {
+  margin-top: 7px;
+  border-left: 2px solid var(--line-strong);
+  padding-left: 15px;
+  color: var(--muted);
+}
+
+/* ── collapsible specification point ──────────────────────────
+   A quiet full-width bar under each section heading. The bar
+   itself carries the assessment statement, worded exactly as the
+   specification words it; multi-part statements open to reveal
+   each sub-statement on its own rail. */
+[data-uimode="terminal"] .spec-point {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--elev);
+}
+[data-uimode="terminal"] .spec-point summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 18px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+[data-uimode="terminal"] .spec-point summary::-webkit-details-marker { display: none; }
+[data-uimode="terminal"] .spec-point-head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+[data-uimode="terminal"] .spec-point-label {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+[data-uimode="terminal"] .spec-point summary:hover .spec-point-label { color: var(--fg); }
+[data-uimode="terminal"] .spec-point-statement {
+  color: color-mix(in srgb, var(--fg) 86%, transparent);
+  font-size: 14px;
+  line-height: 1.55;
+}
+[data-uimode="terminal"] .spec-caret {
+  flex: none;
+  color: var(--faint);
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-uimode="terminal"] .spec-point[open] .spec-caret { transform: rotate(180deg); }
+/* single-statement bar — everything is visible, so nothing to expand */
+[data-uimode="terminal"] .spec-point-flat .spec-point-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 18px;
+}
+[data-uimode="terminal"] .spec-point-body {
+  display: grid;
+  gap: 11px;
+  border-top: 1px solid var(--line);           /* hairline under the bar */
+  padding: 16px 18px 18px;
+}
+[data-uimode="terminal"] .spec-outline-item {
+  border-left: 2px solid var(--line-strong);
+  padding-left: 14px;
+  color: var(--muted);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* softer, friendlier card language for note blocks */
+[data-uimode="terminal"] .stream-warm .blk-eq,
+[data-uimode="terminal"] .stream-warm .blk-callout,
+[data-uimode="terminal"] .stream-warm .blk-worked,
+[data-uimode="terminal"] .stream-warm .blk-table,
+[data-uimode="terminal"] .stream-warm .blk-fig {
+  border-radius: 20px;
+}
+[data-uimode="terminal"] .stream-warm .blk-eq .equation-display {
+  font-size: 18px;
+}
+
+/* end panel + pager cards get the same soft rounding */
+[data-uimode="terminal"][data-page="topic"] .pager-card { border-radius: 20px; }

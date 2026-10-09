@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Topic {
+  id       String      @id @default(cuid())
+  slug     String      @unique
+  number   Int
+  unit     Int
+  unitCode String
+  unitName String
+  title    String
+  subtitle String
+  summary  String
+  estHours Float
+  sections Section[]
+  cards    Flashcard[]
+
+  @@map("topics")
+}
+
+model Section {
+  id         String @id @default(cuid())
+  topicSlug  String
+  sectionKey String
+  number     String
+  title      String
+  blurb      String
+  estMinutes Int
+  spec       String?
+  /** The assessment statement worded exactly as the specification words it (one spec point per section) */
+  specText   String?
+  outline    String
+  content    String?
+  topic      Topic  @relation(fields: [topicSlug], references: [slug], onDelete: Cascade)
+
+  @@unique([topicSlug, sectionKey])
+  @@map("sections")
+}
+
+model Flashcard {
+  id       String @id @default(cuid())
+  topicSlug String
+  ord      Int
+  front    String
+  back     String
+  tag      String
+  topic    Topic  @relation(fields: [topicSlug], references: [slug], onDelete: Cascade)
+
+  @@unique([topicSlug, ord])
+  @@map("flashcards")
+}
