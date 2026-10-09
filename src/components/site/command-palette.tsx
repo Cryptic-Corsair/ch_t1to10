@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { CornerDownLeft } from 'lucide-react'
 import type { TopicData } from '@/lib/site/types'
+import { downloadTopicPdf } from '@/lib/site/pdf-client'
 import { useSettings, useUi, applySettingsToDom, UI_MODES, type AccentName } from '@/lib/site/stores'
 import { useRoute } from '@/lib/site/router'
 
@@ -154,14 +155,9 @@ export function CommandPalette({
         hint: 'print edition',
         run: () => {
           setPalette(false)
-          // server-side Chromium renders the dedicated print document;
-          // Content-Disposition turns this into a download
-          const a = document.createElement('a')
-          a.href = `/api/pdf/${route.slug}`
-          a.download = ''
-          document.body.appendChild(a)
-          a.click()
-          a.remove()
+          // server-rendered PDF download, with print-engine fallback
+          // on hosts without headless Chromium (e.g. Vercel)
+          void downloadTopicPdf(route.slug)
         },
       })
     }

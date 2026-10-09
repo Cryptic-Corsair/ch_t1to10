@@ -56,6 +56,18 @@ bun run build
 bun run start
 ```
 
+### Deploying to Vercel
+
+The site is serverless-ready out of the box:
+
+1. Push the repo to GitHub
+2. [vercel.com/new](https://vercel.com/new) → import the repository → **Deploy** (framework auto-detected)
+3. **No environment variables required** — topic content ships inside the bundle via `src/lib/site/content.json`
+
+Notes:
+- `vercel.json` skips Playwright browser downloads during the build (the server-side PDF renderer needs headless Chromium, which serverless doesn't provide — the app automatically falls back to the visitor's print engine there).
+- **Content workflow**: edit content in the authoring DB (`db/custom.db`), then run `python3 scripts/export_content.py` to regenerate `content.json`, and commit the result.
+
 ## Project Structure
 
 ```

@@ -3,7 +3,8 @@ import type { Browser } from 'playwright'
 import { loadTopics } from '@/lib/site/load'
 
 export const dynamic = 'force-dynamic'
-export const maxDuration = 120
+// Hobby-plan ceiling; the route 501s instantly on serverless hosts anyway
+export const maxDuration = 60
 
 // Headless Chromium renders /print/[slug] into a real, downloadable A4 PDF —
 // deterministic output, no reliance on the visitor's browser print engine
@@ -38,6 +39,15 @@ const cache = new Map<string, { buf: Buffer; at: number }>()
 const TTL = 10 * 60 * 1000
 
 export async function GET(req: NextRequest, ctx: { params: Promise<{ slug: string }> }) {
+  // headless Chromium can't exist on serverless platforms — degrade cleanly;
+  // the client (pdf-client.ts) falls back to the visitor's print engine
+  if (process.env.VERCEL) {
+    return NextResponse.json(
+      { error: 'Server-rendered PDFs are unavailable on this deployment — use the in-page "Save PDF" button instead.' },
+      { status: 501 },
+    )
+  }
+
   const { slug } = await ctx.params
 
   const topics = await loadTopics()

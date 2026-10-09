@@ -26,6 +26,7 @@ import {
   X,
 } from 'lucide-react'
 import type { SectionData, TopicData } from '@/lib/site/types'
+import { downloadTopicPdf } from '@/lib/site/pdf-client'
 import { BlockRenderer, BulletCard, Inline, groupBlocks } from './blocks'
 import { BtnGhost, BtnSolid, ProgressBar } from './ui-bits'
 import { useProgress, useSettings } from '@/lib/site/stores'
@@ -155,28 +156,17 @@ export function TopicDetail({
     })
   }
 
-  // PDF: hit /api/pdf/[slug] — headless Chromium renders the dedicated print
-  // document (cover, contents, spec sections) and returns a real download
+  // PDF: /api/pdf/[slug] renders the dedicated print document server-side
+  // (cover, contents, spec sections); on deployments without headless
+  // Chromium (Vercel) pdf-client falls back to the visitor's print engine
   const [pdfBusy, setPdfBusy] = useState(false)
   const downloadPdf = async () => {
     if (pdfBusy) return
     setPdfBusy(true)
     try {
-      const res = await fetch(`/api/pdf/${slug}`)
-      if (!res.ok) throw new Error('pdf request failed')
-      const blob = await res.blob()
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
       const nn = String(topic.number).padStart(2, '0')
-      a.download = `IAL-Chemistry-Topic-${nn}-${topic.title.replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '').slice(0, 48).replace(/-+$/, '')}.pdf`
-      a.href = url
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-      setTimeout(() => URL.revokeObjectURL(url), 4000)
-    } catch {
-      // fallback: direct navigation still downloads via Content-Disposition
-      window.open(`/api/pdf/${slug}`, '_blank')
+      const filename = `IAL-Chemistry-Topic-${nn}-${topic.title.replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '').slice(0, 48).replace(/-+$/, '')}.pdf`
+      await downloadTopicPdf(slug, filename)
     } finally {
       setPdfBusy(false)
     }
