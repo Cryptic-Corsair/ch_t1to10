@@ -16,8 +16,8 @@ import "./modes.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "IAL CHEM//DECODED — Edexcel International A Level Chemistry",
-    template: "%s — IAL CHEM//DECODED",
+    default: "ial.chem — Edexcel International A Level Chemistry",
+    template: "%s — ial.chem",
   },
   description:
     "Exam-focused notes for every Edexcel International A Level Chemistry topic (WCH11 + WCH12) — precise definitions, every equation, flashcards and a reading experience tuned to you.",
