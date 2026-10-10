@@ -454,6 +454,22 @@ html[data-uimode="terminal"][data-page="topic"] .fab-ctl { bottom: 5.5rem; }
   line-height: 1.6;
 }
 
+/* Focus subheading cards: hug the heading text, not the full reading column. */
+[data-uimode="terminal"] .stream-warm .reading h3 {
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+/* Keep long subheadings readable on narrow screens. */
+[data-uimode="terminal"] .stream-warm .reading h3 > span:last-child {
+  min-width: 0;
+}
+
 /* softer, friendlier card language for note blocks */
 [data-uimode="terminal"] .stream-warm .blk-eq,
 [data-uimode="terminal"] .stream-warm .blk-callout,
