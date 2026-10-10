@@ -576,3 +576,31 @@ html[data-uimode="terminal"][data-page="topic"] .fab-ctl { bottom: 5.5rem; }
     font-size: 14px;
   }
 }
+
+/* FOCUS SUBHEADINGS — distinct face and unmistakable hierarchy */
+/* Override the inherited display-serif / medium-weight utility on note h3 text. */
+html[data-uimode="terminal"] .stream-warm .reading h3 > span:last-child {
+  font-family: var(--font-grotesk), var(--font-geist-sans), ui-sans-serif, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  html[data-uimode="terminal"] .stream-warm .reading h3 > span:last-child {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html[data-uimode="terminal"] .stream-warm .reading h3 > span:last-child {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html[data-uimode="terminal"] .stream-warm .reading h3 > span:last-child {
+    font-size: 27px;
+  }
+}
