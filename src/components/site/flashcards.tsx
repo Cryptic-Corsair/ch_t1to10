@@ -33,7 +33,7 @@ export function Flashcards({
       </p>
 
       <div className={gridShell(mode, 'mt-10 sm:grid-cols-2 lg:grid-cols-3')}>
-        {topics.map((t) => {
+        {topics.filter((t) => t.cards.length > 0).map((t) => {
           const info = deckInfo(t)
           return (
             <button
@@ -192,13 +192,15 @@ export function Deck({
               <RotateCcw size={13} /> Run it again
             </BtnSolid>
             <BtnGhost onClick={() => go('/progress')}>See progress</BtnGhost>
-            {topics.findIndex((t) => t.slug === topic.slug) < topics.length - 1 && (
-              <BtnGhost
-                onClick={() => go(`/deck/${topics[topics.findIndex((t) => t.slug === topic.slug) + 1].slug}`)}
-              >
-                Next deck <ArrowRight size={13} />
-              </BtnGhost>
-            )}
+            {(() => {
+              const decks = topics.filter((t) => t.cards.length > 0)
+              const di = decks.findIndex((t) => t.slug === topic.slug)
+              return di >= 0 && di < decks.length - 1 ? (
+                <BtnGhost onClick={() => go(`/deck/${decks[di + 1].slug}`)}>
+                  Next deck <ArrowRight size={13} />
+                </BtnGhost>
+              ) : null
+            })()}
           </div>
         </div>
       ) : (

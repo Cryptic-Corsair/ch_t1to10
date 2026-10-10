@@ -83,7 +83,7 @@ export function CommandPalette({
         run: () => go(`/topic/${t.slug}/${s.sectionKey}`),
       }))
     )
-    const decks: Item[] = topics.map((t) => ({
+    const decks: Item[] = topics.filter((t) => t.cards.length > 0).map((t) => ({
       id: `d-${t.slug}`,
       group: 'Decks',
       label: `${String(t.number).padStart(2, '0')} · ${t.title}`,

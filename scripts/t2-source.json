@@ -1,0 +1,1891 @@
+{
+ "slug": "atomic-structure",
+ "number": 2,
+ "unit": 1,
+ "unitCode": "WCH11",
+ "unitName": "Structure, Bonding and Introduction to Organic Chemistry",
+ "title": "Atomic Structure and the Periodic Table",
+ "subtitle": "Inside the atom — isotopes, electrons and the trends that organise the elements.",
+ "summary": "Subatomic particles and isotopes; the mass spectrometer; ionisation energies and their trends; electron configuration; periodicity across Period 3.",
+ "estHours": 4.5,
+ "sections": [
+  {
+   "id": "cmv1eoi2r001bjfqk0n477txl",
+   "sectionKey": "specification-map",
+   "number": "2.0",
+   "title": "Specification Map",
+   "blurb": "Every statement the specification assesses in this topic — use it as your revision checklist.",
+   "estMinutes": 10,
+   "spec": "2.1 – 2.18",
+   "specText": "Students will be assessed on their ability to:",
+   "outline": [
+    "The full list of assessment statements for Topic 2, worded exactly as the specification words them"
+   ],
+   "content": [
+    {
+     "type": "p",
+     "text": "Students will be assessed on their ability to:"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Spec",
+      "Assessment statement"
+     ],
+     "rows": [
+      [
+       "2.1",
+       "know the structure of an atom in terms of electrons, protons and neutrons"
+      ],
+      [
+       "2.2",
+       "know the relative mass and charge of protons, neutrons and electrons"
+      ],
+      [
+       "2.3",
+       "know what is meant by the terms 'atomic (proton) number' and 'mass number'"
+      ],
+      [
+       "2.4",
+       "be able to use the atomic number and the mass number to determine the number of each type of subatomic particle in an atom or ion"
+      ],
+      [
+       "2.5",
+       "understand the term 'isotope'"
+      ],
+      [
+       "2.6",
+       "understand the basic principles of a mass spectrometer and be able to analyse and interpret mass spectra to:\ni   deduce the isotopic composition of a sample of an element\nii   calculate the relative atomic mass of an element from relative abundances of isotopes and vice versa\niii   determine the relative molecular mass of a molecule, and hence identify molecules in a sample\niv   understand that ions in a mass spectrometer may have a 2+ charge"
+      ],
+      [
+       "2.7",
+       "be able to predict mass spectra, including relative peak heights, for diatomic molecules, including chlorine, given the isotopic abundances"
+      ],
+      [
+       "2.8",
+       "be able to define first, second and third ionisation energies and understand that all ionisation energies are endothermic"
+      ],
+      [
+       "2.9",
+       "know that an orbital is a region within an atom that can hold up to two electrons with opposite spins"
+      ],
+      [
+       "2.10",
+       "understand how ionisation energies are influenced by the number of protons in the nucleus, the electron shielding and the sub-shell from which the electron is removed"
+      ],
+      [
+       "2.11",
+       "know that ideas about electronic structure developed from:\ni   an understanding that successive ionisation energies provide evidence for the existence of quantum shells and the group to which the element belongs\nii   an understanding that the first ionisation energy of successive elements provides evidence for electron sub-shells"
+      ],
+      [
+       "2.12",
+       "be able to describe the shapes of s and p orbitals"
+      ],
+      [
+       "2.13",
+       "know that orbitals in sub-shells:\ni   each take a single electron before pairing up\nii   pair up with two electrons of opposite spin"
+      ],
+      [
+       "2.14",
+       "be able to predict the electronic configuration of atoms of the elements from hydrogen to krypton inclusive and their ions, using s, p, d notation and electron-in-boxes notation"
+      ],
+      [
+       "2.15",
+       "understand that electronic configuration determines the chemical properties of an element"
+      ],
+      [
+       "2.16",
+       "know that the Periodic Table is divided into blocks, such as s, p and d, and know the number of electrons that can occupy s, p and d sub-shells in the first four quantum shells"
+      ],
+      [
+       "2.17",
+       "be able to represent data, in a graphical form (including the use of logarithms of first ionisation energies on a graph) for elements 1 to 36 and hence explain the meaning of the term 'periodic property'"
+      ],
+      [
+       "2.18",
+       "be able to explain:\ni   the trends in melting and boiling temperatures of the elements of Periods 2 and 3 of the Periodic Table in terms of the structure of the element and the bonding between its atoms or molecules\nii   the general increase and the specific trends in ionisation energy of the elements across Periods 2 and 3 of the Periodic Table\niii   the decrease in first ionisation energy down a group"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2s001djfqkbmne7vki",
+   "sectionKey": "atom-structure",
+   "number": "2.1",
+   "title": "Structure of the Atom",
+   "blurb": "Protons, neutrons and electrons — and where each one lives.",
+   "estMinutes": 10,
+   "spec": "2.1",
+   "specText": "know the structure of an atom in terms of electrons, protons and neutrons",
+   "outline": [],
+   "content": [
+    {
+     "type": "p",
+     "text": "Our current understanding of the structure of atoms is influenced by the theories put forward by scientists such as **J.J Thomson** (discovered electrons in 1897), **Ernest Rutherford** (discovered proton in 1917) and **James Chadwick** (discovered the neutron in 1932)."
+    },
+    {
+     "type": "def",
+     "term": "Atom",
+     "text": "An atom is the smallest, electrically neutral particle of an element that can take part in a chemical change."
+    },
+    {
+     "type": "list",
+     "items": [
+      "An atom comprises of subatomic particles **protons**, **neutrons** and **electrons**.",
+      "Protons and neutrons, together known as **nucleons**, are found in the nucleus which is the center of the atom.",
+      "Electrons exist in energy levels surrounding the nuclei. The energy levels are called **quantum shells**.",
+      "An atom gets its chemical properties from the number of electrons and arrangement of electrons in the atom."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/atom-structure.png",
+     "srcDark": "/diagrams/atom-structure-dark.png",
+     "alt": "Model of the atom showing the nucleus and electron shells",
+     "caption": "Nucleons (protons and neutrons) are found in the nucleus; electrons exist in energy levels — quantum shells — around it."
+    },
+    {
+     "type": "list",
+     "items": [
+      "The mass of electrons are negligible, hence the mass of the atoms are determined by the mass of nucleons.",
+      "The protons and neutrons in the nucleus give the atom its **mass**; the electrons around the nucleus give it its **chemical properties**."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2s001fjfqkmt4cs3mq",
+   "sectionKey": "relative-mass-charge",
+   "number": "2.2",
+   "title": "Relative Masses and Charges",
+   "blurb": "Weighing and charging the three subatomic particles against each other.",
+   "estMinutes": 10,
+   "spec": "2.2",
+   "specText": "know the relative mass and charge of protons, neutrons and electrons",
+   "outline": [],
+   "content": [
+    {
+     "type": "h3",
+     "text": "The masses and charges of the three sub atomic particles"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Particle",
+      "Symbol",
+      "Charge / C",
+      "Relative charge",
+      "Mass / g",
+      "Relative mass"
+     ],
+     "rows": [
+      [
+       "Proton",
+       "p",
+       "+1.60 × 10⁻¹⁹",
+       "+1",
+       "1.67 × 10⁻²⁴",
+       "1"
+      ],
+      [
+       "Neutron",
+       "n",
+       "0",
+       "0",
+       "1.67 × 10⁻²⁴",
+       "1"
+      ],
+      [
+       "Electron",
+       "e⁻",
+       "−1.60 × 10⁻¹⁹",
+       "−1",
+       "9.11 × 10⁻²⁸",
+       "1 / 1840"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "Protons and neutrons have almost identical masses — each is given a **relative mass of 1** on this scale.",
+      "The electron is **1840 times lighter** than a proton, so its mass is taken as negligible (1/1840).",
+      "The proton carries a **relative charge of +1** and the electron a **relative charge of −1**; the neutron is **uncharged (0)**.",
+      "An atom is electrically neutral because the number of protons is equal to the number of electrons — the +1 and −1 charges cancel out."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2s001hjfqkdvezxpe0",
+   "sectionKey": "atomic-mass-number",
+   "number": "2.3",
+   "title": "Atomic Number and Mass Number",
+   "blurb": "The two numbers that label every atom, and the notation that carries them.",
+   "estMinutes": 10,
+   "spec": "2.3",
+   "specText": "know what is meant by the terms ‘atomic (proton) number’ and ‘mass number’",
+   "outline": [],
+   "content": [
+    {
+     "type": "def",
+     "term": "Atomic (proton) number (Z)",
+     "text": "The number of protons in the nucleus of an atom of an element. The atomic number is unique to the element — it defines what the element is."
+    },
+    {
+     "type": "def",
+     "term": "Mass number (A)",
+     "text": "The total number of protons and neutrons in the nucleus of an atom."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Atoms are represented by the following notation, where the **mass number A** is written at the top left and the **atomic number Z** at the bottom left of the symbol.",
+      "Number of **neutrons = mass number − atomic number (A − Z)**.",
+      "In a neutral atom, the number of **electrons = the number of protons (Z)**."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/nuclide-notation.png",
+     "srcDark": "/diagrams/nuclide-notation-dark.png",
+     "alt": "Nuclide notation showing mass number A and atomic number Z beside the symbol X",
+     "caption": "Mass number = sum of protons and neutrons in the nucleus of an atom · Atomic number = protons in the nucleus of an atom."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2t001jjfqkvgcw56z6",
+   "sectionKey": "counting-particles",
+   "number": "2.4",
+   "title": "Counting Subatomic Particles",
+   "blurb": "Using Z and A to count protons, neutrons and electrons in atoms and ions.",
+   "estMinutes": 15,
+   "spec": "2.4",
+   "specText": "be able to use the atomic number and the mass number to determine the number of each type of subatomic particle in an atom or ion",
+   "outline": [],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "The atomic number and the mass number are all you need to count every subatomic particle in an atom or an ion:",
+      "**Protons = Z** — the atomic number.",
+      "**Neutrons = A − Z** — the mass number minus the atomic number.",
+      "**Electrons in a neutral atom = Z**.",
+      "In a **negative ion** the atom has gained electrons: electrons = Z + (size of the charge). Example: Cl⁻ has 17 + 1 = 18 electrons.",
+      "In a **positive ion** the atom has lost electrons: electrons = Z − (size of the charge). Example: Ca²⁺ has 20 − 2 = 18 electrons.",
+      "Forming an ion changes **only the number of electrons** — the number of protons and neutrons stays the same."
+     ]
+    },
+    {
+     "type": "worked",
+     "title": "Counting the particles in a calcium ion",
+     "problem": "Determine the number of protons, neutrons and electrons in the ion ⁴⁰₂₀Ca²⁺.",
+     "steps": [
+      "Protons = Z = 20",
+      "Neutrons = A − Z = 40 − 20 = 20",
+      "The 2+ charge means 2 electrons have been lost: electrons = 20 − 2 = 18"
+     ],
+     "answer": "20 protons, 20 neutrons, 18 electrons"
+    },
+    {
+     "type": "worked",
+     "title": "Counting the particles in a chloride ion",
+     "problem": "Determine the number of protons, neutrons and electrons in the ion ³⁵₁₇Cl⁻.",
+     "steps": [
+      "Protons = Z = 17",
+      "Neutrons = A − Z = 35 − 17 = 18",
+      "The − charge means 1 electron has been gained: electrons = 17 + 1 = 18"
+     ],
+     "answer": "17 protons, 18 neutrons, 18 electrons"
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2u001ljfqk7jt1tiwj",
+   "sectionKey": "isotopes",
+   "number": "2.5",
+   "title": "Isotopes",
+   "blurb": "Same protons, different neutrons — why isotopes behave almost identically.",
+   "estMinutes": 10,
+   "spec": "2.5",
+   "specText": "understand the term ‘isotope’",
+   "outline": [],
+   "content": [
+    {
+     "type": "def",
+     "term": "Isotope",
+     "text": "Isotopes are atoms of the same element having the same number of protons but different number of neutrons."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Example: Carbon has three isotopes, ¹²C, ¹³C and ¹⁴C. They all have the same number of protons but different number of neutrons."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/carbon-isotopes.png",
+     "srcDark": "/diagrams/carbon-isotopes-dark.png",
+     "alt": "The three isotopes of carbon shown with their protons, neutrons and mass numbers",
+     "caption": "The three isotopes of carbon — the atomic number stays 6 while the number of neutrons (and so the mass number) changes."
+    },
+    {
+     "type": "table",
+     "headers": [
+      "",
+      "Protons",
+      "Neutrons",
+      "Mass number"
+     ],
+     "rows": [
+      [
+       "Carbon – 12",
+       "6",
+       "6",
+       "12"
+      ],
+      [
+       "Carbon – 13",
+       "6",
+       "7",
+       "13"
+      ],
+      [
+       "Carbon – 14",
+       "6",
+       "8",
+       "14"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "Isotopes always have the same **chemical properties** because the number of electrons is the same.",
+      "They have slightly different **physical properties** as they have different number of neutrons.",
+      "Example: Isotopes with fewer neutrons will have lower masses, lower densities, faster rate of diffusion, lower melting and boiling points.",
+      "Relative atomic masses measured by chemical methods rarely produce whole numbers. This is because isotopes of the same element exist in different proportions in nature."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2v001njfqkgfyblo4e",
+   "sectionKey": "mass-spectrometer",
+   "number": "2.6",
+   "title": "The Mass Spectrometer",
+   "blurb": "The instrument that weighs atoms — and how to read the spectra it produces.",
+   "estMinutes": 25,
+   "spec": "2.6",
+   "specText": "understand the basic principles of a mass spectrometer and be able to analyse and interpret mass spectra to:",
+   "outline": [
+    "i   deduce the isotopic composition of a sample of an element",
+    "ii   calculate the relative atomic mass of an element from relative abundances of isotopes and vice versa",
+    "iii   determine the relative molecular mass of a molecule, and hence identify molecules in a sample",
+    "iv   understand that ions in a mass spectrometer may have a 2+ charge"
+   ],
+   "content": [
+    {
+     "type": "h3",
+     "text": "Relative masses of elements or compounds"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Measuring the mass of an atom or compound using a balance would be very difficult as they are very small.",
+      "Hence, to measure the mass of an atom or a compound the **atomic mass unit (amu)** is used as a standard reference.",
+      "The relative atomic mass does not have any units. They are measured compare to amu."
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Atomic mass unit** is the mass of a carbon-12 atom divided by 12. This is used as the standard reference scale to measure mass of atoms and molecules.",
+      "**Relative atomic mass** of an element is the weighted average mass of an atom of that element divided by 1/12th the mass of a carbon-12 atom.",
+      "**Relative molecular mass** of a molecule or compound is the sum of the relative atomic masses of all the atoms in the chemical formula.",
+      "**Relative isotopic mass** is the mass of an atom of that isotope divided by 1/12th the mass of a carbon-12 atom."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "What is a mass spectrometer?"
+    },
+    {
+     "type": "def",
+     "term": "Mass spectrometer",
+     "text": "An instrument that was invented by F.W. Aston in 1919. It can be used to find the relative masses of isotopes of atoms, molecules or fragments of molecules. This gave chemists an accurate method of comparing the relative masses of atoms and molecules, and to find the relative abundance of the isotopes in a sample of an element."
+    },
+    {
+     "type": "list",
+     "items": [
+      "The mass spectrometer consists of an **ion source**, an **analyser** and a **detector**.",
+      "Inside the spectrometer there is a **high vacuum** which allows ionized atoms and molecules from the chemical being tested to be studied without interference from atoms and molecules in the air."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "What can mass spectrometry be used for?"
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Carbon dating** — to measure the amount of C-14 in a substance and hence to determine the age of the substance.",
+      "**Pharmaceutical industry** — to identify the new compounds in possibly new drugs and to identify how long they would stay in the body.",
+      "**Testing athletes’ urine** for drugs or banned substances such as anabolic steroids.",
+      "**Studying the composition of the surface of Mars** — to look for molecules that might suggest that life existed on the planet, by sending probes to Mars."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "How does a mass spectrometer work?"
+    },
+    {
+     "type": "p",
+     "text": "There are five main processes occurring in a mass spectrometer. They are:"
+    },
+    {
+     "type": "list",
+     "ordered": true,
+     "items": [
+      "**Vapourisation:** the sample is turned into gas or vapourised using an electrical heater.",
+      "**Ionization:** gas particles are bombarded with a stream of high energy electrons from an electron gun, to ionize them. Electrons are knocked off the particles, producing uni-positively charged ions.",
+      "**Acceleration:** the positive ions are accelerated by an electric field towards the magnetic field, which provides the energy for the particles to accelerate.",
+      "**Deflection:** the positive ions’ path is altered with a magnetic field. For a given magnetic field, only ions with a particular mass/charge ratio will be detected. Lighter ions have less momentum and are deflected more than heavier ions. Ions with a large m/z ratio deflected less than ions with a smaller m/z ratio.",
+      "**Detection:** the ions are detected by the detector, which is linked to an amplifier and then to a recorder. This converts the current to a peak which is shown in a mass spectrum."
+     ]
+    },
+    {
+     "type": "eq",
+     "code": "X(s) → X(g)      ·      X(l) → X(g)",
+     "caption": "Stage 1 — vapourisation"
+    },
+    {
+     "type": "eq",
+     "code": "X(g) → X⁺(g) + e⁻",
+     "caption": "Stage 2 — ionization by the electron gun"
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/mass-spectrometer.png",
+     "srcDark": "/diagrams/mass-spectrometer-dark.png",
+     "alt": "Schematic of a mass spectrometer showing the five stages",
+     "caption": "Vapourised sample → ionisation → acceleration → deflection by the electromagnet → detection → amplifier → chart recorder. A vacuum pump keeps the inside under high vacuum."
+    },
+    {
+     "type": "h3",
+     "text": "The mass spectrum"
+    },
+    {
+     "type": "list",
+     "items": [
+      "An early application was the demonstration by Aston (Nobel Prize, 1922) that naturally occurring neon consisted of three isotopes; ²⁰Ne, ²¹Ne and ²²Ne.",
+      "Position of peaks give **atomic mass**.",
+      "Peak intensity gives **relative abundance**.",
+      "The tallest peak represents the most abundant isotope."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/neon-spectrum.png",
+     "srcDark": "/diagrams/neon-spectrum-dark.png",
+     "alt": "Mass spectrum of neon with peaks at m/z 20, 21 and 22",
+     "caption": "The mass spectrum of neon — peaks at m/z 20, 21 and 22 with relative abundances 90.92%, 0.26% and 8.82%."
+    },
+    {
+     "type": "h3",
+     "text": "Determining relative isotopic and atomic masses"
+    },
+    {
+     "type": "p",
+     "text": "The mass spectrum could be used to calculate the relative atomic mass of an element."
+    },
+    {
+     "type": "worked",
+     "title": "Relative atomic mass of neon",
+     "problem": "Calculate the average relative atomic mass of neon using the above information. Out of every 100 atoms 90.92 are ²⁰Ne, 0.26 are ²¹Ne and 8.82 are ²²Ne.",
+     "steps": [
+      "Out of every 100 atoms: 90.92 atoms of ²⁰Ne, 0.26 atoms of ²¹Ne and 8.82 atoms of ²²Ne",
+      "**Weighted mean:** mean mass = (90.92 × 20 + 0.26 × 21 + 8.82 × 22) ÷ 100",
+      "= (1818.4 + 5.46 + 194.04) ÷ 100 = 2017.9 ÷ 100"
+     ],
+     "answer": "Relative atomic mass of neon = 20.18"
+    },
+    {
+     "type": "worked",
+     "title": "Relative atomic mass of chlorine",
+     "problem": "What is the relative atomic mass of chlorine, if it exists in two isotopic forms: ³⁵Cl (relative isotopic mass 35, relative abundance 75) and ³⁷Cl (relative isotopic mass 37, relative abundance 25)?",
+     "steps": [
+      "**Weighted mean:** mean mass = (35 × 75 + 37 × 25) ÷ 100",
+      "= (2625 + 925) ÷ 100 = 3550 ÷ 100"
+     ],
+     "answer": "Relative atomic mass of chlorine = 35.5"
+    },
+    {
+     "type": "h3",
+     "text": "Determining relative molecular mass of diatomic molecules"
+    },
+    {
+     "type": "list",
+     "items": [
+      "If an element exists as diatomic molecules, like chlorine, then the spectrum would contain peaks for the separate **atomic ions** as well as for the **molecular ions**.",
+      "Molecular ions are formed by the removal of an electron from the whole molecule.",
+      "Atomic ions are formed when the Cl—Cl bond is broken by a high energy beam of electron."
+     ]
+    },
+    {
+     "type": "p",
+     "text": "If diatomic substances are analysed by mass spectrometry, you can obtain the relative molecular mass of the element or compound by observing the peaks with the **largest m/z ratios** (assuming a value of z = 1)."
+    },
+    {
+     "type": "h3",
+     "text": "Determining relative molecular mass of a polyatomic molecule"
+    },
+    {
+     "type": "p",
+     "text": "Mass spectrum of ethanol (C₂H₅OH):"
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/ethanol-spectrum.png",
+     "srcDark": "/diagrams/ethanol-spectrum-dark.png",
+     "alt": "Mass spectrum of ethanol with the molecular ion peak at m/z 46",
+     "caption": "The mass spectrum of ethanol — the M peak at m/z 46 is the molecular ion peak, giving the relative molecular mass of the compound."
+    },
+    {
+     "type": "callout",
+     "variant": "key",
+     "title": "Reading a molecular ion peak",
+     "text": "The peak with the highest m/z ratio is the **molecular ion peak**, which gives the RMM of the compound. RMM for ethanol = 46."
+    },
+    {
+     "type": "callout",
+     "variant": "tip",
+     "title": "Ions with a 2+ charge",
+     "text": "Ions in the spectrometer may carry a 2+ charge. A doubly-charged ion X²⁺ is recorded at **m/z = mass ÷ 2**, so a molecular ion of relative molecular mass M appears at m/z M/2 — remember this when reading spectra."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2w001pjfqk1e1grf4o",
+   "sectionKey": "diatomic-spectra",
+   "number": "2.7",
+   "title": "Mass Spectra of Diatomic Molecules",
+   "blurb": "Predicting chlorine’s five peaks and the 9 : 6 : 1 ratio from first principles.",
+   "estMinutes": 20,
+   "spec": "2.7",
+   "specText": "be able to predict mass spectra, including relative peak heights, for diatomic molecules, including chlorine, given the isotopic abundances",
+   "outline": [],
+   "content": [
+    {
+     "type": "p",
+     "text": "Chlorine exists as two isotopes, ³⁵Cl (75%) and ³⁷Cl (25%). When chlorine vapour is analysed, the spectrum contains peaks for the atomic ions and for the molecular ions of the two isotopes combined:"
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/chlorine-spectrum.png",
+     "srcDark": "/diagrams/chlorine-spectrum-dark.png",
+     "alt": "Mass spectrum of chlorine showing atomic ion peaks A and B and molecular ion peaks C, D and E",
+     "caption": "Mass spectrum of chlorine vapour — peaks A and B are the atomic ions (m/z 35 and 37); peaks C, D and E are the molecular ions (m/z 70, 72 and 74)."
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Peak",
+      "Peak height ratio",
+      "m/z ratio",
+      "Species"
+     ],
+     "rows": [
+      [
+       "A",
+       "3",
+       "35",
+       "³⁵Cl⁺"
+      ],
+      [
+       "B",
+       "1",
+       "37",
+       "³⁷Cl⁺"
+      ],
+      [
+       "C",
+       "9",
+       "70",
+       "³⁵Cl₂⁺  (two ³⁵Cl atoms)"
+      ],
+      [
+       "D",
+       "6",
+       "72",
+       "³⁵Cl³⁷Cl⁺  (one of each)"
+      ],
+      [
+       "E",
+       "1",
+       "74",
+       "³⁷Cl₂⁺  (two ³⁷Cl atoms)"
+      ]
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "Explanation of peak height ratio"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "",
+      "³⁵Cl",
+      "³⁷Cl"
+     ],
+     "rows": [
+      [
+       "Abundance",
+       "75%",
+       "25%   = 100%"
+      ],
+      [
+       "Chance of getting each isotope",
+       "75/100",
+       "25/100"
+      ],
+      [
+       "Simplifying the ratio",
+       "3/4",
+       "1/4"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "There is **3 in 4 chance** of selecting a ³⁵Cl from a sample of chlorine atom. This means total chance of two ³⁵Cl atoms combining together is ¾ × ¾ = **9/16**.",
+      "There is **1 in 4 chance** of selecting a ³⁷Cl atom. This means that the chance of ³⁷Cl combining with a ³⁵Cl atom is ¼ × ¾ = **3/16**.",
+      "The chance of a ³⁵Cl atom combining with a ³⁷Cl atom is also **3/16**.",
+      "This means that the total chance of ³⁷Cl and ³⁵Cl combining together in any order is 2 × 3/16 = **6/16**.",
+      "The chance of two ³⁷Cl atoms combining together is ¼ × ¼ = **1/16**.",
+      "9/16 : 6/16 : 1/16 in whole number ratio is **9 : 6 : 1**."
+     ]
+    },
+    {
+     "type": "callout",
+     "variant": "key",
+     "title": "Predicting diatomic peak ratios",
+     "text": "For a diatomic molecule with isotopic abundances in the ratio **a : b**, the three molecular-ion peak heights follow the ratio **a² : 2ab : b²** — the expansion of (a + b)². For chlorine, a : b = 3 : 1, so the peaks are 3² : 2(3)(1) : 1² = 9 : 6 : 1."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2x001rjfqkbesdpw3g",
+   "sectionKey": "ie-definitions",
+   "number": "2.8",
+   "title": "Defining Ionisation Energies",
+   "blurb": "First, second and third ionisation energies — every one of them endothermic.",
+   "estMinutes": 15,
+   "spec": "2.8",
+   "specText": "be able to define first, second and third ionisation energies and understand that all ionisation energies are endothermic",
+   "outline": [],
+   "content": [
+    {
+     "type": "p",
+     "text": "**Ionization energy** is a measure of the energy required to remove electrons from an atom. There are as many ionization energies as there are electrons in the atom."
+    },
+    {
+     "type": "h3",
+     "text": "First ionization energy"
+    },
+    {
+     "type": "def",
+     "term": "First ionization energy",
+     "text": "The energy required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous uni-positive ions."
+    },
+    {
+     "type": "eq",
+     "code": "Na(g) → Na⁺(g) + e⁻",
+     "caption": "Example"
+    },
+    {
+     "type": "eq",
+     "code": "Mg(g) → Mg⁺(g) + e⁻",
+     "caption": "Example"
+    },
+    {
+     "type": "callout",
+     "variant": "warning",
+     "title": "Always gaseous",
+     "text": "Ionisation energies are defined for gaseous atoms and ions — every species in the equation carries the state symbol (g)."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Its value gives an idea of how strongly the nucleus pulls on the electron being removed. The stronger the pull, the more energy needed to remove the electron."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "Second ionization energy"
+    },
+    {
+     "type": "def",
+     "term": "Second ionization energy",
+     "text": "The energy required to remove 1 mole of electrons from 1 mole of the gaseous uni-positive ions to form one mole of gaseous di-positive ions."
+    },
+    {
+     "type": "eq",
+     "code": "Na⁺(g) → Na²⁺(g) + e⁻",
+     "caption": "Example"
+    },
+    {
+     "type": "eq",
+     "code": "Mg⁺(g) → Mg²⁺(g) + e⁻",
+     "caption": "Example"
+    },
+    {
+     "type": "h3",
+     "text": "Third ionization energy"
+    },
+    {
+     "type": "def",
+     "term": "Third ionization energy",
+     "text": "The energy required to remove 1 mole of electrons from 1 mole of the gaseous di-positive ions to form one mole of gaseous tri-positive ions."
+    },
+    {
+     "type": "eq",
+     "code": "Na²⁺(g) → Na³⁺(g) + e⁻",
+     "caption": "Example"
+    },
+    {
+     "type": "eq",
+     "code": "Mg²⁺(g) → Mg³⁺(g) + e⁻",
+     "caption": "Example"
+    },
+    {
+     "type": "callout",
+     "variant": "key",
+     "title": "All ionisation energies are endothermic",
+     "text": "Every ionisation needs energy to overcome the attraction between the nucleus and the electron, so ionisation energies always have positive (endothermic) values."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2y001tjfqkyvgozhli",
+   "sectionKey": "shells-orbitals",
+   "number": "2.9",
+   "title": "Quantum Shells and Orbitals",
+   "blurb": "Shells, sub-shells and the regions that hold at most two electrons.",
+   "estMinutes": 15,
+   "spec": "2.9",
+   "specText": "know that an orbital is a region within an atom that can hold up to two electrons with opposite spins",
+   "outline": [],
+   "content": [
+    {
+     "type": "h3",
+     "text": "Quantum shells"
+    },
+    {
+     "type": "p",
+     "text": "Max Planck first presented the quantum theory in 1900. We can use this theory to describe the arrangement of electrons around the nuclei. According to this theory electrons exist around the nucleus in certain regions of the atom called shells or energy levels. These well-defined energy levels are called **quantum shells**."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Each shell is described by a number known as the **principle quantum number (n)**. The larger the value of n, the further the electron is from the nucleus."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "From shells to sub-shells to orbitals"
+    },
+    {
+     "type": "list",
+     "items": [
+      "The energy levels or quantum shells (apart from the first one) are divided into **sub-shells** of slightly different energy levels. Each sub-shell is described by a letter s, p, d and f.",
+      "The energy of each sub-shell increases from s to p to d to f.",
+      "Each sub-shell is made up of **orbitals**."
+     ]
+    },
+    {
+     "type": "def",
+     "term": "Orbital",
+     "text": "An orbital is a region within an atom that can hold up to two electrons with opposite spins."
+    },
+    {
+     "type": "list",
+     "items": [
+      "An orbital is the region where the electrons are most likely to be found.",
+      "Orbitals are 3-dimensional statistical maps showing the likeliest places to find electrons — they come in different shapes and sizes.",
+      "Each orbital can accommodate a **maximum of two electrons** in which one electron spins clockwise and the other spins anti-clockwise."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2z001vjfqksvzhiyii",
+   "sectionKey": "ie-factors",
+   "number": "2.10",
+   "title": "Factors Affecting Ionisation Energy",
+   "blurb": "Nuclear charge, shielding, distance — and the sub-shell the electron leaves.",
+   "estMinutes": 15,
+   "spec": "2.10",
+   "specText": "understand how ionisation energies are influenced by the number of protons in the nucleus, the electron shielding and the sub-shell from which the electron is removed",
+   "outline": [],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "The value of ionization energy depends on the **distance of the electron from the nucleus**, and the **effective nuclear charge** (not the nuclear charge) of the atom."
+     ]
+    },
+    {
+     "type": "def",
+     "term": "Nuclear charge (NC)",
+     "text": "The actual charge (relative) due to the protons in the nucleus."
+    },
+    {
+     "type": "def",
+     "term": "Effective nuclear charge (ENC)",
+     "text": "The effectiveness of nuclear charge after passing through filled shells."
+    },
+    {
+     "type": "callout",
+     "variant": "tip",
+     "title": "Comparing effective nuclear charges",
+     "text": "A simple way to compare effective nuclear charges is to knock off a + for every electron in a filled inner level."
+    },
+    {
+     "type": "h3",
+     "text": "What determines the size of the first ionisation energy?"
+    },
+    {
+     "type": "p",
+     "text": "The amount of energy required to remove the first electron depends on the following factors:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "**The number of protons in the nucleus (nuclear charge)**\n- As the effective nuclear charge increases, force of attraction between the nucleus and the outer electrons increases.\n- Electrons are harder to remove (higher ionization energy).",
+      "**Electron shielding**\n- The electron in the outermost energy level experiences more inter-electron repulsion known as shielding.\n- The greater the number of the inner shell electrons the greater is the shielding effect (screening effect).\n- The force of attraction becomes weaker.\n- Less energy is required to remove the electron (lower ionization energy).",
+      "**Distance between the nucleus and the outermost electrons**\n- As the atoms get larger, the distance between the outer most electrons and the nucleus increases.\n- The outer electrons are held less strongly so easier to remove.\n- Less energy is required to remove the electron (lower ionization energy).",
+      "**The sub-shell from which the electron is removed**\n- Sub-shells sit at slightly different energies, so the electron removed is not always held equally tightly.\n- An electron in a higher-energy sub-shell is easier to remove: a 2p electron (boron) is easier to remove than a 2s electron (beryllium), and a 3p electron (aluminium) than a 3s electron (magnesium).\n- A **paired** electron is also easier to remove than an unpaired one — the two electrons sharing an orbital repel each other."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi2z001xjfqkh99txcwl",
+   "sectionKey": "ie-evidence",
+   "number": "2.11",
+   "title": "Ionisation Energies as Evidence",
+   "blurb": "Successive and first ionisation energies — the numbers that revealed shells and sub-shells.",
+   "estMinutes": 25,
+   "spec": "2.11",
+   "specText": "know that ideas about electronic structure developed from:",
+   "outline": [
+    "i   an understanding that successive ionisation energies provide evidence for the existence of quantum shells and the group to which the element belongs",
+    "ii   an understanding that the first ionisation energy of successive elements provides evidence for electron sub-shells"
+   ],
+   "content": [
+    {
+     "type": "h3",
+     "text": "Successive ionization energies of an element"
+    },
+    {
+     "type": "p",
+     "text": "The patterns in successive ionisation energies for an element give us important information about the electronic structure for that element."
+    },
+    {
+     "type": "list",
+     "items": [
+      "When successive ionization energies of an element are listed, there are steady increases and big jumps occuring at defined places. This is one piece of evidence for the existence of **quantum shells**.",
+      "A sodium atom has 11 electrons. Its successive ionization energies are shown below — the values where the ionization energy has jumped significantly are marked in bold."
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "",
+      "1st",
+      "2nd",
+      "3rd",
+      "4th",
+      "5th",
+      "6th"
+     ],
+     "rows": [
+      [
+       "IE / kJ mol⁻¹",
+       "496",
+       "**4563**",
+       "6913",
+       "9544",
+       "13352",
+       "16611"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "",
+      "7th",
+      "8th",
+      "9th",
+      "10th",
+      "11th"
+     ],
+     "rows": [
+      [
+       "IE / kJ mol⁻¹",
+       "20115",
+       "25491",
+       "28934",
+       "**141367**",
+       "159079"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "text": "When a graph is plotted between the log of ionization energy values of an element against the number of electrons removed, the trends in successive ionization energies can be seen. There are two types of increases that can be observed."
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Successive ionization energies are always greater than the previous one** — this is due to increasing attraction of the nucleus on the remaining electrons, because the electrons are being removed from an increasingly positive ion.",
+      "**Large increases occur when there is a change of shell** — this is due to removal of electron from an inner main shell, which is closer to the nucleus on which the nuclear attraction is greater.",
+      "This can be used to predict the **group** of an unknown element. The group number would be given by counting the number of electrons removed before the first big jump. Electronic structure can also be found using successive ionization energies."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/sodium-ie.png",
+     "srcDark": "/diagrams/sodium-ie-dark.png",
+     "alt": "Graph of log ionisation energy against number of electrons removed for sodium",
+     "caption": "Successive ionization energies of sodium, plotted as log(IE) against the order of electron removed — the big jumps after the 1st and 9th electrons mark the changes of quantum shell."
+    },
+    {
+     "type": "h3",
+     "text": "Why do the successive ionization energies of sodium increase?"
+    },
+    {
+     "type": "list",
+     "items": [
+      "The first electron to be removed is in the 3s orbital, which is the third quantum shell. So less energy is needed to remove the electron. Therefore the first ionization energy is the lowest.",
+      "There is a large jump from 1st to the 2nd ionization energy. This is because the second electron to be removed is in the 2nd quantum shell which is lower in energy than the 3rd quantum shell.",
+      "There is steady increase in ionization energy from the 2nd to the 9th electron. This shows that the eight electrons exist within the same quantum shell. As each successive electron is removed from the same shell, the electron – electron repulsion within the shell decreases. As a result, there is steady increase in ionization energy from 2nd to 9th electron.",
+      "The large jump from 9th to 10th electron indicates that the electron is removed from first quantum shell (1s orbital)."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "First ionisation energies of successive elements"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Plotting the **first ionisation energy of successive elements** against atomic number gives a repeating saw-tooth pattern: the value rises across each period to a peak at each noble gas, then falls steeply at the start of the next period.",
+      "The rise is not perfectly smooth — there are **dips after Group 2** (Be → B and Mg → Al) and **dips after Group 5** (N → O and P → S).",
+      "These dips are evidence for **electron sub-shells**: the electron removed from boron is a 2p electron — higher in energy than the 2s electron removed from beryllium — and the electron removed from oxygen is a paired 2p electron, which repels its partner.",
+      "Because the pattern **repeats in the same way across every period**, it is powerful evidence that the shells and sub-shells of every element are filled in the same order."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/first-ie-periods.png",
+     "srcDark": "/diagrams/first-ie-periods-dark.png",
+     "alt": "First ionization energies plotted against atomic number for the elements hydrogen to argon",
+     "caption": "First ionization energies for periods 1–3 — a periodic property: rising to a peak at each noble gas, with dips after Group 2 and Group 5."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi30001zjfqk067hnqmd",
+   "sectionKey": "orbital-shapes",
+   "number": "2.12",
+   "title": "Shapes of s and p Orbitals",
+   "blurb": "Spheres and dumbbells — the geometry of electron space.",
+   "estMinutes": 5,
+   "spec": "2.12",
+   "specText": "be able to describe the shapes of s and p orbitals",
+   "outline": [],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "The orbitals in different sub-levels have different shapes.",
+      "**s orbitals** are spherical — the electron density is spread evenly in all directions around the nucleus. Every shell contains one s orbital (1s, 2s, 3s …), each larger than the one before.",
+      "**p orbitals** are dumbbell-shaped, with two lobes either side of the nucleus. Each p sub-shell holds **three** p orbitals — pₓ, p_y and p_z — arranged at right angles along the x, y and z axes.",
+      "The five d orbitals have four-lobed shapes (their study is beyond the requirements of this specification)."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/orbitals.png",
+     "srcDark": "/diagrams/orbitals-dark.png",
+     "alt": "Shapes of s, p and d orbitals",
+     "caption": "Shapes of orbitals — s orbitals are spherical; each p sub-shell holds three dumbbell-shaped orbitals (pₓ, p_y, p_z) along the x, y and z axes; the five d orbitals have four-lobed shapes."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi310021jfqkjwhhoqv4",
+   "sectionKey": "filling-rules",
+   "number": "2.13",
+   "title": "Rules for Filling Orbitals",
+   "blurb": "Singly first, spins paired — Hund’s rule and the Pauli exclusion principle.",
+   "estMinutes": 10,
+   "spec": "2.13",
+   "specText": "know that orbitals in sub-shells:",
+   "outline": [
+    "i   each take a single electron before pairing up",
+    "ii   pair up with two electrons of opposite spin"
+   ],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "The orbitals in a sub-shell fill in a fixed pattern, described by two rules:"
+     ]
+    },
+    {
+     "type": "def",
+     "term": "Hund's rule",
+     "text": "Electrons fill orbitals singly before they start pairing up."
+    },
+    {
+     "type": "def",
+     "term": "Pauli Exclusion Principle",
+     "text": "Two electrons cannot occupy the same orbital unless they have opposite spin. This is due to the repulsion between electron pairs."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Each of the orbitals in a sub-shell **takes a single electron before any orbital gets a second electron** — for example, the three 2p orbitals of nitrogen fill as 2p¹ 2p¹ 2p¹, not 2p² 2p¹.",
+      "When a second electron does enter an orbital, it **pairs up with opposite spin** — one electron spins clockwise, the other anti-clockwise.",
+      "Electrons entering separate orbitals singly have **parallel spins**."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi310023jfqklrsfhb5o",
+   "sectionKey": "electronic-configuration",
+   "number": "2.14",
+   "title": "Electronic Configuration",
+   "blurb": "Writing configurations from hydrogen to krypton — spdf, boxes and the Cr/Cu exceptions.",
+   "estMinutes": 25,
+   "spec": "2.14",
+   "specText": "be able to predict the electronic configuration of atoms of the elements from hydrogen to krypton inclusive and their ions, using s, p, d notation and electron-in-boxes notation",
+   "outline": [],
+   "content": [
+    {
+     "type": "p",
+     "text": "Electrons are added to the sub-shells according to the **Aufbau Principle**. The following rules must be applied when writing electronic configuration."
+    },
+    {
+     "type": "def",
+     "term": "Aufbau principle",
+     "text": "Electrons fill up the lowest energy orbital first."
+    },
+    {
+     "type": "list",
+     "items": [
+      "The sub-shells which are half filled or completely filled with electrons are more stable. Orbitals are not filled in numerical order.",
+      "For example, **4s is filled before 3d**. This is because the 4s orbital is at a lower energy level than a 3d orbital."
+     ]
+    },
+    {
+     "type": "eq",
+     "code": "1s  2s  2p  3s  3p  4s  3d  4p  …",
+     "caption": "The order in which sub-shells fill"
+    },
+    {
+     "type": "list",
+     "items": [
+      "When writing electronic configuration, the electronic structure of an atom can be represented in two ways: **s p d f notation** and **electron box notation**.",
+      "A shortened version of electronic structure can also be used, by writing the noble gas electronic configuration in square brackets."
+     ]
+    },
+    {
+     "type": "worked",
+     "title": "Electronic configuration of carbon",
+     "problem": "Write down the electronic configuration of ₆C using spdf notation and box notation.",
+     "steps": [
+      "Carbon has 6 electrons. Fill the lowest energy orbitals first: 1s, then 2s, then 2p.",
+      "**spdf notation:** 1s² 2s² 2p²",
+      "**Box notation:** 1s [↑↓] · 2s [↑↓] · 2p [↑] [↑] [ ] — the two 2p electrons occupy separate orbitals singly, with parallel spins (Hund's rule)."
+     ],
+     "answer": "1s² 2s² 2p²"
+    },
+    {
+     "type": "worked",
+     "title": "Electronic configuration of sulfur",
+     "problem": "Write down the electronic configuration of ₁₆S using spdf notation and box notation.",
+     "steps": [
+      "Sulfur has 16 electrons: fill 1s, 2s, 2p, 3s, then 3p.",
+      "**spdf notation:** 1s² 2s² 2p⁶ 3s² 3p⁴",
+      "**Box notation:** 1s [↑↓] · 2s [↑↓] · 2p [↑↓] [↑↓] [↑↓] · 3s [↑↓] · 3p [↑↓] [↑] [↑]",
+      "**Noble gas notation:** [Ne] 3s² 3p⁴"
+     ],
+     "answer": "1s² 2s² 2p⁶ 3s² 3p⁴  — or  [Ne] 3s² 3p⁴"
+    },
+    {
+     "type": "h3",
+     "text": "The exceptions: chromium and copper"
+    },
+    {
+     "type": "list",
+     "items": [
+      "The electronic structure of **Cr** and **Cu** are exceptional. In both cases the outer subshells are either completely full or half full. This is achieved by donating one of their 4s electrons to the 3d sub shell, as this makes the d-sub shell to be half filled or completely filled.",
+      "Chromium is **1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s¹** — not  1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁴ 4s².",
+      "Copper is **1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s¹** — not  1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁹ 4s².",
+      "Completely filled or half-filled sub-shell is a more stable electronic configuration."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "Electronic configuration of ions"
+    },
+    {
+     "type": "list",
+     "items": [
+      "When an atom loses or gains an electron to form ions, the electronic structure changes.",
+      "**Cations (positive ions)** — formed by loss of electrons.",
+      "**Anions (negative ions)** — formed by gain of electrons."
+     ]
+    },
+    {
+     "type": "worked",
+     "title": "Sodium atom and sodium ion",
+     "problem": "Write down the electronic configuration of the sodium atom and the sodium ion using spdf notation.",
+     "steps": [
+      "Sodium atom, Na (Z = 11): 1s² 2s² 2p⁶ 3s¹",
+      "The Na⁺ ion is formed by losing the single 3s electron."
+     ],
+     "answer": "Na⁺: 1s² 2s² 2p⁶ — the same configuration as neon"
+    },
+    {
+     "type": "worked",
+     "title": "Chlorine atom and chloride ion",
+     "problem": "Write down the electronic configuration of the chlorine atom and the chloride ion using spdf notation.",
+     "steps": [
+      "Chlorine atom, Cl (Z = 17): 1s² 2s² 2p⁶ 3s² 3p⁵",
+      "The Cl⁻ ion is formed by gaining one electron into the last 3p orbital."
+     ],
+     "answer": "Cl⁻: 1s² 2s² 2p⁶ 3s² 3p⁶ — the same configuration as argon"
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi320025jfqkrlgr0wvv",
+   "sectionKey": "config-properties",
+   "number": "2.15",
+   "title": "Configuration and Chemical Properties",
+   "blurb": "Why an element’s electrons decide its chemistry and its place in the table.",
+   "estMinutes": 5,
+   "spec": "2.15",
+   "specText": "understand that electronic configuration determines the chemical properties of an element",
+   "outline": [],
+   "content": [
+    {
+     "type": "p",
+     "text": "Atoms can be identified by the mass of their nucleons; however, it is their **electronic structure** which determines the behavior and chemical properties."
+    },
+    {
+     "type": "list",
+     "items": [
+      "All the elements within a group have the **same number of electrons in their outer shell** and they have similar properties.",
+      "It is the outer (valence) electrons that take part in chemical reactions — so the configuration of the outer shell decides how an element reacts.",
+      "Position of an element in the periodic table is determined by its electronic structure. The physical and chemical properties depend on the electronic configuration."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi320027jfqk5v22m7zh",
+   "sectionKey": "periodic-blocks",
+   "number": "2.16",
+   "title": "Blocks of the Periodic Table",
+   "blurb": "The s, p, d and f blocks — and how many electrons each sub-shell holds.",
+   "estMinutes": 15,
+   "spec": "2.16",
+   "specText": "know that the Periodic Table is divided into blocks, such as s, p and d, and know the number of electrons that can occupy s, p and d sub-shells in the first four quantum shells",
+   "outline": [],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "In the modern periodic table the elements are arranged in order of their **atomic number**.",
+      "Vertical columns in the periodic table are called **groups** and the horizontal rows are called **periods**.",
+      "All the elements within a period have the same number of electron shells. Example: elements in period 2 have 2 electron shells."
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Group",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "rows": [
+      [
+       "Outer electronic configuration",
+       "ns¹",
+       "ns²",
+       "ns²np¹",
+       "ns²np²",
+       "ns²np³",
+       "ns²np⁴",
+       "ns²np⁵",
+       "ns²np⁶"
+      ]
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "The blocks of the periodic table"
+    },
+    {
+     "type": "p",
+     "text": "The periodic table can be split into four blocks, based on the orbital in which the last electron gets filled."
+    },
+    {
+     "type": "list",
+     "items": [
+      "**s – Block:** elements of group 1 and 2. Their outermost electrons are found in the s sub-shell.",
+      "**p – Block:** elements in groups 3 to 8. Outermost electrons are found in p sub-shell.",
+      "**d – Block:** transition elements and are found between group 2 and 3. Outermost electrons are found in d sub-shell.",
+      "**f – Block:** lanthanides and actinides, and they have outermost electrons in the f sub-shell."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/periodic-blocks.png",
+     "srcDark": "/diagrams/periodic-blocks-dark.png",
+     "alt": "The s, p, d and f blocks of the periodic table",
+     "caption": "The first four periods of the table — the block an element sits in tells you which sub-shell its last electron enters."
+    },
+    {
+     "type": "h3",
+     "text": "Electrons in the first four quantum shells"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Quantum shell or energy level",
+      "Sub-shells"
+     ],
+     "rows": [
+      [
+       "1",
+       "1s"
+      ],
+      [
+       "2",
+       "2s   2p"
+      ],
+      [
+       "3",
+       "3s   3p   3d"
+      ],
+      [
+       "4",
+       "4s   4p   4d   4f"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Sub-shell",
+      "Number of orbitals",
+      "Total number of electrons"
+     ],
+     "rows": [
+      [
+       "s",
+       "1  (1 × 2)",
+       "2"
+      ],
+      [
+       "p",
+       "3  (3 × 2)",
+       "6"
+      ],
+      [
+       "d",
+       "5  (5 × 2)",
+       "10"
+      ],
+      [
+       "f",
+       "7  (7 × 2)",
+       "14"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Shell",
+      "Principle quantum number (n)",
+      "Sub-shells",
+      "Total number of electrons"
+     ],
+     "rows": [
+      [
+       "1st",
+       "1",
+       "1s",
+       "2"
+      ],
+      [
+       "2nd",
+       "2",
+       "2s   2p",
+       "8"
+      ],
+      [
+       "3rd",
+       "3",
+       "3s   3p   3d",
+       "18"
+      ],
+      [
+       "4th",
+       "4",
+       "4s   4p   4d   4f",
+       "32"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi330029jfqkvo8kdhmv",
+   "sectionKey": "periodic-graphs",
+   "number": "2.17",
+   "title": "Graphing Periodic Data",
+   "blurb": "Plotting first ionisation energies for elements 1–36 — and what ‘periodic property’ means.",
+   "estMinutes": 15,
+   "spec": "2.17",
+   "specText": "be able to represent data, in a graphical form (including the use of logarithms of first ionisation energies on a graph) for elements 1 to 36 and hence explain the meaning of the term ‘periodic property’",
+   "outline": [],
+   "content": [
+    {
+     "type": "h3",
+     "text": "Plotting the data"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Data for the elements can be represented in graphical form — for example the first ionisation energies of elements 1 to 36, plotted below using **logarithms of the ionisation energies**.",
+      "Logarithms are used because the ionisation energies span a wide range; taking log(IE) keeps the saw-tooth shape visible without the later periods dwarfing the first."
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Z",
+      "Element",
+      "First IE / kJ mol⁻¹",
+      "Z",
+      "Element",
+      "First IE / kJ mol⁻¹"
+     ],
+     "rows": [
+      [
+       "1",
+       "H",
+       "1310",
+       "15",
+       "P",
+       "1060"
+      ],
+      [
+       "2",
+       "He",
+       "2370",
+       "16",
+       "S",
+       "1000"
+      ],
+      [
+       "3",
+       "Li",
+       "519",
+       "17",
+       "Cl",
+       "1260"
+      ],
+      [
+       "4",
+       "Be",
+       "900",
+       "18",
+       "Ar",
+       "1520"
+      ],
+      [
+       "5",
+       "B",
+       "799",
+       "19",
+       "K",
+       "418"
+      ],
+      [
+       "6",
+       "C",
+       "1090",
+       "20",
+       "Ca",
+       "590"
+      ],
+      [
+       "7",
+       "N",
+       "1400",
+       "21",
+       "Sc",
+       "632"
+      ],
+      [
+       "8",
+       "O",
+       "1310",
+       "22",
+       "Ti",
+       "661"
+      ],
+      [
+       "9",
+       "F",
+       "1680",
+       "23",
+       "V",
+       "648"
+      ],
+      [
+       "10",
+       "Ne",
+       "2080",
+       "24",
+       "Cr",
+       "653"
+      ],
+      [
+       "11",
+       "Na",
+       "494",
+       "25",
+       "Mn",
+       "716"
+      ],
+      [
+       "12",
+       "Mg",
+       "736",
+       "26",
+       "Fe",
+       "762"
+      ],
+      [
+       "13",
+       "Al",
+       "577",
+       "27",
+       "Co",
+       "757"
+      ],
+      [
+       "14",
+       "Si",
+       "786",
+       "28",
+       "Ni",
+       "736"
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/ie-1-36-log.png",
+     "srcDark": "/diagrams/ie-1-36-log-dark.png",
+     "alt": "Logarithm of first ionisation energy plotted against atomic number for elements 1 to 36",
+     "caption": "log(first ionisation energy) for the elements 1 to 36 — the same saw-tooth repeats across each period: rising to a peak at each noble gas (He, Ne, Ar, Kr), with small dips after Group 2 and Group 5, then a steep fall at each new period (Na, K)."
+    },
+    {
+     "type": "h3",
+     "text": "What does ‘periodic property’ mean?"
+    },
+    {
+     "type": "list",
+     "items": [
+      "A **periodic property** is any property of the elements whose values repeat in a regular pattern when the elements are arranged in order of atomic number.",
+      "First ionisation energy is a periodic property — the graph above shows the same pattern repeating across Period 1, Period 2, Period 3 and Period 4.",
+      "Other examples: atomic radius, ionic radius and melting and boiling temperatures — each rises and falls in the same repeating way across the periods."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "Atomic radius"
+    },
+    {
+     "type": "def",
+     "term": "Atomic radius",
+     "text": "The measurement of the size of an atom — the distance from the center of the nucleus to the boundary of the electron cloud. Since atoms does not have a well defined boundary, we can find the atomic radius by determining the distance between the two nuclei and dividing by 2."
+    },
+    {
+     "type": "list",
+     "items": [
+      "The atomic radius generally **decreases across a period**.",
+      "Nuclear charge (proton number) increases across the period.",
+      "Shielding effect remains constant as the electrons are added to the same shell.",
+      "Therefore, attraction between the nucleus and the electrons increases.",
+      "Electrons are pulled closer to nucleus."
+     ]
+    },
+    {
+     "type": "list",
+     "items": [
+      "The atomic radius generally **increases down the group**.",
+      "Electrons are added to new energy levels down the group.",
+      "Shielding effect increases.",
+      "The attraction between the electrons and the nucleus decreases."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "Ionic radius"
+    },
+    {
+     "type": "list",
+     "items": [
+      "The radius of a **positive ion is smaller** than the element’s atomic radius. This is because as the electrons are removed the remaining electrons are more strongly attracted to the positive nucleus.",
+      "The radius of a **negative ion is larger** than the element’s atomic radius. This is because as the electrons are gained, the number of electrons increases and therefore are bound less tightly to the nucleus."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/ionic-radius.png",
+     "srcDark": "/diagrams/ionic-radius-dark.png",
+     "alt": "Comparison of the radii of sodium and its ion, and chlorine and its ion",
+     "caption": "Na (11 protons, 11 electrons) shrinks to Na⁺ (11 protons, 10 electrons) · Cl (17 protons, 17 electrons) expands to Cl⁻ (17 protons, 18 electrons)."
+    }
+   ]
+  },
+  {
+   "id": "cmv1eoi34002bjfqk8v99dl8a",
+   "sectionKey": "period-trends",
+   "number": "2.18",
+   "title": "Trends Across Periods and Down Groups",
+   "blurb": "Explaining melting points and ionisation energies across Periods 2 and 3, and down a group.",
+   "estMinutes": 25,
+   "spec": "2.18",
+   "specText": "be able to explain:",
+   "outline": [
+    "i   the trends in melting and boiling temperatures of the elements of Periods 2 and 3 of the Periodic Table in terms of the structure of the element and the bonding between its atoms or molecules",
+    "ii   the general increase and the specific trends in ionisation energy of the elements across Periods 2 and 3 of the Periodic Table",
+    "iii   the decrease in first ionisation energy down a group"
+   ],
+   "content": [
+    {
+     "type": "h3",
+     "text": "Melting and boiling temperatures"
+    },
+    {
+     "type": "p",
+     "text": "As you move from left to right the elements go from highly electropositive metals through metalloids with giant structures to the simple molecular structure of non-metals."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Both periods 2 and 3 show similar trends in their melting points and boiling points, which are linked to changes in structure and bond strength of these elements."
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Period 2",
+      "Li",
+      "Be",
+      "B",
+      "C (diamond)",
+      "N",
+      "O",
+      "F"
+     ],
+     "rows": [
+      [
+       "Melting temperature / °C",
+       "181",
+       "1278",
+       "2300",
+       "3550",
+       "−210",
+       "−218",
+       "−220"
+      ],
+      [
+       "Boiling temperature / °C",
+       "1342",
+       "2970",
+       "3927",
+       "4827",
+       "−196",
+       "−183",
+       "−188"
+      ],
+      [
+       "Type of bonding",
+       "metallic",
+       "metallic",
+       "covalent",
+       "covalent",
+       "covalent",
+       "covalent",
+       "covalent"
+      ],
+      [
+       "Structure",
+       "giant lattice",
+       "giant lattice",
+       "giant lattice",
+       "giant lattice",
+       "simple molecular",
+       "simple molecular",
+       "simple molecular"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Period 3",
+      "Na",
+      "Mg",
+      "Al",
+      "Si",
+      "P",
+      "S",
+      "Cl"
+     ],
+     "rows": [
+      [
+       "Melting temperature / °C",
+       "98",
+       "649",
+       "660",
+       "1440",
+       "44",
+       "113",
+       "−101"
+      ],
+      [
+       "Boiling temperature / °C",
+       "883",
+       "1107",
+       "2467",
+       "2355",
+       "280",
+       "445",
+       "−35"
+      ],
+      [
+       "Type of bonding",
+       "metallic",
+       "metallic",
+       "metallic",
+       "covalent",
+       "covalent",
+       "covalent",
+       "covalent"
+      ],
+      [
+       "Structure",
+       "giant lattice",
+       "giant lattice",
+       "giant lattice",
+       "giant lattice",
+       "simple molecular",
+       "simple molecular",
+       "simple molecular"
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/melting-period3.png",
+     "srcDark": "/diagrams/melting-period3-dark.png",
+     "alt": "Melting points across Period 3 in kelvin",
+     "caption": "Melting points across Period 3 (in kelvin, from the table above) — rising to a maximum at silicon, then falling sharply for the simple molecular elements."
+    },
+    {
+     "type": "h3",
+     "text": "Explaining the melting point trend"
+    },
+    {
+     "type": "table",
+     "headers": [
+      "Element(s)",
+      "Structure and type of bonding",
+      "Trend in melting point"
+     ],
+     "rows": [
+      [
+       "Metals  (e.g. Na, Mg, Al)",
+       "Metallic bonding —\ngiant lattice structure",
+       "Melting point increases across the period:\n- ionic size decreases across the period\n- more number of electrons in the ‘sea’ of electrons\n- therefore strength of metallic bonding increases"
+      ],
+      [
+       "Macromolecules  (e.g. Si)",
+       "Covalent bonding —\ngiant covalent structure",
+       "Melting point is very high:\n- they have strong covalent bonds linking all their atoms together\n- a lot of energy is needed to break the strong covalent bonds"
+      ],
+      [
+       "Simple molecules  (e.g. P₄, S₈, Cl₂)",
+       "Covalent bonding —\nsimple molecular structure",
+       "Melting point is low:\n- melting point depends on the strength of intermolecular forces (London forces) between molecules\n- since London forces are weak they have a low melting point\n- London forces are stronger in S₈ as more electrons are present; P₄ contains more electrons than Cl₂, so London forces are stronger in P₄ than Cl₂"
+      ],
+      [
+       "Noble gases  (e.g. Ar)",
+       "Simple atomic structure",
+       "They have the lowest melting and boiling points because they exist as individual atoms, resulting in very weak London forces between atoms"
+      ]
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "Ionisation energies across a period"
+    },
+    {
+     "type": "list",
+     "items": [
+      "In general the 1st ionization energy of the elements across the period **increases gradually**, because:",
+      "As the atomic size decreases, distance between the nucleus and the outer shell electrons decreases.",
+      "Nuclear attraction increases; shielding effect remains the same.",
+      "Therefore, the attraction between the outer electrons and the nucleus increases. Hence, more energy is required to remove the electrons."
+     ]
+    },
+    {
+     "type": "h3",
+     "text": "The specific trends — explaining the deviations"
+    },
+    {
+     "type": "list",
+     "items": [
+      "**Helium > hydrogen (He > H)**\n- Nuclear charge is greater — one extra proton in helium.\n- Extra electron has gone into the same energy level.\n- Increased attraction makes the electron harder to remove.",
+      "**Boron < beryllium (B < Be)** — the Group 2 → 3 deviation\n- Beryllium [4]: 1s² 2s²   ·   Boron [5]: 1s² 2s² 2p¹\n- Despite the increased nuclear charge, the outer electron is held less strongly.\n- The outermost electron of boron is in a 2p orbital, which is higher in energy than the 2s orbital of beryllium.\n- Nuclear attraction is less in boron because the 2p electrons in boron experiences greater electron-electron repulsion (greater shielding) than that in beryllium.\n- Less energy is required to remove an electron from boron.",
+      "**Aluminium < magnesium (Al < Mg)**\n- Magnesium [12]: 1s² 2s² 2p⁶ 3s²   ·   Aluminium [13]: 1s² 2s² 2p⁶ 3s² 3p¹\n- Despite the increased nuclear charge, the outer electron is held less strongly.\n- The outermost electron of aluminium is in a 3p orbital, which is higher in energy than the 3s orbital of magnesium.\n- Nuclear attraction is less in aluminium because the 3p electrons in aluminium experiences greater electron-electron repulsion (greater shielding) than that in magnesium.\n- Less energy is required to remove an electron from aluminium.",
+      "**Oxygen < nitrogen (O < N)** — the Group 5 → 6 deviation\n- Nitrogen [7]: 1s² 2s² 2p³   ·   Oxygen [8]: 1s² 2s² 2p⁴\n- Despite the increased nuclear charge the electron is easier to remove.\n- The 2p electron removed from oxygen is a paired electron, whereas the 2p electron from nitrogen is an unpaired electron.\n- When electrons are paired, the extra mutual repulsion results in less energy being required to remove an electron.\n- Hence less energy is required to remove an electron from oxygen.",
+      "**Sulfur < phosphorous (S < P)**\n- Phosphorous [15]: 1s² 2s² 2p⁶ 3s² 3p³   ·   Sulfur [16]: 1s² 2s² 2p⁶ 3s² 3p⁴\n- Despite the increased nuclear charge the electron is easier to remove.\n- The 3p electron removed from sulfur is a paired electron, whereas the 3p electron from phosphorous is an unpaired electron.\n- When electrons are paired, the extra mutual repulsion results in less energy being required to remove an electron.\n- Hence less energy is required to remove an electron from sulfur."
+     ]
+    },
+    {
+     "type": "figure",
+     "src": "/diagrams/paired-boxes.png",
+     "srcDark": "/diagrams/paired-boxes-dark.png",
+     "alt": "Box notation comparing the 2p orbitals of nitrogen and oxygen",
+     "caption": "Nitrogen’s three 2p electrons sit unpaired; oxygen’s fourth 2p electron must pair up — the extra mutual repulsion makes it easier to remove."
+    },
+    {
+     "type": "h3",
+     "text": "Ionisation energies down the group"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Ionization energy **decreases** down the group. This is because:",
+      "Down the group, the atomic size increases and the number of shells increases.",
+      "Distance between the nucleus and the outer electrons increases.",
+      "The outer electrons are more shielded by the electrons in the inner shells.",
+      "The effect of the increase in nuclear charge is outweighed by the increase in shielding.",
+      "Therefore, the outer electrons are less attracted by the nucleus. Hence, less energy is required to remove the electrons."
+     ]
+    }
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "id": "cmv1eoi34002djfqk0p8jszxz",
+   "ord": 1,
+   "front": "Relative charge and mass of p, n, e⁻?",
+   "back": "Proton: +1, mass 1. Neutron: 0, mass 1. Electron: −1, mass 1/1836 (negligible).",
+   "tag": "CORE"
+  },
+  {
+   "id": "cmv1eoi35002fjfqkijb1b8nd",
+   "ord": 2,
+   "front": "Define isotope.",
+   "back": "Atoms of the same element with the same number of protons but different numbers of neutrons (same Z, different A). Same chemical properties; different physical properties such as mass.",
+   "tag": "DEFINITION"
+  },
+  {
+   "id": "cmv1eoi36002hjfqk8w43d4nr",
+   "ord": 3,
+   "front": "Define first ionisation energy.",
+   "back": "The energy required to remove one electron from each atom in one mole of gaseous atoms to form one mole of gaseous 1+ ions. Always endothermic. X(g) → X⁺(g) + e⁻",
+   "tag": "DEFINITION"
+  },
+  {
+   "id": "cmv1eoi36002jjfqkhplts5yq",
+   "ord": 4,
+   "front": "Why does first IE decrease down a group?",
+   "back": "Atomic radius increases, more inner shells so more shielding; the outer electron is further from the nucleus and less strongly attracted, so easier to remove. (Nuclear charge rises but is outweighed.)",
+   "tag": "EXPLANATION"
+  },
+  {
+   "id": "cmv1eoi37002ljfqk8f2n5oz7",
+   "ord": 5,
+   "front": "Why does first IE generally increase across a period?",
+   "back": "Nuclear charge increases with similar shielding (electrons enter the same shell); radius decreases, so attraction on the outer electron is stronger and more energy is needed.",
+   "tag": "EXPLANATION"
+  },
+  {
+   "id": "cmv1eoi38002njfqkahe8exxx",
+   "ord": 6,
+   "front": "Why do B and O dip below the general IE trend in Period 2?",
+   "back": "Be→B: the new electron enters 2p, slightly higher in energy / more shielded than 2s, so easier to remove. N→O: pairing begins in 2p; repulsion between the paired electrons makes one easier to remove.",
+   "tag": "TRAP"
+  },
+  {
+   "id": "cmv1eoi39002pjfqkkm4ai7ex",
+   "ord": 7,
+   "front": "What does a mass spectrometer do (basic principle)?",
+   "back": "Ionises samples, then separates ions by their mass-to-charge ratio (m/z); a detector measures abundance. Used to find isotopic composition, Ar, and molecular mass (M⁺ peak).",
+   "tag": "CORE"
+  },
+  {
+   "id": "cmv1eoi39002rjfqkvoorkcf9",
+   "ord": 8,
+   "front": "How do you find Ar from a mass spectrum?",
+   "back": "Ar = Σ (isotopic mass × relative abundance) ÷ Σ abundances.",
+   "tag": "EQUATION"
+  },
+  {
+   "id": "cmv1eoi3a002tjfqk81jhgqli",
+   "ord": 9,
+   "front": "State the Aufbau, Hund and Pauli principles.",
+   "back": "Aufbau: fill lowest energy sub-shells first. Hund: degenerate orbitals fill singly before pairing. Pauli: an orbital holds at most 2 electrons, with opposite spins.",
+   "tag": "CORE"
+  },
+  {
+   "id": "cmv1eoi3a002vjfqkv8m35g4q",
+   "ord": 10,
+   "front": "Write the full electron configuration of Fe (Z = 26).",
+   "back": "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s². (4s fills before 3d; 4s empties first when forming ions, e.g. Fe²⁺ = [Ar]3d⁶.)",
+   "tag": "CORE"
+  }
+ ]
+}

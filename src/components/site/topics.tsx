@@ -109,8 +109,15 @@ export function Topics({
                       {String(t.number).padStart(2, '0')}
                     </span>
                     <span className="min-w-0">
-                      <span className="block truncate text-[15px] font-medium text-fg t-fast group-hover:text-acc">
-                        {t.title}
+                      <span className="flex items-center gap-2">
+                        <span className="block truncate text-[15px] font-medium text-fg t-fast group-hover:text-acc">
+                          {t.title}
+                        </span>
+                        {t.slug.endsWith('-v2') && (
+                          <span className="mono shrink-0 rounded border border-acc/40 bg-acc/10 px-1 py-0.5 text-[8.5px] uppercase tracking-[0.14em] text-acc">
+                            version 2
+                          </span>
+                        )}
                       </span>
                       <span className="mt-1 block truncate text-[12.5px] text-muted">
                         {t.subtitle}
@@ -121,7 +128,7 @@ export function Topics({
                     </span>
                     <span className="hidden flex-col items-end gap-1.5 sm:flex">
                       <span className="mono text-[11px] text-faint">
-                        {t.sections.length} sections · {t.cards.length} cards · ~{t.estHours}h
+                        {t.sections.length} sections{t.cards.length ? ` · ${t.cards.length} cards` : ''} · ~{t.estHours}h
                       </span>
                       <span className="flex gap-1.5">
                         <Chip accent={hasNotes}>{hasNotes ? 'notes live' : 'queued'}</Chip>

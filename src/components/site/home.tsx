@@ -82,6 +82,11 @@ function TopicRow({
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-2">
           <span className="truncate text-[15px] font-semibold tracking-tight text-fg">{t.title}</span>
+          {t.slug.endsWith('-v2') && (
+            <span className="mono shrink-0 rounded border border-acc/40 bg-acc/10 px-1 py-0.5 text-[8.5px] uppercase tracking-[0.14em] text-acc">
+              version 2
+            </span>
+          )}
           {!hasNotes && (
             <span className="mono shrink-0 rounded border border-dashed border-line px-1 py-0.5 text-[8.5px] uppercase tracking-[0.14em] text-faint">
               queued
@@ -142,7 +147,7 @@ function TopicsSection({
                 </span>
                 <span className="mono text-[10px] text-faint">{p.name}</span>
               </div>
-              <div className={gridShell(mode, 'sm:grid-cols-2 sm:[&>*:nth-child(5)]:col-span-2')}>
+              <div className={gridShell(mode, p.topics.length % 2 ? 'sm:grid-cols-2 sm:[&>*:nth-child(5)]:col-span-2' : 'sm:grid-cols-2')}>
                 {p.topics.map((t) => (
                   <TopicRow key={t.slug} t={t} go={go} readMap={readMap} hydrated={hydrated} mode={mode} />
                 ))}
