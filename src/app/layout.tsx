@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/next";
 import "@fontsource/playfair-display/500-italic.css";
 import "@fontsource/playfair-display/600-italic.css";
 import "@fontsource/playfair-display/500.css";
@@ -68,6 +69,7 @@ export default function RootLayout({
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
