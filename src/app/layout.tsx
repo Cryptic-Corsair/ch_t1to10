@@ -40,10 +40,10 @@ export const viewport: Viewport = {
 const themeInit = `(function(){try{
 var s=JSON.parse(localStorage.getItem("ialchem-settings")||"{}");
 var st=s.state||{};
-if(st.uiMode==="scholar"){var _tb=(st.themeByMode||{}).terminal,_ab=(st.accentByMode||{}).terminal;st.uiMode="terminal";st.theme=_tb||"midnight";st.accent=_ab||"coral"}
+if(st.uiMode==="scholar"){var _tb=(st.themeByMode||{}).terminal,_ab=(st.accentByMode||{}).terminal;st.uiMode="terminal";st.theme=_tb||"sepia";st.accent=_ab||"coral"}
 var d=document.documentElement;
 d.dataset.uimode=st.uiMode||"terminal";
-d.dataset.theme=st.theme||"midnight";
+d.dataset.theme=st.theme||"sepia";
 d.dataset.accent=st.accent||"coral";
 d.dataset.font=st.fontFamily||"sans";
 d.dataset.motion=st.motion||"normal";
