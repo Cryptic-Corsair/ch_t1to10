@@ -150,6 +150,58 @@ export function BulletCard({ blocks }: { blocks: Block[] }) {
   )
 }
 
+/* ---------- check-yourself card (reveal answers from memory) ---------- */
+
+function QaCard({ block }: { block: Extract<Block, { type: 'qa' }> }) {
+  const [open, setOpen] = useState<boolean[]>(() => block.items.map(() => false))
+  const shown = open.filter(Boolean).length
+  return (
+    <div className="blk blk-qa focus-block overflow-hidden rounded-xl border border-line bg-surface">
+      <div className="flex items-center justify-between gap-3 border-b border-line bg-elev/50 px-5 py-3">
+        <p className="flex items-center gap-2.5 text-[13px] font-semibold text-fg">
+          <Target size={14} className="shrink-0 text-acc" strokeWidth={1.75} />
+          {block.title ?? 'Check yourself'}
+          <span className="font-normal text-muted">— answer from memory first</span>
+        </p>
+        {shown > 0 && (
+          <span className="mono shrink-0 text-[10px] uppercase tracking-[0.14em] text-acc">
+            {shown}/{block.items.length}
+          </span>
+        )}
+      </div>
+      <div className="divide-y divide-line/60">
+        {block.items.map((it, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-expanded={open[i]}
+            onClick={() => setOpen((o) => o.map((v, j) => (j === i ? !v : v)))}
+            className="block w-full px-5 py-3.5 text-left t-fast hover:bg-elev/40 focus-visible:outline-acc"
+          >
+            <span className="flex items-start gap-3">
+              <span className={`mono mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[10px] t-fast ${
+                open[i] ? 'border-acc/50 bg-acc/10 text-acc' : 'border-line text-faint'
+              }`}>
+                {open[i] ? <Check size={11} strokeWidth={2} /> : i + 1}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[14px] font-medium leading-snug text-fg">
+                  <Inline text={it.q} />
+                </span>
+                {open[i] && (
+                  <span className="mt-1.5 block border-l-2 border-acc/40 pl-3 text-[13.5px] leading-relaxed text-muted">
+                    <Inline text={it.a} />
+                  </span>
+                )}
+              </span>
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 /* ---------- the renderer ---------- */
 
 export function BlockRenderer({ block, lead = false }: { block: Block; lead?: boolean }) {
@@ -292,6 +344,9 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
           </div>
         </div>
       )
+
+    case 'qa':
+      return <QaCard block={block} />
 
     case 'table':
       return (

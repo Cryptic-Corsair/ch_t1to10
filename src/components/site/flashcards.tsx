@@ -25,7 +25,8 @@ export function Flashcards({
     <div className="mx-auto max-w-[1200px] px-6 pb-20 pt-12">
       <p className="eyebrow">{eyebrowText(mode, 'Active recall')}</p>
       <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Ten <span className="serif-accent text-acc">decks</span>, one per topic.
+        {topics.filter((t) => t.cards.length > 0).length}{' '}
+        <span className="serif-accent text-acc">decks</span>, one per topic.
       </h1>
       <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
         Precise, exam-grade flashcards — definitions, equations and traps. Grade yourself

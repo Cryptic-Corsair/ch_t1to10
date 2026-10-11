@@ -44,7 +44,8 @@ export function Topics({
       <p className="eyebrow">{eyebrowText(mode, 'Syllabus map')}</p>
       <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          All ten <span className="serif-accent text-acc">topics</span>.
+          All {shown.length}{' '}
+          <span className="serif-accent text-acc">topics</span>.
         </h1>
         <div className="flex items-center gap-2">
           {units.map((u) => (
