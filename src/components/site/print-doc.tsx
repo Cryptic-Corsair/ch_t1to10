@@ -171,6 +171,11 @@ const CALLOUT_LABEL: Record<string, string> = {
   tip: 'Tip', warning: 'Watch out', exam: 'Exam alert', key: 'Key point',
 }
 
+/* human labels for the note-style callouts (quick-revision edition) */
+const NOTE_CALLOUT_LABEL: Record<string, string> = {
+  tip: 'Tip', warning: 'Watch out', exam: 'In the exam', key: 'The key point',
+}
+
 function PBlock({ block }: { block: Block }) {
   switch (block.type) {
     case 'p':
@@ -212,9 +217,10 @@ function PBlock({ block }: { block: Block }) {
 
     case 'callout': {
       const exam = block.variant === 'exam'
+      const labels = block.style === 'note' ? NOTE_CALLOUT_LABEL : CALLOUT_LABEL
       return (
         <div className={`pd-callout${exam ? ' exam' : ''}`}>
-          <span className="pd-callout-label">{CALLOUT_LABEL[block.variant] ?? 'Tip'}</span>
+          <span className="pd-callout-label">{labels[block.variant] ?? 'Tip'}</span>
           <p className="pd-callout-title">{block.title}</p>
           <p className="pd-callout-text"><PInline text={block.text} /></p>
         </div>
@@ -252,7 +258,7 @@ function PBlock({ block }: { block: Block }) {
     case 'qa':
       return (
         <div className="pd-qa">
-          <span className="pd-eyebrow" style={{ color: 'var(--pd-acc)' }}>{block.title ?? 'Check yourself'}</span>
+          <span className="pd-eyebrow" style={{ color: 'var(--pd-acc)' }}>{block.title ?? 'Quick check'}</span>
           {block.items.map((it, i) => (
             <div className="pd-qa-item" key={i}>
               <p className="pd-qa-q">{i + 1}. <PInline text={it.q} /></p>

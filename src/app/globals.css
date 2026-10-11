@@ -330,6 +330,31 @@ kbd.kbd {
   background: color-mix(in srgb, var(--acc) 4%, var(--surface));
 }
 
+/* ---------- note-style callouts (quick-revision edition) ----------
+   Softer, more human treatments — a highlighter swipe for the key
+   point, a marked note for exam wording, an amber margin scribble
+   for warnings, a dashed aside for tips. (Lab mode re-glasses them
+   via [data-uimode="lab"] .blk-callout in modes.css.) */
+.callout-note-key {
+  background: color-mix(in srgb, var(--acc) 5%, var(--surface));
+  border: 1px solid var(--line);
+  border-left: 2.5px solid color-mix(in srgb, var(--acc) 70%, transparent);
+}
+.callout-note-exam {
+  background: color-mix(in srgb, var(--acc) 9%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--acc) 20%, var(--line));
+  border-left: 2.5px solid var(--acc);
+}
+.callout-note-warning {
+  background: color-mix(in srgb, #d97706 7%, var(--surface));
+  border: 1px solid var(--line);
+  border-left: 2.5px solid color-mix(in srgb, #d97706 55%, transparent);
+}
+.callout-note-tip {
+  background: transparent;
+  border: 1px dashed var(--line-strong);
+}
+
 /* worked-example step timeline */
 .steps { position: relative; }
 .steps::before {

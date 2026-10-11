@@ -3077,7 +3077,7 @@
   "unitCode": "WCH11",
   "unitName": "Structure, Bonding and Introduction to Organic Chemistry",
   "title": "Atomic Structure and the Periodic Table — Version 2",
-  "subtitle": "The quick-revision edition — one idea at a time, mark-scheme wording highlighted, and a check-yourself at the end of every section.",
+  "subtitle": "The quick-revision edition — each section opens with its key point, builds the idea in short steps, points out the words the mark scheme wants, and ends with a quick check.",
   "summary": "Topic 2 rebuilt for fast learning: subatomic particles and isotopes; the mass spectrometer; ionisation energies and their trends; electron configuration; periodicity across Period 3.",
   "estHours": 2.5,
   "sections": [
@@ -3094,16 +3094,16 @@
     "content": [
      {
       "type": "p",
-      "text": "Every section in this version follows the same five-step rhythm, so you always know what to do next:"
+      "text": "Every section has the same shape, so you always know what to do next:"
      },
      {
       "type": "list",
       "items": [
-       "**In one line** — the whole idea, compressed into a single sentence.",
-       "**The idea** — short beats that build the concept step by step.",
-       "**Mark scheme wording** — the exact words to reproduce in the exam.",
-       "**60-second recap** — the essentials at a glance.",
-       "**Check yourself** — answer from memory first, then tap to reveal."
+       "Every section **opens with the key point** — the one thing it is really about.",
+       "Then the idea is **built up in short steps**, with the figures and tables that carry it.",
+       "Where wording matters, an **In the exam** note shows the words the mark scheme wants.",
+       "A **tip** closes most sections with the short version — everything worth remembering at a glance.",
+       "And every section ends with a **quick check** — answer from memory first, then tap to reveal."
       ]
      },
      {
@@ -3207,12 +3207,13 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "An atom is the smallest, **electrically neutral** particle of an element that can take part in a chemical change — **protons and neutrons** in a central nucleus, **electrons** arranged in quantum shells around it."
+      "title": "Protons and neutrons sit in the nucleus; electrons occupy quantum shells around it.",
+      "text": "An atom is the smallest, **electrically neutral** particle of an element that can take part in a chemical change.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "The idea"
+      "text": "The three particles, and where they are"
      },
      {
       "type": "list",
@@ -3253,7 +3254,7 @@
      },
      {
       "type": "h3",
-      "text": "What each part does"
+      "text": "What each particle does"
      },
      {
       "type": "list",
@@ -3272,8 +3273,9 @@
      {
       "type": "callout",
       "variant": "exam",
-      "title": "Mark scheme wording",
-      "text": "Protons and neutrons (the **nucleons**) are in the **nucleus**; electrons are in **quantum shells** around the nucleus; the atom is **electrically neutral**. Say 'chemical properties depend on the number and arrangement of electrons'."
+      "title": "Say it like this",
+      "text": "Protons and neutrons (the **nucleons**) are in the **nucleus**; electrons are in **quantum shells** around the nucleus; the atom is **electrically neutral**. Say 'chemical properties depend on the number and arrangement of electrons'.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -3308,12 +3310,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "**Proton — mass 1, charge +1 · Neutron — mass 1, charge 0 · Electron — mass 1/1840, charge −1.**"
-     },
-     {
-      "type": "h3",
-      "text": "The must-know table"
+      "title": "Three values — learn them by heart.",
+      "text": "**Proton** — mass 1, charge +1 · **Neutron** — mass 1, charge 0 · **Electron** — mass 1/1840, charge −1.",
+      "style": "note"
      },
      {
       "type": "table",
@@ -3354,7 +3353,7 @@
      },
      {
       "type": "h3",
-      "text": "The same table, in full"
+      "text": "In full — with units"
      },
      {
       "type": "table",
@@ -3396,8 +3395,9 @@
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "p: mass 1, charge +1 · n: mass 1, charge 0 · e⁻: mass 1/1840, charge −1 · Neutral atom → protons = electrons."
+      "title": "The short version",
+      "text": "p: mass 1, charge +1 · n: mass 1, charge 0 · e⁻: mass 1/1840, charge −1 · Neutral atom → protons = electrons.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -3432,8 +3432,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "**Z** counts the protons and uniquely defines the element · **A** counts the protons + neutrons · **neutrons = A − Z**."
+      "title": "Z names the element; A counts the nucleus.",
+      "text": "**Z** = the number of protons · **A** = the protons + neutrons · **neutrons = A − Z**.",
+      "style": "note"
      },
      {
       "type": "def",
@@ -3466,8 +3467,9 @@
      {
       "type": "callout",
       "variant": "exam",
-      "title": "Mark scheme wording",
-      "text": "Atomic (proton) number = **the number of protons in the nucleus**. Mass number = **the total number of protons and neutrons in the nucleus**. Don't shorten these — each phrase earns the mark."
+      "title": "Say it like this",
+      "text": "Atomic (proton) number = **the number of protons in the nucleus**. Mass number = **the total number of protons and neutrons in the nucleus**. Don't shorten these — each phrase earns the mark.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -3502,12 +3504,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "**Protons = Z · Neutrons = A − Z · Electrons = Z**, then add electrons for a negative charge, take away for a positive one."
-     },
-     {
-      "type": "h3",
-      "text": "The counting rules"
+      "title": "Protons = Z · neutrons = A − Z · electrons = Z ± charge.",
+      "text": "For an ion, **add** electrons for a negative charge and **take away** for a positive one.",
+      "style": "note"
      },
      {
       "type": "list",
@@ -3574,7 +3573,8 @@
       "type": "callout",
       "variant": "warning",
       "title": "Watch out",
-      "text": "Forming an ion changes **only the electrons** — the protons and neutrons stay exactly the same. The nucleus is never touched."
+      "text": "Forming an ion changes **only the electrons** — the protons and neutrons stay exactly the same. The nucleus is never touched.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -3609,8 +3609,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Isotopes = atoms of the same element with the **same number of protons** but a **different number of neutrons**."
+      "title": "Same protons, different neutrons.",
+      "text": "Isotopes are atoms of the same element — identical proton number, different neutron number.",
+      "style": "note"
      },
      {
       "type": "def",
@@ -3659,7 +3660,7 @@
      },
      {
       "type": "h3",
-      "text": "Same chemistry, different physics"
+      "text": "What stays the same, and what changes"
      },
      {
       "type": "list",
@@ -3673,8 +3674,9 @@
      {
       "type": "callout",
       "variant": "exam",
-      "title": "Mark scheme wording",
-      "text": "**Atoms of the same element with the same number of protons but different numbers of neutrons.** Add for full credit: same chemical properties (same electrons), different physical properties."
+      "title": "Say it like this",
+      "text": "**Atoms of the same element with the same number of protons but different numbers of neutrons.** Add for full credit: same chemical properties (same electrons), different physical properties.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -3714,12 +3716,13 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "The mass spectrometer **ionises** atoms and **separates the ions by mass**. On the spectrum: **position** of a peak → mass · **height** of a peak → abundance."
+      "title": "Ionise the atoms, then separate the ions by mass.",
+      "text": "On the spectrum: a peak's **position** → its **mass** · its **height** → its **abundance**.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "First — why masses are called 'relative'"
+      "text": "Why 'relative'?"
      },
      {
       "type": "list",
@@ -3731,7 +3734,7 @@
      },
      {
       "type": "h3",
-      "text": "Four mass definitions to know"
+      "text": "The four mass definitions"
      },
      {
       "type": "table",
@@ -3760,7 +3763,7 @@
      },
      {
       "type": "h3",
-      "text": "The instrument"
+      "text": "Inside the machine"
      },
      {
       "type": "def",
@@ -3776,7 +3779,7 @@
      },
      {
       "type": "h3",
-      "text": "What it is used for"
+      "text": "What it's used for"
      },
      {
       "type": "list",
@@ -3789,7 +3792,7 @@
      },
      {
       "type": "h3",
-      "text": "The five stages — in order"
+      "text": "The five stages, in order"
      },
      {
       "type": "list",
@@ -3821,7 +3824,7 @@
      },
      {
       "type": "h3",
-      "text": "Reading a spectrum"
+      "text": "How to read a spectrum"
      },
      {
       "type": "list",
@@ -3874,7 +3877,7 @@
      },
      {
       "type": "h3",
-      "text": "Molecular ions — finding the RMM"
+      "text": "Molecular ions: finding the RMM"
      },
      {
       "type": "list",
@@ -3894,19 +3897,22 @@
       "type": "callout",
       "variant": "key",
       "title": "Reading a molecular ion peak",
-      "text": "The peak with the **highest m/z** is the **molecular ion peak** — it gives the relative molecular mass of the compound. Ethanol: RMM = 46."
+      "text": "The peak with the **highest m/z** is the **molecular ion peak** — it gives the relative molecular mass of the compound. Ethanol: RMM = 46.",
+      "style": "note"
      },
      {
       "type": "callout",
       "variant": "warning",
       "title": "Ions with a 2+ charge",
-      "text": "Ions in the spectrometer may carry a **2+ charge**. A doubly-charged ion X²⁺ is recorded at **m/z = mass ÷ 2** — a molecular ion of mass M appears at m/z M/2. Don't misread it as a lighter particle."
+      "text": "Ions in the spectrometer may carry a **2+ charge**. A doubly-charged ion X²⁺ is recorded at **m/z = mass ÷ 2** — a molecular ion of mass M appears at m/z M/2. Don't misread it as a lighter particle.",
+      "style": "note"
      },
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "Five stages: **vapourise → ionise → accelerate → deflect → detect** · position → mass, height → abundance · RAM = weighted mean · highest m/z peak → RMM · 2+ ion appears at m/z ÷ 2."
+      "title": "The short version",
+      "text": "Five stages: **vapourise → ionise → accelerate → deflect → detect** · position → mass, height → abundance · RAM = weighted mean · highest m/z peak → RMM · 2+ ion appears at m/z ÷ 2.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -3949,8 +3955,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Chlorine = ³⁵Cl (**75%**) + ³⁷Cl (**25%**). Atomic-ion peaks at m/z 35 and 37 in ratio **3 : 1** · molecular-ion peaks at m/z 70, 72, 74 in ratio **9 : 6 : 1**."
+      "title": "Atomic-ion peaks split 3 : 1; molecular-ion peaks line up 9 : 6 : 1.",
+      "text": "Chlorine is **75%** ³⁵Cl and **25%** ³⁷Cl — atomic ions at m/z 35 and 37; molecular ions at m/z 70, 72 and 74.",
+      "style": "note"
      },
      {
       "type": "figure",
@@ -4018,13 +4025,15 @@
       "type": "callout",
       "variant": "key",
       "title": "The shortcut",
-      "text": "Abundances in the ratio **a : b** → molecular-ion peaks in the ratio **a² : 2ab : b²** — the expansion of (a + b)². Chlorine: a : b = 3 : 1 → 3² : 2(3)(1) : 1² = **9 : 6 : 1**."
+      "text": "Abundances in the ratio **a : b** → molecular-ion peaks in the ratio **a² : 2ab : b²** — the expansion of (a + b)². Chlorine: a : b = 3 : 1 → 3² : 2(3)(1) : 1² = **9 : 6 : 1**.",
+      "style": "note"
      },
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "m/z 35 : 37 = 3 : 1 (atomic ions) · m/z 70 : 72 : 74 = 9 : 6 : 1 (molecular ions) · chances multiply: ¾ × ¾, 2 × (¾ × ¼), ¼ × ¼."
+      "title": "The short version",
+      "text": "m/z 35 : 37 = 3 : 1 (atomic ions) · m/z 70 : 72 : 74 = 9 : 6 : 1 (molecular ions) · chances multiply: ¾ × ¾, 2 × (¾ × ¼), ¼ × ¼.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -4059,8 +4068,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Every ionisation energy removes **one mole of electrons from one mole of gaseous** particles — and **all ionisation energies are endothermic**."
+      "title": "One mole of electrons, from one mole of gaseous particles — every time.",
+      "text": "Energy must be supplied to overcome the attraction between the nucleus and the electron — so **every ionisation energy is endothermic**.",
+      "style": "note"
      },
      {
       "type": "p",
@@ -4115,19 +4125,15 @@
       "type": "callout",
       "variant": "warning",
       "title": "Always gaseous",
-      "text": "Ionisation energies are defined for **gaseous** atoms and ions — every species in your equation carries the state symbol **(g)**. Missing (g) loses the mark."
-     },
-     {
-      "type": "callout",
-      "variant": "key",
-      "title": "All ionisation energies are endothermic",
-      "text": "Energy must be supplied to overcome the attraction between the nucleus and the electron — so every ionisation energy has a **positive (endothermic) value**."
+      "text": "Ionisation energies are defined for **gaseous** atoms and ions — every species in your equation carries the state symbol **(g)**. Missing (g) loses the mark.",
+      "style": "note"
      },
      {
       "type": "callout",
       "variant": "exam",
-      "title": "Mark scheme wording",
-      "text": "First IE = **energy required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous uni-positive ions**. Second = from the gaseous **uni-positive ions**… third = from the **di-positive ions**. Keep 'one mole … one mole' and the (g) symbols."
+      "title": "Say it like this",
+      "text": "First IE = **energy required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous uni-positive ions**. Second = from the gaseous **uni-positive ions**… third = from the **di-positive ions**. Keep 'one mole … one mole' and the (g) symbols.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -4162,12 +4168,13 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Quantum shells divide into **sub-shells** (s, p, d, f) · sub-shells divide into **orbitals** · each orbital holds **up to two electrons with opposite spins**."
+      "title": "Shell → sub-shell → orbital — and an orbital holds just two electrons.",
+      "text": "Sub-shells are the **s, p, d and f** divisions of a shell; orbitals are their subdivisions. The two electrons in an orbital must have **opposite spins**.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "Level 1 — quantum shells"
+      "text": "Start with the shells"
      },
      {
       "type": "list",
@@ -4179,7 +4186,7 @@
      },
      {
       "type": "h3",
-      "text": "Level 2 — sub-shells"
+      "text": "Inside a shell: sub-shells"
      },
      {
       "type": "list",
@@ -4190,7 +4197,7 @@
      },
      {
       "type": "h3",
-      "text": "Level 3 — orbitals"
+      "text": "Inside a sub-shell: orbitals"
      },
      {
       "type": "def",
@@ -4207,8 +4214,9 @@
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "Shell (energy level, n — bigger n = further out) → sub-shell (s < p < d < f) → orbital (**max 2 electrons, opposite spins**)."
+      "title": "The short version",
+      "text": "Shell (energy level, n — bigger n = further out) → sub-shell (s < p < d < f) → orbital (**max 2 electrons, opposite spins**).",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -4243,8 +4251,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "IE depends on the **distance** of the electron from the nucleus and the **effective nuclear charge** — four factors decide the value: **protons · shielding · distance · sub-shell**."
+      "title": "Four things set the value: protons, shielding, distance, sub-shell.",
+      "text": "Ionisation energy depends on how far the outer electron is from the nucleus and on the **effective nuclear charge** it feels.",
+      "style": "note"
      },
      {
       "type": "def",
@@ -4260,11 +4269,12 @@
       "type": "callout",
       "variant": "tip",
       "title": "Comparing effective nuclear charges",
-      "text": "Knock off a **+** for every electron in a filled inner level — what's left is the effective nuclear charge felt by the outer electrons."
+      "text": "Knock off a **+** for every electron in a filled inner level — what's left is the effective nuclear charge felt by the outer electrons.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "The four factors"
+      "text": "The four factors, one by one"
      },
      {
       "type": "table",
@@ -4299,8 +4309,9 @@
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "More protons → higher IE · more shielding → lower IE · bigger distance → lower IE · higher-energy or paired sub-shell electron → lower IE."
+      "title": "The short version",
+      "text": "More protons → higher IE · more shielding → lower IE · bigger distance → lower IE · higher-energy or paired sub-shell electron → lower IE.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -4338,8 +4349,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "**Big jumps** between successive ionisation energies → evidence for **quantum shells** (and they count the group) · **dips** in first ionisation energies across a period → evidence for **sub-shells**."
+      "title": "Big jumps reveal shells; dips reveal sub-shells.",
+      "text": "**Big jumps** between successive ionisation energies → evidence for **quantum shells** (count them and you get the group) · **dips** in first ionisation energies across a period → evidence for **sub-shells**.",
+      "style": "note"
      },
      {
       "type": "h3",
@@ -4472,8 +4484,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "**s orbitals are spherical · p orbitals are dumbbell-shaped** — three of them, along the x, y and z axes."
+      "title": "s orbitals are spheres; p orbitals are dumbbells.",
+      "text": "Every shell has one s orbital, each one larger than the last · every p sub-shell has three p orbitals, at right angles along the x, y and z axes.",
+      "style": "note"
      },
      {
       "type": "list",
@@ -4521,8 +4534,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Orbitals **fill singly before they pair up** — and a paired pair must have **opposite spins**."
+      "title": "Fill singly first; pair only with opposite spins.",
+      "text": "Hund's rule fills them singly; the Pauli Exclusion Principle insists that a pair has opposite spins.",
+      "style": "note"
      },
      {
       "type": "def",
@@ -4575,8 +4589,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Fill the **lowest energy orbital first** (Aufbau) — so **4s fills before 3d**. Write configurations in **spdf notation** or **electron-in-boxes**. **Cr and Cu** are the exceptions."
+      "title": "Lowest energy orbital first — so 4s fills before 3d.",
+      "text": "Write configurations in **spdf notation** or **electron-in-boxes** — and watch for chromium and copper, the two exceptions.",
+      "style": "note"
      },
      {
       "type": "def",
@@ -4665,7 +4680,8 @@
       "type": "callout",
       "variant": "warning",
       "title": "Watch out",
-      "text": "For ions, follow the worked pattern: Na⁺ forms by **losing the 3s electron**, Cl⁻ forms by **gaining into the last 3p orbital**. Cations = loss, anions = gain — never touch the nucleus."
+      "text": "For ions, follow the worked pattern: Na⁺ forms by **losing the 3s electron**, Cl⁻ forms by **gaining into the last 3p orbital**. Cations = loss, anions = gain — never touch the nucleus.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -4708,8 +4724,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Atoms can be identified by the mass of their nucleons — but it is the **electronic structure** that determines their behaviour and chemical properties."
+      "title": "Nucleons identify the atom; electrons decide how it reacts.",
+      "text": "It is the **electronic structure** that determines an atom's behaviour and chemical properties.",
+      "style": "note"
      },
      {
       "type": "list",
@@ -4748,8 +4765,9 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "The block = the sub-shell the **last electron enters**. Capacities: **s 2 · p 6 · d 10 · f 14** electrons."
+      "title": "The block names the sub-shell the last electron enters.",
+      "text": "Sub-shell capacities: **s 2 · p 6 · d 10 · f 14** electrons.",
+      "style": "note"
      },
      {
       "type": "list",
@@ -4828,7 +4846,7 @@
      },
      {
       "type": "h3",
-      "text": "How many electrons fit — the first four shells"
+      "text": "How many electrons fit in each shell"
      },
      {
       "type": "table",
@@ -4898,8 +4916,9 @@
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "Groups = columns, periods = rows · block = last electron's sub-shell · s 2, p 6, d 10, f 14 · shell totals: 2, 8, 18, 32."
+      "title": "The short version",
+      "text": "Groups = columns, periods = rows · block = last electron's sub-shell · s 2, p 6, d 10, f 14 · shell totals: 2, 8, 18, 32.",
+      "style": "note"
      },
      {
       "type": "qa",
@@ -4934,12 +4953,13 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Plot **log(first ionisation energy)** for elements 1–36 → the same saw-tooth repeats every period. Any property that repeats like this is a **periodic property**."
+      "title": "Plot log(first IE) and the same saw-tooth repeats every period.",
+      "text": "Any property whose values repeat in a regular pattern, in order of atomic number, is a **periodic property**.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "Why logarithms"
+      "text": "Why logarithms?"
      },
      {
       "type": "list",
@@ -5040,12 +5060,13 @@
      {
       "type": "callout",
       "variant": "key",
-      "title": "In one line",
-      "text": "Melting points: **rise to the giant structures, then collapse** for simple molecules · first IE: **generally rises** across a period (two dips) · **falls** down a group."
+      "title": "Melting points rise to the giant structures, then collapse.",
+      "text": "First ionisation energy **generally rises** across a period — with two dips — and **falls** down a group.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "i · Melting and boiling temperatures"
+      "text": "Melting and boiling temperatures"
      },
      {
       "type": "p",
@@ -5205,11 +5226,12 @@
       "type": "callout",
       "variant": "key",
       "title": "Order among the simple particles",
-      "text": "**S₈ > P₄ > Cl₂ > Ar** — bigger molecules have **more electrons**, creating stronger London forces."
+      "text": "**S₈ > P₄ > Cl₂ > Ar** — bigger molecules have **more electrons**, creating stronger London forces.",
+      "style": "note"
      },
      {
       "type": "h3",
-      "text": "ii · First ionisation energy across a period"
+      "text": "First ionisation energy across a period"
      },
      {
       "type": "list",
@@ -5222,7 +5244,7 @@
      },
      {
       "type": "h3",
-      "text": "The specific trends — explaining the deviations"
+      "text": "The two dips, explained"
      },
      {
       "type": "list",
@@ -5240,7 +5262,7 @@
      },
      {
       "type": "h3",
-      "text": "iii · First ionisation energy down the group"
+      "text": "First ionisation energy down a group"
      },
      {
       "type": "list",
@@ -5254,8 +5276,9 @@
      {
       "type": "callout",
       "variant": "tip",
-      "title": "60-second recap",
-      "text": "Melting: metals rise (stronger metallic bonding) · Si very high (strong covalent bonds) · simple molecules low (weak London forces; S₈ > P₄ > Cl₂ > Ar) · IE rises across a period (distance ↓, attraction ↑, shielding same) with dips at Group 3 (higher-energy p) and Group 6 (paired repulsion) · IE falls down a group (distance ↑, shielding ↑ outweighs nuclear charge)."
+      "title": "The short version",
+      "text": "Melting: metals rise (stronger metallic bonding) · Si very high (strong covalent bonds) · simple molecules low (weak London forces; S₈ > P₄ > Cl₂ > Ar) · IE rises across a period (distance ↓, attraction ↑, shielding same) with dips at Group 3 (higher-energy p) and Group 6 (paired repulsion) · IE falls down a group (distance ↑, shielding ↑ outweighs nuclear charge).",
+      "style": "note"
      },
      {
       "type": "qa",

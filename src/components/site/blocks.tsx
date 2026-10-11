@@ -150,6 +150,48 @@ export function BulletCard({ blocks }: { blocks: Block[] }) {
   )
 }
 
+/* ---------- note-style callout (quick-revision edition) ----------
+   Quieter and more human than the default card. Four distinct,
+   natural treatments instead of four identical boxes:
+   · key     — highlighter swipe, "The key point", statement up front
+   · exam    — marked note, "In the exam", the wording front and centre
+   · warning — amber margin scribble, icon + lead, no label
+   · tip     — dashed aside, icon + lead, no label, lightest of all   */
+
+const NOTE_META: Record<string, { label?: string; Icon: React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; iconClass: string }> = {
+  key: { label: 'The key point', Icon: KeyRound, iconClass: 'text-acc' },
+  exam: { label: 'In the exam', Icon: Target, iconClass: 'text-acc' },
+  warning: { Icon: TriangleAlert, iconClass: 'text-amber-500' },
+  tip: { Icon: Lightbulb, iconClass: 'text-acc' },
+}
+
+function NoteCallout({ block }: { block: Extract<Block, { type: 'callout' }> }) {
+  const meta = NOTE_META[block.variant] ?? NOTE_META.tip
+  const { label, Icon, iconClass } = meta
+  const inline = block.variant === 'tip' || block.variant === 'warning'
+  return (
+    <div className={`blk blk-callout callout-note callout-note-${block.variant} focus-block rounded-xl px-5 py-4`}>
+      {inline ? (
+        <p className="flex items-center gap-2 text-[14.5px] font-semibold leading-snug text-fg">
+          <Icon size={14} strokeWidth={1.75} className={`shrink-0 ${iconClass}`} />
+          {block.title}
+        </p>
+      ) : (
+        <>
+          <p className={`flex items-center gap-1.5 text-[11.5px] font-medium ${block.variant === 'exam' ? 'text-acc' : 'text-faint'}`}>
+            <Icon size={12} strokeWidth={1.75} className={`shrink-0 ${iconClass}`} />
+            {label}
+          </p>
+          <p className="mt-2 text-[16.5px] font-semibold leading-snug text-fg">{block.title}</p>
+        </>
+      )}
+      <p className={`leading-relaxed text-muted ${inline ? 'mt-1.5 text-[13.5px]' : 'mt-1.5 text-[14px]'}`}>
+        <Inline text={block.text} />
+      </p>
+    </div>
+  )
+}
+
 /* ---------- check-yourself card (reveal answers from memory) ---------- */
 
 function QaCard({ block }: { block: Extract<Block, { type: 'qa' }> }) {
@@ -160,7 +202,7 @@ function QaCard({ block }: { block: Extract<Block, { type: 'qa' }> }) {
       <div className="flex items-center justify-between gap-3 border-b border-line bg-elev/50 px-5 py-3">
         <p className="flex items-center gap-2.5 text-[13px] font-semibold text-fg">
           <Target size={14} className="shrink-0 text-acc" strokeWidth={1.75} />
-          {block.title ?? 'Check yourself'}
+          {block.title ?? 'Quick check'}
           <span className="font-normal text-muted">— answer from memory first</span>
         </p>
         {shown > 0 && (
@@ -286,6 +328,7 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
     }
 
     case 'callout': {
+      if (block.style === 'note') return <NoteCallout block={block} />
       const { label, Icon } = CALLOUT_META[block.variant] ?? CALLOUT_META.tip
       return (
         <div className="blk blk-callout callout focus-block rounded-xl border border-line px-5 py-4">
