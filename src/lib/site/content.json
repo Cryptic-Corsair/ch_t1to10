@@ -17270,10 +17270,10 @@
   "title": "Organic Chemistry: Halogenoalkanes, Alcohols and Spectra",
   "subtitle": "Nucleophiles, substitution, alcohols — and reading mass + IR spectra.",
   "summary": "Mechanisms and nucleophiles; halogenoalkane reactions; classifying and oxidising alcohols; mass spectrometry fragmentation; infrared spectroscopy.",
-  "estHours": 5.0,
+  "estHours": 6.4,
   "sections": [
    {
-    "id": "t10-0",
+    "id": "cmv1eoi5t10r00000000",
     "sectionKey": "specification-map",
     "number": "10.0",
     "title": "Specification Map",
@@ -17281,25 +17281,15 @@
     "estMinutes": 8,
     "spec": "10.1 – 10.23",
     "specText": "Students will be assessed on their ability to:",
-    "outline": [],
+    "outline": [
+     "The full list of assessment statements for Topic 10, worded exactly as the specification words them",
+     "Every statement 10.1 – 10.23 has its own section below",
+     "Four parts: 10A General principles (10.1 – 10.5), 10B Halogenoalkanes (10.6 – 10.14), 10C Alcohols (10.15 – 10.20), 10D Mass spectra and IR (10.21 – 10.23)"
+    ],
     "content": [
      {
       "type": "p",
-      "text": "Topic 10 is the checkpoint for your organic chemistry. It names the reaction types you have already met, then adds two new families — **halogenoalkanes** and **alcohols** — and the two analytical techniques, **mass spectrometry** and **infrared spectroscopy**, that identify what a reaction has made."
-     },
-     {
-      "type": "list",
-      "items": [
-       "Every section **opens with the key point** — the one thing it is really about.",
-       "Then the idea is **built up in short steps**, with the tables and diagrams that carry it.",
-       "Where wording matters, an **In the exam** note shows the words the mark scheme wants.",
-       "A **tip** closes most sections with the short version — everything worth remembering at a glance.",
-       "And every section ends with a **quick check** — answer from memory first, then tap to reveal."
-      ]
-     },
-     {
-      "type": "p",
-      "text": "Here is the full checklist — every assessment statement for Topic 10, worded exactly as the specification words it:"
+      "text": "Students will be assessed on their ability to:"
      },
      {
       "type": "table",
@@ -17401,152 +17391,250 @@
         "CORE PRACTICAL 8 — Analysis of some inorganic and organic unknowns."
        ]
       ]
-     },
-     {
-      "type": "callout",
-      "variant": "tip",
-      "title": "How the topic is organised",
-      "text": "Four parts: **general principles** (10.1 – 10.5), **halogenoalkanes** (10.6 – 10.14), **alcohols** (10.15 – 10.20) and **spectra** (10.21 – 10.23). The general principles come back in every later section — learn them first.",
-      "style": "note"
      }
     ]
    },
    {
-    "id": "cmv1eoi8j00g1jfqkfpnleap0",
-    "sectionKey": "mechanism-principles",
+    "id": "cmv1eoi5t10r00100000",
+    "sectionKey": "classifying-reactions",
     "number": "10.1",
-    "title": "Reaction Mechanisms and Nucleophiles",
-    "blurb": "How bonds break — and the species that attack.",
-    "estMinutes": 30,
-    "spec": "10.1 – 10.5",
-    "specText": "be able to classify reactions (including those in Unit 1) as addition, elimination, substitution, oxidation, reduction, hydrolysis or polymerisation\nunderstand the concept of a reaction mechanism\nunderstand that heterolytic bond breaking results in species that are electrophiles or nucleophiles\nknow the definition of the term 'nucleophile'\nunderstand the link between bond polarity and the type of reaction mechanism a compound will undergo",
+    "title": "Classifying Reactions",
+    "blurb": "Addition, elimination, substitution, oxidation, reduction, hydrolysis or polymerisation.",
+    "estMinutes": 15,
+    "spec": "10.1",
+    "specText": "be able to classify reactions (including those in Unit 1) as addition, elimination, substitution, oxidation, reduction, hydrolysis or polymerisation",
     "outline": [],
     "content": [
      {
-      "type": "callout",
-      "variant": "key",
-      "title": "Every organic reaction is a story — which bond breaks, which species attacks, what takes its place.",
-      "text": "Name those three things and the mechanism writes itself.",
-      "style": "note"
-     },
-     {
-      "type": "h3",
-      "text": "Sorting reactions into types"
-     },
-     {
       "type": "p",
-      "text": "The specification asks you to classify reactions into seven types. You have already met nearly all of them — now you name them. Two worked labels:"
+      "text": "Seven labels cover every organic reaction in the course — including all the reactions you met in Unit 1. Classify a reaction by looking at **what happens to the molecules**: bonds formed or broken, atoms or groups swapped, small units joined up."
+     },
+     {
+      "type": "def",
+      "term": "Addition",
+      "text": "Two or more reactant molecules react to form a **single product** — nothing else is made."
+     },
+     {
+      "type": "def",
+      "term": "Substitution",
+      "text": "An atom or group of atoms in a molecule is **replaced by a different atom or group**."
+     },
+     {
+      "type": "def",
+      "term": "Elimination",
+      "text": "A **small molecule** (such as H₂O or HBr) is **removed from** a larger one, leaving a C=C double bond."
+     },
+     {
+      "type": "def",
+      "term": "Oxidation",
+      "text": "A reaction involving the **gain of oxygen** or the **loss of hydrogen**."
+     },
+     {
+      "type": "def",
+      "term": "Reduction",
+      "text": "A reaction involving the **loss of oxygen** or the **gain of hydrogen**."
+     },
+     {
+      "type": "def",
+      "term": "Hydrolysis",
+      "text": "A reaction in which **water or hydroxide ions replace an atom in a molecule with an –OH group**."
+     },
+     {
+      "type": "def",
+      "term": "Polymerisation",
+      "text": "Many small **monomer** molecules join together end to end to form one long-chain **polymer**."
      },
      {
       "type": "table",
       "headers": [
-       "Reaction",
-       "Class",
+       "Type",
+       "Example equation",
        "How to spot it"
       ],
       "rows": [
        [
-        "ethene + Br₂ → 1,2-dibromoethane",
-        "**Addition**",
-        "two molecules become one — nothing is lost"
+        "Addition",
+        "CH₂=CH₂ + Br₂ → CH₂BrCH₂Br",
+        "Two molecules in, one product out"
        ],
        [
-        "C₂H₆ + Br₂ → C₂H₅Br + HBr (UV light)",
-        "**Substitution**",
-        "an atom or group is swapped for another"
+        "Substitution",
+        "CH₄ + Cl₂ → CH₃Cl + HCl (UV light)",
+        "An atom swapped for another"
        ],
        [
-        "ethanol → ethene + H₂O (conc. H₃PO₄, hot)",
-        "**Elimination**",
-        "a small molecule splits out of one molecule"
+        "Elimination",
+        "CH₃CH₂OH → CH₂=CH₂ + H₂O (conc. H₃PO₄, heat)",
+        "A small molecule splits out"
        ],
        [
-        "C₂H₅OH + 2[O] → CH₃COOH + H₂O",
-        "**Oxidation**",
-        "oxygen added, hydrogen removed — [O] in equations"
+        "Oxidation",
+        "CH₃CH₂OH + 2[O] → CH₃COOH + H₂O",
+        "Oxygen gained / hydrogen lost"
        ],
        [
+        "Reduction",
         "CuO + H₂ → Cu + H₂O",
-        "**Reduction**",
-        "oxygen removed — the reverse of oxidation"
+        "Oxygen lost"
        ],
        [
+        "Hydrolysis",
         "C₂H₅Br + H₂O → C₂H₅OH + HBr",
-        "**Hydrolysis**",
-        "a molecule is split apart by water"
+        "Water splits the molecule"
        ],
        [
-        "many ethene → poly(ethene)",
-        "**Polymerisation**",
-        "small molecules join end to end into one long chain"
-       ]
-      ]
-     },
-     {
-      "type": "p",
-      "text": "Oxidation and reduction travel together — a species is oxidised only if another is reduced (Topic 8). The same reaction can be classified either way depending on which partner you watch."
-     },
-     {
-      "type": "h3",
-      "text": "What a mechanism is"
-     },
-     {
-      "type": "def",
-      "term": "Reaction mechanism",
-      "text": "The **step-by-step account of how a reaction happens** — which bonds break, which bonds form, in what order, and which species attacks which. Curly arrows show where the electron pairs go."
-     },
-     {
-      "type": "p",
-      "text": "A balanced equation tells you what goes in and what comes out. A **mechanism** tells you how it got there. In this topic the mechanisms are drawn with **curly arrows** (movement of an electron pair) and **partial charges δ+ / δ−**."
-     },
-     {
-      "type": "h3",
-      "text": "How the bond breaks decides who attacks"
-     },
-     {
-      "type": "p",
-      "text": "A covalent bond can split in two ways (Topic 4) — and each way creates a different kind of attacker:"
-     },
-     {
-      "type": "table",
-      "headers": [
-       "Fission",
-       "What happens",
-       "What it creates"
-      ],
-      "rows": [
-       [
-        "**Homolytic**",
-        "each bonding atom keeps **one** electron",
-        "two **free radicals** — alkanes + halogens in UV light"
-       ],
-       [
-        "**Heterolytic**",
-        "**one atom takes both** electrons",
-        "a **cation and an anion** — the species that are **electrophiles or nucleophiles**"
+        "Polymerisation",
+        "n CH₂=CH₂ → (—CH₂—CH₂—)ₙ",
+        "Many monomers → one chain"
        ]
       ]
      },
      {
       "type": "callout",
       "variant": "exam",
-      "title": "Say it like this",
-      "text": "Heterolytic fission = **one atom takes both of the shared electrons**. The products are charged — and those charged species are exactly what attack in the mechanisms of this topic.",
-      "style": "note"
+      "title": "One reaction can carry two labels",
+      "text": "Oxidation and reduction happen together — one species is oxidised only if another is reduced. The same reaction can also fit more than one class: hydrogenating ethene (C₂H₄ + H₂ → C₂H₆) is **addition** and **reduction**. Classify from the change, and name both labels when both apply."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00200000",
+    "sectionKey": "reaction-mechanisms",
+    "number": "10.2",
+    "title": "Reaction Mechanisms",
+    "blurb": "What a mechanism shows that a balanced equation does not.",
+    "estMinutes": 10,
+    "spec": "10.2",
+    "specText": "understand the concept of a reaction mechanism",
+    "outline": [],
+    "content": [
+     {
+      "type": "def",
+      "term": "Reaction mechanism",
+      "text": "A **step-by-step account of how a reaction happens** — which bonds break, which bonds form, in what order, and which species attacks which."
      },
      {
-      "type": "h3",
-      "text": "The two attackers"
+      "type": "p",
+      "text": "A balanced equation tells you **what goes in and what comes out**. A mechanism tells you **how it got there**. Curly arrows show where the electron pairs move during the reaction."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Which **covalent bond breaks** — and whether one atom keeps both electrons or they are shared out.",
+       "Which **species attacks** — the nucleophile or the electrophile.",
+       "Which **new bond forms** — shown by a **curly arrow** drawn from the electron pair to the atom it bonds to.",
+       "**Partial charges δ+ and δ−** mark the polar bonds that let the attacking species find its target."
+      ]
+     },
+     {
+      "type": "p",
+      "text": "In this topic the mechanisms you describe are the **nucleophilic substitution** reactions of **primary** halogenoalkanes (section 10.9)."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00300000",
+    "sectionKey": "heterolytic-fission",
+    "number": "10.3",
+    "title": "Heterolytic Fission: Electrophiles and Nucleophiles",
+    "blurb": "Both bonding electrons to one atom — the products that attack.",
+    "estMinutes": 12,
+    "spec": "10.3",
+    "specText": "understand that heterolytic bond breaking results in species that are electrophiles or nucleophiles",
+    "outline": [],
+    "content": [
+     {
+      "type": "def",
+      "term": "Homolytic fission",
+      "text": "A covalent bond splits **evenly** — each bonding atom keeps **one** of the shared electrons. The products are **free radicals** (Topic 4)."
      },
      {
       "type": "def",
-      "term": "Nucleophile",
-      "text": "An **electron-pair donor**. It attacks an electron-deficient (δ+) carbon atom, using a **lone pair** of electrons to form a new covalent bond. Examples: **OH⁻, CN⁻, :NH₃** and water."
+      "term": "Heterolytic fission",
+      "text": "A covalent bond splits **unevenly** — **one atom takes both** of the shared electrons. The products are oppositely charged **ions**: a **cation and an anion**."
+     },
+     {
+      "type": "eq",
+      "code": "C₂H₅—Br  →  C₂H₅⁺  +  :Br⁻",
+      "caption": "Heterolytic fission of the C–Br bond: both bonding electrons go to the bromine atom."
+     },
+     {
+      "type": "p",
+      "text": "Heterolytic bond breaking results in species that are **electrophiles or nucleophiles** — the two attackers of organic chemistry:"
      },
      {
       "type": "def",
       "term": "Electrophile",
-      "text": "An **electron-pair acceptor** — attracted to regions of **high electron density**. You met it in Topic 5, attacking the electron-rich C=C double bond."
+      "text": "An **electron-pair acceptor** — attracted to regions of **high electron density**, such as the electron-rich C=C double bond (Topic 5)."
+     },
+     {
+      "type": "def",
+      "term": "Nucleophile",
+      "text": "An **electron-pair donor** — it attacks an electron-deficient (δ+) atom. Full definition in section 10.4."
+     },
+     {
+      "type": "callout",
+      "variant": "exam",
+      "title": "Name the fission from where the electrons go",
+      "text": "Both electrons of the shared pair to **one atom** = **heterolytic fission**; one electron each = **homolytic fission**. The ions produced by heterolytic fission are exactly the species that attack in the mechanisms of this topic."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00400000",
+    "sectionKey": "nucleophiles",
+    "number": "10.4",
+    "title": "Nucleophiles",
+    "blurb": "The definition, word for word — and the four to know.",
+    "estMinutes": 8,
+    "spec": "10.4",
+    "specText": "know the definition of the term ‘nucleophile’",
+    "outline": [],
+    "content": [
+     {
+      "type": "def",
+      "term": "Nucleophile",
+      "text": "An **electron-pair donor**. It uses a **lone pair** of electrons to form a **covalent bond** with an electron-deficient (δ+) atom."
+     },
+     {
+      "type": "list",
+      "items": [
+       "**OH⁻** — the hydroxide ion (aqueous alkali).",
+       "**:NH₃** — the ammonia molecule (alcoholic ammonia).",
+       "**CN⁻** — the cyanide ion (alcoholic potassium cyanide).",
+       "**H₂O** — water (aqueous silver nitrate in ethanol)."
+      ]
+     },
+     {
+      "type": "p",
+      "text": "All four attack the same target in this topic — the δ+ carbon atom of a polar C–X bond."
+     },
+     {
+      "type": "callout",
+      "variant": "exam",
+      "title": "The definition is a mark on its own",
+      "text": "A nucleophile is an **electron-pair donor** — the mark is for those words. ‘Something that attacks a positive carbon’ does not earn it. Keep the four examples ready."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00500000",
+    "sectionKey": "bond-polarity-and-mechanism",
+    "number": "10.5",
+    "title": "Bond Polarity and Mechanism Type",
+    "blurb": "A polar C–X bond puts a δ+ on carbon — that decides the mechanism.",
+    "estMinutes": 12,
+    "spec": "10.5",
+    "specText": "understand the link between bond polarity and the type of reaction mechanism a compound will undergo",
+    "outline": [],
+    "content": [
+     {
+      "type": "list",
+      "items": [
+       "The halogen is **more electronegative** than carbon, so the C–X bond is **polar**: **carbon is always δ+ and the halogen is always δ−**.",
+       "The polarity produces an **electron-deficient carbon atom, Cδ+** — the site that **nucleophiles attack**.",
+       "So **bond polarity decides the type of mechanism** the compound undergoes: a polar C–X bond invites **nucleophilic substitution**; an electron-rich C=C double bond invites **electrophilic addition** (Topic 5)."
+      ]
      },
      {
       "type": "figure",
@@ -17557,315 +17645,742 @@
      },
      {
       "type": "callout",
-      "variant": "exam",
-      "title": "The definition is a mark on its own",
-      "text": "A nucleophile is an **electron-pair donor** — write it exactly. 'Something that attacks positive carbon' does not earn the mark. Keep three examples ready: **OH⁻, CN⁻, :NH₃**.",
-      "style": "note"
-     },
-     {
-      "type": "h3",
-      "text": "Polarity is the trigger"
-     },
-     {
-      "type": "p",
-      "text": "Why does a halogenoalkane get attacked at all? Because the **C–X bond is polar**:"
-     },
-     {
-      "type": "list",
-      "items": [
-       "The halogen is **more electronegative** than carbon (Topic 3), so it pulls the bonding electrons towards itself.",
-       "The carbon is left with a **partial positive charge, Cδ+** — it is electron-deficient.",
-       "An electron-rich **nucleophile is attracted straight to that δ+ carbon** — so bond polarity decides the **type of mechanism** the compound undergoes."
-      ]
-     },
-     {
-      "type": "callout",
       "variant": "tip",
-      "title": "One chain to memorise",
-      "text": "**electronegativity → polar bond → δ+ carbon → nucleophilic attack.** It explains every reaction in the next section.",
-      "style": "note"
-     },
-     {
-      "type": "qa",
-      "items": [
-       {
-        "q": "Classify: ethene + Br₂, and C₂H₅OH + 2[O] → CH₃COOH + H₂O.",
-        "a": "**Addition** (two molecules become one) and **oxidation** ([O] supplies the oxygen)."
-       },
-       {
-        "q": "What is a nucleophile — exact wording?",
-        "a": "An **electron-pair donor** that attacks electron-deficient (δ+) carbon atoms — e.g. **OH⁻, CN⁻, :NH₃**."
-       },
-       {
-        "q": "Heterolytic fission creates which two kinds of attacking species?",
-        "a": "**Electrophiles or nucleophiles** — charged species from one atom taking **both** bonding electrons."
-       },
-       {
-        "q": "Why is the carbon in a C–Br bond electron-deficient?",
-        "a": "Bromine is **more electronegative**, so the bond is **polar** and the carbon carries the **δ+** charge."
-       }
-      ]
+      "title": "The chain that explains the topic",
+      "text": "**electronegativity → polar C–X bond → δ+ carbon → nucleophilic attack.**"
      }
     ]
    },
    {
-    "id": "cmv1eoi8j00g3jfqkhcx5myw8",
-    "sectionKey": "halogenoalkanes",
-    "number": "10.2",
-    "title": "Halogenoalkanes",
-    "blurb": "Polar C–X bonds and nucleophilic substitution.",
-    "estMinutes": 35,
-    "spec": "10.6 – 10.14",
-    "specText": "understand the nomenclature of halogenoalkanes and be able to draw their structural, displayed and skeletal formulae\nunderstand the distinction between primary, secondary and tertiary halogenoalkanes\nunderstand the reactions of halogenoalkanes with aqueous alkali, ethanolic potassium hydroxide, aqueous silver nitrate in ethanol, alcoholic ammonia and alcoholic potassium cyanide\nunderstand the mechanisms of the nucleophilic substitution reactions between primary halogenoalkanes and aqueous potassium hydroxide, and ammonia\nunderstand that experimental observations and data can be used to compare the relative rates of hydrolysis\nknow the trend in reactivity of primary, secondary and tertiary halogenoalkanes\nunderstand, in terms of bond enthalpy, the trend in reactivity of chloro-, bromo- and iodoalkanes",
+    "id": "cmv1eoi5t10r00600000",
+    "sectionKey": "halogenoalkanes-nomenclature",
+    "number": "10.6",
+    "title": "Halogenoalkanes: Nomenclature and Formulae",
+    "blurb": "CₙH₂ₙ₊₁X — naming, locants and the three formulae.",
+    "estMinutes": 20,
+    "spec": "10.6",
+    "specText": "understand the nomenclature of halogenoalkanes and be able to draw their structural, displayed and skeletal formulae",
     "outline": [],
     "content": [
      {
+      "type": "def",
+      "term": "Halogenoalkanes",
+      "text": "**Halogenoalkanes** (also called **haloalkanes**) have a **halogen atom attached to a hydrocarbon chain**. They have the **general formula CₙH₂ₙ₊₁X**, where X is a halogen atom (F, Cl, Br or I). The halogen atom may sit at the end of the chain or on any of the carbons, and the molecule has **only single bonds**."
+     },
+     {
+      "type": "h3",
+      "text": "Nomenclature"
+     },
+     {
+      "type": "p",
+      "text": "In the IUPAC system:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Identify the **longest chain of carbon atoms containing the halogen**.",
+       "Halogen substituents take the prefixes **fluoro-, chloro-, bromo- and iodo-**, listed in **alphabetical order** with the other substituents.",
+       "A **number (locant)** shows the position of the halogen. **No locant is needed with only two carbons** — with longer chains, a locant is needed to say where on the chain the halogen atom is situated."
+      ]
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Compound",
+       "Name"
+      ],
+      "rows": [
+       [
+        "CH₃Cl",
+        "chloromethane"
+       ],
+       [
+        "CH₃CH₂Br",
+        "bromoethane"
+       ],
+       [
+        "CH₃CH₂CH₂I",
+        "1-iodopropane"
+       ],
+       [
+        "CH₃CH(I)CH₃",
+        "2-iodopropane"
+       ]
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Branched chains and several halogens"
+     },
+     {
+      "type": "list",
+      "items": [
+       "If the chain is branched, the **longest continuous chain containing the halogen atom** gives the parent name and the side chains are named as **alkyl groups** — (CH₃)₃CBr is **2-bromo-2-methylpropane**.",
+       "With **more than one halogen atom**, use **di-, tri-, tetra-** and locants to say where they are: CH₃CH(Cl)CH(Cl)CH₃ is **2,3-dichlorobutane**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "The three formulae"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Structural** — atoms in order, bonds implied: CH₃CH₂Br.",
+       "**Displayed** — **every bond drawn** out, atom by atom.",
+       "**Skeletal** — the zig-zag line drawing; carbons at every bend and end, hydrogens left out, the halogen labelled."
+      ]
+     },
+     {
       "type": "callout",
-      "variant": "key",
-      "title": "One polar bond runs the whole show: Cδ+–Xδ−.",
-      "text": "Nucleophiles swap for the halogen under some conditions; hot ethanolic base tears the molecule apart instead. **Conditions decide the product.**",
-      "style": "note"
-     },
-     {
-      "type": "h3",
-      "text": "Naming and drawing them"
-     },
+      "variant": "exam",
+      "title": "Which formula is being asked for?",
+      "text": "Command words matter — ‘displayed’ means **every bond drawn**, ‘structural’ means the CH₃CH₂… text form, ‘skeletal’ means the zig-zag. Drawing the wrong one loses the mark even if the molecule is right."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00700000",
+    "sectionKey": "halogenoalkane-classes",
+    "number": "10.7",
+    "title": "Primary, Secondary and Tertiary Halogenoalkanes",
+    "blurb": "Count the alkyl groups on the carbon that carries the halogen.",
+    "estMinutes": 12,
+    "spec": "10.7",
+    "specText": "understand the distinction between primary, secondary and tertiary halogenoalkanes",
+    "outline": [],
+    "content": [
      {
       "type": "p",
-      "text": "A halogenoalkane is an alkane with one or more hydrogens swapped for halogens. Name it like a branched alkane — the halogen is just another substituent with a position number: **fluoro-, chloro-, bromo-, iodo-**. So CH₃CH₂CH₂CH₂Br is **1-bromobutane**, and (CH₃)₃CBr is **2-bromo-2-methylpropane**. Draw structural, displayed and skeletal formulae exactly as in Topic 4 — the rules have not changed."
+      "text": "Halogenoalkanes are classified as **primary, secondary or tertiary**, depending on the **number of alkyl groups attached to the carbon that carries the halogen** (the C–X carbon)."
      },
      {
-      "type": "h3",
-      "text": "Primary, secondary or tertiary?"
-     },
-     {
-      "type": "p",
-      "text": "Count the **alkyl groups attached to the carbon that carries the halogen**:"
+      "type": "table",
+      "headers": [
+       "Class",
+       "The C–X carbon is joined to",
+       "Example"
+      ],
+      "rows": [
+       [
+        "**Primary (1°)**",
+        "**one** alkyl group",
+        "1-chloroethane, CH₃CH₂Cl"
+       ],
+       [
+        "**Secondary (2°)**",
+        "**two** alkyl groups",
+        "2-bromopropane, CH₃CHBrCH₃"
+       ],
+       [
+        "**Tertiary (3°)**",
+        "**three** alkyl groups",
+        "2-iodo-2-methylpropane, (CH₃)₃CI"
+       ]
+      ]
      },
      {
       "type": "figure",
       "src": "/diagrams/t10-halo-classes.png",
       "srcDark": "/diagrams/t10-halo-classes-dark.png",
-      "alt": "1-bromobutane (primary), 2-bromobutane (secondary) and 2-bromo-2-methylpropane (tertiary) displayed formulae",
-      "caption": "One, two, three alkyl groups on the C–Br carbon — primary, secondary, tertiary."
-     },
-     {
-      "type": "list",
-      "items": [
-       "**Primary (1°)** — the C–X carbon is bonded to **one** alkyl group: 1-bromobutane.",
-       "**Secondary (2°)** — bonded to **two**: 2-bromobutane.",
-       "**Tertiary (3°)** — bonded to **three**: 2-bromo-2-methylpropane."
-      ]
-     },
-     {
-      "type": "h3",
-      "text": "Five nucleophiles, one target"
+      "alt": "General structures of primary, secondary and tertiary halogenoalkanes with examples",
+      "caption": "One, two or three alkyl groups on the carbon holding the halogen — that is the whole classification."
      },
      {
       "type": "p",
-      "text": "Every nucleophile attacks the same δ+ carbon. What differs is the **solvent and temperature** — and that decides the product and the role the attacking species plays:"
+      "text": "The **same types of reaction** are open to all three classes — but there is a **difference in the rate** at which they react (sections 10.10 and 10.12)."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00800000",
+    "sectionKey": "halogenoalkane-reactions",
+    "number": "10.8",
+    "title": "Reactions of Halogenoalkanes",
+    "blurb": "Five reagents, one target — the solvent decides the role of OH⁻.",
+    "estMinutes": 30,
+    "spec": "10.8",
+    "specText": "understand the reactions of halogenoalkanes with:",
+    "outline": [
+     "i    aqueous alkali, including KOH(aq) to produce alcohols (where the hydroxide ion acts as a nucleophile)",
+     "ii    ethanolic potassium hydroxide to produce alkenes by an elimination reaction (where the hydroxide ion acts as a base)",
+     "iii    aqueous silver nitrate in ethanol (where water acts as a nucleophile)",
+     "iv    alcoholic ammonia under pressure to produce amines (where the ammonia acts as a nucleophile)",
+     "v    alcoholic potassium cyanide to produce nitriles (where the cyanide ion acts as a nucleophile)",
+     "Students should know this is an example of increasing the length of the carbon chain."
+    ],
+    "content": [
+     {
+      "type": "p",
+      "text": "Warm the halogenoalkane with the reagent and note three things every time: the **reagent and its solvent**, the **role of the attacking species**, and the **product**. Many organic reactions are slow and the reagents volatile, so they are carried out by **heating under reflux** — boiling the mixture and condensing the vapour back into the flask continuously."
      },
      {
       "type": "table",
       "headers": [
        "Reagent",
-       "Conditions",
-       "Product",
-       "The attacker acts as"
+       "Condition",
+       "The attacker",
+       "Product"
       ],
       "rows": [
        [
-        "**KOH(aq)**",
-        "warm, aqueous",
-        "**alcohol**",
-        "**nucleophile** — OH⁻"
+        "**KOH(aq)** — aqueous alkali",
+        "heat under reflux, aqueous solution",
+        "OH⁻ acts as a **nucleophile**",
+        "**alcohol**"
        ],
        [
-        "**KOH in ethanol**",
-        "hot, reflux",
-        "**alkene** (elimination)",
-        "**base**"
+        "**ethanolic KOH**",
+        "heat under reflux, ethanolic solution",
+        "OH⁻ acts as a **base**",
+        "**alkene** (elimination)"
        ],
        [
-        "**AgNO₃(aq) in ethanol**",
-        "warm",
-        "alcohol (**hydrolysis**)",
-        "**nucleophile** — water"
+        "**aqueous AgNO₃ in ethanol**",
+        "ethanol as solvent",
+        "H₂O acts as a **nucleophile**",
+        "**alcohol** (hydrolysis) + AgX precipitate"
        ],
        [
-        "**NH₃ in ethanol**",
-        "heated, **under pressure**",
-        "**amine**",
-        "**nucleophile**"
+        "**alcoholic NH₃**",
+        "heat **under pressure in a sealed tube**",
+        "NH₃ acts as a **nucleophile**",
+        "**amine** (amino alkane)"
        ],
        [
-        "**KCN in ethanol**",
-        "reflux",
-        "**nitrile**",
-        "**nucleophile** — CN⁻"
+        "**alcoholic KCN**",
+        "reflux, aqueous alcoholic solution",
+        "CN⁻ acts as a **nucleophile**",
+        "**nitrile**"
        ]
       ]
      },
      {
-      "type": "callout",
-      "variant": "warning",
-      "title": "The classic trap: same reagent, different solvent",
-      "text": "**KOH(aq), warm → substitution → alcohol.** **KOH in ethanol, hot → elimination → alkene.** The hydroxide ion is the **nucleophile** in water and the **base** in ethanol — the conditions choose which job it does.",
-      "style": "note"
+      "type": "h3",
+      "text": "Aqueous alkali — nucleophilic substitution"
      },
      {
-      "type": "callout",
-      "variant": "exam",
-      "title": "KCN lengthens the chain",
-      "text": "The CN⁻ carbon **joins the molecule**, so KCN substitution **increases the length of the carbon chain by one** — the standard route from Cₙ to Cₙ₊₁.",
-      "style": "note"
+      "type": "eq",
+      "code": "CH₃CH₂Br  +  :OH⁻(aq)  →  CH₃CH₂OH  +  :Br⁻",
+      "caption": "Bromoethane + aqueous potassium hydroxide, heated under reflux → ethanol."
      },
      {
       "type": "h3",
-      "text": "The substitution mechanism"
+      "text": "Ethanolic potassium hydroxide — elimination"
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CH₂Cl  +  OH⁻  →  CH₃CH=CH₂  +  H₂O  +  Cl⁻",
+      "caption": "1-chloropropane + ethanolic KOH → propene. For unsymmetrical halogenoalkanes, a mixture of isomeric alkenes can form: CH₃CH₂CH(Cl)CH₃ gives but-2-ene and but-1-ene."
+     },
+     {
+      "type": "h3",
+      "text": "Aqueous silver nitrate in ethanol — hydrolysis"
      },
      {
       "type": "p",
-      "text": "For **primary** halogenoalkanes with aqueous KOH — and with ammonia — substitution runs in **one step**:"
+      "text": "**Water acts as the nucleophile** and replaces the halogen with an –OH group. The halide ion released then forms a **silver halide precipitate** with the silver ions — the basis of the rate comparisons in section 10.10."
+     },
+     {
+      "type": "h3",
+      "text": "Alcoholic ammonia — amines"
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CH₂Cl  +  2NH₃  →  CH₃CH₂CH₂NH₂  +  NH₄Cl",
+      "caption": "1-chloropropane + concentrated ammonia → propylamine. The reaction needs a sealed tube: ammonia does not condense in a heat-under-reflux apparatus, so it escapes unless sealed."
+     },
+     {
+      "type": "h3",
+      "text": "Alcoholic potassium cyanide — nitriles"
+     },
+     {
+      "type": "eq",
+      "code": "C₂H₅Br  +  KCN(aq/alc)  →  C₂H₅CN  +  KBr(aq)",
+      "caption": "Bromoethane + potassium cyanide → propanenitrile — the nitrile has one more carbon atom than the halogenoalkane."
+     },
+     {
+      "type": "p",
+      "text": "The KCN reaction is an example of **increasing the length of the carbon chain** — the carbon skeleton grows by one."
+     },
+     {
+      "type": "callout",
+      "variant": "warning",
+      "title": "Same reagent, different solvent",
+      "text": "KOH gives two different reactions: **aqueous** → substitution (OH⁻ = nucleophile); **ethanolic** → elimination (OH⁻ = base). Name the solvent **and** the role of the hydroxide ion in every answer."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r00900000",
+    "sectionKey": "nucleophilic-substitution-mechanisms",
+    "number": "10.9",
+    "title": "Nucleophilic Substitution Mechanisms",
+    "blurb": "Curly arrows for primary halogenoalkanes with OH⁻ and with NH₃.",
+    "estMinutes": 25,
+    "spec": "10.9",
+    "specText": "understand the mechanisms of the nucleophilic substitution reactions between primary halogenoalkanes and:",
+    "outline": [
+     "i    aqueous potassium hydroxide",
+     "ii    ammonia",
+     "SN1 and SN2 substitution mechanisms will be tested in Unit 4."
+    ],
+    "content": [
+     {
+      "type": "p",
+      "text": "In these reactions the attacking species is a **nucleophile** — hydroxide ions or ammonia molecules — and the substrate is a **primary** halogenoalkane."
+     },
+     {
+      "type": "h3",
+      "text": "Bromoethane with aqueous potassium hydroxide"
      },
      {
       "type": "figure",
       "src": "/diagrams/t10-substitution-mechanism.png",
       "srcDark": "/diagrams/t10-substitution-mechanism-dark.png",
-      "alt": "Three stages: hydroxide attacks the δ+ carbon, transition state with half-made and half-broken bonds, ethanol and bromide products",
-      "caption": "The lone pair attacks Cδ+ from the side opposite the halogen; the C–X pair leaves with X (heterolytic fission)."
+      "alt": "Curly arrow mechanism: hydroxide donates its lone pair to the δ+ carbon of bromoethane, the C–Br bond breaks heterolytically, ethanol and Br− form",
+      "caption": "One step: lone pair in from OH⁻, C–O bond forms, C–Br bond breaks heterolytically."
      },
      {
       "type": "list",
-      "ordered": true,
       "items": [
-       "The **OH⁻ lone pair** attacks the electron-deficient **Cδ+** — from the back, away from the halogen.",
-       "The **C–X bonding pair moves onto X** — heterolytic fission.",
-       "X⁻ leaves and OH takes its place: **C₂H₅OH + Br⁻** for bromoethane."
+       "The reaction starts by **donating a lone pair of electrons** from the **oxygen of the hydroxide** to the **electron-deficient carbon atom**.",
+       "A **C–O bond forms** and at the same time the electrons in the C–Br bond move to the Br atom — the **C–Br bond breaks**.",
+       "This type of bond breaking, where **both electrons of the shared pair are kept by one atom**, is **heterolytic fission**. The organic product is **ethanol**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "1-bromopropane with ammonia — two steps"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**First step** — the **nitrogen of an ammonia molecule donates its lone pair** to the electron-deficient carbon; a **C–N bond forms** and the C–Br bond breaks heterolytically, leaving a **positively charged ion**.",
+       "**Second step** — a **second ammonia molecule acts as a base** and **removes a hydrogen** from the ion formed.",
+       "The products are the **amine** (propylamine, CH₃CH₂CH₂NH₂) and **NH₄Br**."
+      ]
+     },
+     {
+      "type": "callout",
+      "variant": "exam",
+      "title": "Phrases that carry the marks",
+      "text": "**lone pair donated** · **attacked the electron-deficient (δ+) carbon** · **C–X bond breaks heterolytically** · **second NH₃ acts as a base**. The labels **SN1 and SN2** for these mechanisms are tested in Unit 4."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01000000",
+    "sectionKey": "comparing-hydrolysis-rates",
+    "number": "10.10",
+    "title": "Comparing Rates of Hydrolysis",
+    "blurb": "Water as the nucleophile — and what the precipitate shows.",
+    "estMinutes": 22,
+    "spec": "10.10",
+    "specText": "understand that experimental observations and data can be used to compare the relative rates of hydrolysis of:",
+    "outline": [
+     "i    primary, secondary and tertiary structural isomers of a halogenoalkane",
+     "ii    primary chloro-, bromo- and iodoalkanes using aqueous silver nitrate in ethanol"
+    ],
+    "content": [
+     {
+      "type": "def",
+      "term": "Hydrolysis",
+      "text": "A reaction in which **water or hydroxide ions replace an atom in a molecule with an –OH group**."
+     },
+     {
+      "type": "eq",
+      "code": "RX  +  H₂O  →  ROH  +  H⁺  +  X⁻",
+      "caption": "R is an alkyl group and X a halogen — e.g. CH₃CH₂Cl + H₂O → CH₃CH₂OH + H⁺ + Cl⁻ (or written as ROH + HX)."
+     },
+     {
+      "type": "p",
+      "text": "In **aqueous silver nitrate in ethanol** the halogenoalkane hydrolyses, and the **halide ion** released reacts with the silver ions to form a **precipitate of silver halide**:"
+     },
+     {
+      "type": "eq",
+      "code": "X⁻(aq)  +  Ag⁺(aq)  →  AgX(s)",
+      "caption": "The sooner the precipitate appears, the faster the hydrolysis."
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Precipitate",
+       "Colour",
+       "From"
+      ],
+      "rows": [
+       [
+        "**AgCl**",
+        "**white**",
+        "chloroalkane"
+       ],
+       [
+        "**AgBr**",
+        "**cream**",
+        "bromoalkane"
+       ],
+       [
+        "**AgI**",
+        "**yellow**",
+        "iodoalkane"
+       ]
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "What the observations show"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Same structure, different halogen:** 1-**iodobutane is fastest**, 1-bromobutane is in between, 1-**chlorobutane is slowest** — the weaker the C–X bond, the faster the hydrolysis (section 10.13).",
+       "**Same halogen, different class:** **tertiary** halogenoalkanes react **rapidly** — a precipitate is seen as soon as the silver nitrate is added; **secondary** halogenoalkanes react **slowly**; **primary** halogenoalkanes **hardly react with water** (section 10.12)."
       ]
      },
      {
       "type": "p",
-      "text": "Whether a given substitution goes through one step like this or a two-step route via a carbocation (**SN2 vs SN1**) is tested in **Unit 4** — for now, draw the one-step attack cleanly and label the partial charges."
-     },
+      "text": "Rate of hydrolysis can be compared by noting the **time taken for the precipitate to appear** — and the precipitate colour doubles as a **test to identify the halogen** in the halogenoalkane."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01100000",
+    "sectionKey": "core-practical-5",
+    "number": "10.11",
+    "title": "Core Practical 5: Rates of Hydrolysis",
+    "blurb": "The silver nitrate investigation that ranks hydrolysis rates.",
+    "estMinutes": 15,
+    "spec": "10.11",
+    "specText": "CORE PRACTICAL 5\nInvestigation of the rates of hydrolysis of some halogenoalkanes.",
+    "outline": [],
+    "content": [
      {
-      "type": "eq",
-      "code": "C₂H₅Br + OH⁻ → C₂H₅OH + Br⁻",
-      "caption": "bromoethane + hydroxide — the substitution in one line"
+      "type": "p",
+      "text": "**Core Practical 5** investigates the rates of hydrolysis of some halogenoalkanes — comparing halogenoalkanes that differ in the **halogen they carry** or in their **class** (primary, secondary, tertiary)."
      },
      {
       "type": "h3",
-      "text": "How fast? Two trends in hydrolysis"
-     },
-     {
-      "type": "p",
-      "text": "**Hydrolysis** = splitting by water. Warm **aqueous silver nitrate in ethanol** times it for you: water is the nucleophile, and as the halide leaves it forms the **silver halide precipitate** (AgCl white, AgBr cream, AgI yellow — Topic 8). The faster the cloudiness appears, the faster the hydrolysis."
+      "text": "Method"
      },
      {
       "type": "list",
       "items": [
-       "**Down the group: C–I hydrolyses fastest, then C–Br, then C–Cl.** The reason is **bond enthalpy** — C–I is the **weakest** bond, so it breaks most easily.",
-       "**Within one halogen: tertiary > secondary > primary** for reactivity."
+       "To each of three test tubes add **aqueous silver nitrate (1 cm³)** and **ethanol (2 cm³)**, and stand them in a **water bath at 60 °C** — the **ethanol dissolves the halogenoalkane**, which is insoluble in water.",
+       "After **five minutes**, add **2 drops** of a different halogenoalkane to each tube — e.g. 1-chlorobutane, 1-bromobutane, 1-iodobutane.",
+       "**Shake, loosely cork**, and observe each tube at 60 °C for **ten minutes**, noting the **time taken for the precipitate to appear** and its colour."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Results and conclusions"
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Halogenoalkane",
+       "Observation",
+       "Conclusion"
+      ],
+      "rows": [
+       [
+        "1-iodobutane",
+        "yellow precipitate — appears **fastest**",
+        "**C–I is the weakest bond** → fastest hydrolysis"
+       ],
+       [
+        "1-bromobutane",
+        "cream precipitate — slower",
+        "in between"
+       ],
+       [
+        "1-chlorobutane",
+        "white precipitate — **slowest**",
+        "**C–Cl is the strongest bond** → slowest hydrolysis"
+       ]
+      ]
+     },
+     {
+      "type": "p",
+      "text": "The **colour** of the precipitate identifies the halogen; the **time taken** to appear ranks the rates. The same experiment therefore doubles as the suggested practical that uses **silver nitrate solution to identify the halogen present in halogenoalkanes**."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01200000",
+    "sectionKey": "halogenoalkane-reactivity-trend",
+    "number": "10.12",
+    "title": "Reactivity of Primary, Secondary and Tertiary Halogenoalkanes",
+    "blurb": "Tertiary > secondary > primary — carbocation stability decides.",
+    "estMinutes": 8,
+    "spec": "10.12",
+    "specText": "know the trend in reactivity of primary, secondary and tertiary halogenoalkanes",
+    "outline": [],
+    "content": [
+     {
+      "type": "p",
+      "text": "For the **same halogen**, the trend in reactivity is:"
+     },
+     {
+      "type": "eq",
+      "code": "tertiary  >  secondary  >  primary  >  methyl",
+      "caption": "Rate of reaction increases as the carbocation becomes more stable."
+     },
+     {
+      "type": "list",
+      "items": [
+       "The rate of reaction increases due to the **increase in stability of the carbocations** formed as the C–X bond breaks.",
+       "**Tertiary carbocations are more stable than secondary carbocations**, which are **more stable than primary carbocations**."
+      ]
+     },
+     {
+      "type": "callout",
+      "variant": "tip",
+      "title": "Compare like with like",
+      "text": "Hold the **halogen constant** when you compare the classes (10.12), and hold the **class constant** when you compare the halogens (10.13). One variable at a time."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01300000",
+    "sectionKey": "bond-enthalpy-reactivity",
+    "number": "10.13",
+    "title": "Bond Enthalpy and Reactivity",
+    "blurb": "Down the group the C–X bond gets longer, weaker — and faster to break.",
+    "estMinutes": 10,
+    "spec": "10.13",
+    "specText": "understand, in terms of bond enthalpy, the trend in reactivity of chloro-, bromo- and iodoalkanes",
+    "outline": [],
+    "content": [
+     {
+      "type": "list",
+      "items": [
+       "Down the halogen group the **carbon–halogen bond becomes longer and hence weaker**, so **less energy is required to break it**.",
+       "The rate of reaction therefore **increases** from chloroalkane to bromoalkane to iodoalkane."
+      ]
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Bond",
+       "Mean bond enthalpy / kJ mol⁻¹"
+      ],
+      "rows": [
+       [
+        "C–F",
+        "+467"
+       ],
+       [
+        "C–Cl",
+        "+346"
+       ],
+       [
+        "C–Br",
+        "+290"
+       ],
+       [
+        "C–I",
+        "+228"
+       ]
+      ]
+     },
+     {
+      "type": "list",
+      "items": [
+       "A **strong bond requires more energy to break** the bond; a **weaker bond requires less** — so **iodoalkanes hydrolyse fastest** and fluoroalkanes hardly react at all."
       ]
      },
      {
       "type": "callout",
       "variant": "warning",
       "title": "Bond enthalpy wins — not polarity",
-      "text": "Do **not** explain the rate trend with polarity: C–Cl is the **most polar** of the three bonds, yet chloroalkanes hydrolyse **slowest**. **Bond enthalpy decides.**",
-      "style": "note"
+      "text": "C–F is the **most polar** C–X bond, yet fluoroalkanes are the **least reactive**, because C–F is the **strongest** bond (+467 kJ mol⁻¹). Rates here depend on **bond enthalpy**, not on polarity."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01400000",
+    "sectionKey": "core-practical-6",
+    "number": "10.14",
+    "title": "Core Practical 6: Chlorination of 2-methylpropan-2-ol",
+    "blurb": "From a tertiary alcohol to a halogenoalkane with concentrated HCl.",
+    "estMinutes": 10,
+    "spec": "10.14",
+    "specText": "CORE PRACTICAL 6\nChlorination of 2-methylpropan-2-ol with concentrated hydrochloric acid.",
+    "outline": [
+     "Further suggested practicals:",
+     "i    the use of silver nitrate solution to identify the halogen present in halogenoalkanes",
+     "ii    preparation of 1-bromobutane from butan-1-ol, potassium bromide and sulfuric acid"
+    ],
+    "content": [
+     {
+      "type": "p",
+      "text": "**Core Practical 6** chlorinates **2-methylpropan-2-ol** (a **tertiary alcohol**) with **concentrated hydrochloric acid** — the –OH group is **replaced by chlorine**:"
+     },
+     {
+      "type": "eq",
+      "code": "(CH₃)₃COH  +  HCl  →  (CH₃)₃CCl  +  H₂O",
+      "caption": "2-methylpropan-2-ol + concentrated hydrochloric acid → 2-chloro-2-methylpropane."
      },
      {
       "type": "p",
-      "text": "**Core Practical 5** investigates exactly these hydrolysis rates, and **Core Practical 6** runs the reaction in reverse: chlorine from concentrated HCl swaps onto the tertiary alcohol 2-methylpropan-2-ol, making the tertiary halogenoalkane 2-chloro-2-methylpropane."
+      "text": "This is the halogenoalkane-forming twin of section 10.8: the alcohol supplies the carbon skeleton and the halogen takes the place of the –OH group."
      },
      {
-      "type": "callout",
-      "variant": "tip",
-      "title": "The short version",
-      "text": "**Water → substitution. Hot ethanol → elimination. Pressure + NH₃ → amine. KCN → one carbon longer. Rate order C–I > C–Br > C–Cl, because bond enthalpy decreases.**",
-      "style": "note"
+      "type": "h3",
+      "text": "Further suggested practicals"
      },
      {
-      "type": "qa",
+      "type": "list",
       "items": [
-       {
-        "q": "Classify 1-bromobutane, 2-bromobutane and 2-bromo-2-methylpropane.",
-        "a": "**Primary** (C–Br carbon bonded to 1 alkyl group), **secondary** (2), **tertiary** (3)."
-       },
-       {
-        "q": "KOH(aq) vs KOH in ethanol on a halogenoalkane — products and the role of OH⁻?",
-        "a": "Aqueous, warm: **nucleophilic substitution → alcohol**, OH⁻ as **nucleophile**. Ethanolic, hot: **elimination → alkene**, OH⁻ as **base**."
-       },
-       {
-        "q": "Which hydrolyses fastest — 1-chlorobutane, 1-bromobutane or 1-iodobutane — and why?",
-        "a": "**1-iodobutane.** C–I has the **lowest bond enthalpy** (weakest bond), so it breaks fastest — **not** because of polarity."
-       },
-       {
-        "q": "What does KCN do to the carbon chain?",
-        "a": "**Lengthens it by one carbon** — CN⁻ attacks the δ+ carbon and its carbon joins the chain, giving a **nitrile**."
-       }
+       "Use **silver nitrate solution** to identify the **halogen present in halogenoalkanes** — the precipitate colours of section 10.10 (white AgCl, cream AgBr, yellow AgI).",
+       "**Preparation of 1-bromobutane** from **butan-1-ol, potassium bromide and sulfuric acid**."
       ]
      }
     ]
    },
    {
-    "id": "cmv1eoi8k00g5jfqk0ju7hp84",
-    "sectionKey": "alcohols",
-    "number": "10.3",
-    "title": "Alcohols: Class, Reactions and Oxidation",
-    "blurb": "Primary, secondary, tertiary — and what oxidising does to each.",
-    "estMinutes": 35,
-    "spec": "10.15 – 10.20",
-    "specText": "understand the nomenclature of alcohols and be able to draw their structural, displayed and skeletal formulae\nunderstand the distinction between primary, secondary and tertiary alcohols\nunderstand the reactions of alcohols with oxygen in air (combustion), with halogenating agents, and with concentrated phosphoric acid to form alkenes by elimination\nunderstand that potassium dichromate(VI) in dilute sulfuric acid can oxidise primary alcohols to aldehydes (distilled as they form) or carboxylic acids (under reflux), and secondary alcohols to ketones\nunderstand the techniques used in the preparation and purification of a liquid organic compound",
+    "id": "cmv1eoi5t10r01500000",
+    "sectionKey": "alcohols-nomenclature",
+    "number": "10.15",
+    "title": "Alcohols: Nomenclature and Formulae",
+    "blurb": "The –OH group, the -ol suffix and the position number.",
+    "estMinutes": 15,
+    "spec": "10.15",
+    "specText": "understand the nomenclature of alcohols and be able to draw their structural, displayed and skeletal formulae",
     "outline": [],
     "content": [
      {
-      "type": "callout",
-      "variant": "key",
-      "title": "Count the alkyl groups on the C–OH carbon: one = primary, two = secondary, three = tertiary.",
-      "text": "The class decides what oxidation does — and tertiary alcohols refuse to oxidise at all.",
-      "style": "note"
+      "type": "def",
+      "term": "Alcohols",
+      "text": "**Alcohols** carry a **hydroxyl group, –OH**, attached to a saturated carbon chain. They take the suffix **-ol** with a **position number** showing which carbon bears the –OH group."
      },
      {
-      "type": "h3",
-      "text": "Naming and classifying"
+      "type": "list",
+      "items": [
+       "With only **two carbons**, no locant is needed: **ethanol**, CH₃CH₂OH — the same rule as the halogenoalkanes.",
+       "Draw them as **structural** (CH₃CH₂CH₂OH), **displayed** (every bond drawn) and **skeletal** (zig-zag) formulae, exactly as in Topic 4 — skeletal formulae never hide the **oxygen atom**."
+      ]
      },
+     {
+      "type": "table",
+      "headers": [
+       "Formula",
+       "Name"
+      ],
+      "rows": [
+       [
+        "CH₃OH",
+        "methanol"
+       ],
+       [
+        "CH₃CH₂OH",
+        "ethanol"
+       ],
+       [
+        "CH₃CH₂CH₂OH",
+        "propan-1-ol"
+       ],
+       [
+        "CH₃CH(OH)CH₃",
+        "propan-2-ol"
+       ],
+       [
+        "(CH₃)₃COH",
+        "2-methylpropan-2-ol"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01600000",
+    "sectionKey": "alcohol-classes",
+    "number": "10.16",
+    "title": "Primary, Secondary and Tertiary Alcohols",
+    "blurb": "The same counting rule as the halogenoalkanes.",
+    "estMinutes": 10,
+    "spec": "10.16",
+    "specText": "understand the distinction between primary, secondary and tertiary alcohols",
+    "outline": [],
+    "content": [
      {
       "type": "p",
-      "text": "Alcohols take the suffix **-ol** with a position number: **propan-1-ol** and **propan-2-ol** are the two structural isomers of C₃H₇OH — same molecular formula, –OH in a different place. Then classify exactly as you did for halogenoalkanes:"
+      "text": "Alcohols are classified by the **number of alkyl groups attached to the carbon that carries the –OH group**:"
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Class",
+       "The C–OH carbon is joined to",
+       "Example"
+      ],
+      "rows": [
+       [
+        "**Primary (1°)**",
+        "**one** alkyl group",
+        "ethanol, butan-1-ol"
+       ],
+       [
+        "**Secondary (2°)**",
+        "**two** alkyl groups",
+        "propan-2-ol"
+       ],
+       [
+        "**Tertiary (3°)**",
+        "**three** alkyl groups",
+        "2-methylpropan-2-ol"
+       ]
+      ]
      },
      {
       "type": "figure",
       "src": "/diagrams/t10-alcohol-classes.png",
       "srcDark": "/diagrams/t10-alcohol-classes-dark.png",
-      "alt": "Ethanol (primary), propan-2-ol (secondary) and 2-methylpropan-2-ol (tertiary) displayed formulae",
-      "caption": "Count the alkyl groups on the C–OH carbon — one, two, three."
-     },
-     {
-      "type": "list",
-      "items": [
-       "**Primary** — **one** alkyl group on the C–OH carbon: ethanol, propan-1-ol.",
-       "**Secondary** — **two**: propan-2-ol.",
-       "**Tertiary** — **three**: 2-methylpropan-2-ol."
-      ]
-     },
-     {
-      "type": "h3",
-      "text": "Burning it and halogenating it"
+      "alt": "General structures of primary, secondary and tertiary alcohols with examples",
+      "caption": "One, two or three alkyl groups on the carbon holding the –OH — the class that decides the oxidation products."
      },
      {
       "type": "p",
-      "text": "Alcohols **burn in air** — complete combustion gives carbon dioxide and water, which is why ethanol fuels spirit burners:"
+      "text": "The class matters because it decides what oxidation gives (section 10.18): primary alcohols give aldehydes and carboxylic acids, secondary alcohols give ketones — and tertiary alcohols are **not oxidised** under these conditions."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01700000",
+    "sectionKey": "alcohol-reactions",
+    "number": "10.17",
+    "title": "Reactions of Alcohols",
+    "blurb": "Combustion, three halogenating agents, and elimination to an alkene.",
+    "estMinutes": 25,
+    "spec": "10.17",
+    "specText": "understand the reactions of alcohols with:",
+    "outline": [
+     "i    oxygen in air (combustion)",
+     "ii    halogenating agents",
+     "•    PCl5 to produce chloroalkanes (including its use as a qualitative test for the presence of the –OH group)",
+     "•    50% concentrated sulfuric acid and potassium bromide to produce bromoalkanes",
+     "•    red phosphorus and iodine to produce iodoalkanes",
+     "iii    concentrated phosphoric acid to form alkenes by elimination",
+     "Descriptions of the mechanisms of these reactions are not required."
+    ],
+    "content": [
+     {
+      "type": "h3",
+      "text": "Combustion"
+     },
+     {
+      "type": "p",
+      "text": "Alcohols burn in air (**combustion**). Complete combustion gives **carbon dioxide and water**:"
      },
      {
       "type": "eq",
-      "code": "C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O",
-      "caption": "combustion of ethanol"
+      "code": "C₂H₅OH  +  3O₂  →  2CO₂  +  3H₂O",
+      "caption": "Complete combustion of ethanol."
      },
      {
-      "type": "p",
-      "text": "Swap the –OH for a halogen with these **halogenating agents** (mechanisms not required):"
+      "type": "h3",
+      "text": "Halogenating agents — swap the –OH for a halogen"
      },
      {
       "type": "table",
@@ -17878,218 +18393,277 @@
        [
         "**PCl₅**",
         "chloroalkane",
-        "also a **qualitative test for the –OH group** — misty fumes of HCl form"
+        "also a **qualitative test for the –OH group**"
        ],
        [
         "**50% concentrated H₂SO₄ + KBr**",
         "bromoalkane",
-        "the acid and KBr make HBr in situ"
+        "the acid and potassium bromide supply HBr"
        ],
        [
         "**red phosphorus + iodine**",
         "iodoalkane",
-        "PI₃ made in situ"
+        ""
        ]
       ]
      },
      {
-      "type": "h3",
-      "text": "Dehydration: alcohol → alkene"
+      "type": "eq",
+      "code": "C₂H₅OH  +  PCl₅  →  C₂H₅Cl  +  POCl₃  +  HCl",
+      "caption": "Misty fumes of HCl are given off — a positive test for the presence of the –OH group."
      },
      {
-      "type": "p",
-      "text": "Hot **concentrated phosphoric acid** eliminates water — an **elimination** (dehydration) reaction, the reverse of adding water across an alkene's double bond:"
+      "type": "h3",
+      "text": "Elimination — forming an alkene"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Hot **concentrated phosphoric acid** (a catalyst) forms **alkenes by elimination** of water from the alcohol."
+      ]
      },
      {
       "type": "eq",
-      "code": "C₂H₅OH → C₂H₄ + H₂O",
-      "caption": "conc. H₃PO₄, hot — ethene distilled off as it forms"
+      "code": "C₂H₅OH  →  CH₂=CH₂  +  H₂O",
+      "caption": "Ethanol → ethene with concentrated H₃PO₄."
      },
      {
-      "type": "h3",
-      "text": "Oxidation: the class decides"
-     },
+      "type": "callout",
+      "variant": "tip",
+      "title": "Not required",
+      "text": "**Descriptions of the mechanisms of these reactions are not required** by the specification — products, reagents and conditions are what earn the marks."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01800000",
+    "sectionKey": "oxidation-of-alcohols",
+    "number": "10.18",
+    "title": "Oxidation of Alcohols",
+    "blurb": "Dichromate decides by class — and by distil-or-reflux.",
+    "estMinutes": 28,
+    "spec": "10.18",
+    "specText": "understand that potassium dichromate(VI) in dilute sulfuric acid can oxidise:",
+    "outline": [
+     "i    primary alcohols to produce aldehydes (which give a positive result with Benedict's or Fehling's solution) if the product is distilled as it forms",
+     "ii    primary alcohols to produce carboxylic acids (which give a positive result with sodium carbonate or sodium hydrogencarbonate) if the reagents are heated under reflux",
+     "iii    secondary alcohols to produce ketones",
+     "In equations, the oxidising agent can be represented by [O]."
+    ],
+    "content": [
      {
       "type": "p",
-      "text": "The oxidising agent is **potassium dichromate(VI), K₂Cr₂O₇, in dilute sulfuric acid** — written as **[O]** in equations. As it oxidises, the colour flips from **orange (Cr₂O₇²⁻) to green (Cr³⁺)**. What you get depends entirely on the alcohol's class — and on distil versus reflux:"
+      "text": "The oxidising agent is **potassium dichromate(VI), K₂Cr₂O₇, in dilute sulfuric acid**. In equations it is written **[O]**. The **class** of the alcohol and the **apparatus** decide the product."
      },
      {
       "type": "figure",
       "src": "/diagrams/t10-oxidation-flow.png",
       "srcDark": "/diagrams/t10-oxidation-flow-dark.png",
-      "alt": "Flow chart: primary alcohol distilled to aldehyde or refluxed to carboxylic acid, secondary to ketone, tertiary no reaction",
-      "caption": "Primary gives you a choice — distil the aldehyde off as it forms, or reflux and let it oxidise all the way to the acid."
+      "alt": "Flow diagram: primary alcohol to aldehyde by distillation then to carboxylic acid by reflux; secondary alcohol to ketone; tertiary alcohol not oxidised",
+      "caption": "Primary → aldehyde → carboxylic acid; secondary → ketone; tertiary stops."
+     },
+     {
+      "type": "h3",
+      "text": "Primary → aldehyde (distil as it forms)"
+     },
+     {
+      "type": "list",
+      "items": [
+       "If the product is **distilled as it forms**, the oxidation stops at the **aldehyde** — aldehydes give a **positive result with Benedict's or Fehling's solution**."
+      ]
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CH₂OH  +  [O]  →  CH₃CH₂CHO  +  H₂O",
+      "caption": "Propan-1-ol → propanal."
+     },
+     {
+      "type": "h3",
+      "text": "Primary → carboxylic acid (heat under reflux)"
+     },
+     {
+      "type": "list",
+      "items": [
+       "If the reagents are **heated under reflux**, the aldehyde stays in the mixture and oxidation continues to the **carboxylic acid** — carboxylic acids give a **positive result with sodium carbonate or sodium hydrogencarbonate** (effervescence of CO₂)."
+      ]
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CHO  +  [O]  →  CH₃CH₂COOH",
+      "caption": "Propanal → propanoic acid."
+     },
+     {
+      "type": "h3",
+      "text": "Secondary → ketone"
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CHOHCH₃  +  [O]  →  CH₃COCH₃  +  H₂O",
+      "caption": "Propan-2-ol → propanone — there is no further oxidation."
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Tertiary alcohols are not oxidised** — the orange dichromate stays orange."
+      ]
      },
      {
       "type": "table",
       "headers": [
        "Class",
        "Product",
-       "Conditions",
-       "Test for the product"
+       "Condition",
+       "Positive test"
       ],
       "rows": [
        [
-        "**Primary**",
+        "Primary",
         "**aldehyde**",
-        "**distil** it off as it forms",
-        "Benedict's or Fehling's solution: **positive**"
+        "**distil as it forms**",
+        "Benedict's or Fehling's solution"
        ],
        [
-        "**Primary**",
+        "Primary",
         "**carboxylic acid**",
-        "**heat under reflux** with excess oxidant",
-        "sodium carbonate or hydrogencarbonate: **fizzing (CO₂)**"
+        "**heat under reflux**",
+        "sodium carbonate / sodium hydrogencarbonate"
        ],
        [
-        "**Secondary**",
+        "Secondary",
         "**ketone**",
         "reflux",
-        "no further oxidation possible"
+        "—"
        ],
        [
-        "**Tertiary**",
-        "**no reaction**",
+        "Tertiary",
+        "no oxidation",
         "—",
-        "dichromate **stays orange**"
+        "dichromate stays orange"
        ]
       ]
-     },
-     {
-      "type": "eq",
-      "code": "CH₃CH₂CH₂OH + [O] → CH₃CH₂CHO + H₂O",
-      "caption": "propan-1-ol → propanal (aldehyde) — distil as it forms · Core Practical 7"
-     },
-     {
-      "type": "eq",
-      "code": "CH₃CH₂CHO + [O] → CH₃CH₂COOH",
-      "caption": "propanal → propanoic acid (carboxylic acid) — keep under reflux"
-     },
-     {
-      "type": "eq",
-      "code": "CH₃CHOHCH₃ + [O] → CH₃COCH₃ + H₂O",
-      "caption": "propan-2-ol → propanone (ketone)"
-     },
-     {
-      "type": "p",
-      "text": "Why the two techniques give two products: **distilling** removes the aldehyde from the hot oxidising mixture before it can be attacked again; **refluxing** keeps every molecule in contact with the oxidant until it has absorbed all the oxygen it can."
      },
      {
       "type": "callout",
       "variant": "exam",
       "title": "Two phrases carry the marks",
-      "text": "Aldehyde: **'distil off as it forms'**. Carboxylic acid: **'heat under reflux'**. And name the tests — aldehydes give a **positive Benedict's or Fehling's**; carboxylic acids **fizz with sodium carbonate**.",
-      "style": "note"
-     },
-     {
-      "type": "h3",
-      "text": "Purifying the liquid product"
-     },
+      "text": "**‘distilled as it forms’** → aldehyde; **‘heated under reflux’** → carboxylic acid. Quote the colour change too: **orange dichromate to green** (Cr₂O₇²⁻ → Cr³⁺)."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r01900000",
+    "sectionKey": "preparation-and-purification",
+    "number": "10.19",
+    "title": "Preparation and Purification of a Liquid Organic Compound",
+    "blurb": "Five techniques, in the order a preparation uses them.",
+    "estMinutes": 20,
+    "spec": "10.19",
+    "specText": "understand, the following techniques in the preparation and purification of a liquid organic compound:",
+    "outline": [
+     "i    heating under reflux",
+     "ii    extraction with a solvent using a separating funnel",
+     "iii    distillation",
+     "iv    drying with an anhydrous salt",
+     "v    boiling temperature determination"
+    ],
+    "content": [
      {
       "type": "p",
-      "text": "The specification names five techniques for preparing and purifying a liquid organic compound:"
+      "text": "The specification names **five techniques** for the preparation and purification of a liquid organic compound. In a preparation they usually run in this order:"
      },
      {
       "type": "list",
       "items": [
-       "**heating under reflux** — boil without losing volatile liquid, so the reaction runs to completion",
-       "**distillation** — collect the fraction that boils at the lowest temperature",
-       "**extraction with a separating funnel** — wash with an immiscible solvent and run off the layers",
-       "**drying with an anhydrous salt** — the salt soaks up the last traces of water",
-       "**boiling temperature determination** — a pure liquid boils at a sharp, constant temperature; compare with the data value to judge purity"
+       "**Heating under reflux** — boil the reaction mixture and condense the vapour **back into the flask continuously**, so volatile reagents are not lost and the heating can be carried out for a longer period of time.",
+       "**Distillation** — the liquid with the **lowest boiling temperature distils over first**; collect the fraction that is your product (this is how an aldehyde is distilled as it forms, section 10.18).",
+       "**Extraction with a solvent using a separating funnel** — shake the product with an **immiscible solvent**; the layers separate and the layer holding the product can be **run off**.",
+       "**Drying with an anhydrous salt** — an **anhydrous** (water-free) salt **binds the traces of water** left in the organic liquid; the dried liquid is then decanted off.",
+       "**Boiling temperature determination** — a **pure liquid boils at a fixed temperature**; a sharp, steady boiling temperature confirms the identity and purity of the product."
       ]
      },
      {
       "type": "callout",
       "variant": "tip",
-      "title": "Core Practical 7 strings it all together",
-      "text": "Oxidise **propan-1-ol** and collect **propanal** by distillation — then push on to **propanoic acid** under reflux.",
-      "style": "note"
-     },
-     {
-      "type": "qa",
-      "items": [
-       {
-        "q": "How do you get propanal from propan-1-ol? And propanoic acid?",
-        "a": "Propanal: acidified **K₂Cr₂O₇**, heat, and **distil the aldehyde off as it forms**. Propanoic acid: **reflux** with excess oxidant so the aldehyde stays in the mix and oxidises further."
-       },
-       {
-        "q": "What is observed when each class of alcohol meets acidified dichromate?",
-        "a": "Primary and secondary: **orange → green**. Tertiary: **no change** — not oxidised under these conditions."
-       },
-       {
-        "q": "Name the reagent that turns an alcohol into a chloroalkane, and the observation that makes it a test.",
-        "a": "**PCl₅** — misty fumes of **HCl** form, so it is a **qualitative test for the –OH group**."
-       },
-       {
-        "q": "Which acid dehydrates an alcohol, and to what?",
-        "a": "Hot **concentrated phosphoric acid (H₃PO₄)** — an **elimination** that removes H₂O and gives an **alkene**."
-       }
-      ]
+      "title": "Why reflux first, distil later",
+      "text": "**Reflux** keeps everything in the flask so the reaction goes to completion; **distillation** then separates the product by its boiling temperature. Same apparatus idea, two different jobs."
      }
     ]
    },
    {
-    "id": "cmv1eoi8l00g7jfqkemp1cg6c",
-    "sectionKey": "mass-spectrometry",
-    "number": "10.4",
-    "title": "Mass Spectra of Molecules",
-    "blurb": "Fragmentation patterns as molecular fingerprints.",
-    "estMinutes": 30,
+    "id": "cmv1eoi5t10r02000000",
+    "sectionKey": "core-practical-7",
+    "number": "10.20",
+    "title": "Core Practical 7: Oxidation of Propan-1-ol",
+    "blurb": "One alcohol, two techniques, two different products.",
+    "estMinutes": 15,
+    "spec": "10.20",
+    "specText": "CORE PRACTICAL 7\nThe oxidation of propan-1-ol to produce propanal and propanoic acid.",
+    "outline": [
+     "Further suggested practical:",
+     "Investigation of reactions of primary and secondary alcohols, including propan-1-ol and propan-2-ol"
+    ],
+    "content": [
+     {
+      "type": "p",
+      "text": "**Core Practical 7** oxidises **propan-1-ol** with acidified **potassium dichromate(VI)** to produce **propanal** and **propanoic acid** — which one you get depends on the apparatus:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Distil the product as it forms** → **propanal** (the aldehyde) — it leaves the reaction mixture before it can be oxidised further.",
+       "**Heat under reflux** → **propanoic acid** (the carboxylic acid) — the aldehyde stays in contact with the oxidising agent."
+      ]
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CH₂OH  +  [O]  →  CH₃CH₂CHO  +  H₂O",
+      "caption": "Then, under reflux: CH₃CH₂CHO + [O] → CH₃CH₂COOH."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Check which product you have: propanal gives a **positive Benedict's or Fehling's** test; propanoic acid **effervesces with sodium carbonate or sodium hydrogencarbonate**.",
+       "The preparation runs through the techniques of section 10.19: **reflux → distillation → extraction → drying → boiling temperature**."
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Further suggested practical: investigating the reactions of **primary and secondary alcohols**, including propan-1-ol and propan-2-ol."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r02100000",
+    "sectionKey": "mass-spectra",
+    "number": "10.21",
+    "title": "Mass Spectra of Organic Compounds",
+    "blurb": "The molecular ion gives Mᵣ — the fragments give the structure.",
+    "estMinutes": 22,
     "spec": "10.21",
     "specText": "be able to interpret data from mass spectra to suggest possible structures of simple organic compounds using the m/z of the molecular ion and fragmentation patterns",
     "outline": [],
     "content": [
      {
-      "type": "callout",
-      "variant": "key",
-      "title": "Two clues, one spectrum: the M⁺ peak tells you the molecule's size, the fragment peaks tell you its pieces.",
-      "text": "Match the pieces to a structure — that is the whole skill.",
-      "style": "note"
-     },
-     {
-      "type": "h3",
-      "text": "The molecular ion"
-     },
-     {
       "type": "p",
-      "text": "Inside the mass spectrometer (Topic 2), high-energy electrons bombarding the sample knock **one electron off** each molecule, making the **molecular ion**:"
+      "text": "Inside the **mass spectrometer** (Topic 2), high-energy electrons knock an electron off the molecule, forming the **molecular ion**:"
      },
      {
       "type": "eq",
-      "code": "M(g) → M⁺(g) + e⁻",
-      "caption": "the molecular ion — its m/z equals the relative molecular mass, Mᵣ"
+      "code": "M(g)  →  M⁺(g)  +  e⁻",
+      "caption": "The molecular ion — its m/z equals the relative molecular mass, Mᵣ."
      },
      {
       "type": "list",
       "items": [
-       "The peak at the **largest m/z** is the **molecular ion, M⁺**.",
-       "Its **m/z value = the relative molecular mass (Mᵣ)** of the compound — size, straight away."
+       "The **molecular ion peak (M⁺)** has the **largest m/z** in the cluster — its m/z gives the **relative molecular mass** of the compound.",
+       "A small **M+1 peak** appears because about **1.1% of carbon atoms are ¹³C**.",
+       "The bombardment is violent: some molecular ions **shake apart (fragment)**:"
       ]
-     },
-     {
-      "type": "h3",
-      "text": "The M+1 peak"
-     },
-     {
-      "type": "list",
-      "items": [
-       "A small peak at **M+1** comes from **¹³C** — about **1.1%** of carbon atoms carry it (Topic 1).",
-       "The height of the M+1 peak ≈ the **number of carbon atoms** in the molecule."
-      ]
-     },
-     {
-      "type": "h3",
-      "text": "Fragmentation"
-     },
-     {
-      "type": "p",
-      "text": "The bombardment is violent: some molecular ions **shake apart**. Each fragment that keeps the positive charge shows up as its own peak:"
      },
      {
       "type": "eq",
-      "code": "M⁺ → fragment⁺ + radical",
-      "caption": "only the charged fragments reach the detector — the radicals are lost"
+      "code": "M⁺  →  fragment⁺  +  radical",
+      "caption": "Only the charged fragments are detected — the radical is lost."
      },
      {
       "type": "table",
@@ -18118,11 +18692,7 @@
      },
      {
       "type": "p",
-      "text": "Read each fragment as a subtraction: **fragment m/z = M − what broke off**. A peak at M − 15 means a CH₃ group left; a peak at M − 29 means C₂H₅ left. Rebuild the pieces into a structure that fits."
-     },
-     {
-      "type": "h3",
-      "text": "Worked example"
+      "text": "Read every fragment as a subtraction: **fragment m/z = M − the piece that was lost**. Matching the fragments to possible structures is how you **suggest possible structures** of the compound from its spectrum."
      },
      {
       "type": "worked",
@@ -18134,83 +18704,42 @@
        "Peak at **29** = 58 − 29: the chain split in the middle, leaving **C₂H₅⁺** — the signature of the **straight chain**, butane CH₃CH₂CH₂CH₃.",
        "Isomer B's dominant peak at **57** = 58 − 15 means it mainly loses a methyl from a **central carbon** — the signature of the branched chain, **methylpropane** (CH₃)₃CH."
       ],
-      "answer": "A = butane (fragments at 43 and 29); B = methylpropane (dominant 57). Same M⁺, different fragmentation — the pieces tell the structures apart."
+      "answer": "A = butane (fragments at 43 and 29); B = methylpropane (dominant fragment at 57)."
      },
      {
       "type": "figure",
       "src": "/diagrams/t10-mass-spectrum.png",
       "srcDark": "/diagrams/t10-mass-spectrum-dark.png",
-      "alt": "Mass spectrum of butane with peaks at m/z 15, 29, 43 (base peak), 57, 58 (M+) and a tiny M+1 at 59",
-      "caption": "Read right to left: M⁺ = 58 gives the size, then subtract to name each piece."
-     },
-     {
-      "type": "callout",
-      "variant": "tip",
-      "title": "The reading order",
-      "text": "**M⁺ first** (the size) → **M+1** (the carbon count) → **subtract each fragment** from M⁺ to see what broke off → **rebuild** the pieces into a structure.",
-      "style": "note"
-     },
-     {
-      "type": "qa",
-      "items": [
-       {
-        "q": "What does the M⁺ peak tell you?",
-        "a": "Its **m/z = the relative molecular mass** of the compound — the size of the molecule."
-       },
-       {
-        "q": "Where does the M+1 peak come from?",
-        "a": "**¹³C** — about 1.1% of carbon atoms. Its height ≈ the **number of carbon atoms**."
-       },
-       {
-        "q": "A spectrum shows M⁺ = 46 and a strong peak at 31. What broke off?",
-        "a": "46 − 31 = 15 — a **CH₃ group**. (The compound is ethanol: the 31 fragment is CH₂OH⁺, the piece that kept the charge.)"
-       },
-       {
-        "q": "Two isomers share M⁺ = 58. How does the spectrum separate them?",
-        "a": "By their **fragmentation patterns** — the straight chain splits in the middle (peak at 29); the branched isomer loses one methyl cleanly (dominant peak at 57)."
-       }
-      ]
+      "alt": "A mass spectrum showing the molecular ion peak, M+1 peak and fragment peaks",
+      "caption": "Read right to left: the molecular ion gives Mᵣ, then subtract the fragments to rebuild the molecule."
      }
     ]
    },
    {
-    "id": "cmv1eoi8l00g9jfqkbtlusj9x",
+    "id": "cmv1eoi5t10r02200000",
     "sectionKey": "infrared-spectroscopy",
-    "number": "10.5",
+    "number": "10.22",
     "title": "Infrared Spectroscopy",
-    "blurb": "Bonds vibrate at characteristic frequencies — and absorb IR.",
-    "estMinutes": 30,
-    "spec": "10.22 – 10.23",
-    "specText": "be able to use infrared spectra, or data from infrared spectra, to deduce functional groups present in organic compounds, and predict infrared absorptions, given wavenumber data, due to familiar functional groups including C–H, C=C, O–H, C=O, C–X and N–H stretching absorptions",
-    "outline": [],
+    "blurb": "Bonds absorb characteristic wavenumbers — the functional-group checker.",
+    "estMinutes": 20,
+    "spec": "10.22",
+    "specText": "be able to use infrared spectra, or data from infrared spectra, to deduce functional groups present in organic compounds, and predict infrared absorptions, given wavenumber data, due to familiar functional groups including:",
+    "outline": [
+     "i    C–H stretching absorptions in alkanes, alkenes and aldehydes",
+     "ii    C=C stretching absorption in alkenes",
+     "iii    O–H stretching absorptions in alcohols and carboxylic acids",
+     "iv    C=O stretching absorptions in aldehydes, ketones and carboxylic acids",
+     "v    C–X stretching absorption in halogenoalkanes",
+     "vi    N–H stretching absorption in amines"
+    ],
     "content": [
-     {
-      "type": "callout",
-      "variant": "key",
-      "title": "Every bond vibrates at its own frequency — shine IR through a sample and each bond type absorbs at its own wavenumber.",
-      "text": "The dips in the spectrum name the functional groups.",
-      "style": "note"
-     },
-     {
-      "type": "h3",
-      "text": "How the spectrum forms"
-     },
      {
       "type": "list",
       "items": [
-       "Covalent bonds **vibrate** — stretching and bending — at **characteristic frequencies**.",
-       "A bond **absorbs infrared radiation only when the frequency matches** one of its vibrations.",
-       "Position is reported as **wavenumber in cm⁻¹** — higher wavenumber, higher frequency.",
-       "The spectrum plots **transmittance against wavenumber**: each absorption shows as a **downward dip**."
+       "Covalent bonds **vibrate** at characteristic frequencies.",
+       "A bond **absorbs infrared radiation** whose frequency matches one of its vibrations — the spectrum plots **absorbance against wavenumber (cm⁻¹)**.",
+       "You are **given wavenumber data** in the exam — use it to **deduce the functional groups** present and to **predict infrared absorptions**."
       ]
-     },
-     {
-      "type": "h3",
-      "text": "The absorptions to know"
-     },
-     {
-      "type": "p",
-      "text": "In the exam you are given wavenumber data — but recognising the famous ones on sight is what makes the data usable:"
      },
      {
       "type": "table",
@@ -18266,81 +18795,63 @@
       ]
      },
      {
-      "type": "callout",
-      "variant": "tip",
-      "title": "Two shapes are worth more than ten numbers",
-      "text": "**Broad = O–H** (hydrogen bonding smears the absorption). **Sharp = C=O.** Broad 2500 – 3300 **plus** a sharp C=O together = a **carboxylic acid**.",
-      "style": "note"
+      "type": "figure",
+      "src": "/diagrams/t10-ir-spectrum.png",
+      "srcDark": "/diagrams/t10-ir-spectrum-dark.png",
+      "alt": "An infrared spectrum with labelled absorption dips for O–H, C=O and C–H and the fingerprint region",
+      "caption": "Each dip is a bond absorbing at its vibration frequency — match the dips to the table."
      },
      {
       "type": "h3",
       "text": "The fingerprint region"
      },
      {
-      "type": "p",
-      "text": "Below about **1500 cm⁻¹** the dip pattern is unique to each molecule — the **fingerprint region**. Identify a compound by matching its fingerprint against a known spectrum. It is also where the **C–X absorptions** of halogenoalkanes sit."
-     },
-     {
-      "type": "h3",
-      "text": "Worked example"
-     },
-     {
-      "type": "worked",
-      "title": "Deduce the functional groups",
-      "problem": "A liquid's IR spectrum shows a strong sharp dip at 1715 cm⁻¹, a very broad absorption stretching from 2500 to 3300 cm⁻¹, and sharp dips near 2950 cm⁻¹. What is present?",
-      "steps": [
-       "**1715 cm⁻¹, sharp** — inside the **C=O** window (1630 – 1820).",
-       "**2500 – 3300, very broad** — the **O–H of a carboxylic acid** (a plain alcohol's O–H would start at 3200).",
-       "**2950, sharp** — ordinary **C–H**."
-      ],
-      "answer": "**Carboxylic acid** — C=O + acid O–H + C–H. Consistent with ethanoic acid, CH₃COOH."
-     },
-     {
-      "type": "figure",
-      "src": "/diagrams/t10-ir-spectrum.png",
-      "srcDark": "/diagrams/t10-ir-spectrum-dark.png",
-      "alt": "Infrared spectrum with a broad O–H dip at 3200–3550, a sharp C–H dip near 2950, a deep sharp C=O dip at 1715 and the fingerprint region below 1500",
-      "caption": "Each dip names a bond — broad O–H, sharp C=O, and the unique fingerprint below 1500 cm⁻¹."
-     },
-     {
-      "type": "h3",
-      "text": "IR and the greenhouse effect"
-     },
-     {
-      "type": "p",
-      "text": "The same physics runs the climate. **CO₂, H₂O vapour and CH₄** have bonds that vibrate at infrared frequencies — they **absorb the infrared radiation the Earth re-emits**, then re-radiate part of it back towards the surface. More of these gases, more trapped radiation: the **enhanced greenhouse effect** and global warming."
+      "type": "list",
+      "items": [
+       "Below about **1500 cm⁻¹** the absorption pattern is unique to each compound — the **fingerprint** used to match a spectrum against known ones."
+      ]
      },
      {
       "type": "callout",
       "variant": "tip",
-      "title": "Same cause, different consequence",
-      "text": "Lab spectroscopy and the greenhouse effect both come down to one idea: **bonds absorb IR at their vibration frequencies**.",
-      "style": "note"
+      "title": "Two shapes are worth more than ten numbers",
+      "text": "A **broad** dip near 3200–3550 cm⁻¹ means **O–H (alcohol)**; a **sharp, strong** dip near 1700 cm⁻¹ means **C=O**. A very broad 2500–3300 cm⁻¹ dip **plus** a C=O dip suggests a **carboxylic acid**."
+     },
+     {
+      "type": "callout",
+      "variant": "tip",
+      "title": "The same physics, outside the lab",
+      "text": "**CO₂, H₂O vapour and CH₄** absorb outgoing infrared radiation through their **bond vibrations** — the cause of the **enhanced greenhouse effect**."
+     }
+    ]
+   },
+   {
+    "id": "cmv1eoi5t10r02300000",
+    "sectionKey": "core-practical-8",
+    "number": "10.23",
+    "title": "Core Practical 8: Analysis of Unknowns",
+    "blurb": "Combine the spectra and the test-tube observations.",
+    "estMinutes": 12,
+    "spec": "10.23",
+    "specText": "CORE PRACTICAL 8\nAnalysis of some inorganic and organic unknowns.",
+    "outline": [],
+    "content": [
+     {
+      "type": "p",
+      "text": "**Core Practical 8** analyses **inorganic and organic unknowns** by combining the evidence of this topic — no single technique is conclusive on its own:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Mass spectrum** — the **molecular ion m/z** gives the Mᵣ; the **fragmentation pattern** suggests the carbon skeleton (section 10.21).",
+       "**Infrared spectrum** — the positions and shapes of the absorptions **deduce the functional groups** present (section 10.22).",
+       "**Silver nitrate test** — the **precipitate colour** identifies the halogen in a halogenoalkane: white AgCl, cream AgBr, yellow AgI (section 10.10).",
+       "**Oxidation tests** — **Benedict's or Fehling's solution** for an aldehyde; **sodium carbonate or sodium hydrogencarbonate** effervescence for a carboxylic acid (section 10.18)."
+      ]
      },
      {
       "type": "p",
-      "text": "**Core Practical 8** closes the topic: unknowns identified by combining the chemical tests from Topics 8 and 10 with **mass spectra** and **IR spectra** — exactly the toolkit this topic has built."
-     },
-     {
-      "type": "qa",
-      "items": [
-       {
-        "q": "Which absorptions identify an alcohol? An aldehyde?",
-        "a": "Alcohol: **broad O–H at 3200 – 3550 cm⁻¹**. Aldehyde: **sharp C=O at 1630 – 1820 cm⁻¹**."
-       },
-       {
-        "q": "What is the fingerprint region and what is it for?",
-        "a": "Below about **1500 cm⁻¹** — a dip pattern **unique to each molecule**, used to identify a compound by matching to a known spectrum."
-       },
-       {
-        "q": "How do greenhouse gases interact with infrared radiation?",
-        "a": "Their bonds **vibrate at IR frequencies**, so **CO₂, H₂O and CH₄ absorb outgoing IR** and re-emit part of it back — the **enhanced greenhouse effect**."
-       },
-       {
-        "q": "What does wavenumber measure?",
-        "a": "The **frequency of vibration** a bond absorbs, in **cm⁻¹** — higher wavenumber, higher frequency."
-       }
-      ]
+      "text": "Match **all** the evidence — molecular mass, fragments, functional groups and test-tube observations — before naming the unknown."
      }
     ]
    }
