@@ -141,7 +141,7 @@ export function AppShell({
       >
         skip to content
       </a>
-      <Nav route={route} />
+      <Nav route={route} topics={topics} total={stats.sections} />
       <main id="main" className="flex-1">
         {view}
       </main>
