@@ -105,6 +105,28 @@ print("replacing sections:", old_titles)
 
 topic["sections"] = sections
 
+# ---------- flashcards: append alcohol cards (11-14) if missing ----------
+NEW_CARDS = [
+    (11, "CORE", "Name the reagent and condition to make a chloroalkane, a bromoalkane and an iodoalkane from an alcohol.",
+     "Chloro: PCl₅, room temperature (tertiary alcohols: concentrated HCl, shake to mix). Bromo: KBr + 50% concentrated H₂SO₄, heat under reflux. Iodo: iodine + moist red phosphorus, warm. All substitution."),
+    (12, "TRAP", "Why must the H₂SO₄ be 50% — not 100% concentrated — when making HBr from KBr?",
+     "100% concentrated sulfuric acid oxidises bromide ions to bromine, so no hydrogen bromide is produced for the reaction."),
+    (13, "CORE", "Why do alcohols have much higher boiling temperatures than alkanes of comparable relative molecular mass?",
+     "Alcohols form hydrogen bonding between molecules; alkanes only have weak London forces and haloalkanes dipole–dipole forces. Hydrogen bonding is stronger, so it requires more energy to break the bonds."),
+    (14, "EXAM", "Put the purification techniques for a liquid organic product in order.",
+     "Heating under reflux (the reaction) → distillation (collect the distillate at the product's approximate boiling point range) → solvent extraction with a separating funnel → drying with an anhydrous salt → boiling temperature determination against the data booklet values."),
+]
+existing_fronts = {c["front"] for c in topic.get("cards", [])}
+other_card_ids = {c["id"] for t in data if t["slug"] != slug for c in t.get("cards", [])}
+for ordn, tag, front, back in NEW_CARDS:
+    cid = f"cmv1eoi8l00gt10card{ordn:02d}"
+    if cid in other_card_ids:
+        print("CARD ID CLASH:", cid)
+        sys.exit(1)
+    if front not in existing_fronts:
+        topic.setdefault("cards", []).append({"id": cid, "ord": ordn, "front": front, "back": back, "tag": tag})
+        existing_fronts.add(front)
+
 # estHours follows the per-section estimates, as in the original topics
 total_min = sum(s["estMinutes"] for s in sections)
 topic["estHours"] = round(total_min / 60, 1)

@@ -17270,7 +17270,7 @@
   "title": "Organic Chemistry: Halogenoalkanes, Alcohols and Spectra",
   "subtitle": "Nucleophiles, substitution, alcohols — and reading mass + IR spectra.",
   "summary": "Mechanisms and nucleophiles; halogenoalkane reactions; classifying and oxidising alcohols; mass spectrometry fragmentation; infrared spectroscopy.",
-  "estHours": 6.4,
+  "estHours": 7.3,
   "sections": [
    {
     "id": "cmv1eoi5t10r00000000",
@@ -17312,7 +17312,7 @@
        ],
        [
         "10.4",
-        "know the definition of the term 'nucleophile'"
+        "know the definition of the term ‘nucleophile’"
        ],
        [
         "10.5",
@@ -17328,11 +17328,11 @@
        ],
        [
         "10.8",
-        "understand the reactions of halogenoalkanes with:\ni   aqueous alkali, including KOH(aq) to produce alcohols (where the hydroxide ion acts as a nucleophile)\nii   ethanolic potassium hydroxide to produce alkenes by an elimination reaction (where the hydroxide ion acts as a base)\niii   aqueous silver nitrate in ethanol (where water acts as a nucleophile)\niv   alcoholic ammonia under pressure to produce amines (where the ammonia acts as a nucleophile)\nv   alcoholic potassium cyanide to produce nitriles (where the cyanide ion acts as a nucleophile)"
+        "understand the reactions of halogenoalkanes with:\ni   aqueous alkali, including KOH(aq) to produce alcohols (where the hydroxide ion acts as a nucleophile)\nii   ethanolic potassium hydroxide to produce alkenes by an elimination reaction (where the hydroxide ion acts as a base)\niii   aqueous silver nitrate in ethanol (where water acts as a nucleophile)\niv   alcoholic ammonia under pressure to produce amines (where the ammonia acts as a nucleophile)\nv   alcoholic potassium cyanide to produce nitriles (where the cyanide ion acts as a nucleophile)\nStudents should know this is an example of increasing the length of the carbon chain."
        ],
        [
         "10.9",
-        "understand the mechanisms of the nucleophilic substitution reactions between primary halogenoalkanes and:\ni   aqueous potassium hydroxide\nii   ammonia"
+        "understand the mechanisms of the nucleophilic substitution reactions between primary halogenoalkanes and:\ni   aqueous potassium hydroxide\nii   ammonia\nSN1 and SN2 substitution mechanisms will be tested in Unit 4."
        ],
        [
         "10.10",
@@ -17352,7 +17352,7 @@
        ],
        [
         "10.14",
-        "CORE PRACTICAL 6 — Chlorination of 2-methylpropan-2-ol with concentrated hydrochloric acid."
+        "CORE PRACTICAL 6 — Chlorination of 2-methylpropan-2-ol with concentrated hydrochloric acid.\nFurther suggested practicals:\ni   the use of silver nitrate solution to identify the halogen present in halogenoalkanes\nii   preparation of 1-bromobutane from butan-1-ol, potassium bromide and sulfuric acid"
        ],
        [
         "10.15",
@@ -17364,19 +17364,19 @@
        ],
        [
         "10.17",
-        "understand the reactions of alcohols with:\ni   oxygen in air (combustion)\nii   halogenating agents:\n•   PCl₅ to produce chloroalkanes (including its use as a qualitative test for the presence of the –OH group)\n•   50% concentrated sulfuric acid and potassium bromide to produce bromoalkanes\n•   red phosphorus and iodine to produce iodoalkanes\niii   concentrated phosphoric acid to form alkenes by elimination"
+        "understand the reactions of alcohols with:\ni   oxygen in air (combustion)\nii   halogenating agents\n•   PCl5 to produce chloroalkanes (including its use as a qualitative test for the presence of the –OH group)\n•   50% concentrated sulfuric acid and potassium bromide to produce bromoalkanes\n•   red phosphorus and iodine to produce iodoalkanes\niii   concentrated phosphoric acid to form alkenes by elimination\nDescriptions of the mechanisms of these reactions are not required."
        ],
        [
         "10.18",
-        "understand that potassium dichromate(VI) in dilute sulfuric acid can oxidise:\ni   primary alcohols to produce aldehydes (which give a positive result with Benedict's or Fehling's solution) if the product is distilled as it forms\nii   primary alcohols to produce carboxylic acids (which give a positive result with sodium carbonate or sodium hydrogencarbonate) if the reagents are heated under reflux\niii   secondary alcohols to produce ketones"
+        "understand that potassium dichromate(VI) in dilute sulfuric acid can oxidise:\ni   primary alcohols to produce aldehydes (which give a positive result with Benedict's or Fehling's solution) if the product is distilled as it forms\nii   primary alcohols to produce carboxylic acids (which give a positive result with sodium carbonate or sodium hydrogencarbonate) if the reagents are heated under reflux\niii   secondary alcohols to produce ketones\nIn equations, the oxidising agent can be represented by [O]."
        ],
        [
         "10.19",
-        "understand the following techniques in the preparation and purification of a liquid organic compound:\ni   heating under reflux\nii   extraction with a solvent using a separating funnel\niii   distillation\niv   drying with an anhydrous salt\nv   boiling temperature determination"
+        "understand, the following techniques in the preparation and purification of a liquid organic compound:\ni   heating under reflux\nii   extraction with a solvent using a separating funnel\niii   distillation\niv   drying with an anhydrous salt\nv   boiling temperature determination"
        ],
        [
         "10.20",
-        "CORE PRACTICAL 7 — The oxidation of propan-1-ol to produce propanal and propanoic acid."
+        "CORE PRACTICAL 7 — The oxidation of propan-1-ol to produce propanal and propanoic acid.\nFurther suggested practical:\nInvestigation of reactions of primary and secondary alcohols, including propan-1-ol and propan-2-ol"
        ],
        [
         "10.21",
@@ -17384,7 +17384,7 @@
        ],
        [
         "10.22",
-        "be able to use infrared spectra, or data from infrared spectra, to deduce functional groups present in organic compounds, and predict infrared absorptions, given wavenumber data, due to familiar functional groups including:\ni   C–H stretching absorptions in alkanes, alkenes and aldehydes\nii   C=C stretching absorption in alkenes\niii   O–H stretching absorptions in alcohols and carboxylic acids\niv   C=O stretching absorptions in aldehydes, ketones and carboxylic acids\nv   C–X stretching absorption in halogenoalkanes\nvi   N–H stretching absorption in amines"
+        "be able to use infrared spectra, or data from infrared spectra, to deduce functional groups present in organic compounds, and predict infrared absorptions, given wavenumber data, due to familiar functional groups including:\ni   C–H stretching absorptions in alkanes, alkenes and aldehydes\nii   C=C stretching absorption in alkenes\niii   O–H stretching absorptions in alcohols and carboxylic acids\niv   C=O stretching absorptions in aldehydes, ketones and carboxylic acids\nv   C–X stretching absorption in halogenoalkanes\nvi    N–H stretching absorption in amines"
        ],
        [
         "10.23",
@@ -18244,8 +18244,8 @@
     "sectionKey": "alcohols-nomenclature",
     "number": "10.15",
     "title": "Alcohols: Nomenclature and Formulae",
-    "blurb": "The –OH group, the -ol suffix and the position number.",
-    "estMinutes": 15,
+    "blurb": "The –OH group, the -ol suffix, the bond angles and the position number.",
+    "estMinutes": 25,
     "spec": "10.15",
     "specText": "understand the nomenclature of alcohols and be able to draw their structural, displayed and skeletal formulae",
     "outline": [],
@@ -18253,19 +18253,39 @@
      {
       "type": "def",
       "term": "Alcohols",
-      "text": "**Alcohols** carry a **hydroxyl group, –OH**, attached to a saturated carbon chain. They take the suffix **-ol** with a **position number** showing which carbon bears the –OH group."
+      "text": "**Alcohols** have the **general formula CₙH₂ₙ₊₁OH**. The **functional group is –OH**. They are **good organic solvents**, and are also used as **raw materials in organic synthesis**."
+     },
+     {
+      "type": "h3",
+      "text": "Bond angles in alcohols"
      },
      {
       "type": "list",
       "items": [
-       "With only **two carbons**, no locant is needed: **ethanol**, CH₃CH₂OH — the same rule as the halogenoalkanes.",
-       "Draw them as **structural** (CH₃CH₂CH₂OH), **displayed** (every bond drawn) and **skeletal** (zig-zag) formulae, exactly as in Topic 4 — skeletal formulae never hide the **oxygen atom**."
+       "All the **H–C–H bonds** and the **C–C–O** bonds are **109.5°** (**tetrahedral shape**) — there are **4 bond pairs of electrons** repelling to a position of **minimum repulsion**.",
+       "The **H–O–C bond is 104.5°** (**bent line shape**) — the oxygen has **2 bond pairs and 2 lone pairs**. **Lone pairs repel more than bond pairs**, so the bond angle is reduced."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Naming an alcohol"
+     },
+     {
+      "type": "p",
+      "text": "In the IUPAC system:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Identify the **longest chain of carbon atoms containing the –OH group**.",
+       "To show that the compound is an alcohol, the **suffix –e of the parent alkane is changed to -ol**.",
+       "The **carbon number is added** to show the **location of the –OH group**. **No locant is needed with only two carbons** — with longer chains, a locant tells us where on the chain the –OH group is situated."
       ]
      },
      {
       "type": "table",
       "headers": [
-       "Formula",
+       "Compound",
        "Name"
       ],
       "rows": [
@@ -18284,11 +18304,50 @@
        [
         "CH₃CH(OH)CH₃",
         "propan-2-ol"
-       ],
-       [
-        "(CH₃)₃COH",
-        "2-methylpropan-2-ol"
        ]
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Branched chains"
+     },
+     {
+      "type": "p",
+      "text": "If the carbon chain is branched, the **longest continuous carbon chain containing the –OH group** is given the **parent name**, and the side chains are named as **alkyl groups**."
+     },
+     {
+      "type": "worked",
+      "title": "Name it step by step",
+      "problem": "Name the alcohol CH₃CH(OH)CH(CH₃)CH₃.",
+      "steps": [
+       "**Parent chain: butane** — the longest chain containing the –OH group has four carbons.",
+       "**–OH group location: 2** — the –OH sits on carbon 2 (counting from the nearer end).",
+       "**Substituents location: 3-methyl** — a methyl group on carbon 3.",
+       "The alkane name is **3-methylbutane**, so the alcohol name is **3-methylbutan-2-ol**."
+      ],
+      "answer": "3-methylbutan-2-ol"
+     },
+     {
+      "type": "h3",
+      "text": "More than one –OH group"
+     },
+     {
+      "type": "list",
+      "items": [
+       "If there is **more than one –OH group**, use **di-, tri-, tetra-**, with **locants** to say where they are.",
+       "In this case the **root word ends with ‘ane’**: CH₃CH(OH)CH(OH)CH₃ is **butane-2,3-diol**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "The three formulae"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Structural** — atoms in order, bonds implied: CH₃CH₂CH₂OH.",
+       "**Displayed** — **every bond drawn** out, atom by atom.",
+       "**Skeletal** — the zig-zag line drawing; carbons at every bend and end, hydrogens left out — but the **O–H is always shown**."
       ]
      }
     ]
@@ -18298,38 +18357,38 @@
     "sectionKey": "alcohol-classes",
     "number": "10.16",
     "title": "Primary, Secondary and Tertiary Alcohols",
-    "blurb": "The same counting rule as the halogenoalkanes.",
-    "estMinutes": 10,
+    "blurb": "Count the alkyl groups on the C–OH carbon — the class decides the oxidation.",
+    "estMinutes": 18,
     "spec": "10.16",
     "specText": "understand the distinction between primary, secondary and tertiary alcohols",
     "outline": [],
     "content": [
      {
       "type": "p",
-      "text": "Alcohols are classified by the **number of alkyl groups attached to the carbon that carries the –OH group**:"
+      "text": "Alcohols are **classified into different classes depending on how the –OH group is positioned on the chain of carbon atoms**. The **chemical behaviour, especially oxidation, often depends on the structural type**."
      },
      {
       "type": "table",
       "headers": [
        "Class",
-       "The C–OH carbon is joined to",
-       "Example"
+       "The carbon carrying the –OH is…",
+       "Examples"
       ],
       "rows": [
        [
         "**Primary (1°)**",
-        "**one** alkyl group",
-        "ethanol, butan-1-ol"
+        "**only attached to one alkyl group**",
+        "ethanol, propan-1-ol, 2-methylpropan-1-ol"
        ],
        [
         "**Secondary (2°)**",
-        "**two** alkyl groups",
-        "propan-2-ol"
+        "**joined directly to two alkyl groups**",
+        "propan-2-ol, butan-2-ol, pentan-3-ol"
        ],
        [
         "**Tertiary (3°)**",
-        "**three** alkyl groups",
-        "2-methylpropan-2-ol"
+        "**joined directly to three alkyl groups**",
+        "2-methylpropan-2-ol, 2-methylbutan-2-ol"
        ]
       ]
      },
@@ -18338,11 +18397,52 @@
       "src": "/diagrams/t10-alcohol-classes.png",
       "srcDark": "/diagrams/t10-alcohol-classes-dark.png",
       "alt": "General structures of primary, secondary and tertiary alcohols with examples",
-      "caption": "One, two or three alkyl groups on the carbon holding the –OH — the class that decides the oxidation products."
+      "caption": "One, two or three alkyl groups on the carbon holding the –OH — the class that decides the oxidation products (section 10.18)."
      },
      {
-      "type": "p",
-      "text": "The class matters because it decides what oxidation gives (section 10.18): primary alcohols give aldehydes and carboxylic acids, secondary alcohols give ketones — and tertiary alcohols are **not oxidised** under these conditions."
+      "type": "h3",
+      "text": "Melting and boiling temperatures"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Alcohols have melting and boiling temperatures **much higher than those of alkanes and haloalkanes of comparable relative molecular mass**.",
+       "Alcohols form **hydrogen bonding between molecules**, while only **weak London forces** exist between alkanes and **dipole–dipole forces** between haloalkanes.",
+       "Since **hydrogen bonding is stronger, it requires more energy to break the bonds**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Solubility"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Alcohols with **relatively short carbon chains dissolve in water** — they form **hydrogen bonds with water**, which is stronger than the **London forces between the carbon chains** of the alcohols.",
+       "Solubility in water **gradually decreases with increasing carbon chain length** — the **non-polar group becomes bigger**, increasing the strength of the London forces between the carbon chains.",
+       "**More than one –OH group in the molecule increases solubility**, since **more hydrogen bonds** can be formed between the alcohol and water."
+      ]
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Alcohol",
+       "Solubility in water"
+      ],
+      "rows": [
+       [
+        "methanol",
+        "**very soluble**"
+       ],
+       [
+        "butanol",
+        "**slightly soluble**"
+       ],
+       [
+        "octanol",
+        "**very insoluble**"
+       ]
+      ]
      }
     ]
    },
@@ -18351,8 +18451,8 @@
     "sectionKey": "alcohol-reactions",
     "number": "10.17",
     "title": "Reactions of Alcohols",
-    "blurb": "Combustion, three halogenating agents, and elimination to an alkene.",
-    "estMinutes": 25,
+    "blurb": "Combustion, three halogenating agents, and dehydration to an alkene.",
+    "estMinutes": 40,
     "spec": "10.17",
     "specText": "understand the reactions of alcohols with:",
     "outline": [
@@ -18370,68 +18470,145 @@
       "text": "Combustion"
      },
      {
-      "type": "p",
-      "text": "Alcohols burn in air (**combustion**). Complete combustion gives **carbon dioxide and water**:"
+      "type": "list",
+      "items": [
+       "**Alcohols make useful fuels** — like almost all organic chemicals, they **burn in oxygen to form carbon dioxide and water**."
+      ]
      },
      {
       "type": "eq",
-      "code": "C₂H₅OH  +  3O₂  →  2CO₂  +  3H₂O",
+      "code": "C₂H₅OH(l)  +  3O₂(g)  →  2CO₂(g)  +  3H₂O(l)",
       "caption": "Complete combustion of ethanol."
      },
      {
       "type": "h3",
-      "text": "Halogenating agents — swap the –OH for a halogen"
+      "text": "Halogenating agents — replace the –OH with a halogen"
+     },
+     {
+      "type": "p",
+      "text": "In **halogenation** reactions, the **–OH group of the alcohol molecule is replaced by a halogen atom**."
      },
      {
       "type": "table",
       "headers": [
        "Reagent",
-       "Product",
-       "Remember"
+       "Condition",
+       "Reaction type",
+       "Product"
       ],
       "rows": [
        [
-        "**PCl₅**",
-        "chloroalkane",
-        "also a **qualitative test for the –OH group**"
+        "**PCl₅** (primary and secondary alcohols)",
+        "room temperature",
+        "substitution",
+        "**chloroalkane**"
        ],
        [
-        "**50% concentrated H₂SO₄ + KBr**",
-        "bromoalkane",
-        "the acid and potassium bromide supply HBr"
+        "**concentrated HCl** (tertiary alcohols)",
+        "room temperature",
+        "substitution",
+        "**chloroalkane**"
        ],
        [
-        "**red phosphorus + iodine**",
-        "iodoalkane",
-        ""
+        "**KBr + 50% concentrated H₂SO₄**",
+        "heat under reflux",
+        "substitution",
+        "**bromoalkane**"
+       ],
+       [
+        "**iodine + moist red phosphorus**",
+        "warm",
+        "substitution",
+        "**iodoalkane**"
        ]
       ]
      },
      {
-      "type": "eq",
-      "code": "C₂H₅OH  +  PCl₅  →  C₂H₅Cl  +  POCl₃  +  HCl",
-      "caption": "Misty fumes of HCl are given off — a positive test for the presence of the –OH group."
+      "type": "h3",
+      "text": "Chlorination"
      },
      {
-      "type": "h3",
-      "text": "Elimination — forming an alkene"
+      "type": "eq",
+      "code": "CH₃CH₂OH  +  PCl₅  →  CH₃CH₂Cl  +  POCl₃  +  HCl",
+      "caption": "Primary and secondary alcohols + PCl₅, at room temperature — misty fumes of HCl are the observation."
      },
      {
       "type": "list",
       "items": [
-       "Hot **concentrated phosphoric acid** (a catalyst) forms **alkenes by elimination** of water from the alcohol."
+       "The reaction with **PCl₅ is used as a qualitative test for the –OH group** in a molecule.",
+       "**Tertiary alcohols** are chlorinated with **concentrated hydrochloric acid** instead — the alcohol is **mixed (by shaking)** with the acid:"
+      ]
+     },
+     {
+      "type": "eq",
+      "code": "(CH₃)₃COH  +  HCl  →  (CH₃)₃CCl  +  H₂O",
+      "caption": "2-methylpropan-2-ol + concentrated HCl at room temperature (Core Practical 6)."
+     },
+     {
+      "type": "h3",
+      "text": "Bromination — HBr made in the flask"
+     },
+     {
+      "type": "eq",
+      "code": "KBr  +  H₂SO₄  →  KHSO₄  +  HBr",
+      "caption": "The acid and the potassium bromide supply the HBr in situ (or 2KBr + H₂SO₄ → K₂SO₄ + 2HBr)."
+     },
+     {
+      "type": "eq",
+      "code": "C₂H₅OH(l)  +  HBr(aq)  →  C₂H₅Br(l)  +  H₂O(l)",
+      "caption": "Substitution, heated under reflux — the product is a bromoalkane."
+     },
+     {
+      "type": "callout",
+      "variant": "exam",
+      "title": "Why 50% concentrated H₂SO₄?",
+      "text": "Because **100% concentrated sulfuric acid oxidises bromide ions to bromine** — and then **no hydrogen bromide is produced** for the reaction."
+     },
+     {
+      "type": "h3",
+      "text": "Iodination — via phosphorus triiodide"
+     },
+     {
+      "type": "eq",
+      "code": "2P(s)  +  3I₂(s)  →  2PI₃(s)",
+      "caption": "Iodine and moist red phosphorus, warmed."
+     },
+     {
+      "type": "eq",
+      "code": "3C₂H₅OH(l)  +  PI₃(aq)  →  3C₂H₅I(l)  +  H₃PO₃(l)",
+      "caption": "Substitution — the product is an iodoalkane."
+     },
+     {
+      "type": "h3",
+      "text": "Dehydration — forming an alkene"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Excess concentrated H₂SO₄ or concentrated H₃PO₄**, heated **under reflux at 170 °C** — an **elimination (dehydration)** that removes water and forms an **alkene**."
       ]
      },
      {
       "type": "eq",
       "code": "C₂H₅OH  →  CH₂=CH₂  +  H₂O",
-      "caption": "Ethanol → ethene with concentrated H₃PO₄."
+      "caption": "Ethanol → ethene with concentrated phosphoric acid at 170 °C."
+     },
+     {
+      "type": "list",
+      "items": [
+       "For **unsymmetrical alcohols containing more than three C atoms, a mixture of isomeric products** can be formed — dehydrating **butan-2-ol** gives both **but-2-ene** and **but-1-ene**:"
+      ]
+     },
+     {
+      "type": "eq",
+      "code": "2CH₃CH₂CH(OH)CH₃  →  CH₃CH=CHCH₃  +  CH₃CH₂CH=CH₂  +  2H₂O",
+      "caption": "Dehydration of butan-2-ol — two isomeric alkenes."
      },
      {
       "type": "callout",
       "variant": "tip",
       "title": "Not required",
-      "text": "**Descriptions of the mechanisms of these reactions are not required** by the specification — products, reagents and conditions are what earn the marks."
+      "text": "**Descriptions of the mechanisms of these reactions are not required** by the specification — reagents, conditions, reaction type and products are what earn the marks."
      }
     ]
    },
@@ -18441,7 +18618,7 @@
     "number": "10.18",
     "title": "Oxidation of Alcohols",
     "blurb": "Dichromate decides by class — and by distil-or-reflux.",
-    "estMinutes": 28,
+    "estMinutes": 32,
     "spec": "10.18",
     "specText": "understand that potassium dichromate(VI) in dilute sulfuric acid can oxidise:",
     "outline": [
@@ -18453,7 +18630,24 @@
     "content": [
      {
       "type": "p",
-      "text": "The oxidising agent is **potassium dichromate(VI), K₂Cr₂O₇, in dilute sulfuric acid**. In equations it is written **[O]**. The **class** of the alcohol and the **apparatus** decide the product."
+      "text": "Oxidation of alcohols using **acidified potassium dichromate(VI)** — or **potassium manganate(VII)** — solution leads to the formation of **aldehydes, ketones and carboxylic acids**. It provides a way of **differentiating between primary, secondary and tertiary alcohols**."
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Oxidising agent",
+       "Observation"
+      ],
+      "rows": [
+       [
+        "**potassium dichromate(VI) + dilute sulfuric acid**",
+        "**orange to green**"
+       ],
+       [
+        "**potassium manganate(VII)**",
+        "purple to colourless"
+       ]
+      ]
      },
      {
       "type": "figure",
@@ -18464,48 +18658,75 @@
      },
      {
       "type": "h3",
-      "text": "Primary → aldehyde (distil as it forms)"
+      "text": "Primary alcohols — aldehyde or carboxylic acid"
      },
      {
       "type": "list",
       "items": [
-       "If the product is **distilled as it forms**, the oxidation stops at the **aldehyde** — aldehydes give a **positive result with Benedict's or Fehling's solution**."
+       "Primary alcohols can be oxidised to **either aldehydes or carboxylic acids, depending on the reaction conditions** — **first to the aldehyde**, which is then **oxidised further** to the **carboxylic acid**.",
+       "An **aldehyde** belongs to the homologous series with the **R–CHO** functional group; a **ketone** has the **R–CO–** functional group."
       ]
      },
      {
       "type": "eq",
-      "code": "CH₃CH₂CH₂OH  +  [O]  →  CH₃CH₂CHO  +  H₂O",
-      "caption": "Propan-1-ol → propanal."
+      "code": "CH₃CH₂OH  +  2[O]  →  CH₃CHO  +  H₂O",
+      "caption": "Heat and distil — the aldehyde (ethanal) is distilled as it forms, so it escapes before it can be oxidised further."
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂OH  +  2[O]  →  CH₃COOH  +  H₂O",
+      "caption": "Heat under reflux — the aldehyde condenses back into the mixture and is oxidised to the carboxylic acid (ethanoic acid)."
      },
      {
       "type": "h3",
-      "text": "Primary → carboxylic acid (heat under reflux)"
+      "text": "Secondary alcohols — ketones only"
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CHOHCH₃  +  2[O]  →  CH₃COCH₃  +  H₂O",
+      "caption": "Propan-2-ol → propanone (a ketone). Ketones cannot be further oxidised."
      },
      {
       "type": "list",
       "items": [
-       "If the reagents are **heated under reflux**, the aldehyde stays in the mixture and oxidation continues to the **carboxylic acid** — carboxylic acids give a **positive result with sodium carbonate or sodium hydrogencarbonate** (effervescence of CO₂)."
+       "Secondary alcohols **can only be oxidised to ketones** — and **ketones cannot be further oxidised**."
       ]
-     },
-     {
-      "type": "eq",
-      "code": "CH₃CH₂CHO  +  [O]  →  CH₃CH₂COOH",
-      "caption": "Propanal → propanoic acid."
      },
      {
       "type": "h3",
-      "text": "Secondary → ketone"
+      "text": "Tertiary alcohols — no reaction"
      },
      {
       "type": "eq",
-      "code": "CH₃CHOHCH₃  +  [O]  →  CH₃COCH₃  +  H₂O",
-      "caption": "Propan-2-ol → propanone — there is no further oxidation."
+      "code": "tertiary alcohol  +  [O]  →  no reaction",
+      "caption": "Tertiary alcohols cannot be oxidised — the dichromate stays orange."
+     },
+     {
+      "type": "h3",
+      "text": "Test for aldehydes — Benedict's or Fehling's"
      },
      {
       "type": "list",
       "items": [
-       "**Tertiary alcohols are not oxidised** — the orange dichromate stays orange."
+       "**Fehling's solution is blue** in colour due to its **Cu²⁺ ions**; **gently heat** with the sample.",
+       "**Aldehyde:** the blue solution (Cu²⁺) changes to a **brick red precipitate** — the aldehyde is **oxidised to the carboxylic acid**, and the **Cu²⁺ ions are reduced to Cu⁺**.",
+       "**Ketone:** the **blue solution remains unchanged**."
       ]
+     },
+     {
+      "type": "h3",
+      "text": "Test for carboxylic acids — carbonate"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Add **sodium carbonate or sodium hydrogencarbonate**: **effervescence** — colourless gas bubbles that **turn limewater milky** (CO₂)."
+      ]
+     },
+     {
+      "type": "eq",
+      "code": "2CH₃CO₂H  +  Na₂CO₃  →  2CH₃CO₂Na  +  H₂O  +  CO₂",
+      "caption": "Carboxylic acid + sodium carbonate."
      },
      {
       "type": "table",
@@ -18520,33 +18741,38 @@
         "Primary",
         "**aldehyde**",
         "**distil as it forms**",
-        "Benedict's or Fehling's solution"
+        "Benedict's or Fehling's: blue → **brick red precipitate**"
        ],
        [
         "Primary",
         "**carboxylic acid**",
         "**heat under reflux**",
-        "sodium carbonate / sodium hydrogencarbonate"
+        "sodium carbonate / sodium hydrogencarbonate: **effervescence**"
        ],
        [
         "Secondary",
         "**ketone**",
         "reflux",
-        "—"
+        "— (ketone unchanged by Fehling's)"
        ],
        [
         "Tertiary",
         "no oxidation",
         "—",
-        "dichromate stays orange"
+        "dichromate stays **orange**"
        ]
       ]
      },
      {
-      "type": "callout",
-      "variant": "exam",
-      "title": "Two phrases carry the marks",
-      "text": "**‘distilled as it forms’** → aldehyde; **‘heated under reflux’** → carboxylic acid. Quote the colour change too: **orange dichromate to green** (Cr₂O₇²⁻ → Cr³⁺)."
+      "type": "worked",
+      "title": "Why the apparatus decides the product",
+      "problem": "Ethanol is oxidised with acidified potassium dichromate(VI). Explain fully why ethanal, rather than ethanoic acid, is produced and collected when the product is distilled as it forms.",
+      "steps": [
+       "Ethanal has a **lower boiling temperature** than the reaction mixture, so it **distils off as it forms**.",
+       "Distillation **removes the aldehyde from contact with the oxidising agent** — the oxidation cannot continue.",
+       "Under **reflux** the aldehyde would **condense back into the mixture** and be **oxidised further to ethanoic acid**."
+      ],
+      "answer": "Distilling as it forms removes ethanal before it can be oxidised further — so ethanal, not ethanoic acid, is collected."
      }
     ]
    },
@@ -18555,8 +18781,8 @@
     "sectionKey": "preparation-and-purification",
     "number": "10.19",
     "title": "Preparation and Purification of a Liquid Organic Compound",
-    "blurb": "Five techniques, in the order a preparation uses them.",
-    "estMinutes": 20,
+    "blurb": "Why the crude product is impure — and the techniques that clean it up.",
+    "estMinutes": 35,
     "spec": "10.19",
     "specText": "understand, the following techniques in the preparation and purification of a liquid organic compound:",
     "outline": [
@@ -18569,23 +18795,144 @@
     "content": [
      {
       "type": "p",
-      "text": "The specification names **five techniques** for the preparation and purification of a liquid organic compound. In a preparation they usually run in this order:"
+      "text": "The organic products obtained from these reactions are **not pure**. The crude product could be contaminated with:"
      },
      {
       "type": "list",
       "items": [
-       "**Heating under reflux** — boil the reaction mixture and condense the vapour **back into the flask continuously**, so volatile reagents are not lost and the heating can be carried out for a longer period of time.",
-       "**Distillation** — the liquid with the **lowest boiling temperature distils over first**; collect the fraction that is your product (this is how an aldehyde is distilled as it forms, section 10.18).",
-       "**Extraction with a solvent using a separating funnel** — shake the product with an **immiscible solvent**; the layers separate and the layer holding the product can be **run off**.",
-       "**Drying with an anhydrous salt** — an **anhydrous** (water-free) salt **binds the traces of water** left in the organic liquid; the dried liquid is then decanted off.",
-       "**Boiling temperature determination** — a **pure liquid boils at a fixed temperature**; a sharp, steady boiling temperature confirms the identity and purity of the product."
+       "**unreacted starting materials**",
+       "**other organic products**",
+       "**the inorganic reagents** used, or products formed from them",
+       "**water**"
+      ]
+     },
+     {
+      "type": "p",
+      "text": "The techniques used are based on the **physical state (solid, liquid or gas)** of the product. For a liquid, a preparation runs: **heating under reflux → distillation → solvent extraction → drying → boiling temperature determination**."
+     },
+     {
+      "type": "h3",
+      "text": "Heating under reflux"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Used when **heating organic reaction mixtures for long periods** — the **condenser prevents organic vapours from escaping** by **condensing them back to liquids**.",
+       "**Anti-bumping granules** are added to the flask in both distillation and reflux — they **prevent vigorous, uneven boiling** by making **small bubbles form instead of large bubbles**.",
+       "**Electric heaters** are used to heat organic chemicals — they are normally **highly flammable** and could **set on fire with a naked flame**."
+      ]
+     },
+     {
+      "type": "callout",
+      "variant": "warning",
+      "title": "Never seal the condenser",
+      "text": "**Never seal the end of the condenser** — the **build-up of gas pressure could cause the apparatus to explode**."
+     },
+     {
+      "type": "h3",
+      "text": "Distillation"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Distillation** separates the components of a liquid mixture using **selective boiling and condensation** — collect the **distillate of the approximate boiling point range** of the desired product.",
+       "The **bulb of the thermometer sits at the T-junction** connecting to the condenser, so it measures the **correct boiling point**.",
+       "**Water goes in the bottom of the condenser** — it goes **against gravity**, which gives **more efficient cooling** and **prevents back flow of water**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Fractional distillation"
+     },
+     {
+      "type": "list",
+      "items": [
+       "The separation of a liquid mixture into **fractions differing in boiling point**, typically using a **fractionating column**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Extraction with a separating funnel"
+     },
+     {
+      "type": "list",
+      "items": [
+       "A mixture of **two immiscible liquids** can be separated with a separating funnel — it has a **stop-cock** in its stem to allow or stop the flow of liquid, and **two layers** are seen.",
+       "The **denser solvent will be the bottom layer** — most **halogenated solvents are denser than water**, most **non-halogenated solvents are less dense**."
+      ]
+     },
+     {
+      "type": "p",
+      "text": "**Solvent extraction — method:**"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Place the reaction mixture in the separating funnel and **add the solvent** — it should form **two separate layers**.",
+       "**Place the stopper** in the neck of the funnel and **gently shake** the contents, **releasing pressure by opening the tap** from time to time.",
+       "**Allow the contents to settle** into two layers.",
+       "**Remove the stopper, open the tap** and **collect the desired organic layer** into a flask — **discard the unwanted aqueous layer**."
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Drying with an anhydrous salt"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Final traces of water** are removed by treating the organic solution with a **drying agent** — an **inorganic salt which readily takes up water to become hydrated**.",
+       "Add **three spatula loads** of drying agent (e.g. **anhydrous sodium sulfate, calcium chloride**) to the organic liquid — when dry, the liquid should **appear clear**.",
+       "The drying agent is removed by **decanting or filtration**. It must be **insoluble in the organic liquid** and **must not react with it**."
+      ]
+     },
+     {
+      "type": "table",
+      "headers": [
+       "Drying agent",
+       "Applications"
+      ],
+      "rows": [
+       [
+        "anhydrous **calcium chloride, CaCl₂**",
+        "used for **hydrocarbons**"
+       ],
+       [
+        "anhydrous **calcium sulfate, CaSO₄**",
+        "**generally useful**"
+       ],
+       [
+        "anhydrous **magnesium sulfate, MgSO₄**",
+        "not for **very acid-sensitive** compounds"
+       ],
+       [
+        "anhydrous **potassium carbonate, K₂CO₃**",
+        "not for **acidic** compounds"
+       ],
+       [
+        "anhydrous **sodium sulfate, Na₂SO₄**",
+        "**generally useful**"
+       ]
+      ]
+     },
+     {
+      "type": "h3",
+      "text": "Boiling temperature determination"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Purity of a liquid can be determined by measuring a boiling point** — in a distillation set-up, or by boiling a tube of the sample in a **heating oil bath**.",
+       "Once the boiling point is found, the value is **compared with the data booklet values** — and the **purity of the compound is determined**.",
+       "For a correct measure, the thermometer should be **above the level of the surface of the boiling liquid**, measuring the temperature of the **saturated vapour**.",
+       "**Pressure should be noted** — changing pressure can change the boiling point of a liquid."
       ]
      },
      {
       "type": "callout",
       "variant": "tip",
-      "title": "Why reflux first, distil later",
-      "text": "**Reflux** keeps everything in the flask so the reaction goes to completion; **distillation** then separates the product by its boiling temperature. Same apparatus idea, two different jobs."
+      "title": "Reflux first, distil later",
+      "text": "**Reflux** keeps everything in the flask so the reaction can be heated for a long period; **distillation** then separates the product by its boiling temperature. Same idea, two different jobs."
      }
     ]
    },
@@ -18926,6 +19273,34 @@
     "front": "How do greenhouse gases interact with IR?",
     "back": "C=O and O–H bonds in CO₂, H₂O and CH₄ absorb IR radiation (bond vibrations), trapping outgoing radiation and re-emitting it back — the enhanced greenhouse effect.",
     "tag": "CORE"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card11",
+    "ord": 11,
+    "front": "Name the reagent and condition to make a chloroalkane, a bromoalkane and an iodoalkane from an alcohol.",
+    "back": "Chloro: PCl₅, room temperature (tertiary alcohols: concentrated HCl, shake to mix). Bromo: KBr + 50% concentrated H₂SO₄, heat under reflux. Iodo: iodine + moist red phosphorus, warm. All substitution.",
+    "tag": "CORE"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card12",
+    "ord": 12,
+    "front": "Why must the H₂SO₄ be 50% — not 100% concentrated — when making HBr from KBr?",
+    "back": "100% concentrated sulfuric acid oxidises bromide ions to bromine, so no hydrogen bromide is produced for the reaction.",
+    "tag": "TRAP"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card13",
+    "ord": 13,
+    "front": "Why do alcohols have much higher boiling temperatures than alkanes of comparable relative molecular mass?",
+    "back": "Alcohols form hydrogen bonding between molecules; alkanes only have weak London forces and haloalkanes dipole–dipole forces. Hydrogen bonding is stronger, so it requires more energy to break the bonds.",
+    "tag": "CORE"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card14",
+    "ord": 14,
+    "front": "Put the purification techniques for a liquid organic product in order.",
+    "back": "Heating under reflux (the reaction) → distillation (collect the distillate at the product's approximate boiling point range) → solvent extraction with a separating funnel → drying with an anhydrous salt → boiling temperature determination against the data booklet values.",
+    "tag": "EXAM"
    }
   ]
  }

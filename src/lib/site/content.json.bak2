@@ -17871,7 +17871,7 @@
      {
       "type": "eq",
       "code": "CH₃CH₂CH₂Cl  +  OH⁻  →  CH₃CH=CH₂  +  H₂O  +  Cl⁻",
-      "caption": "1-chloropropane + ethanolic KOH → propene. For unsymmetrical halogenoalkanes, a **mixture of isomeric alkenes** can form: CH₃CH₂CH(Cl)CH₃ gives but-2-ene and but-1-ene."
+      "caption": "1-chloropropane + ethanolic KOH → propene. For unsymmetrical halogenoalkanes, a mixture of isomeric alkenes can form: CH₃CH₂CH(Cl)CH₃ gives but-2-ene and but-1-ene."
      },
      {
       "type": "h3",
@@ -17888,7 +17888,7 @@
      {
       "type": "eq",
       "code": "CH₃CH₂CH₂Cl  +  2NH₃  →  CH₃CH₂CH₂NH₂  +  NH₄Cl",
-      "caption": "1-chloropropane + concentrated ammonia → propylamine. The reaction needs a **sealed tube**: ammonia does not condense in a heat-under-reflux apparatus, so it escapes unless sealed."
+      "caption": "1-chloropropane + concentrated ammonia → propylamine. The reaction needs a sealed tube: ammonia does not condense in a heat-under-reflux apparatus, so it escapes unless sealed."
      },
      {
       "type": "h3",
@@ -17897,7 +17897,7 @@
      {
       "type": "eq",
       "code": "C₂H₅Br  +  KCN(aq/alc)  →  C₂H₅CN  +  KBr(aq)",
-      "caption": "Bromoethane + potassium cyanide → propanenitrile — the nitrile has **one more carbon atom** than the halogenoalkane."
+      "caption": "Bromoethane + potassium cyanide → propanenitrile — the nitrile has one more carbon atom than the halogenoalkane."
      },
      {
       "type": "p",
