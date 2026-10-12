@@ -431,6 +431,7 @@ html[data-uimode="terminal"][data-page="topic"] .fab-ctl { bottom: 5.5rem; }
   color: color-mix(in srgb, var(--fg) 86%, transparent);
   font-size: 14px;
   line-height: 1.55;
+  white-space: pre-line;   /* multi-statement specText keeps its authored line breaks */
 }
 [data-uimode="terminal"] .spec-caret {
   flex: none;
@@ -502,6 +503,7 @@ html[data-uimode="terminal"][data-page="topic"] .fab-ctl { bottom: 5.5rem; }
   html[data-uimode="terminal"] .stream-warm .spec-point-statement {
     font-size: 15px;
     line-height: 1.65;
+    white-space: pre-line;
   }
   html[data-uimode="terminal"] .stream-warm .spec-outline-item {
     font-size: 1em;
