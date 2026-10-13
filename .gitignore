@@ -78,3 +78,14 @@ server.log
 
 # internal agent worklog
 /worklog.md
+
+# verification screenshots & sandbox runtime files (scripts stay tracked)
+/.zscripts/*.png
+/.zscripts/*.pid
+/.zscripts/*.log
+
+# course source materials — reference PDFs kept locally, not part of the app
+/download/
+
+# sandbox scaffolding examples (not part of the site)
+/examples/
