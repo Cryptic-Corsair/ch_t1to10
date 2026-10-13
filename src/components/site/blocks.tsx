@@ -6,9 +6,12 @@ import {
   Check,
   CheckCircle2,
   Copy,
+  Eye,
+  EyeOff,
   Image as ImageIcon,
   KeyRound,
   Lightbulb,
+  PencilRuler,
   Sigma,
   Target,
   TriangleAlert,
@@ -64,47 +67,121 @@ function EqCopy({ text }: { text: string }) {
   )
 }
 
-/* ---------- worked example ----------
-   A guided solution sheet: problem → numbered working → answer.
-   Lines that are chemistry equations (contain an arrow) or short
-   calculations (contain '=', no sentence punctuation) render as
-   distinct "working" chips so the maths never drowns in prose. */
+/* ---------- worked example — the method sheet ----------
+   Problem → numbered method → answer, with the maths set apart.
+   Each line of a step is classified: prose, calculation chips
+   ("Q = mcΔT = …"), or a lead-in label above its calculation
+   ("Molar masses: …"). A cover toggle hides the working so the
+   problem can be attempted on paper first. Text is never altered —
+   every classification only restyles what is already there. */
 
 const WX_ARROW = /→|⇌|⇒/
 
-function wxLineKind(line: string): 'eq' | 'li' | 'p' {
-  const l = line.trim()
-  if (!l) return 'p'
-  if (WX_ARROW.test(l)) return 'eq'
-  if (l.includes('=') && l.length <= 78 && !/[.!?]['")\]]?$/.test(l)) return 'eq'
-  if (/^[-•*]\s+/.test(l)) return 'li'
-  return 'p'
+/** does this line read as a calculation / equation rather than prose? */
+function wxIsEq(l: string): boolean {
+  if (WX_ARROW.test(l)) return true
+  if (!l.includes('=')) return false
+  if (l.length <= 78 && !/[.!?]['")\]]?$/.test(l)) return true
+  // longer sentences that are still mostly maths:
+  // "Q = mcΔT = 50 × 4.18 × 6.7 = 1400.3 J = 1.4003 kJ."
+  if (/[÷×√]/.test(l)) return true
+  if (/\d\s*[+−]\s*[(\d−]/.test(l)) return true
+  const s = l.replace(/\s/g, '')
+  const mathy = (s.match(/[\d+=÷×−√().,°]/g) ?? []).length
+  return s.length > 0 && mathy / s.length >= 0.45
+}
+
+/** "Molar masses: M(CuCO₃) = …" → the label + the calculation.
+    Ratio colons like "Cu : H₂O" (space on both sides) never split. */
+function wxSplitLead(line: string): { lead: string; rest: string } | null {
+  for (let i = 0; i < line.length; i++) {
+    if (line[i] !== ':') continue
+    if (line[i + 1] !== ' ') return null
+    if (i > 0 && line[i - 1] === ' ') continue
+    const lead = line.slice(0, i + 1)
+    if (lead.length < 3 || lead.length > 47) return null
+    return { lead, rest: line.slice(i + 1).trim() }
+  }
+  return null
+}
+
+/** "p = 120 × 10³ = … Pa; V = …; T = …" → one chip per calculation.
+    Only when every segment is a short calculation, so nothing is
+    lost — the ';' stays with its segment. */
+function wxSplitMulti(line: string): string[] | null {
+  if (!line.includes(';')) return null
+  const parts = line.split(';').map((p) => p.trim()).filter(Boolean)
+  if (parts.length < 2 || parts.length > 3) return null
+  if (parts.some((p) => !p.includes('=') || p.length > 64)) return null
+  return parts.map((p, i) => (i < parts.length - 1 ? p + ';' : p))
+}
+
+type WxSeg =
+  | { kind: 'lead'; lead: string; chips: string[] }
+  | { kind: 'eq'; chips: string[] }
+  | { kind: 'li'; text: string }
+  | { kind: 'p'; text: string }
+
+function wxSegs(step: string): WxSeg[] {
+  const out: WxSeg[] = []
+  const lines = step.split('\n').map((l) => l.trim()).filter(Boolean)
+  for (const line of lines) {
+    if (/^[-•*]\s+/.test(line)) {
+      out.push({ kind: 'li', text: line.replace(/^[-•*]\s+/, '') })
+      continue
+    }
+    const lead = wxSplitLead(line)
+    if (lead && wxIsEq(lead.rest)) {
+      out.push({ kind: 'lead', lead: lead.lead, chips: wxSplitMulti(lead.rest) ?? [lead.rest] })
+      continue
+    }
+    if (wxIsEq(line)) {
+      out.push({ kind: 'eq', chips: wxSplitMulti(line) ?? [line] })
+      continue
+    }
+    out.push({ kind: 'p', text: line })
+  }
+  return out
+}
+
+function WxChips({ chips }: { chips: string[] }) {
+  return (
+    <div className="space-y-2">
+      {chips.map((chip, j) => (
+        <p key={j} className="wx-eq">
+          <Inline text={chip} />
+        </p>
+      ))}
+    </div>
+  )
 }
 
 function WxLines({ text }: { text: string }) {
-  const lines = text.split('\n').map((l) => l.trim()).filter(Boolean)
   return (
     <div className="space-y-2">
-      {lines.map((line, i) => {
-        const kind = wxLineKind(line)
-        if (kind === 'eq') {
+      {wxSegs(text).map((seg, i) => {
+        if (seg.kind === 'lead') {
           return (
-            <p key={i} className="wx-eq">
-              <Inline text={line} />
-            </p>
+            <div key={i} className="space-y-2">
+              <p className="text-[13px] font-medium leading-snug text-fg/75">
+                <Inline text={seg.lead} />
+              </p>
+              <WxChips chips={seg.chips} />
+            </div>
           )
         }
-        if (kind === 'li') {
+        if (seg.kind === 'eq') return <WxChips key={i} chips={seg.chips} />
+        if (seg.kind === 'li') {
           return (
             <p key={i} className="wx-li">
               <span aria-hidden>–</span>
-              <span className="min-w-0"><Inline text={line.replace(/^[-•*]\s+/, '')} /></span>
+              <span className="min-w-0"><Inline text={seg.text} /></span>
             </p>
           )
         }
         return (
           <p key={i} className="leading-relaxed">
-            <Inline text={line} />
+            <Inline text={seg.text} />
           </p>
         )
       })}
@@ -235,6 +312,110 @@ function NoteCallout({ block }: { block: Extract<Block, { type: 'callout' }> }) 
       <p className={`leading-relaxed text-muted ${inline ? 'mt-1.5 text-[13.5px]' : 'mt-1.5 text-[14px]'}`}>
         <Inline text={block.text} />
       </p>
+    </div>
+  )
+}
+
+/* ---------- worked example card ----------
+   The method sheet: header → problem → numbered method → answer.
+   "Cover" hides the working and the answer so the problem can be
+   attempted first — active recall, one tap away. */
+
+function WorkedCard({ block }: { block: Extract<Block, { type: 'worked' }> }) {
+  const [covered, setCovered] = useState(false)
+  const nSteps = block.steps.length
+  return (
+    <div className="blk blk-worked focus-block overflow-hidden rounded-xl border border-line bg-surface">
+      {/* header — skill title up front, cover control on the right */}
+      <div className="flex items-start justify-between gap-4 px-5 py-4">
+        <div className="min-w-0">
+          <p className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+            <span className="flex items-center gap-1.5">
+              <PencilRuler size={12} strokeWidth={1.75} className="shrink-0 text-acc" aria-hidden />
+              <span className="mono text-[9.5px] font-semibold uppercase tracking-[0.2em] text-acc">
+                Worked example
+              </span>
+            </span>
+            <span className="mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
+              · {nSteps} {nSteps === 1 ? 'step' : 'steps'}
+            </span>
+          </p>
+          <p className="mt-1 text-[15.5px] font-semibold leading-snug text-fg">{block.title}</p>
+        </div>
+        {!covered && (
+          <button
+            type="button"
+            onClick={() => setCovered(true)}
+            aria-label="Cover the working and answer to try the problem yourself first"
+            title="Cover — try it yourself first"
+            className="mono flex shrink-0 items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-[9.5px] font-medium uppercase tracking-[0.14em] text-muted t-fast hover:border-line-strong hover:text-fg focus-visible:outline-acc"
+          >
+            <EyeOff size={11} strokeWidth={1.75} aria-hidden />
+            Cover
+          </button>
+        )}
+      </div>
+
+      {/* the problem — stays visible even when the method is covered */}
+      <div className="px-5 pb-5">
+        <div className="rounded-xl border border-line/70 border-l-2 border-l-acc/60 bg-elev/40 px-4 py-3.5">
+          <p className="mono text-[10px] font-medium uppercase tracking-[0.18em] text-faint">Problem</p>
+          <p className="mt-1.5 text-[15px] leading-relaxed text-fg/90">
+            <Inline text={block.problem} />
+          </p>
+        </div>
+      </div>
+
+      {covered ? (
+        /* covered — attempt it on paper, then reveal */
+        <div className="px-5 pb-5">
+          <div className="rounded-xl border border-dashed border-line-strong bg-elev/30 px-4 py-6 text-center">
+            <EyeOff size={16} strokeWidth={1.75} className="mx-auto text-faint" aria-hidden />
+            <p className="mt-2.5 text-[14px] font-medium text-fg">Working and answer covered</p>
+            <p className="mx-auto mt-1 max-w-[38ch] text-[13px] leading-relaxed text-muted">
+              Try the problem on paper first, then check the method.
+            </p>
+            <button
+              type="button"
+              onClick={() => setCovered(false)}
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-acc px-4 py-2 text-[12.5px] font-semibold text-on-acc t-fast hover:opacity-90 focus-visible:outline-acc"
+            >
+              <Eye size={13} strokeWidth={2} aria-hidden />
+              Reveal the method
+            </button>
+          </div>
+        </div>
+      ) : (
+        <>
+          {/* the method — numbered timeline, the maths set apart */}
+          <div className="px-5 pb-5">
+            <ol className="steps space-y-4">
+              {block.steps.map((s, i) => (
+                <li key={i} className="flex items-start gap-3.5">
+                  <span className="step-dot" aria-hidden>{i + 1}</span>
+                  <div className="min-w-0 flex-1 pt-0.5 text-[14px] leading-relaxed text-muted">
+                    <WxLines text={s} />
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* the answer — full-bleed result band, one tap to copy */}
+          <div className="flex items-start gap-3.5 border-t border-line bg-[color-mix(in_srgb,var(--acc)_10%,transparent)] px-5 py-4">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-acc text-on-acc shadow-md">
+              <CheckCircle2 size={15} strokeWidth={2.25} aria-hidden />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="mono text-[10px] font-medium uppercase tracking-[0.18em] text-acc">Answer</p>
+              <p className="mt-1 text-[15px] font-semibold leading-relaxed text-fg [font-variant-numeric:tabular-nums]">
+                <Inline text={block.answer} />
+              </p>
+            </div>
+            <EqCopy text={block.answer} />
+          </div>
+        </>
+      )}
     </div>
   )
 }
@@ -395,62 +576,8 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
       )
     }
 
-    case 'worked': {
-      const nSteps = block.steps.length
-      return (
-        <div className="blk blk-worked focus-block overflow-hidden rounded-xl border border-line bg-surface">
-          {/* header — skill title up front, length gauge on the right */}
-          <div className="flex items-center justify-between gap-4 border-b border-line bg-[color-mix(in_srgb,var(--acc)_7%,transparent)] px-5 py-4">
-            <div className="min-w-0">
-              <p className="mono text-[9.5px] font-semibold uppercase tracking-[0.2em] text-acc">
-                Worked example
-              </p>
-              <p className="mt-1 text-[15px] font-semibold leading-snug text-fg">{block.title}</p>
-            </div>
-            <span
-              className="mono shrink-0 rounded-full border border-line px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-muted"
-              title={`${nSteps} step${nSteps === 1 ? '' : 's'} of working`}
-            >
-              {nSteps} {nSteps === 1 ? 'step' : 'steps'}
-            </span>
-          </div>
-
-          <div className="px-5 py-5">
-            {/* problem — the question, set apart with an accent edge */}
-            <div className="rounded-xl border-l-2 border-acc/50 bg-elev/40 px-4 py-3.5">
-              <p className="mono text-[10px] font-medium uppercase tracking-[0.18em] text-faint">Problem</p>
-              <p className="mt-1.5 text-[0.95em] leading-relaxed text-fg/90">
-                <Inline text={block.problem} />
-              </p>
-            </div>
-
-            {/* working — numbered timeline, equations as chips */}
-            <ol className="steps mt-5 space-y-4">
-              {block.steps.map((s, i) => (
-                <li key={i} className="flex items-start gap-3.5">
-                  <span className="step-dot" aria-hidden>{i + 1}</span>
-                  <div className="min-w-0 flex-1 pt-0.5 text-[13.5px] leading-relaxed text-muted">
-                    <WxLines text={s} />
-                  </div>
-                </li>
-              ))}
-            </ol>
-
-            {/* answer — the result, with one-tap copy */}
-            <div className="mt-5 flex items-start gap-3.5 rounded-xl border border-acc/30 bg-acc/10 px-4 py-4">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-acc text-on-acc shadow-md">
-                <CheckCircle2 size={15} strokeWidth={2.25} />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="mono text-[10px] font-medium uppercase tracking-[0.18em] text-acc">Answer</p>
-                <p className="mt-1 text-[14.5px] font-medium leading-relaxed text-fg">{block.answer}</p>
-              </div>
-              <EqCopy text={block.answer} />
-            </div>
-          </div>
-        </div>
-      )
-    }
+    case 'worked':
+      return <WorkedCard block={block} />
 
     case 'qa':
       return <QaCard block={block} />
