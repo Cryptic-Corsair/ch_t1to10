@@ -427,11 +427,13 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
           <div className="relative border-b border-line bg-elev/30">
             {block.srcDark ? (
               <>
-                <img src={block.src} alt={block.alt} loading="lazy" className="fig-light h-auto w-full" />
-                <img src={block.srcDark} alt="" aria-hidden loading="lazy" className="fig-dark h-auto w-full" />
+                {/* eager (not lazy): lazy figures load mid-scroll and shift the
+                    page, which throws off TOC jumps and the scroll-spy */}
+                <img src={block.src} alt={block.alt} className="fig-light h-auto w-full" />
+                <img src={block.srcDark} alt="" aria-hidden className="fig-dark h-auto w-full" />
               </>
             ) : (
-              <img src={block.src} alt={block.alt} loading="lazy" className="h-auto w-full" />
+              <img src={block.src} alt={block.alt} className="h-auto w-full" />
             )}
           </div>
           <figcaption className="flex items-start gap-2.5 px-5 py-3.5 text-[12.5px] leading-relaxed text-muted">

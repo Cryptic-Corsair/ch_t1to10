@@ -527,41 +527,84 @@ export function TopicDetail({
 
   const tocLab = (
     <div className="sticky top-24">
-      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-faint" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
-        On this page
-      </p>
-      <p className="mb-3 text-[11px] text-faint" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
-        {doneCount}/{total} read{minLeft > 0 ? ` · ~${fmtLeft(minLeft)} left` : ' · complete'}
-      </p>
-      <nav className="space-y-1.5" aria-label="Sections">
-        {topic.sections.map((s) => {
-          const isRead = !!readMap[`${slug}/${s.sectionKey}`]
-          const isActive = activeId === s.sectionKey
-          return (
+      <div className="lab-glass rounded-[20px] p-4">
+        {/* header — label, reading time, slim progress */}
+        <div className="flex items-baseline justify-between gap-2">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-faint" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
+            On this page
+          </p>
+          <p className="mono whitespace-nowrap text-[10px] text-faint">{doneCount}/{total} read</p>
+        </div>
+        <p className="mt-1 text-[11px] text-faint" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
+          {minLeft > 0 ? `~${fmtLeft(minLeft)} of reading left` : 'everything read'}
+        </p>
+        <ProgressBar value={pct} className="mt-2.5" />
+        {/* numbered section list — compact rows, scrollable when tall */}
+        <nav className="mt-3 max-h-[calc(100dvh-330px)] space-y-0.5 overflow-y-auto" aria-label="Sections">
+          {topic.sections.map((s) => {
+            const isRead = !!readMap[`${slug}/${s.sectionKey}`]
+            const isActive = activeId === s.sectionKey
+            return (
+              <button
+                key={s.sectionKey}
+                onClick={() => scrollToSection(s.sectionKey)}
+                aria-current={isActive ? 'true' : undefined}
+                title={s.title}
+                className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-[7px] text-left t-fast focus-visible:outline-acc ${
+                  isActive
+                    ? 'bg-[color-mix(in_srgb,var(--acc)_13%,transparent)] text-acc'
+                    : 'text-muted hover:bg-[color-mix(in_srgb,var(--fg)_7%,transparent)] hover:text-fg'
+                }`}
+                style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}
+              >
+                <span
+                  className={`mono w-[22px] shrink-0 text-[10px] font-semibold ${
+                    isActive ? 'text-acc' : isRead ? 'text-acc/60' : 'text-faint'
+                  }`}
+                >
+                  {s.number}
+                </span>
+                <span className="min-w-0 flex-1 truncate text-[12.5px] leading-snug">{s.title}</span>
+                <span className="shrink-0" aria-hidden>
+                  {isRead ? (
+                    <CheckCircle2 size={13} strokeWidth={2} className="text-acc" />
+                  ) : (
+                    <span className={`block h-[9px] w-[9px] rounded-full border ${isActive ? 'border-acc' : 'border-line-strong'}`} />
+                  )}
+                </span>
+              </button>
+            )
+          })}
+        </nav>
+        {/* quick actions — resume + deck */}
+        <div className="mt-3 space-y-2 border-t border-[color-mix(in_srgb,var(--fg)_10%,transparent)] pt-3 print:hidden">
+          {!allRead && firstUnread && (
             <button
-              key={s.sectionKey}
-              onClick={() => scrollToSection(s.sectionKey)}
-              aria-current={isActive ? 'true' : undefined}
-              className={`w-full rounded-full border px-3.5 py-2 text-left text-[12px] leading-snug t-fast focus-visible:outline-acc ${
-                isActive
-                  ? 'border-[color-mix(in_srgb,var(--acc)_50%,transparent)] bg-[color-mix(in_srgb,var(--acc)_12%,transparent)] text-acc'
-                  : 'border-[color-mix(in_srgb,var(--fg)_10%,transparent)] text-muted hover:border-[color-mix(in_srgb,var(--fg)_22%,transparent)] hover:text-fg'
-              }`}
-              style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}
+              onClick={() => scrollToSection(firstUnread.sectionKey)}
+              className="mono flex w-full items-center justify-center gap-2 rounded-lg bg-acc px-3 py-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-on-acc t-fast hover:opacity-85 focus-visible:outline-acc active:translate-y-px"
             >
-              <span className={`mr-1.5 text-[10px] ${isRead ? 'text-acc' : 'text-faint'}`}>{isRead ? '●' : '○'}</span>
-              {s.title}
+              <BookOpen size={12} strokeWidth={2} />
+              Continue · {firstUnread.number}
             </button>
-          )
-        })}
-      </nav>
-      <button
-        onClick={() => go(`/deck/${slug}`)}
-        className="lab-glass mt-4 w-full rounded-full px-4 py-2.5 text-[12px] font-semibold text-acc t-fast hover:border-[color-mix(in_srgb,var(--acc)_45%,transparent)] focus-visible:outline-acc"
-        style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}
-      >
-        Deck · {topic.cards.length} cards
-      </button>
+          )}
+          {allRead && (
+            <button
+              onClick={() => scrollToSection(topic.sections[0]?.sectionKey)}
+              className="mono flex w-full items-center justify-center gap-2 rounded-lg border border-[color-mix(in_srgb,var(--fg)_14%,transparent)] px-3 py-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-muted t-fast hover:border-[color-mix(in_srgb,var(--acc)_45%,transparent)] hover:text-acc focus-visible:outline-acc"
+            >
+              <BookOpen size={12} strokeWidth={1.75} />
+              Review from the top
+            </button>
+          )}
+          <button
+            onClick={() => go(`/deck/${slug}`)}
+            className="mono flex w-full items-center justify-center gap-2 rounded-lg border border-[color-mix(in_srgb,var(--fg)_14%,transparent)] px-3 py-2 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-muted t-fast hover:border-[color-mix(in_srgb,var(--acc)_45%,transparent)] hover:text-acc focus-visible:outline-acc"
+          >
+            <Layers3 size={12} strokeWidth={1.75} />
+            Deck · {topic.cards.length} cards
+          </button>
+        </div>
+      </div>
     </div>
   )
 
@@ -738,8 +781,9 @@ export function TopicDetail({
   let body: React.ReactNode
   if (mode === 'lab') {
     body = (
-      <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_230px] xl:grid-cols-[minmax(0,1fr)_230px_56px] xl:gap-12">
+      <div className="mt-12 grid gap-10 lg:grid-cols-[250px_minmax(0,1fr)] xl:grid-cols-[260px_minmax(0,1fr)_56px] xl:gap-12">
         {mobileContents}
+        <aside className="hidden lg:block print:hidden">{tocLab}</aside>
         <div ref={streamRef} className="min-w-0">
           {topic.sections.map((s, si) => (
             <TopicSection
@@ -761,7 +805,6 @@ export function TopicDetail({
           <EndPanel cls={endPanelCls} topic={topic} go={go} />
           <PagerNav prev={prev} next={next} go={go} />
         </div>
-        <aside className="hidden lg:block print:hidden">{tocLab}</aside>
         <aside className="hidden xl:block print:hidden" aria-label="Reading tools">{toolsRail}</aside>
       </div>
     )
