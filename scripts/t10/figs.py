@@ -423,6 +423,64 @@ def build_mass_spectrum(pal):
                         'tells you which piece broke off. M+1 counts the carbons.')
 
 
+# ------------------------------------------------- 6b · isotope patterns ----
+def _mini_spectrum(peak_list, w=420, h=210):
+    """A mini line spectrum: peak_list = [(label, height01), ...]."""
+    X0, Y0, AW = 26, 158, w - 52
+    s = line(X0, Y0, X0 + AW, Y0, w=2, color='var(--ink)')
+    n = len(peak_list)
+    tops = []
+    for i, (lab, hh) in enumerate(peak_list):
+        x = X0 + AW * (i + 1) / (n + 1)
+        y = Y0 - hh * 118
+        s += line(x, Y0, x, y, w=3.4, color='var(--ink)', cap='butt')
+        s += text(x, Y0 + 20, lab, 11.5, 'var(--body)', 600, family='GeistMono')
+        tops.append((x, y))
+    return s, tops
+
+
+def build_isotope_patterns(pal):
+    W, H = 1240, 920
+
+    def inner(cnum, layout):
+        s1, t1 = _mini_spectrum([('M', 1.0), ('M+2', 1.0)])
+        x, y = t1[0]
+        s1 += text((t1[0][0] + t1[1][0]) / 2, min(t1[0][1], t1[1][1]) - 14,
+                   '1 : 1', 12.5, 'var(--acc)', 700, family='GeistMono')
+        s2, t2 = _mini_spectrum([('M', 0.5), ('M+2', 1.0), ('M+4', 0.5)])
+        s2 += text(t2[1][0], t2[1][1] - 14, '1 : 2 : 1', 12.5, 'var(--acc)', 700,
+                   family='GeistMono')
+        s3, t3 = _mini_spectrum([('M', 1.0), ('M+2', 1 / 3)])
+        s3 += text(t3[1][0], t3[1][1] - 14, '3 : 1', 12.5, 'var(--acc)', 700,
+                   family='GeistMono')
+        s4, t4 = _mini_spectrum([('M', 1.0), ('M+2', 6 / 9), ('M+4', 1 / 9)])
+        s4 += text(t4[1][0], t4[1][1] - 14, '9 : 6 : 1', 12.5, 'var(--acc)', 700,
+                   family='GeistMono')
+
+        return ('<style>%s</style>' % GRID_CSS
+                + '<div class="duo">'
+                + card('One bromine atom', svg(420, 210, s1), 'M : M+2 = 1 : 1',
+                       '⁷⁹Br and ⁸¹Br exist in <b>equal quantities</b> — two molecular '
+                       'ion peaks, two m/z units apart. ⁷⁹Br gives M, ⁸¹Br gives M+2.')
+                + card('Two bromine atoms', svg(420, 210, s2), 'M : M+2 : M+4 = 1 : 2 : 1',
+                       'M = two ⁷⁹Br · M+2 = one of each isotope · M+4 = two ⁸¹Br.')
+                + card('One chlorine atom', svg(420, 210, s3), 'M : M+2 = 3 : 1',
+                       '³⁵Cl and ³⁷Cl exist in the <b>ratio 3 : 1</b> — the ³⁵Cl M peak '
+                       'is three times the height of the ³⁷Cl M+2 peak.')
+                + card('Two chlorine atoms', svg(420, 210, s4), 'M : M+2 : M+4 = 9 : 6 : 1',
+                       'M = two ³⁵Cl · M+2 = one of each isotope · M+4 = two ³⁷Cl.')
+                + '</div>')
+
+    body = inner(0, 'x')
+    return shell(W, H, pal, 'TOPIC 10 · MASS SPECTRA',
+                 'Isotopic peaks — two m/z units apart means a halogen mix', body,
+                 tag='10.21',
+                 fkey='PATTERN',
+                 footer='Bromine (1:1 isotopes) → 1:1, or 1:2:1 with two Br atoms. '
+                        'Chlorine (3:1 isotopes) → 3:1, or 9:6:1 with two Cl atoms. '
+                        'Iodine has only one stable isotope — a single M peak.')
+
+
 # ----------------------------------------------------------- 7 · IR spectrum ----
 def build_ir_spectrum(pal):
     W, H = 1240, 640

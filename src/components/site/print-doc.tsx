@@ -197,7 +197,7 @@ function PBlock({ block }: { block: Block }) {
       return (
         <div className="pd-eq">
           <p className="pd-eq-code">{block.code}</p>
-          {block.caption && <p className="pd-eq-cap">{block.caption}</p>}
+          {block.caption && <p className="pd-eq-cap"><PInline text={block.caption} /></p>}
         </div>
       )
 
@@ -289,7 +289,7 @@ function PBlock({ block }: { block: Block }) {
         <figure className="pd-fig">
           {/* block.src is the light variant — right choice for paper */}
           <img src={block.src} alt={block.alt} />
-          <figcaption className="pd-fig-cap">{block.caption ?? block.alt}</figcaption>
+          <figcaption className="pd-fig-cap"><PInline text={block.caption ?? block.alt} /></figcaption>
         </figure>
       )
 

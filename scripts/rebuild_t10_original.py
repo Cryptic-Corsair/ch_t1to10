@@ -115,6 +115,10 @@ NEW_CARDS = [
      "Alcohols form hydrogen bonding between molecules; alkanes only have weak London forces and haloalkanes dipole–dipole forces. Hydrogen bonding is stronger, so it requires more energy to break the bonds."),
     (14, "EXAM", "Put the purification techniques for a liquid organic product in order.",
      "Heating under reflux (the reaction) → distillation (collect the distillate at the product's approximate boiling point range) → solvent extraction with a separating funnel → drying with an anhydrous salt → boiling temperature determination against the data booklet values."),
+    (15, "DEFINITION", "What is the base peak of a mass spectrum?",
+     "The most abundant fragment ion — each fragment ion's abundance is quoted as a percentage of it, and by convention the base peak has a relative abundance of 100%. Only the fragments with the positive charge are detected; the neutral radical is lost."),
+    (16, "EXAM", "The mass spectrum shows molecular ion peaks two m/z units apart. What does that tell you?",
+     "A halogen with two isotopes is present. One Br atom (⁷⁹Br, ⁸¹Br equal): M and M+2 in 1:1; two Br atoms: M, M+2, M+4 in 1:2:1. One Cl atom (³⁵Cl : ³⁷Cl = 3:1): M and M+2 in 3:1; two Cl atoms: 9:6:1. Iodoalkanes give a single molecular ion peak — iodine has only one stable isotope."),
 ]
 existing_fronts = {c["front"] for c in topic.get("cards", [])}
 other_card_ids = {c["id"] for t in data if t["slug"] != slug for c in t.get("cards", [])}
@@ -126,6 +130,14 @@ for ordn, tag, front, back in NEW_CARDS:
     if front not in existing_fronts:
         topic.setdefault("cards", []).append({"id": cid, "ord": ordn, "front": front, "back": back, "tag": tag})
         existing_fronts.add(front)
+
+# align the M/M+1 card with the source notes wording (carbon-13 ≈ 1%, n% rule)
+for c in topic.get("cards", []):
+    if c["id"] == "cmv1eoi8p00gpjfqk48446fqe":
+        c["back"] = ("M⁺• (molecular ion) m/z = molecular mass of the molecule. "
+                     "M+1 comes from carbon-13 (about 1% of naturally occurring carbon-12): "
+                     "height of M+1 = (number of C atoms ÷ 100) × height of the M peak.")
+        print("card 8 back updated to notes wording")
 
 # estHours follows the per-section estimates, as in the original topics
 total_min = sum(s["estMinutes"] for s in sections)

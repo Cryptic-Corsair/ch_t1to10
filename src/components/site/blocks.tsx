@@ -293,7 +293,7 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
             </p>
             {block.caption && (
               <figcaption className="mt-3 text-center text-[12.5px] italic leading-relaxed text-muted">
-                {block.caption}
+                <Inline text={block.caption} />
               </figcaption>
             )}
           </div>
@@ -436,7 +436,7 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
           </div>
           <figcaption className="flex items-start gap-2.5 px-5 py-3.5 text-[12.5px] leading-relaxed text-muted">
             <ImageIcon size={13} strokeWidth={1.75} className="mt-0.5 shrink-0 text-acc" />
-            <span className="min-w-0">{block.caption ?? block.alt}</span>
+            <span className="min-w-0"><Inline text={block.caption ?? block.alt} /></span>
           </figcaption>
         </figure>
       )

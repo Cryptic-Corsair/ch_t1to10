@@ -21,11 +21,13 @@ FIGS = [
     ('t10-alcohol-classes', 1240, 560, figs.build_alcohol_classes),
     ('t10-oxidation-flow', 1340, 660, figs.build_oxidation),
     ('t10-mass-spectrum', 1240, 640, figs.build_mass_spectrum),
+    ('t10-isotope-patterns', 1240, 920, figs.build_isotope_patterns),
     ('t10-ir-spectrum', 1240, 640, figs.build_ir_spectrum),
 ]
 
 
 def main():
+    only = sys.argv[1] if len(sys.argv) > 1 else None
     HTML_DIR.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
@@ -34,6 +36,8 @@ def main():
                                   viewport={'width': 1500, 'height': 1200})
         page = ctx.new_page()
         for name, w, h, build in FIGS:
+            if only and only not in name:
+                continue
             for variant, pal in (('light', LIGHT), ('dark', DARK)):
                 html = build(pal)
                 hp = HTML_DIR / ('%s-%s.html' % (name, variant))
