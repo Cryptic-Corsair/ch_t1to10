@@ -345,8 +345,10 @@ export function TopicDetail({
     </div>
   )
 
+  const glass = mode !== 'terminal' // studio-skinned chrome (Studio + Hybrid)
+
   const endPanelCls =
-    mode === 'lab'
+    mode !== 'terminal'
       ? 'lab-glass rounded-[26px]'
       : 'rounded-2xl border border-line bg-surface'
 
@@ -501,7 +503,7 @@ export function TopicDetail({
   /* ---------- breadcrumbs per interface ---------- */
 
   const crumb =
-    mode === 'lab' ? (
+    glass ? (
       <nav aria-label="Breadcrumb" className="mt-6 flex items-center gap-2 text-[12.5px] text-muted">
         <button onClick={() => go('/topics')} className="inline-flex items-center gap-1.5 rounded-full border border-[color-mix(in_srgb,var(--fg)_14%,transparent)] px-3.5 py-1.5 t-fast hover:border-[color-mix(in_srgb,var(--acc)_45%,transparent)] hover:text-acc focus-visible:outline-acc" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
           <ArrowLeft size={12} />
@@ -563,10 +565,11 @@ export function TopicDetail({
     </div>
   )
 
-  /* ---------- TERMINAL floating contents — bubble, popover, scroll-top ---------- */
+  /* ---------- TERMINAL / HYBRID floating contents — bubble, popover, scroll-top ----------
+     Focus's card-system navigation; Hybrid wears it in glass. */
 
   const unread = total - doneCount
-  const floatingToc = mode === 'terminal' && (
+  const floatingToc = mode !== 'lab' && (
     <>
       {tocOpen && <div aria-hidden className="fixed inset-0 z-40 print:hidden" onClick={() => setTocOpen(false)} />}
       {/* scroll back to top (bottom-left) */}
@@ -576,7 +579,9 @@ export function TopicDetail({
         aria-label="Back to top"
         aria-hidden={!showTop}
         tabIndex={showTop ? 0 : -1}
-        className={`mono fixed bottom-5 left-5 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-line-strong bg-surface text-muted shadow-lg t-fast hover:border-acc hover:text-acc focus-visible:outline-acc print:hidden ${
+        className={`${glass
+          ? 'lab-glass'
+          : 'mono border border-line-strong bg-surface shadow-lg'} fixed bottom-5 left-5 z-40 flex h-11 w-11 items-center justify-center rounded-full text-muted t-fast hover:text-acc focus-visible:outline-acc print:hidden ${
           showTop ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
@@ -588,7 +593,9 @@ export function TopicDetail({
           <div
             role="dialog"
             aria-label="Section contents"
-            className="absolute bottom-[62px] right-0 w-[340px] max-w-[calc(100vw-40px)] overflow-hidden rounded-2xl border border-line bg-surface shadow-2xl"
+            className={`toc-float-card absolute bottom-[62px] right-0 w-[340px] max-w-[calc(100vw-40px)] overflow-hidden rounded-2xl shadow-2xl ${
+              glass ? '' : 'border border-line bg-surface'
+            }`}
             style={{ animation: 'toc-pop 170ms cubic-bezier(0.33,1,0.68,1)' }}
           >
             <div className="flex items-center justify-between gap-4 border-b border-line px-4 py-3.5">
@@ -759,7 +766,7 @@ export function TopicDetail({
       </div>
     )
   } else {
-    /* TERMINAL — warm reading room: centered stream, floating contents */
+    /* TERMINAL / HYBRID — warm reading room: centered stream, floating contents */
     body = (
       <div className="mt-12">
         <div ref={streamRef} className="stream-warm mx-auto w-full max-w-[var(--content-max)]">

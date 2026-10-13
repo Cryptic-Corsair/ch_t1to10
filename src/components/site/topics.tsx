@@ -90,7 +90,7 @@ export function Topics({
             </div>
 
             <div className={`overflow-hidden ${
-              mode === 'lab'
+              mode !== 'terminal'
                 ? 'lab-glass rounded-[22px]'
                 : 'rounded-xl border border-line'
             }`}>

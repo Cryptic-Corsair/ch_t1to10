@@ -71,6 +71,9 @@ function useScrollIntent(blockHide: boolean) {
 function useSlideIndicator(ref: React.RefObject<HTMLElement | null>, activeKey: string) {
   const [box, setBox] = useState<{ left: number; width: number } | null>(null)
 
+  /* isoLayout is useLayoutEffect on the client — the ref read below is
+     effect-phase, but the conditional alias hides that from the linter. */
+  // eslint-disable-next-line react-hooks/refs
   isoLayout(() => {
     const root = ref.current
     if (!root) return
@@ -117,13 +120,17 @@ function HexMark({ lab = false, size = 20, hover = false }: { lab?: boolean; siz
 }
 
 function Brand({ mode }: { mode: string }) {
-  const lab = mode === 'lab'
+  const glass = mode !== 'terminal'
   return (
     <span className="nav-brand flex items-center gap-2.5 text-[13px] text-fg">
-      <HexMark lab={lab} size={20} hover />
-      {lab ? (
+      <HexMark lab={glass} size={20} hover />
+      {mode === 'lab' ? (
         <span className="font-semibold tracking-[0.04em]" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
           IAL&nbsp;STUDIO
+        </span>
+      ) : mode === 'hybrid' ? (
+        <span className="font-semibold tracking-[0.04em]" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
+          IAL&nbsp;HYBRID
         </span>
       ) : (
         <span className="mono text-[13px] font-semibold tracking-[0.08em]">
@@ -190,24 +197,25 @@ function ProgressDial({
 }
 
 /* ============================================================
-   MODE SEGMENT — Focus | Studio with a sliding thumb
+   MODE SEGMENT — Focus | Studio | Hybrid with a sliding thumb
    ============================================================ */
 
 function ModeSegment({ lab, className = '' }: { lab: boolean; className?: string }) {
   const mode = useSettings((s) => s.uiMode)
+  const idx = UI_MODES.findIndex((m) => m.value === mode)
   return (
     <div
       role="group"
       aria-label="Interface"
-      className={`relative grid grid-cols-2 ${lab
+      className={`relative grid grid-cols-3 ${lab
         ? 'rounded-full border border-[color-mix(in_srgb,var(--fg)_14%,transparent)] p-[3px]'
         : 'rounded-lg border border-line p-[3px]'} ${className}`}
     >
       <span
         aria-hidden
-        className="absolute inset-y-[3px] left-[3px] w-[calc(50%-3px)] rounded-full t-fast"
+        className="absolute inset-y-[3px] left-[3px] w-[calc(33.333%-2px)] rounded-full t-fast"
         style={{
-          transform: mode === 'lab' ? 'translateX(100%)' : 'translateX(0%)',
+          transform: `translateX(${Math.max(0, idx) * 100}%)`,
           background: lab ? 'var(--glass-bg-strong)' : 'color-mix(in srgb, var(--acc) 16%, transparent)',
         }}
       />
@@ -217,9 +225,9 @@ function ModeSegment({ lab, className = '' }: { lab: boolean; className?: string
           onClick={() => setUiMode(m.value)}
           aria-pressed={mode === m.value}
           title={`Interface: ${m.label}`}
-          className={`relative z-10 px-3 py-1 t-fast ${lab
-            ? 'text-[10.5px] font-semibold tracking-[0.04em]'
-            : 'mono text-[9.5px] uppercase tracking-[0.14em]'} ${mode === m.value ? 'text-acc' : 'text-muted hover:text-fg'}`}
+          className={`relative z-10 px-2 py-1 t-fast ${lab
+            ? 'text-[10px] font-semibold tracking-[0.02em]'
+            : 'mono text-[9px] uppercase tracking-[0.1em]'} ${mode === m.value ? 'text-acc' : 'text-muted hover:text-fg'}`}
         >
           {m.label}
         </button>
@@ -259,7 +267,7 @@ function TopicChip({ topic, lab }: { topic: TopicData | undefined; lab: boolean 
    ============================================================ */
 
 function MobileMenu({
-  open, onClose, route, topics, total, go, lab,
+  open, onClose, route, topics, total, go, mode,
 }: {
   open: boolean
   onClose: () => void
@@ -267,10 +275,11 @@ function MobileMenu({
   topics: TopicData[]
   total: number
   go: (to: string) => void
-  lab: boolean
+  mode: 'terminal' | 'lab' | 'hybrid'
 }) {
   const read = useProgress((s) => s.read)
   const openPalette = useUi((s) => s.setPalette)
+  const lab = mode !== 'terminal'
 
   useEffect(() => {
     if (!open) return
@@ -306,7 +315,7 @@ function MobileMenu({
       className={`menu-fade fixed inset-0 z-[60] flex flex-col print:hidden ${lab ? 'menu-glass' : 'bg-[var(--bg)] dotgrid'}`}
     >
       <div className={`flex h-14 shrink-0 items-center justify-between border-b px-5 sm:px-6 ${hair}`}>
-        <Brand mode={lab ? 'lab' : 'terminal'} />
+        <Brand mode={mode} />
         <button
           autoFocus
           onClick={onClose}
@@ -520,24 +529,24 @@ function TerminalNav({ route, topics, total }: { route: Route; topics: TopicData
         topics={topics}
         total={total}
         go={go}
-        lab={false}
+        mode="terminal"
       />
     </>
   )
 }
 
 /* ============================================================
-   NAV — LAB (glass instrument panel)
+   NAV — GLASS (Studio + Hybrid)
    Floating glass pill with the same scroll intelligence,
-   gradient progress dial and glass sliding thumb.
+   gradient progress dial and glass sliding thumb. Studio and
+   Hybrid share the chrome; each wears its own wordmark.
    ============================================================ */
 
-function LabNav({ route, topics, total }: { route: Route; topics: TopicData[]; total: number }) {
+function GlassNav({ route, topics, total, mode }: { route: Route; topics: TopicData[]; total: number; mode: 'lab' | 'hybrid' }) {
   const openPalette = useUi((s) => s.setPalette)
   const openSettings = useUi((s) => s.openSettings)
   const [menuOpen, setMenuOpen] = useState(false)
   const [, go] = useRoute()
-  const mode = useSettings((s) => s.uiMode)
   const { scrolled, hide } = useScrollIntent(menuOpen)
   const topic = route.name === 'topic' ? topics.find((t) => t.slug === route.slug) : undefined
 
@@ -566,7 +575,7 @@ function LabNav({ route, topics, total }: { route: Route; topics: TopicData[]; t
             href="#/"
             onClick={(e) => { e.preventDefault(); go('/') }}
             className="group flex shrink-0 items-center focus-visible:outline-acc"
-            aria-label="IAL Studio — home"
+            aria-label={mode === 'lab' ? 'IAL Studio — home' : 'IAL Hybrid — home'}
           >
             <Brand mode={mode} />
           </a>
@@ -637,7 +646,7 @@ function LabNav({ route, topics, total }: { route: Route; topics: TopicData[]; t
         topics={topics}
         total={total}
         go={go}
-        lab
+        mode={mode}
       />
     </>
   )
@@ -651,12 +660,12 @@ export function Nav({
   total: number
 }) {
   const mode = useSettings((s) => s.uiMode)
-  if (mode === 'lab') return <LabNav route={route} topics={topics} total={total} />
-  return <TerminalNav route={route} topics={topics} total={total} />
+  if (mode === 'terminal') return <TerminalNav route={route} topics={topics} total={total} />
+  return <GlassNav route={route} topics={topics} total={total} mode={mode} />
 }
 
 /* ============================================================
-   FOOTERS — two different colophons
+   FOOTERS — three colophons
    ============================================================ */
 
 function TerminalFooter({ go }: { go: (to: string) => void }) {

@@ -630,3 +630,424 @@ html[data-uimode="terminal"] .stream-warm .reading h3 > span:last-child {
     padding-left: 44px;
   }
 }
+
+/* ════════════════════════════════════════════════════════════
+   HYBRID — Studio's aesthetics wrapped around Focus's card system
+   Glass nav + aurora + Space Grotesk up front; inside the topics,
+   Focus's warm reading room (bullet-cards, spec points, floating
+   contents) re-materialised in glass. [data-uimode="hybrid"]
+   ════════════════════════════════════════════════════════════ */
+
+/* ---------- glass token set (same recipe as lab) ---------- */
+html[data-uimode="hybrid"] {
+  --dot: transparent;
+  --glass-bg: color-mix(in srgb, var(--fg) 4.5%, transparent);
+  --glass-bg-strong: color-mix(in srgb, var(--fg) 8%, transparent);
+  --glass-line: color-mix(in srgb, var(--fg) 12%, transparent);
+  --glass-line-strong: color-mix(in srgb, var(--fg) 22%, transparent);
+  --lab-nav-bg: color-mix(in srgb, var(--bg) 55%, transparent);
+  --card-shadow: 0 24px 70px -30px rgb(0 0 0 / 0.55);
+  --glow: 0 0 0 1px color-mix(in srgb, var(--acc) 38%, transparent),
+          0 10px 44px -10px color-mix(in srgb, var(--acc) 55%, transparent);
+}
+
+/* aurora glow field behind everything */
+[data-uimode="hybrid"] .app-root { isolation: isolate; }
+[data-uimode="hybrid"] .app-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(640px 460px at 10% -6%, color-mix(in srgb, var(--acc) 17%, transparent), transparent 70%),
+    radial-gradient(760px 560px at 92% 4%, rgb(56 213 238 / 0.09), transparent 72%),
+    radial-gradient(1000px 720px at 46% 112%, color-mix(in srgb, var(--acc) 13%, transparent), transparent 74%);
+}
+
+/* ---------- display voice → Space Grotesk ---------- */
+[data-uimode="hybrid"] main h1,
+[data-uimode="hybrid"] main h2,
+[data-uimode="hybrid"] .display-serif {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+[data-uimode="hybrid"] .serif-accent {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  background: linear-gradient(100deg, var(--acc), color-mix(in srgb, var(--acc) 40%, #38d5ee));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+[data-uimode="hybrid"] .eyebrow,
+[data-uimode="hybrid"] .kicker {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+}
+[data-uimode="hybrid"] .nav-link {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+[data-uimode="hybrid"] .nav-link:hover { background: var(--glass-bg-strong); }
+[data-uimode="hybrid"] .nav-brand {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* gradient headline on the Focus masthead — the fusion signature */
+[data-uimode="hybrid"] header h1.display-serif {
+  background: linear-gradient(100deg, var(--fg) 20%, var(--acc) 75%, color-mix(in srgb, var(--acc) 50%, #38d5ee) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* the masthead folio numeral stays italic serif, but glows */
+[data-uimode="hybrid"] .mast-num {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--acc) 75%, transparent), color-mix(in srgb, var(--acc) 18%, transparent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 34px color-mix(in srgb, var(--acc) 22%, transparent));
+}
+
+/* ---------- pill everything ---------- */
+[data-uimode="hybrid"] .rounded-xl { border-radius: 22px; }
+[data-uimode="hybrid"] .rounded-2xl { border-radius: 26px; }
+[data-uimode="hybrid"] .rounded-lg { border-radius: 16px; }
+[data-uimode="hybrid"] .rounded-md { border-radius: 12px; }
+[data-uimode="hybrid"] .btn-solid,
+[data-uimode="hybrid"] .btn-ghost,
+[data-uimode="hybrid"] .btn-subtle {
+  border-radius: 999px;
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+[data-uimode="hybrid"] .btn-solid { box-shadow: var(--glow); }
+[data-uimode="hybrid"] .btn-solid:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent), 0 14px 54px -10px color-mix(in srgb, var(--acc) 70%, transparent); }
+[data-uimode="hybrid"] .btn-ghost {
+  background: var(--glass-bg);
+  border-color: var(--glass-line-strong);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+[data-uimode="hybrid"] .btn-ghost:hover { border-color: color-mix(in srgb, var(--acc) 45%, transparent); }
+[data-uimode="hybrid"] .chip { border-radius: 999px; font-family: var(--font-grotesk), sans-serif; }
+[data-uimode="hybrid"] .stat-num { font-family: var(--font-grotesk), sans-serif; font-weight: 700; }
+[data-uimode="hybrid"] .ghost-numeral { display: none; }
+[data-uimode="hybrid"] .reading-lead::first-letter {
+  font-family: inherit;
+  font-weight: inherit;
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+}
+
+/* ---------- glass note blocks ---------- */
+[data-uimode="hybrid"] .blk-def,
+[data-uimode="hybrid"] .blk-eq,
+[data-uimode="hybrid"] .blk-callout,
+[data-uimode="hybrid"] .blk-worked,
+[data-uimode="hybrid"] .blk-table,
+[data-uimode="hybrid"] .blk-fig {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+[data-uimode="hybrid"] .blk-eq { box-shadow: 0 0 60px -30px color-mix(in srgb, var(--acc) 55%, transparent); }
+[data-uimode="hybrid"] .blk-eq .blk-eq-bar { background: transparent; border-bottom-color: var(--glass-line); }
+[data-uimode="hybrid"] .blk-callout { border-left: 3px solid var(--acc); }
+[data-uimode="hybrid"] .blk-table thead tr { background: transparent; }
+[data-uimode="hybrid"] .blk-table th { font-family: var(--font-grotesk), sans-serif; }
+[data-uimode="hybrid"] .steps::before { background: var(--glass-line-strong); }
+[data-uimode="hybrid"] .step-dot {
+  background: var(--glass-bg-strong);
+  border-color: var(--glass-line-strong);
+  font-family: var(--font-grotesk), sans-serif;
+}
+
+/* ---------- Focus's card system, re-materialised in glass ---------- */
+
+/* background bullet cards float as glass panels */
+[data-uimode="hybrid"] .bullet-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 56px -34px rgb(0 0 0 / 0.6);
+  padding: 6px 24px;
+}
+[data-uimode="hybrid"] .bullet-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+}
+[data-uimode="hybrid"] .bullet-row + .bullet-row {
+  border-top: 1px solid var(--glass-line);
+}
+[data-uimode="hybrid"] .bullet-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.62em;
+  border-radius: 999px;
+  background: var(--acc);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--acc) 65%, transparent);
+}
+[data-uimode="hybrid"] .bullet-num {
+  flex: none;
+  width: 24px;
+  padding-top: 3px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--acc);
+}
+[data-uimode="hybrid"] .bullet-term {
+  font-weight: 600;
+  color: var(--fg);
+}
+[data-uimode="hybrid"] .bullet-text {
+  color: color-mix(in srgb, var(--fg) 88%, transparent);
+}
+[data-uimode="hybrid"] .rail {
+  margin-top: 7px;
+  border-left: 2px solid var(--glass-line-strong);
+  padding-left: 15px;
+  color: var(--muted);
+}
+
+/* warm list dots round while reading (legacy plain lists) */
+[data-uimode="hybrid"] .stream-warm ul > li > span[aria-hidden] {
+  width: 7px;
+  height: 7px;
+  margin-top: 0.58em;
+  rotate: 0deg;
+  border-radius: 999px;
+  background: var(--acc);
+}
+
+/* the accent dash above section headers → gradient beam */
+[data-uimode="hybrid"] .warm-dash {
+  background: linear-gradient(90deg, var(--acc), color-mix(in srgb, var(--acc) 35%, #38d5ee));
+  box-shadow: 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent);
+}
+
+/* collapsible specification point → glass bar */
+[data-uimode="hybrid"] .spec-point {
+  border: 1px solid var(--glass-line);
+  border-radius: 14px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color 200ms ease;
+}
+[data-uimode="hybrid"] .spec-point:hover { border-color: var(--glass-line-strong); }
+[data-uimode="hybrid"] .spec-point summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 18px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+[data-uimode="hybrid"] .spec-point summary::-webkit-details-marker { display: none; }
+[data-uimode="hybrid"] .spec-point-head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+[data-uimode="hybrid"] .spec-point-label {
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+[data-uimode="hybrid"] .spec-point summary:hover .spec-point-label { color: var(--acc); }
+[data-uimode="hybrid"] .spec-point-statement {
+  color: color-mix(in srgb, var(--fg) 86%, transparent);
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-line;
+}
+[data-uimode="hybrid"] .spec-caret {
+  flex: none;
+  color: var(--faint);
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-uimode="hybrid"] .spec-point[open] .spec-caret { transform: rotate(180deg); }
+[data-uimode="hybrid"] .spec-point-flat .spec-point-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 18px;
+}
+[data-uimode="hybrid"] .spec-point-body {
+  display: grid;
+  gap: 11px;
+  border-top: 1px solid var(--glass-line);
+  padding: 16px 18px 18px;
+}
+[data-uimode="hybrid"] .spec-outline-item {
+  border-left: 2px solid var(--glass-line-strong);
+  padding-left: 14px;
+  color: var(--muted);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Focus subheadings keep their hanging accent dash — text in Space Grotesk */
+html[data-uimode="hybrid"] .stream-warm .reading h3 {
+  position: relative;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  margin-top: 2.4rem !important;
+  padding: 0 0 0 36px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  align-items: flex-start;
+  gap: 0;
+  font-size: 19px;
+}
+html[data-uimode="hybrid"] .stream-warm .reading h3 > span:first-child {
+  position: absolute;
+  left: 0;
+  top: calc(0.62em - 1.5px);
+  width: 22px !important;
+  height: 3px !important;
+  flex: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--acc), color-mix(in srgb, var(--acc) 35%, #38d5ee));
+  box-shadow: 0 0 12px color-mix(in srgb, var(--acc) 50%, transparent);
+}
+html[data-uimode="hybrid"] .stream-warm .reading h3 > span:last-child {
+  min-width: 0;
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  text-wrap: balance;
+}
+@media screen and (min-width: 640px) {
+  html[data-uimode="hybrid"] .stream-warm .reading h3 { font-size: 21px; padding-left: 38px; }
+  html[data-uimode="hybrid"] .stream-warm .reading h3 > span:first-child { width: 24px !important; }
+}
+@media screen and (min-width: 768px) {
+  html[data-uimode="hybrid"] .stream-warm .reading h3 { font-size: 22px; }
+}
+@media screen and (min-width: 1024px) {
+  html[data-uimode="hybrid"] .stream-warm .reading h3 { font-size: 24px; padding-left: 40px; margin-top: 2.6rem !important; }
+  html[data-uimode="hybrid"] .stream-warm .reading h3 > span:first-child { width: 26px !important; }
+}
+@media screen and (min-width: 1440px) {
+  html[data-uimode="hybrid"] .stream-warm .reading h3 { font-size: 26px; padding-left: 44px; }
+}
+
+/* softer rounding for the remaining note blocks in the warm stream */
+[data-uimode="hybrid"] .stream-warm .blk-eq,
+[data-uimode="hybrid"] .stream-warm .blk-callout,
+[data-uimode="hybrid"] .stream-warm .blk-worked,
+[data-uimode="hybrid"] .stream-warm .blk-table,
+[data-uimode="hybrid"] .stream-warm .blk-fig {
+  border-radius: 20px;
+}
+[data-uimode="hybrid"] .stream-warm .blk-eq .equation-display { font-size: 18px; }
+
+/* ---------- chrome ---------- */
+
+/* fixed glass pill nav needs body offset */
+[data-uimode="hybrid"] main { padding-top: 86px; }
+
+/* reading progress → gradient beam */
+[data-uimode="hybrid"] .read-progress {
+  height: 3px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, var(--acc), color-mix(in srgb, var(--acc) 40%, #38d5ee));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--acc) 60%, transparent);
+}
+
+/* Studio's giant ghost numerals carry over the section headers */
+.sec-giant { display: none; }
+[data-uimode="hybrid"] .sec-giant {
+  display: block;
+  font-family: var(--font-grotesk), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  font-size: clamp(72px, 10vw, 128px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--fg) 30%, transparent),
+    color-mix(in srgb, var(--fg) 8%, transparent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  user-select: none;
+  margin-bottom: 2px;
+}
+
+/* glass hover for shared list rows */
+[data-uimode="hybrid"] .topic-row:hover,
+[data-uimode="hybrid"] .topic-row:focus-visible {
+  background: var(--glass-bg-strong);
+}
+[data-uimode="hybrid"] .reading-table tbody tr:hover { background: var(--glass-bg-strong); }
+
+/* doodles a touch louder under glass (studio recipe) */
+[data-uimode="hybrid"] .doodle { opacity: 0.09; }
+
+/* glass pager cards */
+[data-uimode="hybrid"] .pager-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+[data-uimode="hybrid"] .pager-card:hover {
+  border-color: color-mix(in srgb, var(--acc) 42%, transparent);
+  box-shadow: 0 20px 60px -24px color-mix(in srgb, var(--acc) 40%, transparent);
+}
+
+/* floating contents popover → deep glass */
+[data-uimode="hybrid"] .toc-float-card {
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  border: 1px solid var(--glass-line-strong);
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+}
+
+/* the Aa pill yields to the contents bubble on topic pages */
+html[data-uimode="hybrid"][data-page="topic"] .fab-ctl { bottom: 5.5rem; }

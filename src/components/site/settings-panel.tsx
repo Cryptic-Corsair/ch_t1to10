@@ -19,6 +19,25 @@ function ModePreview({ mode }: { mode: UiMode }) {
       </span>
     )
   }
+  if (mode === 'hybrid') {
+    /* studio glass + focus's bullet-card rows */
+    return (
+      <span aria-hidden className="block h-[64px] w-full overflow-hidden rounded-md border border-[#241c3f] bg-[#0d0b1a] p-2.5 text-left">
+        <span className="block h-[6px] w-3/5 rounded-full bg-gradient-to-r from-[#a78bfa] to-[#38d5ee] opacity-90" />
+        <span className="mt-[6px] block rounded-md border border-white/15 bg-white/[0.07] px-1.5 py-1">
+          <span className="flex items-center gap-1">
+            <span className="block h-[4px] w-[4px] rounded-full bg-[#a78bfa]" />
+            <span className="block h-[4px] w-3/5 rounded-full bg-white/25" />
+          </span>
+          <span className="mt-[3px] ml-[8px] block h-[3px] w-2/5 rounded-full bg-white/15" />
+        </span>
+        <span className="mt-[5px] flex items-center gap-1">
+          <span className="block h-[4px] w-[4px] rounded-full bg-[#38d5ee]" />
+          <span className="block h-[4px] w-2/5 rounded-full bg-white/20" />
+        </span>
+      </span>
+    )
+  }
   return (
     <span aria-hidden className="block h-[64px] w-full overflow-hidden rounded-md border border-[#241c3f] bg-[#0d0b1a] p-2.5 text-left">
       <span className="block h-[7px] w-11/12 rounded-full bg-gradient-to-r from-[#a78bfa] to-[#38d5ee] opacity-90" />
@@ -105,8 +124,8 @@ export function SettingsContent() {
   return (
     <div className="flex h-full flex-col">
       <div className="flex-1 overflow-y-auto px-6 py-6">
-        <Group label="Interface" hint="Two different websites, not two color schemes — each has its own layout, chrome, type voice and native palette. Same notes, same progress everywhere.">
-          <div role="radiogroup" aria-label="Interface mode" className="grid grid-cols-2 gap-2">
+        <Group label="Interface" hint="Three different websites, not three color schemes — each has its own layout, chrome, type voice and native palette. Same notes, same progress everywhere.">
+          <div role="radiogroup" aria-label="Interface mode" className="grid grid-cols-3 gap-2">
             {UI_MODES.map((m) => {
               const active = s.uiMode === m.value
               const preset = MODE_PRESETS[m.value]

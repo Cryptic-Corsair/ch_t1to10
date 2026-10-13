@@ -155,11 +155,11 @@ export function AppShell({
           aria-label="Open control room"
           title="Control room"
           className={
-            mode === 'lab'
-              ? 'lab-glass fixed bottom-5 right-5 z-40 flex h-11 items-center gap-2 rounded-full px-4 text-[12px] font-semibold text-muted shadow-lg t-fast hover:border-[color-mix(in_srgb,var(--acc)_45%,transparent)] hover:text-acc focus-visible:outline-acc print:hidden'
+            mode !== 'terminal'
+              ? 'lab-glass fab-ctl fixed bottom-5 right-5 z-40 flex h-11 items-center gap-2 rounded-full px-4 text-[12px] font-semibold text-muted shadow-lg t-fast hover:border-[color-mix(in_srgb,var(--acc)_45%,transparent)] hover:text-acc focus-visible:outline-acc print:hidden'
               : 'fab-ctl mono fixed bottom-5 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-line-strong bg-surface text-muted shadow-lg t-fast hover:border-acc hover:text-acc focus-visible:outline-acc print:hidden'
           }
-          style={mode === 'lab' ? { fontFamily: 'var(--font-grotesk), sans-serif' } : undefined}
+          style={mode !== 'terminal' ? { fontFamily: 'var(--font-grotesk), sans-serif' } : undefined}
         >
           <span className="text-[13px] font-semibold">Aa</span>
           {mode !== 'terminal' && <span className="hidden sm:inline">Control room</span>}

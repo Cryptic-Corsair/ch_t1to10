@@ -587,8 +587,10 @@ kbd.kbd {
 
   /* neutralise textures + glass */
   .dotgrid { background-image: none !important; }
-  [data-uimode="lab"] .app-root::before { display: none !important; }
-  [data-uimode="lab"] {
+  [data-uimode="lab"] .app-root::before,
+  [data-uimode="hybrid"] .app-root::before { display: none !important; }
+  [data-uimode="lab"],
+  [data-uimode="hybrid"] {
     --glass-bg: transparent;
     --glass-bg-strong: #f6f6f6;
     --glass-line: #d9d9d9;
@@ -600,11 +602,15 @@ kbd.kbd {
 
   /* gradient text prints as solid accent (clipped gradients don't print) */
   .lab-grad,
-  [data-uimode="lab"] .serif-accent {
+  [data-uimode="lab"] .serif-accent,
+  [data-uimode="hybrid"] .serif-accent,
+  [data-uimode="hybrid"] header h1.display-serif,
+  [data-uimode="hybrid"] .mast-num {
     background: none !important;
     -webkit-background-clip: initial !important;
     background-clip: initial !important;
     color: var(--acc) !important;
+    filter: none !important;
   }
 
   /* decorative numerals: keep the masthead folio, drop the giant ghosts */

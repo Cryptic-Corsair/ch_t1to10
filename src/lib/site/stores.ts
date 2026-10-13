@@ -10,14 +10,17 @@ import { persist, createJSONStorage } from 'zustand/middleware'
 export type ThemeName = 'midnight' | 'carbon' | 'paper' | 'sepia'
 export type AccentName = 'coral' | 'amber' | 'mint' | 'rose' | 'violet' | 'cyan'
 export type FontFamily = 'sans' | 'serif' | 'mono'
-export type UiMode = 'terminal' | 'lab'
+export type UiMode = 'terminal' | 'lab' | 'hybrid'
 
-/* Two interfaces, two different websites:
-   terminal ("Focus") — the control desk homepage + a warm student reading room for notes
-   lab ("Studio")     — a glassmorphic neon instrument panel (floating glass, glow) */
+/* Three interfaces, three different websites:
+   terminal ("Focus")  — the control desk homepage + a warm student reading room for notes
+   lab ("Studio")      — a glassmorphic neon instrument panel (floating glass, glow)
+   hybrid ("Hybrid")   — Studio's glass aesthetics wrapped around Focus's reading room:
+                         glass nav + aurora up front, Focus's card system inside the topics */
 export const UI_MODES: { value: UiMode; label: string; blurb: string }[] = [
   { value: 'terminal', label: 'Focus', blurb: 'The control desk — mono, hairlines and dot grid up front; a warm, focused reading room inside the topics.' },
   { value: 'lab', label: 'Studio', blurb: 'A glass instrument panel — floating glass nav, aurora glow, gradient type, pill chrome.' },
+  { value: 'hybrid', label: 'Hybrid', blurb: 'Studio’s glass and glow wrapped around Focus’s reading room — glass nav and aurora up front, Focus’s cards and floating contents inside the topics.' },
 ]
 
 /* Each interface is a different site with its own native palette.
@@ -25,6 +28,7 @@ export const UI_MODES: { value: UiMode; label: string; blurb: string }[] = [
 export const MODE_PRESETS: Record<UiMode, { theme: ThemeName; accent: AccentName }> = {
   terminal: { theme: 'midnight', accent: 'coral' },
   lab: { theme: 'carbon', accent: 'violet' },
+  hybrid: { theme: 'carbon', accent: 'violet' },
 }
 
 interface SettingsState {
@@ -61,8 +65,8 @@ export const useSettings = create<SettingsState>()(
   persist(
     (set) => ({
       ...DEFAULTS,
-      themeByMode: { terminal: 'midnight', lab: 'carbon' },
-      accentByMode: { terminal: 'coral', lab: 'violet' },
+      themeByMode: { terminal: 'midnight', lab: 'carbon', hybrid: 'carbon' },
+      accentByMode: { terminal: 'coral', lab: 'violet', hybrid: 'violet' },
       set: (patch) =>
         set((st) => {
           const next = { ...st, ...patch }
@@ -78,8 +82,8 @@ export const useSettings = create<SettingsState>()(
       reset: () =>
         set({
           ...DEFAULTS,
-          themeByMode: { terminal: 'midnight', lab: 'carbon' },
-          accentByMode: { terminal: 'coral', lab: 'violet' },
+          themeByMode: { terminal: 'midnight', lab: 'carbon', hybrid: 'carbon' },
+          accentByMode: { terminal: 'coral', lab: 'violet', hybrid: 'violet' },
         }),
     }),
     {
@@ -232,7 +236,7 @@ export function hydrateStores() {
    If a browser ever saved one, snap it back to a valid interface. */
 export function migrateRemovedModes() {
   const s = useSettings.getState()
-  if (s.uiMode === 'terminal' || s.uiMode === 'lab') return
+  if (s.uiMode === 'terminal' || s.uiMode === 'lab' || s.uiMode === 'hybrid') return
   const legacy = s.themeByMode as Record<string, ThemeName | undefined>
   const legacyAcc = s.accentByMode as Record<string, AccentName | undefined>
   useSettings.setState({
@@ -265,7 +269,7 @@ export function applySettingsToDom(s: SettingsState) {
 }
 
 export function cycleUiMode(): UiMode {
-  const order: UiMode[] = ['terminal', 'lab']
+  const order: UiMode[] = ['terminal', 'lab', 'hybrid']
   const cur = useSettings.getState().uiMode
   const next = order[(order.indexOf(cur) + 1) % order.length]
   useSettings.getState().set({ uiMode: next })

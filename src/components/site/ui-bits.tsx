@@ -6,7 +6,7 @@ import type { UiMode } from '@/lib/site/stores'
 
 /* ---------- mode-aware layout helpers ----------
    terminal keeps the joined hairline grid (gap-px on bg-line);
-   lab gets separated glass cells. */
+   lab + hybrid get separated glass cells (studio aesthetics). */
 
 export function gridShell(mode: UiMode, extra = ''): string {
   if (mode === 'terminal') return `grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line ${extra}`
@@ -23,7 +23,7 @@ export function hoverCell(mode: UiMode): string {
   return 'focus-visible:outline-acc'
 }
 
-/* eyebrow voice: terminal prefixes "///", studio marks plain */
+/* eyebrow voice: terminal prefixes "///", studio + hybrid stay plain */
 export function eyebrowText(mode: UiMode, text: string): string {
   return mode === 'terminal' ? `/// ${text}` : text
 }
