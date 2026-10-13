@@ -213,6 +213,12 @@ html[data-uimode="lab"] {
 [data-uimode="lab"] .blk-table thead tr { background: transparent; }
 [data-uimode="lab"] .blk-table th { font-family: var(--font-grotesk), sans-serif; }
 [data-uimode="lab"] .steps::before { background: var(--glass-line-strong); }
+
+/* worked-example working chips wear glass */
+[data-uimode="lab"] .wx-eq {
+  background: var(--glass-bg-strong);
+  border-color: var(--glass-line-strong);
+}
 [data-uimode="lab"] .step-dot {
   background: var(--glass-bg-strong);
   border-color: var(--glass-line-strong);
@@ -782,6 +788,12 @@ html[data-uimode="hybrid"] {
   background: var(--glass-bg-strong);
   border-color: var(--glass-line-strong);
   font-family: var(--font-grotesk), sans-serif;
+}
+
+/* worked-example working chips wear glass */
+[data-uimode="hybrid"] .wx-eq {
+  background: var(--glass-bg-strong);
+  border-color: var(--glass-line-strong);
 }
 
 /* ---------- Focus's card system, re-materialised in glass ---------- */

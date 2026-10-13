@@ -380,7 +380,29 @@ kbd.kbd {
   background: var(--elev);
   font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 11px;
+  font-weight: 600;
   color: var(--fg);
+}
+
+/* worked-example: equation / calculation lines pop out of the prose */
+.wx-eq {
+  font-variant-numeric: tabular-nums lining-nums;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--elev);
+  border-radius: 10px;
+  padding: 7px 12px;
+  color: var(--fg);
+  overflow-x: auto;
+}
+.wx-li {
+  display: flex;
+  gap: 9px;
+}
+.wx-li > span[aria-hidden] {
+  color: var(--faint);
+  flex-shrink: 0;
 }
 
 /* equations set like display math */

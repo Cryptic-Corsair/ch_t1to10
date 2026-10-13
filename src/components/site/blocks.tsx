@@ -9,7 +9,6 @@ import {
   Image as ImageIcon,
   KeyRound,
   Lightbulb,
-  PenLine,
   Sigma,
   Target,
   TriangleAlert,
@@ -62,6 +61,54 @@ function EqCopy({ text }: { text: string }) {
     >
       {done ? <Check size={12} /> : <Copy size={12} />}
     </button>
+  )
+}
+
+/* ---------- worked example ----------
+   A guided solution sheet: problem → numbered working → answer.
+   Lines that are chemistry equations (contain an arrow) or short
+   calculations (contain '=', no sentence punctuation) render as
+   distinct "working" chips so the maths never drowns in prose. */
+
+const WX_ARROW = /→|⇌|⇒/
+
+function wxLineKind(line: string): 'eq' | 'li' | 'p' {
+  const l = line.trim()
+  if (!l) return 'p'
+  if (WX_ARROW.test(l)) return 'eq'
+  if (l.includes('=') && l.length <= 78 && !/[.!?]['")\]]?$/.test(l)) return 'eq'
+  if (/^[-•*]\s+/.test(l)) return 'li'
+  return 'p'
+}
+
+function WxLines({ text }: { text: string }) {
+  const lines = text.split('\n').map((l) => l.trim()).filter(Boolean)
+  return (
+    <div className="space-y-2">
+      {lines.map((line, i) => {
+        const kind = wxLineKind(line)
+        if (kind === 'eq') {
+          return (
+            <p key={i} className="wx-eq">
+              <Inline text={line} />
+            </p>
+          )
+        }
+        if (kind === 'li') {
+          return (
+            <p key={i} className="wx-li">
+              <span aria-hidden>–</span>
+              <span className="min-w-0"><Inline text={line.replace(/^[-•*]\s+/, '')} /></span>
+            </p>
+          )
+        }
+        return (
+          <p key={i} className="leading-relaxed">
+            <Inline text={line} />
+          </p>
+        )
+      })}
+    </div>
   )
 }
 
@@ -348,45 +395,62 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
       )
     }
 
-    case 'worked':
+    case 'worked': {
+      const nSteps = block.steps.length
       return (
         <div className="blk blk-worked focus-block overflow-hidden rounded-xl border border-line bg-surface">
-          <div className="flex items-center gap-2.5 border-b border-line bg-elev/50 px-5 py-3">
-            <PenLine size={14} className="shrink-0 text-acc" strokeWidth={1.75} />
-            <p className="text-[13px] font-semibold text-fg">
-              Worked example
-              <span className="font-normal text-muted"> — {block.title}</span>
-            </p>
+          {/* header — skill title up front, length gauge on the right */}
+          <div className="flex items-center justify-between gap-4 border-b border-line bg-[color-mix(in_srgb,var(--acc)_7%,transparent)] px-5 py-4">
+            <div className="min-w-0">
+              <p className="mono text-[9.5px] font-semibold uppercase tracking-[0.2em] text-acc">
+                Worked example
+              </p>
+              <p className="mt-1 text-[15px] font-semibold leading-snug text-fg">{block.title}</p>
+            </div>
+            <span
+              className="mono shrink-0 rounded-full border border-line px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] text-muted"
+              title={`${nSteps} step${nSteps === 1 ? '' : 's'} of working`}
+            >
+              {nSteps} {nSteps === 1 ? 'step' : 'steps'}
+            </span>
           </div>
+
           <div className="px-5 py-5">
-            <div className="rounded-lg border border-line/70 bg-elev/50 px-4 py-3.5">
+            {/* problem — the question, set apart with an accent edge */}
+            <div className="rounded-xl border-l-2 border-acc/50 bg-elev/40 px-4 py-3.5">
               <p className="mono text-[10px] font-medium uppercase tracking-[0.18em] text-faint">Problem</p>
               <p className="mt-1.5 text-[0.95em] leading-relaxed text-fg/90">
                 <Inline text={block.problem} />
               </p>
             </div>
 
+            {/* working — numbered timeline, equations as chips */}
             <ol className="steps mt-5 space-y-4">
               {block.steps.map((s, i) => (
                 <li key={i} className="flex items-start gap-3.5">
                   <span className="step-dot" aria-hidden>{i + 1}</span>
-                  <span className="min-w-0 flex-1 overflow-x-auto whitespace-pre-wrap pt-0.5 text-[13.5px] leading-relaxed text-muted">
-                    <Inline text={s} />
-                  </span>
+                  <div className="min-w-0 flex-1 pt-0.5 text-[13.5px] leading-relaxed text-muted">
+                    <WxLines text={s} />
+                  </div>
                 </li>
               ))}
             </ol>
 
-            <div className="mt-5 flex items-start gap-3 rounded-lg border border-acc/30 bg-acc/10 px-4 py-3.5">
-              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-acc" strokeWidth={1.75} />
-              <div className="min-w-0">
+            {/* answer — the result, with one-tap copy */}
+            <div className="mt-5 flex items-start gap-3.5 rounded-xl border border-acc/30 bg-acc/10 px-4 py-4">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-acc text-on-acc shadow-md">
+                <CheckCircle2 size={15} strokeWidth={2.25} />
+              </span>
+              <div className="min-w-0 flex-1">
                 <p className="mono text-[10px] font-medium uppercase tracking-[0.18em] text-acc">Answer</p>
-                <p className="mt-1 text-[14px] font-medium leading-relaxed text-fg">{block.answer}</p>
+                <p className="mt-1 text-[14.5px] font-medium leading-relaxed text-fg">{block.answer}</p>
               </div>
+              <EqCopy text={block.answer} />
             </div>
           </div>
         </div>
       )
+    }
 
     case 'qa':
       return <QaCard block={block} />
