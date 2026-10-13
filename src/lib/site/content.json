@@ -17270,7 +17270,7 @@
   "title": "Organic Chemistry: Halogenoalkanes, Alcohols and Spectra",
   "subtitle": "Nucleophiles, substitution, alcohols — and reading mass + IR spectra.",
   "summary": "Mechanisms and nucleophiles; halogenoalkane reactions; classifying and oxidising alcohols; mass spectrometry fragmentation; infrared spectroscopy.",
-  "estHours": 7.7,
+  "estHours": 9.2,
   "sections": [
    {
     "id": "cmv1eoi5t10r00000000",
@@ -17657,7 +17657,7 @@
     "number": "10.6",
     "title": "Halogenoalkanes: Nomenclature and Formulae",
     "blurb": "CₙH₂ₙ₊₁X — naming, locants and the three formulae.",
-    "estMinutes": 20,
+    "estMinutes": 30,
     "spec": "10.6",
     "specText": "understand the nomenclature of halogenoalkanes and be able to draw their structural, displayed and skeletal formulae",
     "outline": [],
@@ -17720,6 +17720,45 @@
       ]
      },
      {
+      "type": "worked",
+      "title": "Exercise 1 — write the IUPAC names",
+      "problem": "From the notes: write the IUPAC names of 1. CH₃Br · 2. C₂H₅F · 3. IH₂C–CH₂–CH₂–I · 4. H₃C–CH₂–CH(Cl)–CH₃ · 5. H₃C–CH(Cl)–CH(Cl)–CH₂Cl (and the three drawn structures 6–8, each a skeletal drawing to name).",
+      "steps": [
+       "**CH₃Br → bromomethane** — no locant is needed with only two carbons.",
+       "**C₂H₅F → fluoroethane** — the halogen is fluoro- on the only possible position.",
+       "**IH₂C–CH₂–CH₂–I → 1,3-diiodopropane** — two iodine atoms, di- plus locants.",
+       "**H₃C–CH₂–CH(Cl)–CH₃ → 2-chlorobutane** — four-carbon chain, chloro on C2.",
+       "**H₃C–CH(Cl)–CH(Cl)–CH₂Cl → 1,2-dichlorobutane** — number from the end nearer the substituents, so the locants are the lowest: 1 and 2."
+      ],
+      "answer": "1 bromomethane · 2 fluoroethane · 3 1,3-diiodopropane · 4 2-chlorobutane · 5 1,2-dichlorobutane."
+     },
+     {
+      "type": "h3",
+      "text": "Isomers of halogenoalkanes"
+     },
+     {
+      "type": "p",
+      "text": "**Isomers** are the organic compounds which have the **same molecular formula but different structural formula and properties**. The phenomenon is called **isomerism**. Haloalkanes can exhibit the following types of isomerism:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Chain isomerism** — occurs due to **branching in carbon chains**.",
+       "**Position isomerism** — occurs due to the **position in which the functional group is present**."
+      ]
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 2 — draw, name and classify all the isomers",
+      "problem": "From the notes: draw the displayed formula and skeletal formula for all the possible isomers of C₄H₉Br and C₅H₁₁Br, and name and classify each isomer as primary, secondary or tertiary.",
+      "steps": [
+       "**C₄H₉Br — four isomers:** 1-bromobutane (primary, one alkyl group on the C–Br carbon) · 2-bromobutane (secondary, two) · 1-bromo-2-methylpropane (primary) · 2-bromo-2-methylpropane (tertiary, three).",
+       "**C₅H₁₁Br — eight isomers:** 1-bromopentane (1°) · 2-bromopentane (2°) · 3-bromopentane (2°) · 1-bromo-2-methylbutane (1°) · 1-bromo-3-methylbutane (1°) · 2-bromo-2-methylbutane (3°) · 2-bromo-3-methylbutane (2°) · 1-bromo-2,2-dimethylpropane (1°).",
+       "The class is decided by the **number of carbon atoms attached to the carbon holding the halogen** — the classification of section 10.7."
+      ],
+      "answer": "Four isomers of C₄H₉Br and eight of C₅H₁₁Br — one tertiary (2-bromo-2-methylpropane for C₄H₉Br; 2-bromo-2-methylbutane for C₅H₁₁Br)."
+     },
+     {
       "type": "h3",
       "text": "The three formulae"
      },
@@ -17745,7 +17784,7 @@
     "number": "10.7",
     "title": "Primary, Secondary and Tertiary Halogenoalkanes",
     "blurb": "Count the alkyl groups on the carbon that carries the halogen.",
-    "estMinutes": 12,
+    "estMinutes": 14,
     "spec": "10.7",
     "specText": "understand the distinction between primary, secondary and tertiary halogenoalkanes",
     "outline": [],
@@ -17789,6 +17828,18 @@
      {
       "type": "p",
       "text": "The **same types of reaction** are open to all three classes — but there is a **difference in the rate** at which they react (sections 10.10 and 10.12)."
+     },
+     {
+      "type": "worked",
+      "title": "Check point — fluoroalkanes vs chloroalkanes",
+      "problem": "From the notes: why are nucleophiles more strongly attracted to fluoroalkanes than to chloroalkanes?",
+      "steps": [
+       "Fluorine has a **greater electronegativity** than chlorine, so the C–F bond is **more polar** than the C–Cl bond.",
+       "The carbon in C–F therefore carries a **larger δ+ charge** — it is more **electron-deficient**.",
+       "Nucleophiles are **electron-pair donors** attracted to electron-deficient (δ+) carbon atoms — the more δ+ the carbon, the stronger the attraction.",
+       "Note the flip side (section 10.13): despite this polarity, fluoroalkanes react **most slowly**, because the C–F bond is the **strongest**."
+      ],
+      "answer": "Because fluorine is the most electronegative halogen — the C–F bond is the most polar, so its carbon is the most electron-deficient (δ+) and attracts nucleophiles most strongly."
      }
     ]
    },
@@ -17798,7 +17849,7 @@
     "number": "10.8",
     "title": "Reactions of Halogenoalkanes",
     "blurb": "Five reagents, one target — the solvent decides the role of OH⁻.",
-    "estMinutes": 30,
+    "estMinutes": 40,
     "spec": "10.8",
     "specText": "understand the reactions of halogenoalkanes with:",
     "outline": [
@@ -17812,7 +17863,7 @@
     "content": [
      {
       "type": "p",
-      "text": "Warm the halogenoalkane with the reagent and note three things every time: the **reagent and its solvent**, the **role of the attacking species**, and the **product**. Many organic reactions are slow and the reagents volatile, so they are carried out by **heating under reflux** — boiling the mixture and condensing the vapour back into the flask continuously."
+      "text": "Warm the halogenoalkane with the reagent and note three things every time: the **reagent and its solvent**, the **role of the attacking species**, and the **product**. Many organic reactions are slow and the reagents volatile, so they are carried out by **heating under reflux** — boiling the reaction mixture and condensing the vapour produced back into the flask continuously."
      },
      {
       "type": "table",
@@ -17848,7 +17899,7 @@
         "**amine** (amino alkane)"
        ],
        [
-        "**alcoholic KCN**",
+        "**alcoholic KCN (or NaCN)**",
         "reflux, aqueous alcoholic solution",
         "CN⁻ acts as a **nucleophile**",
         "**nitrile**"
@@ -17865,13 +17916,28 @@
       "caption": "Bromoethane + aqueous potassium hydroxide, heated under reflux → ethanol."
      },
      {
+      "type": "eq",
+      "code": "CH₃CH(Cl)CH₃  +  :OH⁻(aq)  →  CH₃CH(OH)CH₃  +  :Cl⁻",
+      "caption": "2-chloropropane + aqueous potassium hydroxide, heated under reflux → propan-2-ol."
+     },
+     {
       "type": "h3",
       "text": "Ethanolic potassium hydroxide — elimination"
      },
      {
       "type": "eq",
+      "code": "CH₃CH₂Br  +  OH⁻  →  CH₂=CH₂  +  Br⁻  +  H₂O",
+      "caption": "Bromoethane + ethanolic potassium hydroxide, heated under reflux → ethene."
+     },
+     {
+      "type": "eq",
       "code": "CH₃CH₂CH₂Cl  +  OH⁻  →  CH₃CH=CH₂  +  H₂O  +  Cl⁻",
       "caption": "1-chloropropane + ethanolic KOH → propene. For unsymmetrical halogenoalkanes, a mixture of isomeric alkenes can form: CH₃CH₂CH(Cl)CH₃ gives but-2-ene and but-1-ene."
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CH(Cl)CH₃  +  OH⁻  →  CH₃CH=CHCH₃  +  CH₃CH₂CH=CH₂  +  H₂O  +  Cl⁻",
+      "caption": "2-chlorobutane (unsymmetrical) → a mixture of isomeric alkenes: but-2-ene and but-1-ene."
      },
      {
       "type": "h3",
@@ -17891,6 +17957,20 @@
       "caption": "1-chloropropane + concentrated ammonia → propylamine. The reaction needs a sealed tube: ammonia does not condense in a heat-under-reflux apparatus, so it escapes unless sealed."
      },
      {
+      "type": "p",
+      "text": "**Amino propane can further react with 1-chloropropane** — the amine formed is itself a nucleophile, so the chain keeps growing:"
+     },
+     {
+      "type": "eq",
+      "code": "CH₃CH₂CH₂NH₂  +  CH₃CH₂CH₂Cl  →  (CH₃CH₂CH₂)₂NH  +  HCl",
+      "caption": "A second substitution — the product is dipropylamine (a secondary amine)."
+     },
+     {
+      "type": "eq",
+      "code": "(CH₃CH₂CH₂)₂NH  +  CH₃CH₂CH₂Cl  →  (CH₃CH₂CH₂)₃N  +  HCl",
+      "caption": "And again — the product is tripropylamine (a tertiary amine)."
+     },
+     {
       "type": "h3",
       "text": "Alcoholic potassium cyanide — nitriles"
      },
@@ -17908,6 +17988,17 @@
       "variant": "warning",
       "title": "Same reagent, different solvent",
       "text": "KOH gives two different reactions: **aqueous** → substitution (OH⁻ = nucleophile); **ethanolic** → elimination (OH⁻ = base). Name the solvent **and** the role of the hydroxide ion in every answer."
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 3 — chloroethane two ways",
+      "problem": "From the notes: complete the table for the reaction of chloroethane with aqueous NaOH and with ethanolic NaOH — condition, type of reaction, role of the OH⁻ ion (given: acts as a nucleophile / acts as a base), product and equation.",
+      "steps": [
+       "**Aqueous NaOH:** heat under reflux in aqueous solution · **nucleophilic substitution** · OH⁻ acts as a **nucleophile** · product **ethanol** · CH₃CH₂Cl + OH⁻ → CH₃CH₂OH + Cl⁻.",
+       "**Ethanolic NaOH:** heat under reflux in ethanolic solution · **elimination** · OH⁻ acts as a **base** · product **ethene** · CH₃CH₂Cl + OH⁻ → CH₂=CH₂ + H₂O + Cl⁻.",
+       "Same reagent ion, different solvent — the solvent decides the role of OH⁻ and therefore the whole reaction."
+      ],
+      "answer": "Aqueous → substitution, ethanol. Ethanolic → elimination, ethene."
      }
     ]
    },
@@ -17917,7 +18008,7 @@
     "number": "10.9",
     "title": "Nucleophilic Substitution Mechanisms",
     "blurb": "Curly arrows for primary halogenoalkanes with OH⁻ and with NH₃.",
-    "estMinutes": 25,
+    "estMinutes": 30,
     "spec": "10.9",
     "specText": "understand the mechanisms of the nucleophilic substitution reactions between primary halogenoalkanes and:",
     "outline": [
@@ -17966,6 +18057,30 @@
       "variant": "exam",
       "title": "Phrases that carry the marks",
       "text": "**lone pair donated** · **attacked the electron-deficient (δ+) carbon** · **C–X bond breaks heterolytically** · **second NH₃ acts as a base**. The labels **SN1 and SN2** for these mechanisms are tested in Unit 4."
+     },
+     {
+      "type": "h3",
+      "text": "Exercise 4 — the halogenoalkane scheme"
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-halo-scheme.png",
+      "srcDark": "/diagrams/t10-halo-scheme-dark.png",
+      "alt": "Reaction scheme: C4H9Br connected by arrows A, B, C and D to C4H8, C4H9OH and C4H9NH2",
+      "caption": "Halogenoalkanes are important intermediates in organic chemistry — identify the reagents and conditions for A, B, C and D, then classify the type of reaction in A and D."
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 4 — reagents, conditions and reaction types",
+      "problem": "Identify the reagents and any specific conditions required for A, B, C and D (a suitable temperature is maintained in each reaction), then classify the type of reaction in each of A and D.",
+      "steps": [
+       "**A (C₄H₉Br → C₄H₈):** **ethanolic potassium hydroxide**, heated under reflux — OH⁻ acts as a **base**.",
+       "**B (C₄H₉Br → C₄H₉OH):** **aqueous potassium hydroxide (KOH(aq))**, heated under reflux — OH⁻ acts as a **nucleophile**.",
+       "**C (C₄H₉OH → C₄H₉Br):** **50% concentrated sulfuric acid and potassium bromide**, heated under reflux (the bromination of an alcohol, section 10.17).",
+       "**D (C₄H₉Br → C₄H₉NH₂):** **alcoholic ammonia**, heated **under pressure in a sealed tube** — NH₃ acts as a **nucleophile**.",
+       "**Classify:** A is **elimination**; D is **nucleophilic substitution**."
+      ],
+      "answer": "A ethanolic KOH, reflux (elimination) · B aqueous KOH, reflux (nucleophilic substitution) · C KBr + 50% concentrated H₂SO₄, reflux · D alcoholic NH₃, pressure, sealed tube (nucleophilic substitution)."
      }
     ]
    },
@@ -17975,7 +18090,7 @@
     "number": "10.10",
     "title": "Comparing Rates of Hydrolysis",
     "blurb": "Water as the nucleophile — and what the precipitate shows.",
-    "estMinutes": 22,
+    "estMinutes": 28,
     "spec": "10.10",
     "specText": "understand that experimental observations and data can be used to compare the relative rates of hydrolysis of:",
     "outline": [
@@ -18011,18 +18126,18 @@
       ],
       "rows": [
        [
-        "**AgCl**",
-        "**white**",
+        "**White ppt (AgCl)**",
+        "white",
         "chloroalkane"
        ],
        [
-        "**AgBr**",
-        "**cream**",
+        "**Cream ppt (AgBr)**",
+        "cream",
         "bromoalkane"
        ],
        [
-        "**AgI**",
-        "**yellow**",
+        "**Yellow ppt (AgI)**",
+        "yellow",
         "iodoalkane"
        ]
       ]
@@ -18041,6 +18156,21 @@
      {
       "type": "p",
       "text": "Rate of hydrolysis can be compared by noting the **time taken for the precipitate to appear** — and the precipitate colour doubles as a **test to identify the halogen** in the halogenoalkane."
+     },
+     {
+      "type": "h3",
+      "text": "Exercise 4, Q2 — isomers and a yellow precipitate"
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 4, Q2 — 1-iodobutane with hot aqueous silver nitrate",
+      "problem": "1-iodobutane, dissolved in ethanol, reacts with hot aqueous silver nitrate to form a yellow precipitate. The reaction involves two steps. (a) Draw skeletal formulae of the four structural isomers of C₄H₉I. (b)(i) In the first step, 1-iodobutane forms butan-1-ol — identify the attacking reagent, and state the type and mechanism of this reaction. (ii) Write the ionic equation for the formation of the precipitate.",
+      "steps": [
+       "**(a)** The four structural isomers of C₄H₉I: **1-iodobutane · 2-iodobutane · 1-iodo-2-methylpropane · 2-iodo-2-methylpropane** — drawn as skeletal zig-zags with the I label on C1, C2, C2 of a branched chain, and the central carbon respectively.",
+       "**(b)(i) Attacking reagent: water** (water acts as the nucleophile in aqueous silver nitrate — the ethanol is only the solvent). **Type: hydrolysis** — water or hydroxide ions replace an atom in a molecule with an –OH group. **Mechanism: nucleophilic substitution.**",
+       "**(b)(ii)** The yellow precipitate is silver iodide: **Ag⁺(aq) + I⁻(aq) → AgI(s)** — yellow, so the halogen is iodine."
+      ],
+      "answer": "(a) 1-iodobutane, 2-iodobutane, 1-iodo-2-methylpropane, 2-iodo-2-methylpropane · (b)(i) water; hydrolysis; nucleophilic substitution · (b)(ii) Ag⁺ + I⁻ → AgI."
      }
     ]
    },
@@ -18068,7 +18198,7 @@
       "items": [
        "To each of three test tubes add **aqueous silver nitrate (1 cm³)** and **ethanol (2 cm³)**, and stand them in a **water bath at 60 °C** — the **ethanol dissolves the halogenoalkane**, which is insoluble in water.",
        "After **five minutes**, add **2 drops** of a different halogenoalkane to each tube — e.g. 1-chlorobutane, 1-bromobutane, 1-iodobutane.",
-       "**Shake, loosely cork**, and observe each tube at 60 °C for **ten minutes**, noting the **time taken for the precipitate to appear** and its colour."
+       "**Each test tube is shaken, loosely corked** and observed each tube at 60 °C for **ten minutes**, noting the **time taken for the precipitate to appear** and its colour."
       ]
      },
      {
@@ -18245,7 +18375,7 @@
     "number": "10.15",
     "title": "Alcohols: Nomenclature and Formulae",
     "blurb": "The –OH group, the -ol suffix, the bond angles and the position number.",
-    "estMinutes": 25,
+    "estMinutes": 32,
     "spec": "10.15",
     "specText": "understand the nomenclature of alcohols and be able to draw their structural, displayed and skeletal formulae",
     "outline": [],
@@ -18265,6 +18395,13 @@
        "All the **H–C–H bonds** and the **C–C–O** bonds are **109.5°** (**tetrahedral shape**) — there are **4 bond pairs of electrons** repelling to a position of **minimum repulsion**.",
        "The **H–O–C bond is 104.5°** (**bent line shape**) — the oxygen has **2 bond pairs and 2 lone pairs**. **Lone pairs repel more than bond pairs**, so the bond angle is reduced."
       ]
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-alcohol-bond-angles.png",
+      "srcDark": "/diagrams/t10-alcohol-bond-angles-dark.png",
+      "alt": "Ethanol displayed with the 109.5° tetrahedral angles at carbon and the 104.5° bent angle at the oxygen, with its two lone pairs",
+      "caption": "All the H–C–H bonds and C–C–O are 109.5° (tetrahedral). The H–O–C bond is 104.5° (bent line shape) — the oxygen's lone pairs repel more than bond pairs."
      },
      {
       "type": "h3",
@@ -18337,6 +18474,18 @@
        "If there is **more than one –OH group**, use **di-, tri-, tetra-**, with **locants** to say where they are.",
        "In this case the **root word ends with ‘ane’**: CH₃CH(OH)CH(OH)CH₃ is **butane-2,3-diol**."
       ]
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 1 — name them, then draw them",
+      "problem": "From the notes: write the IUPAC names of 2. CH₃OH · 3. C₂H₅OH · 4. H₃C–CH₂–CH₂–OH · 5. H₃C–CH₂–CH(OH)–CH₃ · 6. (CH₃)₃COH. Then draw the displayed and skeletal structure of 3-methylpentan-3-ol, 2,2-dimethylpropan-1-ol, cyclopentanol, 3-chloro-2-methylhexan-1-ol, cyclohexanol and 2-methylpentan-2-ol.",
+      "steps": [
+       "**CH₃OH → methanol** · **C₂H₅OH → ethanol** — no locant needed with only two carbons.",
+       "**H₃C–CH₂–CH₂–OH → propan-1-ol** · **H₃C–CH₂–CH(OH)–CH₃ → butan-2-ol** — the locant shows where the –OH sits.",
+       "**(CH₃)₃COH → 2-methylpropan-2-ol** — the longest chain containing the –OH group is propane, with a methyl on C2 and the –OH on C2.",
+       "For the drawing tasks: pick the **longest chain containing the –OH group**, number from the end that gives the –OH the lowest locant, then place every alkyl and halo substituent. In the skeletal formula only the O–H bond is labelled; in the displayed formula every bond is drawn."
+      ],
+      "answer": "2 methanol · 3 ethanol · 4 propan-1-ol · 5 butan-2-ol · 6 2-methylpropan-2-ol."
      },
      {
       "type": "h3",
@@ -18443,6 +18592,13 @@
         "**very insoluble**"
        ]
       ]
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-alcohol-solubility.png",
+      "srcDark": "/diagrams/t10-alcohol-solubility-dark.png",
+      "alt": "Methanol, butanol and octanol chains with the non-polar carbon chain bracketed: very soluble, slightly soluble, very insoluble",
+      "caption": "The non-polar carbon chain grows from methanol to butanol to octanol — solubility in water falls as the London forces between the chains strengthen."
      }
     ]
    },
@@ -18618,7 +18774,7 @@
     "number": "10.18",
     "title": "Oxidation of Alcohols",
     "blurb": "Dichromate decides by class — and by distil-or-reflux.",
-    "estMinutes": 32,
+    "estMinutes": 40,
     "spec": "10.18",
     "specText": "understand that potassium dichromate(VI) in dilute sulfuric acid can oxidise:",
     "outline": [
@@ -18773,6 +18929,17 @@
        "Under **reflux** the aldehyde would **condense back into the mixture** and be **oxidised further to ethanoic acid**."
       ],
       "answer": "Distilling as it forms removes ethanal before it can be oxidised further — so ethanal, not ethanoic acid, is collected."
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 2 — three quick questions",
+      "problem": "From the notes: 1. Which of the following is a secondary alcohol — A butan-1-ol · B butan-2-ol · C 2-methylpropan-1-ol · D 2-methylpropan-2-ol? 2. Propan-1-ol and propan-2-ol are separately oxidized under mild conditions by acidified sodium dichromate(VI) and the product immediately distilled off — what is the oxidation product in each case? 3. The best method of converting ethanol into iodoethane is — A heat iodine and ethanol under reflux · B react ethanol and potassium iodide in the presence of dilute acid · C heat potassium iodide and ethanol with concentrated sulfuric acid · D heat red phosphorus, ethanol and iodine under reflux.",
+      "steps": [
+       "**1 → B, butan-2-ol** — the carbon carrying the –OH is joined directly to **two alkyl groups** (butan-1-ol and 2-methylpropan-1-ol are primary; 2-methylpropan-2-ol is tertiary).",
+       "**2 → A: propanal from propan-1-ol, propanone from propan-2-ol** — distilling the product as it forms stops at the aldehyde, and a secondary alcohol can only be oxidised to a ketone.",
+       "**3 → D** — iodination needs **iodine and moist red phosphorus**, warmed: 2P + 3I₂ → 2PI₃, then 3C₂H₅OH + PI₃ → 3C₂H₅I + H₃PO₃. Concentrated sulfuric acid would oxidise the iodide (the same reason it must be 50% for bromide)."
+      ],
+      "answer": "1 B butan-2-ol · 2 A propanal + propanone · 3 D red phosphorus, ethanol and iodine under reflux."
      }
     ]
    },
@@ -18782,7 +18949,7 @@
     "number": "10.19",
     "title": "Preparation and Purification of a Liquid Organic Compound",
     "blurb": "Why the crude product is impure — and the techniques that clean it up.",
-    "estMinutes": 35,
+    "estMinutes": 50,
     "spec": "10.19",
     "specText": "understand, the following techniques in the preparation and purification of a liquid organic compound:",
     "outline": [
@@ -18829,6 +18996,13 @@
       "text": "**Never seal the end of the condenser** — the **build-up of gas pressure could cause the apparatus to explode**."
      },
      {
+      "type": "figure",
+      "src": "/diagrams/t10-apparatus-reflux.png",
+      "srcDark": "/diagrams/t10-apparatus-reflux-dark.png",
+      "alt": "Labelled reflux apparatus: vertical Liebig condenser with open top, water out at the top and water in at the bottom, pear-shaped flask with anti-bumping granules over heat, vapour condensing back",
+      "caption": "Heat under reflux — the condenser prevents organic vapours from escaping by condensing them back to liquids; never seal the end of the condenser."
+     },
+     {
       "type": "h3",
       "text": "Distillation"
      },
@@ -18841,6 +19015,13 @@
       ]
      },
      {
+      "type": "figure",
+      "src": "/diagrams/t10-apparatus-distillation.png",
+      "srcDark": "/diagrams/t10-apparatus-distillation-dark.png",
+      "alt": "Labelled distillation apparatus: thermometer with bulb at the T junction, Liebig condenser with water in at the bottom, distillate collected, round-bottomed flask with anti-bumping granules over heat",
+      "caption": "Distillation — the thermometer bulb sits at the T junction connecting to the condenser, water goes in the bottom of the condenser against gravity, and the distillate is collected in a flask."
+     },
+     {
       "type": "h3",
       "text": "Fractional distillation"
      },
@@ -18849,6 +19030,13 @@
       "items": [
        "The separation of a liquid mixture into **fractions differing in boiling point**, typically using a **fractionating column**."
       ]
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-apparatus-fractional.png",
+      "srcDark": "/diagrams/t10-apparatus-fractional-dark.png",
+      "alt": "Fractional distillation apparatus: fractionating column packed with glass beads on a flask, side-arm condenser with water out and water in, receiver flask",
+      "caption": "Fractional distillation — separation of a liquid mixture into fractions differing in boiling point, typically using a fractionating column."
      },
      {
       "type": "h3",
@@ -18870,9 +19058,16 @@
       "items": [
        "Place the reaction mixture in the separating funnel and **add the solvent** — it should form **two separate layers**.",
        "**Place the stopper** in the neck of the funnel and **gently shake** the contents, **releasing pressure by opening the tap** from time to time.",
-       "**Allow the contents to settle** into two layers.",
+       "Allow the contents to **settle into two layers**.",
        "**Remove the stopper, open the tap** and **collect the desired organic layer** into a flask — **discard the unwanted aqueous layer**."
       ]
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-apparatus-separating.png",
+      "srcDark": "/diagrams/t10-apparatus-separating-dark.png",
+      "alt": "Separating funnel clamped to a stand with oil as the top layer and water as the bottom layer, stop-cock open above a conical flask",
+      "caption": "Separating funnel — two immiscible liquids form two layers; the denser solvent will be the bottom layer, and the stop-cock controls the flow."
      },
      {
       "type": "h3",
@@ -18929,10 +19124,47 @@
       ]
      },
      {
+      "type": "figure",
+      "src": "/diagrams/t10-bp-determination.png",
+      "srcDark": "/diagrams/t10-bp-determination-dark.png",
+      "alt": "Boiling point determination: sample tube with capillary tube inside a heating oil bath, thermometer through glass tubing with the bulb above the liquid surface",
+      "caption": "Boiling point determination — the thermometer bulb must sit above the level of the surface of the boiling liquid, measuring the temperature of the saturated vapour."
+     },
+     {
       "type": "callout",
       "variant": "tip",
       "title": "Reflux first, distil later",
       "text": "**Reflux** keeps everything in the flask so the reaction can be heated for a long period; **distillation** then separates the product by its boiling temperature. Same idea, two different jobs."
+     },
+     {
+      "type": "h3",
+      "text": "Exercise 3 — from the notes"
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 3, Q1 — ethanol oxidised, collected and tested",
+      "problem": "Alcohols, such as ethanol, undergo a number of reactions. (a) Write the balanced equation for the oxidation of ethanol to ethanoic acid using displayed formulae and the symbol [O]. (b) Ethanol can be oxidized to the aldehyde, ethanal, using the distillation apparatus: (i) state the class of alcohols that can be oxidized to aldehydes; (ii) explain fully why ethanal, rather than ethanoic acid, is produced and collected; (iii) state the purpose of the part of the apparatus labelled A (the receiver). (c) The distillation product, ethanal, is dried — suggest one reagent that could test for both ethanol and ethanoic acid in the presence of ethanal. (d) Write the equation for the complete combustion of propane-1,2,3-triol (glycerol, C₃H₈O₃), and a possible equation for its combustion in a limited supply of oxygen with a likely observation. (e) Halogenoalkanes react with aqueous hydroxide ions to form the corresponding alcohol — name the type of reaction and mechanism, and choose a halogenoalkane that will react in this way to form ethanol.",
+      "steps": [
+       "**(a)** CH₃CH₂OH + 2[O] → CH₃COOH + H₂O — drawn with **every bond shown** in the displayed formulae of reactants and products.",
+       "**(b)(i) Primary alcohols.** **(ii)** Ethanal has a **lower boiling temperature** than the reaction mixture, so it **distils off as it forms** — distillation **removes it from contact with the oxidising agent**, so the oxidation cannot continue (under reflux it would condense back and be oxidised further to ethanoic acid). **(iii) A collects (and condenses) the distillate.**",
+       "**(c) PCl₅** — misty fumes of HCl form with the **–OH group** of ethanol or ethanoic acid; ethanal has **no –OH group**, so it gives no fumes.",
+       "**(d)** Complete: **C₃H₈O₃ + 3.5O₂ → 3CO₂ + 4H₂O**. Limited oxygen: **C₃H₈O₃ + 2O₂ → 3C + 4H₂O** — observation: a **smoky (yellow) flame with carbon (soot) formed**.",
+       "**(e) Nucleophilic substitution** — the hydroxide ion acts as a **nucleophile** (mechanism in section 10.9). Use **bromoethane, CH₃CH₂Br** + :OH⁻(aq) → CH₃CH₂OH + Br⁻."
+      ],
+      "answer": "(a) CH₃CH₂OH + 2[O] → CH₃COOH + H₂O · (b) primary; distilled off as it forms, removed from the oxidant; A collects the distillate · (c) PCl₅, misty fumes · (d) C₃H₈O₃ + 3.5O₂ → 3CO₂ + 4H₂O; C₃H₈O₃ + 2O₂ → 3C + 4H₂O, smoky flame · (e) nucleophilic substitution; bromoethane."
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 3, Q2 — isomers, reflux and halogenoalkanes",
+      "problem": "This is a question about alcohols. (a) There are two alcohol structural isomers with the molecular formula C₃H₈O — give the skeletal formula, systematic name and classification of each. (b) Ethanol can be oxidised by acidified sodium dichromate(VI) to ethanal and then to ethanoic acid: (i) complete the ionic half-equation for the reduction of the dichromate(VI) ions to chromium(III) ions; (ii) describe how the reflux apparatus ensures that any ethanal initially produced is further oxidised. (c) Write the equation for the reaction between methanol and PCl₅ and state the observation. (d) Draw the mechanism for the reaction of 1-bromopropane with aqueous alkali; the reaction with concentrated alcoholic alkali forms a different organic product — name the type of reaction and give the displayed formula of the product. (e) How would you test for the OH group in 2-methylpropan-2-ol without using phosphorus(V) chloride? Name the reagent and state the observation for a positive test.",
+      "steps": [
+       "**(a)** **Propan-1-ol, CH₃CH₂CH₂OH — primary** (the –OH carbon is attached to one alkyl group) and **propan-2-ol, CH₃CH(OH)CH₃ — secondary** (attached to two); drawn as three-carbon skeletal zig-zags with –OH on the end or middle carbon.",
+       "**(b)(i)** **Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O** — orange to green. **(ii)** The condenser **prevents the ethanal escaping**: it condenses **back into the mixture**, so it stays in contact with the oxidising agent and is **oxidised further** to ethanoic acid.",
+       "**(c)** **CH₃OH + PCl₅ → CH₃Cl + POCl₃ + HCl** — observation: **misty fumes of HCl** (this is the qualitative test for the –OH group).",
+       "**(d)** Lone pair of **:OH⁻** attacks the δ+ carbon of CH₃CH₂CH₂Br, the C–Br bond breaks heterolytically → **propan-1-ol** (mechanism: figure in section 10.9). With concentrated alcoholic alkali: **elimination** — the product is **propene**, displayed formula H₂C=CH–CH₃ with every bond drawn.",
+       "**(e) Concentrated hydrochloric acid**, mixed by shaking at room temperature (the tertiary-alcohol chlorination) — a **positive test is the mixture turning cloudy as insoluble 2-chloro-2-methylpropane forms** (Core Practical 6)."
+      ],
+      "answer": "(a) propan-1-ol (1°) and propan-2-ol (2°) · (b) Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O; aldehyde condenses back and is oxidised further · (c) CH₃OH + PCl₅ → CH₃Cl + POCl₃ + HCl, misty fumes · (d) nucleophilic substitution → propan-1-ol; elimination → propene · (e) concentrated HCl, mixture goes cloudy."
      }
     ]
    },
@@ -18985,7 +19217,7 @@
     "number": "10.21",
     "title": "Mass Spectra of Organic Compounds",
     "blurb": "The molecular ion gives the Mᵣ — fragments and isotope patterns give the structure.",
-    "estMinutes": 30,
+    "estMinutes": 55,
     "spec": "10.21",
     "specText": "be able to interpret data from mass spectra to suggest possible structures of simple organic compounds using the m/z of the molecular ion and fragmentation patterns",
     "outline": [],
@@ -19020,7 +19252,7 @@
      },
      {
       "type": "p",
-      "text": "During the bombardment, **some energy is transferred to the molecular ion** — sufficient to **break some of the covalent bonds** in it. This process is known as **fragmentation**. When the molecular ion fragments into smaller pieces, **one of the fragments carries the positive charge while the other is neutral**:"
+      "text": "During the bombardment, **some energy is transferred to the molecular ion** — **sufficient to break some of the covalent bonds** in it. This process is known as **fragmentation**. When the molecular ion fragments into smaller pieces, **one of the fragments carries the positive charge while the other is neutral**:"
      },
      {
       "type": "eq",
@@ -19041,6 +19273,29 @@
       "srcDark": "/diagrams/t10-mass-spectrum-dark.png",
       "alt": "Mass spectrum of butane with fragment peaks at 29 and 43 and the molecular ion peak at 58",
       "caption": "Butane: the molecular ion C₄H₁₀⁺• at m/z 58, with fragments CH₃CH₂CH₂⁺ (43) and CH₃CH₂⁺ (29). Read right to left — Mᵣ first, then subtract."
+     },
+     {
+      "type": "h3",
+      "text": "Fragmentation step by step — ethane"
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-ms-ethane.png",
+      "srcDark": "/diagrams/t10-ms-ethane-dark.png",
+      "alt": "Ethane displayed formula bombarded by an electron, fragmenting into the molecular ion at m/z 30, CH3CH2+ at 29 plus H radical, and CH3+ at 15 plus CH3 radical not detected",
+      "caption": "Fragmentation of the ethane molecular ion — the charged fragment is detected, the neutral radical is not."
+     },
+     {
+      "type": "worked",
+      "title": "Ethane under the beam",
+      "problem": "Ethane is ionised and fragmented in the mass spectrometer. Account for the peaks at m/z 30, 29 and 15, and state which species is not detected.",
+      "steps": [
+       "**Ionisation:** CH₃CH₃ + e⁻ → **CH₃CH₃⁺•** + 2e⁻ — the **molecular ion**, **m/z = 30**.",
+       "**First fragmentation:** the molecular ion breaks into **CH₃CH₂⁺ (m/z 29)** plus a neutral **H•** radical.",
+       "**Further fragmentation:** CH₃CH₂⁺ → **CH₃⁺ (m/z 15)** plus **•CH₃** — the methyl radical carries no charge, so it is **not detected by MS**.",
+       "Only the fragments with the **positive charge** are detected by the spectrometer."
+      ],
+      "answer": "30 = CH₃CH₃⁺• (molecular ion) · 29 = CH₃CH₂⁺ · 15 = CH₃⁺ — the neutral partners (H•, •CH₃) are not detected."
      },
      {
       "type": "h3",
@@ -19108,6 +19363,104 @@
        "The pieces CH₃⁺ and CHO⁺ join through the carbonyl carbon: the structure is **CH₃–CHO**."
       ],
       "answer": "E is ethanal, CH₃CHO — structural formula CH₃–C(=O)–H."
+     },
+     {
+      "type": "h3",
+      "text": "The exercises — spectrum by spectrum"
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-ms-pentane.png",
+      "srcDark": "/diagrams/t10-ms-pentane-dark.png",
+      "alt": "Mass spectrum of pentane with labelled peaks C at m/z 15, B at 29, A at 43, D at 57 and the molecular ion at 72",
+      "caption": "Exercise 1 — the mass spectrum of pentane, C₅H₁₂: peaks C (15), B (29), A (43), D (57) and the molecular ion (72)."
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 1 — the pentane spectrum",
+      "problem": "The mass spectrum of pentane (C₅H₁₂) shows peaks C (15), B (29), A (43), D (57) and the molecular ion (72). (a) Write an equation for the formation of the molecular ion of pentane. (b) The molecular ion can fragment in several ways — label the species which has given rise to each of the labelled peaks.",
+      "steps": [
+       "**(a)** **C₅H₁₂ + e⁻ → C₅H₁₂⁺• + 2e⁻** — loss of one electron.",
+       "**(b)** Breaking the chain between carbons gives: **CH₃⁺ (15, peak C)** + •CH₂CH₂CH₂CH₃, or CH₃• + **CH₃CH₂CH₂CH₂⁺ (57, peak D)**; and **CH₃CH₂⁺ (29, peak B)** + •CH₂CH₂CH₃, or CH₃CH₂• + **CH₃CH₂CH₂⁺ (43, peak A)**.",
+       "**The molecular ion at 72** is C₅H₁₂⁺• — the peak furthest to the right."
+      ],
+      "answer": "C 15 = CH₃⁺ · B 29 = CH₃CH₂⁺ · A 43 = CH₃CH₂CH₂⁺ (base peak) · D 57 = CH₃CH₂CH₂CH₂⁺ · 72 = C₅H₁₂⁺•."
+     },
+     {
+      "type": "worked",
+      "title": "Question 2 — the decane spectrum",
+      "problem": "The mass spectrum of decane (CH₃CH₂CH₂CH₂CH₂CH₂CH₂CH₂CH₂CH₃) shows a base peak and successive peaks 14 units apart, with the molecular ion at 142. Give the formula of the species that has given rise to the peaks at m/z 43, 57, 71, 85, 99, 113 and 142.",
+      "steps": [
+       "Successive peaks **14 units apart** mean **CH₂ units** along a chain.",
+       "**43 → CH₃CH₂CH₂⁺ (C₃H₇⁺)** — the base peak · **57 → C₄H₉⁺** · **71 → C₅H₁₁⁺** · **85 → C₆H₁₃⁺** · **99 → C₇H₁₅⁺** · **113 → C₈H₁₇⁺**.",
+       "**142 → C₁₀H₂₂⁺•** — the **molecular ion** (Mᵣ of decane = 142)."
+      ],
+      "answer": "43 C₃H₇⁺ · 57 C₄H₉⁺ · 71 C₅H₁₁⁺ · 85 C₆H₁₃⁺ · 99 C₇H₁₅⁺ · 113 C₈H₁₇⁺ · 142 C₁₀H₂₂⁺•."
+     },
+     {
+      "type": "worked",
+      "title": "Question 3 — the ethanol spectrum",
+      "problem": "The mass spectrum of ethanol shows peaks A (15), B (17), C (29), D (31), E (45) and F (46). Give the formula of the species that has given rise to each peak.",
+      "steps": [
+       "**A 15 → CH₃⁺** · **B 17 → OH⁺** · **C 29 → CH₃CH₂⁺**.",
+       "**D 31 → CH₂OH⁺** · **E 45 → CH₃CH₂O⁺** · **F 46 → CH₃CH₂OH⁺** — the **molecular ion**.",
+       "Read each as a subtraction from M = 46: 46 − 15 → 31 (loss of CH₃), 46 − 17 → 29 (loss of OH), 46 − 45 → 1 (loss of H)."
+      ],
+      "answer": "15 CH₃⁺ · 17 OH⁺ · 29 CH₃CH₂⁺ · 31 CH₂OH⁺ · 45 CH₃CH₂O⁺ · 46 CH₃CH₂OH⁺."
+     },
+     {
+      "type": "worked",
+      "title": "Question 4 — the pentan-3-one spectrum",
+      "problem": "The mass spectrum of pentan-3-one shows peaks at m/z 29, 57 and 86. Give the formula of the species that has given rise to these peaks.",
+      "steps": [
+       "**29 → CH₃CH₂⁺** — the ethyl cation.",
+       "**57 → CH₃CH₂CO⁺** — the acyl fragment, split off one side of the C=O.",
+       "**86 → CH₃CH₂COCH₂CH₃⁺** — the **molecular ion** (Mᵣ of pentan-3-one, C₅H₁₀O, = 86)."
+      ],
+      "answer": "29 CH₃CH₂⁺ · 57 CH₃CH₂CO⁺ · 86 CH₃CH₂COCH₂CH₃⁺."
+     },
+     {
+      "type": "worked",
+      "title": "Question 6 — which compound is it?",
+      "problem": "A simplified mass spectrum of an organic compound shows peaks at m/z 15, 43 and 58. Which of the following produces this spectrum — A propane · B propan-1-ol · C propan-2-ol · D propanone?",
+      "steps": [
+       "**m/z 15 → CH₃⁺** — a methyl fragment.",
+       "**m/z 43 → CH₃CO⁺** — the acylium fragment, characteristic of a ketone.",
+       "**m/z 58 → CH₃COCH₃⁺** — the **molecular ion**; Mᵣ = 58 fits C₃H₆O (propanone). Propane (44) and the propanols (60) do not match."
+      ],
+      "answer": "D — propanone (15 CH₃⁺ · 43 CH₃CO⁺ · 58 CH₃COCH₃⁺)."
+     },
+     {
+      "type": "worked",
+      "title": "Question 7 — compound S",
+      "problem": "A compound S with the molecular formula C₃H₆O gave a mass spectrum with peaks at m/z 58, 43 and 15. Identify the species responsible for the peaks and give the structural formula of S.",
+      "steps": [
+       "**15 → CH₃⁺** · **43 → CH₃CO⁺** · **58 → CH₃COCH₃⁺** — the **molecular ion** (C₃H₆O = 58).",
+       "CH₃⁺ and CH₃CO⁺ join through the carbonyl carbon — the skeleton is CH₃–CO–CH₃.",
+       "The peak at 43 (CH₃CO⁺) is what ketones characteristically show."
+      ],
+      "answer": "S is propanone, CH₃COCH₃ — structural formula CH₃–C(=O)–CH₃."
+     },
+     {
+      "type": "worked",
+      "title": "Exercise 2, Q1 — two identical peaks for C₄H₉Br",
+      "problem": "An alkene, C₄H₈, reacts with HBr to form compound B, C₄H₉Br. Suggest why the mass spectrum obtained for B has two identical peaks at m/z values 136 and 138, and write the formula of the species which produced these peaks.",
+      "steps": [
+       "Bromine has **two isotopes, ⁷⁹Br and ⁸¹Br**, which exist in **equal quantities**.",
+       "The molecular ion peaks **M and M+2** therefore appear in the ratio **1 : 1**, two m/z units apart.",
+       "**(C₄H₉–⁷⁹Br)⁺ → m/z 136** (57 + 79) · **(C₄H₉–⁸¹Br)⁺ → m/z 138** (57 + 81)."
+      ],
+      "answer": "M and M+2 in a 1 : 1 ratio — (C₄H₉–⁷⁹Br)⁺ at 136 and (C₄H₉–⁸¹Br)⁺ at 138."
+     },
+     {
+      "type": "worked",
+      "title": "Question 14 — methanol and ethanol compared",
+      "problem": "Methanol and ethanol have a number of fragment peaks which appear in the mass spectra of both compounds but, somewhat surprisingly, the OH⁺ peak at m/e = 17 is not one of them. (i) Suggest the formulae and m/e values of two fragment ions that you would expect to occur in both spectra. (ii) Give the formula of one fragment ion that you would expect to be present in the mass spectrum of ethanol but absent from that of methanol.",
+      "steps": [
+       "**(i)** Both molecules contain **CH₃–O–** … and a methyl group: **CH₃⁺ at m/e 15** and **CH₂OH⁺ (or CH₃O⁺) at m/e 31**.",
+       "**(ii)** **CH₃CH₂⁺ at m/e 29** — only ethanol has the extra CH₂ to give the ethyl fragment."
+      ],
+      "answer": "(i) CH₃⁺ (15) and CH₂OH⁺/CH₃O⁺ (31) · (ii) CH₃CH₂⁺ (29)."
      },
      {
       "type": "h3",
@@ -19671,6 +20024,27 @@
     "front": "How do N–H stretches distinguish primary, secondary and tertiary amines?",
     "back": "Primary (1°) amine: two N–H bands, 3400–3300 and 3330–3250 cm⁻¹. Secondary (2°) amine: one band, 3350–3310 cm⁻¹. Tertiary (3°) amine: no bands in this region — like triethylamine, which shows no N–H stretch at all.",
     "tag": "CORE"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card20",
+    "ord": 20,
+    "front": "What are the two types of isomerism shown by halogenoalkanes?",
+    "back": "Chain isomerism — occurs due to branching in carbon chains — and position isomerism — occurs due to the position in which the functional group is present. Isomers have the same molecular formula but different structural formula and properties.",
+    "tag": "CORE"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card21",
+    "ord": 21,
+    "front": "Which labels must a correct distillation or reflux apparatus show?",
+    "back": "Thermometer bulb at the T junction connecting to the condenser; water in at the bottom of the condenser (against gravity — efficient cooling, prevents back flow); anti-bumping granules in the flask; never seal the end of the condenser; electric heaters because organic chemicals are highly flammable.",
+    "tag": "EXAM"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card22",
+    "ord": 22,
+    "front": "The mass spectrum of C4H9Br shows two peaks of equal height at m/z 136 and 138. Explain.",
+    "back": "M and M+2 molecular ion peaks in a 1:1 ratio — bromine has two isotopes, 79Br and 81Br, in equal quantities. (C4H9–79Br)+ = 136 and (C4H9–81Br)+ = 138.",
+    "tag": "EXAM"
    }
   ]
  }
