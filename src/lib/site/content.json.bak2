@@ -17270,7 +17270,7 @@
   "title": "Organic Chemistry: Halogenoalkanes, Alcohols and Spectra",
   "subtitle": "Nucleophiles, substitution, alcohols — and reading mass + IR spectra.",
   "summary": "Mechanisms and nucleophiles; halogenoalkane reactions; classifying and oxidising alcohols; mass spectrometry fragmentation; infrared spectroscopy.",
-  "estHours": 7.3,
+  "estHours": 7.4,
   "sections": [
    {
     "id": "cmv1eoi5t10r00000000",
@@ -18984,81 +18984,212 @@
     "sectionKey": "mass-spectra",
     "number": "10.21",
     "title": "Mass Spectra of Organic Compounds",
-    "blurb": "The molecular ion gives Mᵣ — the fragments give the structure.",
-    "estMinutes": 22,
+    "blurb": "The molecular ion gives the Mᵣ — fragments and isotope patterns give the structure.",
+    "estMinutes": 30,
     "spec": "10.21",
     "specText": "be able to interpret data from mass spectra to suggest possible structures of simple organic compounds using the m/z of the molecular ion and fragmentation patterns",
     "outline": [],
     "content": [
      {
       "type": "p",
-      "text": "Inside the **mass spectrometer** (Topic 2), high-energy electrons knock an electron off the molecule, forming the **molecular ion**:"
+      "text": "Mass spectrometry is used to **determine the relative molecular mass** of an organic molecule — and to **deduce the structure of an organic unknown** using the **fragmentation pattern** observed in a mass spectrum."
+     },
+     {
+      "type": "h3",
+      "text": "The molecular ion"
+     },
+     {
+      "type": "p",
+      "text": "In the mass spectrometer, the molecules are **ionised by bombardment with a beam of high energy electrons**:"
      },
      {
       "type": "eq",
-      "code": "M(g)  →  M⁺(g)  +  e⁻",
-      "caption": "The molecular ion — its m/z equals the relative molecular mass, Mᵣ."
+      "code": "M  +  e⁻  →  M⁺•  +  2e⁻",
+      "caption": "The radical cation **M⁺•** is the **molecular ion** — formed by the **loss of one electron** from the molecule. For butane: C₄H₁₀ + e⁻ → C₄H₁₀⁺• + 2e⁻."
      },
      {
       "type": "list",
       "items": [
-       "The **molecular ion peak (M⁺)** has the **largest m/z** in the cluster — its m/z gives the **relative molecular mass** of the compound.",
-       "A small **M+1 peak** appears because about **1.1% of carbon atoms are ¹³C**.",
-       "The bombardment is violent: some molecular ions **shake apart (fragment)**:"
+       "The **molecular ion peak** is the peak **furthest to the right** of the spectrum — the peak with the **greatest mass-to-charge ratio (m/z)**.",
+       "The **m/z value of the molecular ion (M⁺•) = the molecular mass** of the organic molecule."
       ]
      },
      {
-      "type": "eq",
-      "code": "M⁺  →  fragment⁺  +  radical",
-      "caption": "Only the charged fragments are detected — the radical is lost."
-     },
-     {
-      "type": "table",
-      "headers": [
-       "m/z",
-       "Fragment",
-       "Meaning"
-      ],
-      "rows": [
-       [
-        "**15**",
-        "**CH₃⁺**",
-        "a methyl group broke off and kept the charge"
-       ],
-       [
-        "**29**",
-        "**C₂H₅⁺**",
-        "an ethyl group"
-       ],
-       [
-        "**43**",
-        "**C₃H₇⁺**",
-        "a propyl group"
-       ]
-      ]
+      "type": "h3",
+      "text": "Fragmentation"
      },
      {
       "type": "p",
-      "text": "Read every fragment as a subtraction: **fragment m/z = M − the piece that was lost**. Matching the fragments to possible structures is how you **suggest possible structures** of the compound from its spectrum."
+      "text": "During the bombardment, **some energy is transferred to the molecular ion** — sufficient to **break some of the covalent bonds** in it. This process is known as **fragmentation**. When the molecular ion fragments into smaller pieces, **one of the fragments carries the positive charge while the other is neutral**:"
      },
      {
-      "type": "worked",
-      "title": "Same M⁺, different pieces",
-      "problem": "Hydrocarbon A gives M⁺ at m/z 58, with strong peaks at 43 and 29 and a small one at 15. Its isomer B gives M⁺ at 58 too, but a dominant peak at 57. Suggest structures for A and B.",
-      "steps": [
-       "M⁺ = 58 → **Mᵣ 58** → the formula is **C₄H₁₀** — butane or methylpropane.",
-       "Peak at **43** = 58 − 15: a **CH₃ group** broke off, leaving **C₃H₇⁺**.",
-       "Peak at **29** = 58 − 29: the chain split in the middle, leaving **C₂H₅⁺** — the signature of the **straight chain**, butane CH₃CH₂CH₂CH₃.",
-       "Isomer B's dominant peak at **57** = 58 − 15 means it mainly loses a methyl from a **central carbon** — the signature of the branched chain, **methylpropane** (CH₃)₃CH."
-      ],
-      "answer": "A = butane (fragments at 43 and 29); B = methylpropane (dominant fragment at 57)."
+      "type": "eq",
+      "code": "M⁺•  →  X⁺  +  Y•",
+      "caption": "**Only the fragments with the positive charge are detected** by the spectrometer — the neutral radical is lost."
+     },
+     {
+      "type": "list",
+      "items": [
+       "The smaller pieces may **in turn undergo fragmentation** and produce even smaller pieces: X⁺ → A⁺ + B.",
+       "A mass spectrum is a **line diagram of relative abundance against m/z**, showing only the major peaks. Each fragment ion's abundance is a **percentage of the most abundant fragment** — the signal called the **base peak**. By convention, **the base peak has a relative abundance of 100%**.",
+       "Mass spectra are **as unique as fingerprints** — it is very unlikely that two different compounds fragment in exactly the same way. Mass spectrometry is thus useful for identifying the **relative molecular mass** and **parts of the structural form**."
+      ]
      },
      {
       "type": "figure",
       "src": "/diagrams/t10-mass-spectrum.png",
       "srcDark": "/diagrams/t10-mass-spectrum-dark.png",
-      "alt": "A mass spectrum showing the molecular ion peak, M+1 peak and fragment peaks",
-      "caption": "Read right to left: the molecular ion gives Mᵣ, then subtract the fragments to rebuild the molecule."
+      "alt": "Mass spectrum of butane with fragment peaks at 29 and 43 and the molecular ion peak at 58",
+      "caption": "Butane: the molecular ion C₄H₁₀⁺• at m/z 58, with fragments CH₃CH₂CH₂⁺ (43) and CH₃CH₂⁺ (29). Read right to left — Mᵣ first, then subtract."
+     },
+     {
+      "type": "h3",
+      "text": "Fragments worth recognising"
+     },
+     {
+      "type": "table",
+      "headers": [
+       "m/z",
+       "Ion",
+       "Seen in the source spectra of"
+      ],
+      "rows": [
+       [
+        "**15**",
+        "**CH₃⁺**",
+        "pentane, ethanol, propanone"
+       ],
+       [
+        "**17**",
+        "**OH⁺**",
+        "ethanol"
+       ],
+       [
+        "**29**",
+        "**CH₃CH₂⁺** or **CHO⁺**",
+        "pentane, decane, chloroethane / propanal"
+       ],
+       [
+        "**31**",
+        "**CH₂OH⁺**",
+        "ethanol"
+       ],
+       [
+        "**43**",
+        "**CH₃CH₂CH₂⁺** or **CH₃CO⁺**",
+        "butane, pentane, decane / propanone"
+       ],
+       [
+        "**45**",
+        "**CH₃CH₂O⁺**",
+        "ethanol"
+       ],
+       [
+        "**57**",
+        "**C₄H₉⁺** or **CH₃CH₂CO⁺**",
+        "pentane, decane / pentan-3-one"
+       ]
+      ]
+     },
+     {
+      "type": "list",
+      "items": [
+       "Read every fragment as a subtraction: **fragment m/z = M − the piece that was lost**.",
+       "Successive peaks **14 units apart** mean **CH₂ units** along a chain — decane gives 43, 57, 71, 85, 99, 113, with the **molecular ion at 142**.",
+       "Ethanol's full set: **15 CH₃⁺ · 17 OH⁺ · 29 CH₃CH₂⁺ · 31 CH₂OH⁺ · 45 CH₃CH₂O⁺ · 46 CH₃CH₂OH⁺ (molecular ion)**."
+      ]
+     },
+     {
+      "type": "worked",
+      "title": "Three peaks, one structure",
+      "problem": "A compound E has the empirical formula C₂H₄O and shows three characteristic peaks in its mass spectrum at m/z 15, 29 and 44. Identify the species responsible and deduce the molecular formula and structure of E.",
+      "steps": [
+       "m/z **15** → **CH₃⁺** · m/z **29** → **CHO⁺** · m/z **44** → **CH₃CHO⁺** — the **molecular ion**, so the **molecular formula is C₂H₄O**.",
+       "The pieces CH₃⁺ and CHO⁺ join through the carbonyl carbon: the structure is **CH₃–CHO**."
+      ],
+      "answer": "E is ethanal, CH₃CHO — structural formula CH₃–C(=O)–H."
+     },
+     {
+      "type": "h3",
+      "text": "Isotopic peaks — M+1, M+2 and M+4"
+     },
+     {
+      "type": "p",
+      "text": "**Carbon:** the abundance of the **carbon-13** isotope is about **1% of naturally occurring carbon-12**. The molecular peak due to carbon-12 is the **M peak**; the peak due to carbon-13 is the **M+1 peak**."
+     },
+     {
+      "type": "list",
+      "items": [
+       "If there are **n carbon atoms** in the molecule, the **M+1 peak is n% of the height of the M peak** — 1 carbon atom → M+1 is 1% of the M peak; 10 carbon atoms → 10%.",
+       "**Height of M+1 = (number of carbon atoms ÷ 100) × height of the M peak.**",
+       "So CH₄ shows M at **16** and M+1 at **17**; C₂H₆ shows **30 and 31**; C₁₀H₂₂ shows **142 and 143**."
+      ]
+     },
+     {
+      "type": "worked",
+      "title": "The M+1 peak counts the carbons",
+      "problem": "The relative height of the M peak for benzoic acid (7 carbon atoms) is 85%. Find the height of its M+1 peak.",
+      "steps": [
+       "Height of M+1 = (number of carbon atoms ÷ 100) × height of the M peak.",
+       "= (7 ÷ 100) × 85 = **5.95**."
+      ],
+      "answer": "The M+1 peak has a height of 5.95 — 7% of the M peak."
+     },
+     {
+      "type": "p",
+      "text": "**Bromine** has two isotopes, **⁷⁹Br and ⁸¹Br**, which exist in **equal quantities**; **chlorine** has **³⁵Cl and ³⁷Cl in the ratio 3 : 1**. A compound containing these halogens shows molecular ion peaks in a fixed pattern:"
+     },
+     {
+      "type": "figure",
+      "src": "/diagrams/t10-isotope-patterns.png",
+      "srcDark": "/diagrams/t10-isotope-patterns-dark.png",
+      "alt": "Four mini mass spectra showing M and M+2 peaks at 1:1 and 3:1 for one Br or Cl atom, and M, M+2, M+4 at 1:2:1 and 9:6:1 for two Br or Cl atoms",
+      "caption": "Peaks **two m/z units apart** mean a halogen with two isotopes: bromine → 1 : 1 (1 : 2 : 1 with two Br atoms); chlorine → 3 : 1 (9 : 6 : 1 with two Cl atoms)."
+     },
+     {
+      "type": "worked",
+      "title": "Counting the bromines",
+      "problem": "How many molecular ion peaks are expected in the mass spectrum of CH₂Br₂? State the m/z values and identify the species responsible for them.",
+      "steps": [
+       "**Two Br atoms** → **three molecular ion peaks**, M, M+2 and M+4, in the intensity ratio **1 : 2 : 1**.",
+       "M = (CH₂–⁷⁹Br–⁷⁹Br)⁺ at **m/z 172** · M+2 = (CH₂–⁷⁹Br–⁸¹Br)⁺ at **174** · M+4 = (CH₂–⁸¹Br–⁸¹Br)⁺ at **176**."
+      ],
+      "answer": "Three peaks at m/z 172, 174 and 176 — each ⁸¹Br in place of a ⁷⁹Br adds two units."
+     },
+     {
+      "type": "p",
+      "text": "The spectrum of **chloroethane, C₂H₅Cl**, puts all of this to work:"
+     },
+     {
+      "type": "table",
+      "headers": [
+       "m/z",
+       "Species",
+       "What it shows"
+      ],
+      "rows": [
+       [
+        "**29**",
+        "**CH₃CH₂⁺**",
+        "the ethyl fragment"
+       ],
+       [
+        "**35 / 37**",
+        "**³⁵Cl⁺ / ³⁷Cl⁺**",
+        "the two chlorine isotopes, in the ratio 3 : 1"
+       ],
+       [
+        "**64 / 66**",
+        "**(C₂H₅–³⁵Cl)⁺ / (C₂H₅–³⁷Cl)⁺**",
+        "**M and M+2** — the molecular ion peaks, two units apart"
+       ]
+      ]
+     },
+     {
+      "type": "callout",
+      "variant": "exam",
+      "title": "Iodoalkanes give a single molecular ion peak",
+      "text": "Iodoalkanes are easily distinguished from chloroalkanes and bromoalkanes using mass spectrometry because they give only **one molecular ion peak** — **iodine has only one stable isotope**. In the spectrum of 1-iodopropane, the peak at m/z 43 is **(CH₃CH₂CH₂)⁺**, formed when the molecular ion fragments."
      }
     ]
    },
@@ -19257,7 +19388,7 @@
     "id": "cmv1eoi8p00gpjfqk48446fqe",
     "ord": 8,
     "front": "What does the M⁺ peak tell you, and what is the M+1 peak?",
-    "back": "M⁺ (molecular ion) m/z = relative molecular mass. M+1 arises from ¹³C (1.1% of carbon atoms) — height ≈ number of carbon atoms.",
+    "back": "M⁺• (molecular ion) m/z = molecular mass of the molecule. M+1 comes from carbon-13 (about 1% of naturally occurring carbon-12): height of M+1 = (number of C atoms ÷ 100) × height of the M peak.",
     "tag": "CORE"
    },
    {
@@ -19300,6 +19431,20 @@
     "ord": 14,
     "front": "Put the purification techniques for a liquid organic product in order.",
     "back": "Heating under reflux (the reaction) → distillation (collect the distillate at the product's approximate boiling point range) → solvent extraction with a separating funnel → drying with an anhydrous salt → boiling temperature determination against the data booklet values.",
+    "tag": "EXAM"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card15",
+    "ord": 15,
+    "front": "What is the base peak of a mass spectrum?",
+    "back": "The most abundant fragment ion — each fragment ion's abundance is quoted as a percentage of it, and by convention the base peak has a relative abundance of 100%. Only the fragments with the positive charge are detected; the neutral radical is lost.",
+    "tag": "DEFINITION"
+   },
+   {
+    "id": "cmv1eoi8l00gt10card16",
+    "ord": 16,
+    "front": "The mass spectrum shows molecular ion peaks two m/z units apart. What does that tell you?",
+    "back": "A halogen with two isotopes is present. One Br atom (⁷⁹Br, ⁸¹Br equal): M and M+2 in 1:1; two Br atoms: M, M+2, M+4 in 1:2:1. One Cl atom (³⁵Cl : ³⁷Cl = 3:1): M and M+2 in 3:1; two Cl atoms: 9:6:1. Iodoalkanes give a single molecular ion peak — iodine has only one stable isotope.",
     "tag": "EXAM"
    }
   ]

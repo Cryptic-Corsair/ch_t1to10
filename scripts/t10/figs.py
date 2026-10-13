@@ -537,13 +537,13 @@ def build_ir_spectrum(pal):
                 out += text(x, y - 18 - i * 16, ln, 11, col, 600 if i == 0 else 500,
                             anchor=anchor)
             return out
-        s += tag(3370, 0.66, ['O–H (alcohol)', '3200–3550 · BROAD'])
-        s += tag(2950, 0.73, ['C–H 2850–3300'], 'var(--muted)')
+        s += tag(3370, 0.66, ['O–H (alcohol)', '3230–3550 · BROAD'])
+        s += tag(2950, 0.73, ['C–H 2850–3000'], 'var(--muted)')
         # C=O label offset right of the narrow dip, with a leader to the trough
         xc, yc = wx(1715), Y0 - (0.86 - 0.34) * (AH - 40)
         s += line(xc + 10, yc + 6, xc + 40, yc - 12, w=1.1, color='var(--faint)')
         s += text(xc + 46, yc - 8, 'C=O', 11, 'var(--acc)', 600, anchor='start')
-        s += text(xc + 46, yc + 8, '1630–1820 · SHARP', 11, 'var(--acc)', 500, anchor='start')
+        s += text(xc + 46, yc + 8, '1680–1750 · SHARP', 11, 'var(--acc)', 500, anchor='start')
         return ('<div style="flex:1;display:flex;align-items:center;justify-content:center">'
                 + svg(1160, 520, s) + '</div>')
 
