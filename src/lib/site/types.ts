@@ -45,8 +45,7 @@ export type Block =
   | { type: 'def'; term: string; text: string }
   | { type: 'eq'; code: string; caption?: string }
   | { type: 'list'; items: string[]; ordered?: boolean }
-  | { type: 'callout'; variant: 'tip' | 'warning' | 'exam' | 'key'; title: string; text: string; /** 'note' = the quieter, human quick-revision treatment (used by the v2 edition) */ style?: 'note' }
+  | { type: 'callout'; variant: 'tip' | 'warning' | 'exam' | 'key'; title: string; text: string }
   | { type: 'worked'; title: string; problem: string; steps: string[]; answer: string }
-  | { type: 'qa'; title?: string; items: { q: string; a: string }[] }
   | { type: 'table'; headers: string[]; rows: string[][] }
   | { type: 'figure'; src: string; srcDark?: string; alt: string; caption?: string }

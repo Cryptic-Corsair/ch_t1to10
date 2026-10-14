@@ -3,7 +3,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import {
   ArrowLeft,
-  ArrowLeftRight,
   ArrowRight,
   ArrowUp,
   BookOpen,
@@ -216,21 +215,10 @@ export function TopicDetail({
   const hasNotes = topic.sections.some((s) => s.content)
   const firstUnread = topic.sections.find((s) => !readMap[`${slug}/${s.sectionKey}`])
 
-  /* prev/next walk the canonical topics only — version variants sit outside the flow.
-     A -v2 page borrows its original's slot: prev = the original topic, next = the topic after it. */
-  const isV2 = slug.endsWith('-v2')
-  const navTopics = topics.filter((t) => !t.slug.endsWith('-v2'))
-  const baseIdx = navTopics.findIndex((t) => t.slug === slug.replace(/-v2$/, ''))
-  const prev = isV2
-    ? navTopics[baseIdx] ?? null
-    : baseIdx > 0
-      ? navTopics[baseIdx - 1]
-      : null
-  const next = baseIdx >= 0 && baseIdx < navTopics.length - 1 ? navTopics[baseIdx + 1] : null
-
-  /* version siblings — Topic 2 has a digest edition living at -v2 */
-  const sibSlug =
-    slug === 'atomic-structure-v2' ? 'atomic-structure' : slug === 'atomic-structure' ? 'atomic-structure-v2' : null
+  /* prev/next walk the canonical topic order */
+  const idx = topics.findIndex((t) => t.slug === slug)
+  const prev = idx > 0 ? topics[idx - 1] : null
+  const next = idx >= 0 && idx < topics.length - 1 ? topics[idx + 1] : null
 
   /* ---------- shared fragments ---------- */
 
@@ -358,7 +346,7 @@ export function TopicDetail({
   if (mode === 'lab') {
     masthead = (
       <header className="lab-glass mt-8 rounded-[26px] p-7 sm:p-10">
-        <span className="lab-chip">Chapter {pad(topic.number)} · {topic.unitCode}{isV2 ? ' · Version 2' : ''}</span>
+        <span className="lab-chip">Chapter {pad(topic.number)} · {topic.unitCode}</span>
         <h1 className="mt-6 max-w-[20ch] text-[clamp(34px,5.2vw,52px)] leading-[1.06] text-fg">
           <span className="lab-grad">{topic.title}</span>
         </h1>
@@ -376,12 +364,6 @@ export function TopicDetail({
           ))}
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-2.5 print:hidden">
-          {sibSlug && (
-            <BtnGhost onClick={() => go(`/topic/${sibSlug}`)} ariaLabel="Switch to the other version of this topic">
-              <ArrowLeftRight size={14} />
-              {isV2 ? 'Original version' : 'Version 2 · digest'}
-            </BtnGhost>
-          )}
           {topic.cards.length > 0 && (
             <BtnGhost onClick={() => go(`/deck/${slug}`)}>
               <Layers3 size={14} />
@@ -406,11 +388,6 @@ export function TopicDetail({
               <span className="mono text-[11px] font-bold uppercase tracking-[0.2em] text-acc">
                 Topic {pad(topic.number)}
               </span>
-              {isV2 && (
-                <span className="mono rounded-full border border-acc/40 bg-acc/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.16em] text-acc">
-                  Version 2
-                </span>
-              )}
               <span aria-hidden className="h-3 w-px bg-line-strong" />
               <span className="mono text-[10.5px] uppercase tracking-[0.18em] text-muted">
                 Unit {topic.unit} · {topic.unitCode}
@@ -458,12 +435,6 @@ export function TopicDetail({
                   <BookOpen size={14} />
                   {started ? 'Continue reading' : 'Start reading'}
                 </BtnSolid>
-              )}
-              {sibSlug && (
-                <BtnGhost onClick={() => go(`/topic/${sibSlug}`)} ariaLabel="Switch to the other version of this topic">
-                  <ArrowLeftRight size={14} />
-                  {isV2 ? 'Original version' : 'Version 2 · digest'}
-                </BtnGhost>
               )}
               {topic.cards.length > 0 && (
                 <BtnGhost onClick={() => go(`/deck/${slug}`)}>

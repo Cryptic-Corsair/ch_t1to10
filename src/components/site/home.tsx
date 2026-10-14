@@ -82,11 +82,6 @@ function TopicRow({
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-2">
           <span className="truncate text-[15px] font-semibold tracking-tight text-fg">{t.title}</span>
-          {t.slug.endsWith('-v2') && (
-            <span className="mono shrink-0 rounded border border-acc/40 bg-acc/10 px-1 py-0.5 text-[8.5px] uppercase tracking-[0.14em] text-acc">
-              version 2
-            </span>
-          )}
           {!hasNotes && (
             <span className="mono shrink-0 rounded border border-dashed border-line px-1 py-0.5 text-[8.5px] uppercase tracking-[0.14em] text-faint">
               queued

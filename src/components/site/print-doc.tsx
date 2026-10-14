@@ -111,10 +111,6 @@ const PD_CSS = `
   .pd-callout-title { font-weight: 700; color: var(--pd-ink); font-size: 10pt; margin: 3pt 0 2pt; }
   .pd-callout-text { margin: 0; font-size: 9.4pt; color: var(--pd-muted); }
   .pd-worked { border: 0.9pt solid var(--pd-line-strong); border-radius: 3pt; margin: 11pt 0; break-inside: avoid; overflow: hidden; }
-  .pd-qa { border: 0.9pt solid var(--pd-line-strong); border-radius: 3pt; margin: 11pt 0; break-inside: avoid; padding: 9pt 11pt; background: var(--pd-tint); }
-  .pd-qa-item { margin: 6pt 0 0; }
-  .pd-qa-q { margin: 0; font-weight: 700; font-size: 9.6pt; color: var(--pd-ink); }
-  .pd-qa-a { margin: 2pt 0 0; padding-left: 10pt; border-left: 2pt solid var(--pd-acc); font-size: 9.4pt; color: var(--pd-muted); }
   .pd-worked-head { display: flex; align-items: baseline; gap: 8pt; background: var(--pd-tint); border-bottom: 0.7pt solid var(--pd-line); padding: 7pt 11pt; }
   .pd-worked-label { font-family: var(--pd-mono); font-size: 7pt; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pd-acc); white-space: nowrap; }
   .pd-worked-title { font-weight: 600; font-size: 9.8pt; color: var(--pd-ink); }
@@ -171,11 +167,6 @@ const CALLOUT_LABEL: Record<string, string> = {
   tip: 'Tip', warning: 'Watch out', exam: 'Exam alert', key: 'Key point',
 }
 
-/* human labels for the note-style callouts (quick-revision edition) */
-const NOTE_CALLOUT_LABEL: Record<string, string> = {
-  tip: 'Tip', warning: 'Watch out', exam: 'In the exam', key: 'The key point',
-}
-
 function PBlock({ block }: { block: Block }) {
   switch (block.type) {
     case 'p':
@@ -217,7 +208,7 @@ function PBlock({ block }: { block: Block }) {
 
     case 'callout': {
       const exam = block.variant === 'exam'
-      const labels = block.style === 'note' ? NOTE_CALLOUT_LABEL : CALLOUT_LABEL
+      const labels = CALLOUT_LABEL
       return (
         <div className={`pd-callout${exam ? ' exam' : ''}`}>
           <span className="pd-callout-label">{labels[block.variant] ?? 'Tip'}</span>
@@ -252,19 +243,6 @@ function PBlock({ block }: { block: Block }) {
               <span className="pd-answer-v"><PInline text={block.answer} /></span>
             </div>
           </div>
-        </div>
-      )
-
-    case 'qa':
-      return (
-        <div className="pd-qa">
-          <span className="pd-eyebrow" style={{ color: 'var(--pd-acc)' }}>{block.title ?? 'Quick check'}</span>
-          {block.items.map((it, i) => (
-            <div className="pd-qa-item" key={i}>
-              <p className="pd-qa-q">{i + 1}. <PInline text={it.q} /></p>
-              <p className="pd-qa-a"><PInline text={it.a} /></p>
-            </div>
-          ))}
         </div>
       )
 
