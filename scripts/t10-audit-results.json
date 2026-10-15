@@ -1,0 +1,14 @@
+{
+ "Halogenoalkane.json": {
+  "checked": 141,
+  "strong_verbatim": 65,
+  "partial_4gram": 26,
+  "no_match": 50
+ },
+ "Alcohols.json": {
+  "checked": 213,
+  "strong_verbatim": 97,
+  "partial_4gram": 39,
+  "no_match": 77
+ }
+}
