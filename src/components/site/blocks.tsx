@@ -391,7 +391,7 @@ export function BlockRenderer({ block, lead = false }: { block: Block; lead?: bo
 
     case 'h3':
       return (
-        <h3 className="!mt-10 flex items-center gap-3 text-[17px] font-semibold tracking-tight text-fg">
+        <h3 className="mt-10! flex items-center gap-3 text-[17px] font-semibold tracking-tight text-fg">
           <span aria-hidden className="h-4 w-1 rounded-full bg-acc/70" />
           <span className="display-serif text-[19px] font-medium [letter-spacing:0]">{block.text}</span>
         </h3>

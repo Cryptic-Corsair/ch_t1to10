@@ -202,23 +202,68 @@ export const useCards = create<CardsState>()(
 // SPEC PICKS — the points behind custom revision notes
 // ============================================================
 
+export interface SpecSet {
+  id: string
+  name: string
+  picks: string[]                      // spec point codes, e.g. ["5.6", "8.3"]
+  savedAt: string                      // ISO timestamp
+}
+
 interface SpecPicksState {
-  picks: string[]                       // spec point codes, e.g. ["5.6", "8.3"]
+  picks: string[]                       // the working selection, e.g. ["5.6", "8.3"]
+  sets: SpecSet[]                       // named selections saved for later
+  activeSetId: string | null            // the loaded set (null = free selection)
   toggle: (code: string) => void
   setPicks: (codes: string[]) => void
   clear: () => void
+  saveSet: (name: string) => string     // returns the new set's id
+  overwriteSet: (id: string) => void
+  loadSet: (id: string) => void
+  renameSet: (id: string, name: string) => void
+  deleteSet: (id: string) => void
 }
+
+const newSetId = () => `set-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`
 
 export const useSpecPicks = create<SpecPicksState>()(
   persist(
     (set) => ({
       picks: [],
+      sets: [],
+      activeSetId: null,
       toggle: (code) =>
         set((st) => ({
           picks: st.picks.includes(code) ? st.picks.filter((c) => c !== code) : [...st.picks, code],
+          // editing a loaded set by hand detaches it — the saved copy stays as-is
+          activeSetId: null,
         })),
-      setPicks: (codes) => set({ picks: codes }),
-      clear: () => set({ picks: [] }),
+      setPicks: (codes) => set({ picks: codes, activeSetId: null }),
+      clear: () => set({ picks: [], activeSetId: null }),
+      saveSet: (name) => {
+        const id = newSetId()
+        set((st) => ({
+          sets: [...st.sets, { id, name: name.trim(), picks: [...st.picks], savedAt: new Date().toISOString() }],
+          activeSetId: id,
+        }))
+        return id
+      },
+      overwriteSet: (id) =>
+        set((st) => ({
+          sets: st.sets.map((s) => (s.id === id ? { ...s, picks: [...st.picks], savedAt: new Date().toISOString() } : s)),
+          activeSetId: id,
+        })),
+      loadSet: (id) =>
+        set((st) => {
+          const target = st.sets.find((s) => s.id === id)
+          return target ? { picks: [...target.picks], activeSetId: id } : {}
+        }),
+      renameSet: (id, name) =>
+        set((st) => ({ sets: st.sets.map((s) => (s.id === id ? { ...s, name: name.trim() } : s)) })),
+      deleteSet: (id) =>
+        set((st) => ({
+          sets: st.sets.filter((s) => s.id !== id),
+          activeSetId: st.activeSetId === id ? null : st.activeSetId,
+        })),
     }),
     {
       name: 'ialchem-spec-picks',
