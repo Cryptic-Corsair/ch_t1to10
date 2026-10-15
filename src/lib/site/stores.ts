@@ -12,15 +12,14 @@ export type AccentName = 'coral' | 'amber' | 'mint' | 'rose' | 'violet' | 'cyan'
 export type FontFamily = 'sans' | 'serif' | 'mono'
 export type UiMode = 'terminal' | 'lab' | 'hybrid'
 
-/* Three interfaces, three different websites:
-   terminal ("Focus")  — the control desk homepage + a warm student reading room for notes
-   lab ("Studio")      — a glassmorphic neon instrument panel (floating glass, glow)
-   hybrid ("Hybrid")   — Studio's glass aesthetics wrapped around Focus's reading room:
-                         glass nav + aurora up front, Focus's card system inside the topics */
+/* Three interfaces, one codebase:
+   terminal ("Focus")  — plain, dense layout with monospaced labels
+   lab ("Studio")      — glass panels, gradient type and floating navigation
+   hybrid ("Hybrid")   — Studio's navigation and homepage with Focus's reading layout */
 export const UI_MODES: { value: UiMode; label: string; blurb: string }[] = [
-  { value: 'terminal', label: 'Focus', blurb: 'The control desk — mono, hairlines and dot grid up front; a warm, focused reading room inside the topics.' },
-  { value: 'lab', label: 'Studio', blurb: 'A glass instrument panel — floating glass nav, aurora glow, gradient type, pill chrome.' },
-  { value: 'hybrid', label: 'Hybrid', blurb: 'Studio’s glass and glow wrapped around Focus’s reading room — glass nav and aurora up front, Focus’s cards and floating contents inside the topics.' },
+  { value: 'terminal', label: 'Focus', blurb: 'A plain, dense reading layout — monospaced labels, hairline rules and a compact contents rail.' },
+  { value: 'lab', label: 'Studio', blurb: 'Glass panels, gradient headings and a floating navigation bar.' },
+  { value: 'hybrid', label: 'Hybrid', blurb: 'Studio’s navigation and homepage, with Focus’s section layout inside the topics.' },
 ]
 
 /* Each interface is a different site with its own native palette.

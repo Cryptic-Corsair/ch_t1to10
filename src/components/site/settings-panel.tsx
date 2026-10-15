@@ -124,7 +124,7 @@ export function SettingsContent() {
   return (
     <div className="flex h-full flex-col">
       <div className="flex-1 overflow-y-auto px-6 py-6">
-        <Group label="Interface" hint="Three different websites, not three color schemes — each has its own layout, chrome, type voice and native palette. Same notes, same progress everywhere.">
+        <Group label="Interface" hint="Each interface has its own layout and palette. Notes, progress and preferences are shared across all three.">
           <div role="radiogroup" aria-label="Interface mode" className="grid grid-cols-3 gap-2">
             {UI_MODES.map((m) => {
               const active = s.uiMode === m.value

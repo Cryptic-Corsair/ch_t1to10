@@ -186,7 +186,7 @@ export function Deck({
             got it <span className="text-acc">{sessionKnown}</span> · again <span className="text-muted">{sessionAgain}</span>
           </p>
           <p className="mt-2 text-[13px] leading-relaxed text-muted">
-            Cards graded “again” will find you — rerun the deck tomorrow and watch the ratio flip.
+            Cards graded “again” are queued for another pass — run the deck again tomorrow and compare your ratio.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <BtnSolid onClick={reshuffle}>

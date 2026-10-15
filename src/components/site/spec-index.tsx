@@ -88,7 +88,7 @@ export function SpecIndex({
         The spec <span className="serif-accent text-acc">index</span>.
       </h1>
       <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
-        Every assessment statement from the 2018 specification, worded exactly as it words them —
+        Every assessment statement from the 2018 specification, quoted verbatim —
         all {index.length} points across topics 1–10. Tick the points you want, save the selection
         as a named set for later, and the full notes behind every ticked point are pulled together
         at{' '}
