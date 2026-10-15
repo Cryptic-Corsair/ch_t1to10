@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react'
 
 export interface Route {
-  name: 'home' | 'topics' | 'topic' | 'flashcards' | 'deck' | 'progress' | 'settings' | 'not-found'
+  name: 'home' | 'topics' | 'topic' | 'flashcards' | 'deck' | 'progress' | 'spec' | 'notes' | 'settings' | 'not-found'
   slug?: string
   section?: string
 }
@@ -25,6 +25,10 @@ export function parseHash(hash: string): Route {
       return { name: 'flashcards' }
     case 'progress':
       return { name: 'progress' }
+    case 'spec':
+      return { name: 'spec' }
+    case 'notes':
+      return { name: 'notes' }
     case 'settings':
       return { name: 'settings' }
     default:

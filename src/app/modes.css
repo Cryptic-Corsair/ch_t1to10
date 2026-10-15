@@ -281,6 +281,40 @@ html[data-uimode="lab"] {
 /* LAB: reading-table rows keep glass */
 [data-uimode="lab"] .reading-table tbody tr:hover { background: var(--glass-bg-strong); }
 
+/* LAB: specification-point bars share the terminal layout, glass skin */
+[data-uimode="lab"] .spec-point {
+  border: 1px solid var(--glass-line);
+  border-radius: 14px;
+  background: var(--glass-bg);
+}
+[data-uimode="lab"] .spec-point-head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+[data-uimode="lab"] .spec-point-label {
+  font-family: var(--font-grotesk), sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--acc);
+}
+[data-uimode="lab"] .spec-point-statement {
+  color: color-mix(in srgb, var(--fg) 86%, transparent);
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-line;   /* multi-statement specText keeps its authored line breaks */
+}
+[data-uimode="lab"] .spec-point-flat .spec-point-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 18px;
+}
+
 /* ────────────────────────────────────────────────────────────
    HOMEPAGE MODE SKINS — topics on a doodled margin
    (shared bases live in globals.css)

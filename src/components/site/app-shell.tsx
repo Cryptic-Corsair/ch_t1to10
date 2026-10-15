@@ -10,6 +10,8 @@ import { Topics } from './topics'
 import { TopicDetail } from './topic-detail'
 import { Flashcards, Deck } from './flashcards'
 import { ProgressView } from './progress'
+import { SpecIndex } from './spec-index'
+import { CustomNotes } from './custom-notes'
 import { SettingsPanel, SettingsContent } from './settings-panel'
 import { CommandPalette } from './command-palette'
 import { useProgress } from '@/lib/site/stores'
@@ -122,6 +124,12 @@ export function AppShell({
       break
     case 'progress':
       view = <ProgressView topics={topics} go={go} hydrated={hydrated} />
+      break
+    case 'spec':
+      view = <SpecIndex topics={topics} go={go} hydrated={hydrated} />
+      break
+    case 'notes':
+      view = <CustomNotes topics={topics} go={go} hydrated={hydrated} />
       break
     case 'settings':
       view = <Home topics={topics} stats={stats} go={go} openSettings={openSettings} hydrated={hydrated} />

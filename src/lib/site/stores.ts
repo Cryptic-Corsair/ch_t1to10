@@ -199,6 +199,36 @@ export const useCards = create<CardsState>()(
 )
 
 // ============================================================
+// SPEC PICKS — the points behind custom revision notes
+// ============================================================
+
+interface SpecPicksState {
+  picks: string[]                       // spec point codes, e.g. ["5.6", "8.3"]
+  toggle: (code: string) => void
+  setPicks: (codes: string[]) => void
+  clear: () => void
+}
+
+export const useSpecPicks = create<SpecPicksState>()(
+  persist(
+    (set) => ({
+      picks: [],
+      toggle: (code) =>
+        set((st) => ({
+          picks: st.picks.includes(code) ? st.picks.filter((c) => c !== code) : [...st.picks, code],
+        })),
+      setPicks: (codes) => set({ picks: codes }),
+      clear: () => set({ picks: [] }),
+    }),
+    {
+      name: 'ialchem-spec-picks',
+      storage: createJSONStorage(() => localStorage),
+      skipHydration: true,
+    }
+  )
+)
+
+// ============================================================
 // UI STORE — transient
 // ============================================================
 
@@ -228,6 +258,7 @@ export function hydrateStores() {
   useSettings.persist.rehydrate()
   useProgress.persist.rehydrate()
   useCards.persist.rehydrate()
+  useSpecPicks.persist.rehydrate()
   migrateRemovedModes()
   alignModeMemory()
 }
