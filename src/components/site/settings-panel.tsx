@@ -145,7 +145,7 @@ export function SettingsContent() {
                     {m.label}
                   </span>
                   <span className="mono block text-[8.5px] uppercase tracking-[0.14em] text-faint">
-                    native: {preset.theme} / {preset.accent}
+                    default: {preset.theme} · {preset.accent}
                   </span>
                 </button>
               )

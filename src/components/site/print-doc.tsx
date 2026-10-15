@@ -334,7 +334,7 @@ export function PrintDoc({ topic, topics }: { topic: TopicData; topics: TopicDat
       {/* ── cover ─────────────────────────────────────────── */}
       <div className="pd-cover">
         <div className="pd-brandbar">
-          <span className="pd-brand">IAL CHEM<em>{'//'}</em>DECODED</span>
+          <span className="pd-brand">IAL CHEM</span>
           <span className="pd-eyebrow" style={{ color: 'var(--pd-acc)' }}>Print edition</span>
         </div>
 
@@ -419,7 +419,7 @@ export function PrintDoc({ topic, topics }: { topic: TopicData; topics: TopicDat
           ))}
         </div>
         <p className="pd-end-disc">
-          IAL CHEM//DECODED — flashcards, progress tracking and the interactive version of these notes live on the site.
+          IAL Chem — flashcards, progress tracking and the interactive version of these notes live on the site.
           Not affiliated with or endorsed by Pearson Edexcel.
         </p>
       </div>

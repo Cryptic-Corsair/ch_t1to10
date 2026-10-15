@@ -100,7 +100,9 @@ function useSlideIndicator(ref: React.RefObject<HTMLElement | null>, activeKey: 
 }
 
 /* ============================================================
-   BRAND — benzene hexagon mark + wordmark (per interface)
+   BRAND — benzene hexagon mark + wordmark.
+   One name everywhere: IAL CHEM. Typography follows the
+   active interface; the name never changes.
    ============================================================ */
 
 function HexMark({ lab = false, size = 20, hover = false }: { lab?: boolean; size?: number; hover?: boolean }) {
@@ -125,19 +127,12 @@ function Brand({ mode }: { mode: string }) {
   return (
     <span className="nav-brand flex items-center gap-2.5 text-[13px] text-fg">
       <HexMark lab={glass} size={20} hover />
-      {mode === 'lab' ? (
-        <span className="font-semibold tracking-[0.04em]" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
-          IAL&nbsp;STUDIO
-        </span>
-      ) : mode === 'hybrid' ? (
-        <span className="font-semibold tracking-[0.04em]" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>
-          IAL&nbsp;HYBRID
-        </span>
-      ) : (
-        <span className="mono text-[13px] font-semibold tracking-[0.08em]">
-          IAL<span className="text-acc">{'//'}</span>CHEM
-        </span>
-      )}
+      <span
+        className={`font-semibold ${glass ? 'tracking-[0.04em]' : 'mono text-[13px] tracking-[0.08em]'}`}
+        style={glass ? { fontFamily: 'var(--font-grotesk), sans-serif' } : undefined}
+      >
+        IAL&nbsp;CHEM
+      </span>
     </span>
   )
 }
@@ -541,7 +536,7 @@ function TerminalNav({ route, topics, total }: { route: Route; topics: TopicData
    NAV — GLASS (Studio + Hybrid)
    Floating glass pill with the same scroll intelligence,
    gradient progress dial and glass sliding thumb. Studio and
-   Hybrid share the chrome; each wears its own wordmark.
+   Hybrid share the chrome and the IAL CHEM wordmark.
    ============================================================ */
 
 function GlassNav({ route, topics, total, mode }: { route: Route; topics: TopicData[]; total: number; mode: 'lab' | 'hybrid' }) {
@@ -577,7 +572,7 @@ function GlassNav({ route, topics, total, mode }: { route: Route; topics: TopicD
             href="#/"
             onClick={(e) => { e.preventDefault(); go('/') }}
             className="group flex shrink-0 items-center focus-visible:outline-acc"
-            aria-label={mode === 'lab' ? 'IAL Studio — home' : 'IAL Hybrid — home'}
+            aria-label="IAL Chem — home"
           >
             <Brand mode={mode} />
           </a>
@@ -676,10 +671,7 @@ function TerminalFooter({ go }: { go: (to: string) => void }) {
     <footer className="mt-auto border-t border-line print:hidden">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-6 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2.5">
-            <HexMark lab={false} size={22} />
-            <Brand mode={mode} />
-          </div>
+          <Brand mode={mode} />
           <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-muted">
             Exam-focused notes for Pearson Edexcel International A Level Chemistry —
             the 2018 specification, topics 1–10 (WCH11 + WCH12).
@@ -715,7 +707,7 @@ function TerminalFooter({ go }: { go: (to: string) => void }) {
       </div>
       <div className="border-t border-line">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-2 px-6 py-4">
-          <p className="mono text-[10px] uppercase tracking-[0.16em] text-faint">© {new Date().getFullYear()} ial//chem — built for revision</p>
+          <p className="mono text-[10px] uppercase tracking-[0.16em] text-faint">© {new Date().getFullYear()} IAL Chem — built for revision</p>
           <p className="mono text-[10px] uppercase tracking-[0.16em] text-faint">your data stays in your browser</p>
         </div>
       </div>
@@ -729,10 +721,7 @@ function LabFooter({ go }: { go: (to: string) => void }) {
       <div className="lab-footer mx-auto max-w-[1080px] rounded-[26px] px-7 py-9 sm:px-10">
         <div className="grid gap-8 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <HexMark lab size={22} />
-              <span className="nav-brand text-[13px] text-fg">IAL&nbsp;STUDIO</span>
-            </div>
+            <Brand mode="lab" />
             <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-muted">
               Exam-focused notes for Pearson Edexcel International A Level Chemistry —
               the 2018 specification, topics 1–10 (WCH11 + WCH12).
@@ -765,7 +754,7 @@ function LabFooter({ go }: { go: (to: string) => void }) {
           </div>
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-between gap-2 border-t border-[color-mix(in_srgb,var(--fg)_10%,transparent)] pt-5">
-          <p className="text-[10px] uppercase tracking-[0.16em] text-faint">© {new Date().getFullYear()} ial studio — built for revision</p>
+          <p className="text-[10px] uppercase tracking-[0.16em] text-faint">© {new Date().getFullYear()} IAL Chem — built for revision</p>
           <p className="text-[10px] uppercase tracking-[0.16em] text-faint">your data stays in your browser</p>
         </div>
       </div>

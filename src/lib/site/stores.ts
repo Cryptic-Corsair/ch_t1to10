@@ -12,18 +12,18 @@ export type AccentName = 'coral' | 'amber' | 'mint' | 'rose' | 'violet' | 'cyan'
 export type FontFamily = 'sans' | 'serif' | 'mono'
 export type UiMode = 'terminal' | 'lab' | 'hybrid'
 
-/* Three interfaces, one codebase:
+/* Three interfaces, one site:
    terminal ("Focus")  — plain, dense layout with monospaced labels
    lab ("Studio")      — glass panels, gradient type and floating navigation
-   hybrid ("Hybrid")   — Studio's navigation and homepage with Focus's reading layout */
+   hybrid ("Hybrid")   — glass navigation and homepage, dense reading layout */
 export const UI_MODES: { value: UiMode; label: string; blurb: string }[] = [
   { value: 'terminal', label: 'Focus', blurb: 'A plain, dense reading layout — monospaced labels, hairline rules and a compact contents rail.' },
   { value: 'lab', label: 'Studio', blurb: 'Glass panels, gradient headings and a floating navigation bar.' },
-  { value: 'hybrid', label: 'Hybrid', blurb: 'Studio’s navigation and homepage, with Focus’s section layout inside the topics.' },
+  { value: 'hybrid', label: 'Hybrid', blurb: 'Glass navigation and homepage, with the plain, dense reading layout inside topics.' },
 ]
 
-/* Each interface is a different site with its own native palette.
-   themeByMode / accentByMode remember what you chose per interface. */
+/* Each interface remembers its own theme and accent:
+   themeByMode / accentByMode store the per-interface choice. */
 export const MODE_PRESETS: Record<UiMode, { theme: ThemeName; accent: AccentName }> = {
   terminal: { theme: 'midnight', accent: 'coral' },
   lab: { theme: 'carbon', accent: 'violet' },

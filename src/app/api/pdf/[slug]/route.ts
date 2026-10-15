@@ -74,7 +74,7 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ slug: strin
 
       const nn = String(topic.number).padStart(2, '0')
       const footer = `<div style="width:100%;padding:0 15mm;display:flex;justify-content:space-between;align-items:baseline;font-family:monospace;font-size:6.8px;letter-spacing:0.12em;color:#98938A;">
-        <span>IAL CHEM//DECODED &nbsp;·&nbsp; TOPIC ${nn} — ${escapeHtml(topic.title.toUpperCase()).slice(0, 58)}</span>
+        <span>IAL CHEM &nbsp;·&nbsp; TOPIC ${nn} — ${escapeHtml(topic.title.toUpperCase()).slice(0, 58)}</span>
         <span>PAGE <span class="pageNumber"></span> / <span class="totalPages"></span></span>
       </div>`
 
