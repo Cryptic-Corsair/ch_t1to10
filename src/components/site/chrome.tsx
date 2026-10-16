@@ -708,9 +708,19 @@ function TerminalFooter({ go }: { go: (to: string) => void }) {
         </div>
       </div>
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-2 px-6 py-4">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-x-5 gap-y-2 px-6 py-4">
           <p className="mono text-[10px] uppercase tracking-[0.16em] text-faint">© {new Date().getFullYear()} IAL Chem — built for revision</p>
-          <p className="mono text-[10px] uppercase tracking-[0.16em] text-faint">your data stays in your browser</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <p className="mono text-[10px] uppercase tracking-[0.16em] text-faint">your data stays in your browser</p>
+            <a
+              href="#/legal"
+              onClick={(e) => { e.preventDefault(); go('/legal') }}
+              aria-label="Read the legal notices and disclaimers"
+              className="mono text-[10px] uppercase tracking-[0.16em] text-faint t-fast underline decoration-line-strong underline-offset-4 hover:text-acc hover:decoration-acc focus-visible:outline-acc"
+            >
+              Legal &amp; disclaimers
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -755,9 +765,19 @@ function LabFooter({ go }: { go: (to: string) => void }) {
             </div>
           </div>
         </div>
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-2 border-t border-[color-mix(in_srgb,var(--fg)_10%,transparent)] pt-5">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 border-t border-[color-mix(in_srgb,var(--fg)_10%,transparent)] pt-5">
           <p className="text-[10px] uppercase tracking-[0.16em] text-faint">© {new Date().getFullYear()} IAL Chem — built for revision</p>
-          <p className="text-[10px] uppercase tracking-[0.16em] text-faint">your data stays in your browser</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <p className="text-[10px] uppercase tracking-[0.16em] text-faint">your data stays in your browser</p>
+            <a
+              href="#/legal"
+              onClick={(e) => { e.preventDefault(); go('/legal') }}
+              aria-label="Read the legal notices and disclaimers"
+              className="text-[10px] uppercase tracking-[0.16em] text-faint t-fast underline decoration-line-strong underline-offset-4 hover:text-acc hover:decoration-acc focus-visible:outline-acc"
+            >
+              Legal &amp; disclaimers
+            </a>
+          </div>
         </div>
       </div>
     </footer>
