@@ -8,6 +8,9 @@
  * cleaner pass, and the whole set prints or copies as plain text.
  * Studio + Hybrid get the glass treatment: masthead panel, topic bands,
  * dash-kickered section heads — same content, studio voice.
+ * Body blocks render exactly as the topic pages render them: the reading
+ * column (`.reading` — face, measure, Control Room sizing) with the same
+ * spacing, plain blocks in Studio and bullet-card groups in Focus/Hybrid.
  */
 
 import React, { useMemo, useState } from 'react'
@@ -227,6 +230,8 @@ export function CustomNotes({
             <div className={glass ? 'mt-7 space-y-12' : 'mt-6 space-y-10'}>
               {g.sections.map(({ section: s, viaPicks }) => {
                 const isRead = !!read[`${g.topic.slug}/${s.sectionKey}`]
+                /* drop cap only when the section opens on prose, as in the topics */
+                const leadIsP = !!s.content && s.content.length > 0 && s.content[0].type === 'p'
                 return (
                   <article key={s.sectionKey} className="blk-wrap">
                     {/* section head */}
@@ -299,16 +304,22 @@ export function CustomNotes({
                         ) : null
                       )}
 
-                    {/* content */}
+                    {/* content — same reading column and block voice as the topic pages:
+                        Studio renders plain blocks (its lists carry their own markers);
+                        Focus + Hybrid group defs/bullets into the background cards */}
                     {s.content ? (
-                      <div className="mt-6">
-                        {groupBlocks(s.content).map((seg, segI) =>
-                          seg.kind === 'group' ? (
-                            <BulletCard key={segI} blocks={seg.blocks} />
-                          ) : (
-                            <BlockRenderer key={segI} block={seg.block} lead={segI === 0} />
-                          )
-                        )}
+                      <div className="reading mt-7 space-y-5">
+                        {mode === 'lab'
+                          ? s.content.map((b, bi) => (
+                              <BlockRenderer key={bi} block={b} lead={bi === 0 && leadIsP} />
+                            ))
+                          : groupBlocks(s.content).map((seg, segI) =>
+                              seg.kind === 'group' ? (
+                                <BulletCard key={segI} blocks={seg.blocks} />
+                              ) : (
+                                <BlockRenderer key={segI} block={seg.block} lead={segI === 0 && leadIsP} />
+                              )
+                            )}
                       </div>
                     ) : (
                       <div className={`mt-6 px-6 py-7 ${glass ? 'lab-glass rounded-[18px]' : 'rounded-2xl border border-dashed border-line-strong bg-surface/50'}`}>
