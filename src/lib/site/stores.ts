@@ -25,9 +25,9 @@ export const UI_MODES: { value: UiMode; label: string; blurb: string }[] = [
 /* Each interface remembers its own theme and accent:
    themeByMode / accentByMode store the per-interface choice. */
 export const MODE_PRESETS: Record<UiMode, { theme: ThemeName; accent: AccentName }> = {
-  terminal: { theme: 'midnight', accent: 'coral' },
-  lab: { theme: 'carbon', accent: 'violet' },
-  hybrid: { theme: 'carbon', accent: 'violet' },
+  terminal: { theme: 'sepia', accent: 'coral' },
+  lab: { theme: 'sepia', accent: 'violet' },
+  hybrid: { theme: 'sepia', accent: 'violet' },
 }
 
 interface SettingsState {
@@ -49,7 +49,7 @@ interface SettingsState {
 
 const DEFAULTS = {
   uiMode: 'terminal' as UiMode,
-  theme: 'midnight' as ThemeName,
+  theme: 'sepia' as ThemeName,
   accent: 'coral' as AccentName,
   fontFamily: 'sans' as FontFamily,
   fontSize: 1,
@@ -64,7 +64,7 @@ export const useSettings = create<SettingsState>()(
   persist(
     (set) => ({
       ...DEFAULTS,
-      themeByMode: { terminal: 'midnight', lab: 'carbon', hybrid: 'carbon' },
+      themeByMode: { terminal: 'sepia', lab: 'sepia', hybrid: 'sepia' },
       accentByMode: { terminal: 'coral', lab: 'violet', hybrid: 'violet' },
       set: (patch) =>
         set((st) => {
@@ -81,7 +81,7 @@ export const useSettings = create<SettingsState>()(
       reset: () =>
         set({
           ...DEFAULTS,
-          themeByMode: { terminal: 'midnight', lab: 'carbon', hybrid: 'carbon' },
+          themeByMode: { terminal: 'sepia', lab: 'sepia', hybrid: 'sepia' },
           accentByMode: { terminal: 'coral', lab: 'violet', hybrid: 'violet' },
         }),
     }),
@@ -318,7 +318,7 @@ export function migrateRemovedModes() {
     uiMode: 'terminal',
     theme: legacy.terminal ?? MODE_PRESETS.terminal.theme,
     accent: legacyAcc.terminal ?? MODE_PRESETS.terminal.accent,
-    themeByMode: { ...s.themeByMode, terminal: legacy.terminal ?? 'midnight' },
+    themeByMode: { ...s.themeByMode, terminal: legacy.terminal ?? 'sepia' },
     accentByMode: { ...s.accentByMode, terminal: legacyAcc.terminal ?? 'coral' },
   })
 }
