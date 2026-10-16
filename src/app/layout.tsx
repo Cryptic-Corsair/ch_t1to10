@@ -31,6 +31,19 @@ export const metadata: Metadata = {
     "revision",
     "flashcards",
   ],
+  // Site mark (public/icon.svg, generated set in public/icons/) — without
+  // this the browser tab / home-screen shows a placeholder globe.
+  // NOTE: the app-dir metadata file conventions (src/app/icon.png etc.)
+  // crash `next build` with a Turbopack panic in this Next version, so the
+  // icons are served from public/ and referenced here instead.
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icons/icon-256.png", sizes: "256x256", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
