@@ -91,9 +91,9 @@ export function SpecIndex({
         Every assessment statement from the 2018 specification, quoted verbatim —
         all {index.length} points across topics 1–10. Tick the points you want, save the selection
         as a named set for later, and the full notes behind every ticked point are pulled together
-        at{' '}
+        in{' '}
         <button onClick={() => go('/notes')} className="text-acc underline decoration-acc/40 underline-offset-2 t-fast hover:decoration-acc">
-          custom notes
+          revision notes
         </button>
         .
       </p>
@@ -117,11 +117,11 @@ export function SpecIndex({
             )}
             <BtnSolid
               onClick={() => go('/notes')}
-              ariaLabel="Build custom notes from the selected points"
+              ariaLabel="Open the revision notes built from the selected points"
               className={picks.length === 0 ? 'pointer-events-none opacity-40' : ''}
             >
               <NotebookPen size={14} />
-              Custom notes{picks.length > 0 ? ` · ${picks.length}` : ''}
+              Revision notes{picks.length > 0 ? ` · ${picks.length}` : ''}
             </BtnSolid>
           </div>
         </div>

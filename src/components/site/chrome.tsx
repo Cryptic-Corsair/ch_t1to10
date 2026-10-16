@@ -11,7 +11,8 @@ import type { TopicData } from '@/lib/site/types'
 
 const LINKS: { label: string; to: string; match: (r: Route) => boolean }[] = [
   { label: 'Topics', to: '/topics', match: (r) => r.name === 'topics' || r.name === 'topic' },
-  { label: 'Spec index', to: '/spec', match: (r) => r.name === 'spec' || r.name === 'notes' },
+  { label: 'Spec index', to: '/spec', match: (r) => r.name === 'spec' },
+  { label: 'Revision notes', to: '/notes', match: (r) => r.name === 'notes' },
   { label: 'Flashcards', to: '/flashcards', match: (r) => r.name === 'flashcards' || r.name === 'deck' },
   { label: 'Progress', to: '/progress', match: (r) => r.name === 'progress' },
 ]
@@ -298,7 +299,8 @@ function MobileMenu({
 
   const pages = [
     { label: 'Topics', to: '/topics', active: route.name === 'topics' || route.name === 'topic' },
-    { label: 'Spec index', to: '/spec', active: route.name === 'spec' || route.name === 'notes' },
+    { label: 'Spec index', to: '/spec', active: route.name === 'spec' },
+    { label: 'Revision notes', to: '/notes', active: route.name === 'notes' },
     { label: 'Flashcards', to: '/flashcards', active: route.name === 'flashcards' || route.name === 'deck' },
     { label: 'Progress', to: '/progress', active: route.name === 'progress' },
     { label: 'Control room', to: '/settings', active: route.name === 'settings' },
@@ -683,7 +685,7 @@ function TerminalFooter({ go }: { go: (to: string) => void }) {
         <div>
           <p className="mono mb-4 text-[10px] uppercase tracking-[0.2em] text-faint">Site</p>
           <ul className="space-y-2.5">
-            {[['Topics', '/topics'], ['Spec index', '/spec'], ['Flashcards', '/flashcards'], ['Progress', '/progress'], ['Control room', '/settings']].map(([label, to]) => (
+            {[['Topics', '/topics'], ['Spec index', '/spec'], ['Revision notes', '/notes'], ['Flashcards', '/flashcards'], ['Progress', '/progress'], ['Control room', '/settings']].map(([label, to]) => (
               <li key={to}>
                 <a href={`#${to}`} onClick={(e) => { e.preventDefault(); go(to) }} className="mono text-[12px] text-muted t-fast hover:text-acc focus-visible:outline-acc">
                   {label}
@@ -734,7 +736,7 @@ function LabFooter({ go }: { go: (to: string) => void }) {
             <div>
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-faint" style={{ fontFamily: 'var(--font-grotesk), sans-serif' }}>Site</p>
               <ul className="space-y-2">
-                {[['Topics', '/topics'], ['Spec index', '/spec'], ['Flashcards', '/flashcards'], ['Progress', '/progress'], ['Control room', '/settings']].map(([label, to]) => (
+                {[['Topics', '/topics'], ['Spec index', '/spec'], ['Revision notes', '/notes'], ['Flashcards', '/flashcards'], ['Progress', '/progress'], ['Control room', '/settings']].map(([label, to]) => (
                   <li key={to}>
                     <a href={`#${to}`} onClick={(e) => { e.preventDefault(); go(to) }} className="text-[12.5px] text-muted t-fast hover:text-acc">{label}</a>
                   </li>

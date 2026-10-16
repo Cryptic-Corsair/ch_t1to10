@@ -198,7 +198,7 @@ export const useCards = create<CardsState>()(
 )
 
 // ============================================================
-// SPEC PICKS — the points behind custom revision notes
+// SPEC PICKS — the points behind the revision notes page
 // ============================================================
 
 export interface SpecSet {

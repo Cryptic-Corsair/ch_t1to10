@@ -1,7 +1,7 @@
 'use client'
 
 /*
- * CUSTOM NOTES — the revision set you build yourself. Tick spec points in
+ * REVISION NOTES — the set you build yourself. Tick spec points in
  * the spec index and this page gathers the full notes behind them: every
  * selected point's sections, in syllabus order, rendered whole. Sections
  * can be ticked off as read, the verbatim statements can be hidden for a
@@ -47,7 +47,7 @@ export function CustomNotes({
 
   /* plain-text export of the whole set, for pasting into a doc or a message */
   const exportText = useMemo(() => {
-    const lines: string[] = ['IAL Chemistry — custom revision set']
+    const lines: string[] = ['IAL Chemistry — revision notes']
     lines.push(`${picks.length} spec point${picks.length === 1 ? '' : 's'} · ${sectionCount} section${sectionCount === 1 ? '' : 's'}`)
     for (const g of groups) {
       lines.push('', `— Topic ${pad2(g.topic.number)} · ${g.topic.title} —`)
@@ -65,9 +65,9 @@ export function CustomNotes({
   return (
     <div className="mx-auto max-w-[900px] px-6 pb-20 pt-12">
       {/* ---------- masthead ---------- */}
-      <p className="eyebrow">{eyebrowText(mode, 'Revision set')}</p>
+      <p className="eyebrow">{eyebrowText(mode, 'Your set')}</p>
       <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Custom <span className="serif-accent text-acc">notes</span>.
+        Revision <span className="serif-accent text-acc">notes</span>.
       </h1>
       {picks.length > 0 ? (
         <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">

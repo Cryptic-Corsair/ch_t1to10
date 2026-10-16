@@ -64,7 +64,7 @@ export function CommandPalette({
       { id: 'p-home', group: 'Pages', label: 'Home', hint: '~', run: () => go('/') },
       { id: 'p-topics', group: 'Pages', label: 'All topics', hint: '/topics', run: () => go('/topics') },
       { id: 'p-spec', group: 'Pages', label: 'Spec index', hint: '/spec', run: () => go('/spec') },
-      { id: 'p-notes', group: 'Pages', label: 'Custom notes', hint: '/notes', run: () => go('/notes') },
+      { id: 'p-notes', group: 'Pages', label: 'Revision notes', hint: '/notes', run: () => go('/notes') },
       { id: 'p-cards', group: 'Pages', label: 'Flashcard decks', hint: '/flashcards', run: () => go('/flashcards') },
       { id: 'p-progress', group: 'Pages', label: 'Progress dashboard', hint: '/progress', run: () => go('/progress') },
     ]

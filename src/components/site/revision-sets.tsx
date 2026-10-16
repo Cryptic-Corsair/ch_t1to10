@@ -3,7 +3,7 @@
 /*
  * REVISION SETS — save the current selection of spec points under a name,
  * reload it whenever the revision mood strikes. One popover shared by the
- * spec index and the custom notes pages, so sets are always within reach.
+ * spec index and the revision notes pages, so sets are always within reach.
  */
 
 import React, { useEffect, useRef, useState } from 'react'
