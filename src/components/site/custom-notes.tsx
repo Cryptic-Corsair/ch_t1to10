@@ -1,11 +1,13 @@
 'use client'
 
 /*
- * REVISION NOTES — the set you build yourself. Tick spec points in
+ * CUSTOM NOTES — the set you build yourself. Tick spec points in
  * the spec index and this page gathers the full notes behind them: every
  * selected point's sections, in syllabus order, rendered whole. Sections
  * can be ticked off as read, the verbatim statements can be hidden for a
  * cleaner pass, and the whole set prints or copies as plain text.
+ * Studio + Hybrid get the glass treatment: masthead panel, topic bands,
+ * dash-kickered section heads — same content, studio voice.
  */
 
 import React, { useMemo, useState } from 'react'
@@ -45,9 +47,12 @@ export function CustomNotes({
   )
   const anyContent = groups.some((g) => g.sections.some((s) => s.section.content))
 
+  /* studio-skinned chrome (Studio + Hybrid); terminal keeps the flat reading room */
+  const glass = mode !== 'terminal'
+
   /* plain-text export of the whole set, for pasting into a doc or a message */
   const exportText = useMemo(() => {
-    const lines: string[] = ['IAL Chemistry — revision notes']
+    const lines: string[] = ['IAL Chemistry — custom notes']
     lines.push(`${picks.length} spec point${picks.length === 1 ? '' : 's'} · ${sectionCount} section${sectionCount === 1 ? '' : 's'}`)
     for (const g of groups) {
       lines.push('', `— Topic ${pad2(g.topic.number)} · ${g.topic.title} —`)
@@ -62,83 +67,106 @@ export function CustomNotes({
     return lines.join('\n')
   }, [groups, picks, statementOf, sectionCount])
 
+  /* ---------- shared masthead fragments (both voices) ---------- */
+  const introCopy =
+    picks.length > 0 ? (
+      <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
+        {picks.length} specification point{picks.length === 1 ? '' : 's'} · {sectionCount} section
+        {sectionCount === 1 ? '' : 's'} of notes, pulled together in syllabus order. Everything
+        below is your normal topic notes — assembled around the points you picked.
+      </p>
+    ) : (
+      <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
+        Pick the specification points you want to revise and their full notes appear here as one
+        personalised set.
+      </p>
+    )
+
+  const pickedRow = (
+    <p className="mono flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[11px] text-faint">
+      <span className="uppercase tracking-[0.16em]">picked:</span>
+      {picks.slice(0, 10).map((code) => (
+        <span key={code} className="font-semibold text-acc">{code}</span>
+      ))}
+      {picks.length > 10 && <span>+ {picks.length - 10} more</span>}
+    </p>
+  )
+
+  const progressRow = (
+    <div className="flex max-w-md items-center gap-3">
+      <ProgressBar value={(readCount / sectionCount) * 100} className="flex-1" />
+      <span className="mono shrink-0 text-[10px] uppercase tracking-[0.14em] text-faint">
+        {readCount}/{sectionCount} read
+      </span>
+    </div>
+  )
+
+  const actionsRow = (
+    <div className="flex flex-wrap items-center gap-2.5 print:hidden">
+      <BtnGhost onClick={() => go('/spec')} ariaLabel="Edit the selected specification points">
+        <SlidersHorizontal size={14} />
+        Edit selection
+      </BtnGhost>
+      <RevisionSets mode={mode} />
+      {picks.length > 0 && (
+        <BtnGhost
+          onClick={() => setShowStatements((v) => !v)}
+          ariaLabel={showStatements ? 'Hide the verbatim statements' : 'Show the verbatim statements'}
+        >
+          {showStatements ? <EyeOff size={14} /> : <Eye size={14} />}
+          {showStatements ? 'Hide statements' : 'Show statements'}
+        </BtnGhost>
+      )}
+      {picks.length > 0 && <CopyBtn text={exportText} label="Copy set" className="px-3! py-2.5! text-xs!" />}
+      {sectionCount > 0 && (
+        <BtnGhost onClick={() => window.print()} ariaLabel="Print this revision set">
+          <Printer size={14} />
+          Print set
+        </BtnGhost>
+      )}
+      {picks.length > 0 && (
+        <BtnGhost onClick={clear} ariaLabel="Clear the selection">
+          <ListChecks size={14} />
+          Clear selection
+        </BtnGhost>
+      )}
+    </div>
+  )
+
   return (
     <div className="mx-auto max-w-[900px] px-6 pb-20 pt-12">
       {/* ---------- masthead ---------- */}
-      <p className="eyebrow">{eyebrowText(mode, 'Your set')}</p>
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Revision <span className="serif-accent text-acc">notes</span>.
-      </h1>
-      {picks.length > 0 ? (
-        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
-          {picks.length} specification point{picks.length === 1 ? '' : 's'} · {sectionCount} section
-          {sectionCount === 1 ? '' : 's'} of notes, pulled together in syllabus order. Everything
-          below is your normal topic notes — assembled around the points you picked.
-        </p>
+      {glass ? (
+        /* STUDIO — the instrument panel: chip, gradient title, glass controls */
+        <header className="lab-glass rounded-[26px] p-7 sm:p-10">
+          <span className="lab-chip">{eyebrowText(mode, 'Your set')}</span>
+          <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Custom <span className="serif-accent text-acc">notes</span>.
+          </h1>
+          {introCopy}
+          {picks.length > 0 && <div className="mt-6">{pickedRow}</div>}
+          {sectionCount > 0 && <div className="mt-5">{progressRow}</div>}
+          <div className="mt-7">{actionsRow}</div>
+        </header>
       ) : (
-        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted">
-          Pick the specification points you want to revise and their full notes appear here as one
-          personalised set.
-        </p>
+        /* FOCUS — the flat reading-room masthead */
+        <header>
+          <p className="eyebrow">{eyebrowText(mode, 'Your set')}</p>
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+            Custom <span className="serif-accent text-acc">notes</span>.
+          </h1>
+          {introCopy}
+          {picks.length > 0 && <div className="mt-3">{pickedRow}</div>}
+          {sectionCount > 0 && <div className="mt-5">{progressRow}</div>}
+          <div className="mt-7">{actionsRow}</div>
+        </header>
       )}
-
-      {/* picked codes, always visible */}
-      {picks.length > 0 && (
-        <p className="mono mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[11px] text-faint">
-          <span className="uppercase tracking-[0.16em]">picked:</span>
-          {picks.slice(0, 10).map((code) => (
-            <span key={code} className="font-semibold text-acc">{code}</span>
-          ))}
-          {picks.length > 10 && <span>+ {picks.length - 10} more</span>}
-        </p>
-      )}
-
-      {/* reading progress */}
-      {sectionCount > 0 && (
-        <div className="mt-5 flex max-w-md items-center gap-3">
-          <ProgressBar value={(readCount / sectionCount) * 100} className="flex-1" />
-          <span className="mono shrink-0 text-[10px] uppercase tracking-[0.14em] text-faint">
-            {readCount}/{sectionCount} read
-          </span>
-        </div>
-      )}
-
-      {/* ---------- actions ---------- */}
-      <div className="mt-7 flex flex-wrap items-center gap-2.5 print:hidden">
-        <BtnGhost onClick={() => go('/spec')} ariaLabel="Edit the selected specification points">
-          <SlidersHorizontal size={14} />
-          Edit selection
-        </BtnGhost>
-        <RevisionSets mode={mode} />
-        {picks.length > 0 && (
-          <BtnGhost
-            onClick={() => setShowStatements((v) => !v)}
-            ariaLabel={showStatements ? 'Hide the verbatim statements' : 'Show the verbatim statements'}
-          >
-            {showStatements ? <EyeOff size={14} /> : <Eye size={14} />}
-            {showStatements ? 'Hide statements' : 'Show statements'}
-          </BtnGhost>
-        )}
-        {picks.length > 0 && <CopyBtn text={exportText} label="Copy set" className="px-3! py-2.5! text-xs!" />}
-        {sectionCount > 0 && (
-          <BtnGhost onClick={() => window.print()} ariaLabel="Print this revision set">
-            <Printer size={14} />
-            Print set
-          </BtnGhost>
-        )}
-        {picks.length > 0 && (
-          <BtnGhost onClick={clear} ariaLabel="Clear the selection">
-            <ListChecks size={14} />
-            Clear selection
-          </BtnGhost>
-        )}
-      </div>
 
       {/* ---------- empty state ---------- */}
       {picks.length === 0 && (
         <div
           className={`mt-10 px-8 py-14 text-center ${
-            mode === 'terminal' ? 'rounded-xl border border-dashed border-line-strong bg-surface/40' : 'lab-glass rounded-[20px]'
+            !glass ? 'rounded-xl border border-dashed border-line-strong bg-surface/40' : 'lab-glass rounded-[22px]'
           }`}
         >
           <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-acc/30 bg-acc/10 text-acc">
@@ -161,7 +189,11 @@ export function CustomNotes({
 
       {/* ---------- the notes ---------- */}
       {picks.length > 0 && !anyContent && (
-        <p className="mono mt-10 rounded-xl border border-dashed border-line px-5 py-4 text-[12px] text-muted">
+        <p
+          className={`mono mt-10 rounded-xl border px-5 py-4 text-[12px] leading-relaxed text-muted ${
+            glass ? 'lab-glass' : 'border-dashed border-line'
+          }`}
+        >
           {'// the picked points don’t have written notes behind them yet — pick more points or check back soon'}
         </p>
       )}
@@ -169,19 +201,30 @@ export function CustomNotes({
       <div className="mt-12 space-y-14">
         {groups.map((g) => (
           <section key={g.topic.slug} aria-label={`Topic ${g.topic.number} — ${g.topic.title}`}>
-            {/* topic divider */}
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-line pb-4">
+            {/* topic divider — glass band in Studio, hairline in Focus */}
+            <div
+              className={
+                glass
+                  ? 'lab-glass flex flex-wrap items-center gap-x-4 gap-y-2.5 rounded-[18px] px-5 py-4'
+                  : 'flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-line pb-4'
+              }
+            >
+              {glass ? (
+                <span className="lab-num-chip shrink-0" aria-hidden>
+                  {pad2(g.topic.number)}
+                </span>
+              ) : null}
               <h2 className="flex items-baseline gap-3 text-[17px] font-semibold tracking-tight text-fg">
-                <span className="mono text-[13px] text-faint">{pad2(g.topic.number)}</span>
+                {!glass && <span className="mono text-[13px] text-faint">{pad2(g.topic.number)}</span>}
                 {g.topic.title}
               </h2>
-              <span className="mono text-[10px] uppercase tracking-[0.16em] text-faint">
+              <span className={`mono text-[10px] uppercase tracking-[0.16em] text-faint ${glass ? 'ms-auto' : ''}`}>
                 {g.topic.unitCode} · {g.sections.length} section{g.sections.length === 1 ? '' : 's'}
               </span>
             </div>
 
             {/* sections */}
-            <div className="mt-6 space-y-10">
+            <div className={glass ? 'mt-7 space-y-12' : 'mt-6 space-y-10'}>
               {g.sections.map(({ section: s, viaPicks }) => {
                 const isRead = !!read[`${g.topic.slug}/${s.sectionKey}`]
                 return (
@@ -189,10 +232,23 @@ export function CustomNotes({
                     {/* section head */}
                     <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-3">
                       <div className="min-w-0">
-                        <p className="mono text-[10.5px] uppercase tracking-[0.18em] text-faint">
-                          Section {s.number}
-                        </p>
-                        <h3 className={`mt-1.5 text-[19px] font-semibold tracking-tight ${isRead ? 'text-muted' : 'text-fg'}`}>
+                        {glass ? (
+                          <>
+                            <span aria-hidden className="warm-dash block" />
+                            <p className="mono mt-4 text-[13px] font-bold tracking-tight text-acc">
+                              Section {s.number}
+                            </p>
+                          </>
+                        ) : (
+                          <p className="mono text-[10.5px] uppercase tracking-[0.18em] text-faint">
+                            Section {s.number}
+                          </p>
+                        )}
+                        <h3
+                          className={`${glass ? 'display-serif mt-2 text-[21px]' : 'mt-1.5 text-[19px]'} font-semibold tracking-tight ${
+                            isRead ? 'text-muted' : 'text-fg'
+                          }`}
+                        >
                           {s.title}
                         </h3>
                       </div>
@@ -255,7 +311,7 @@ export function CustomNotes({
                         )}
                       </div>
                     ) : (
-                      <div className="mt-6 rounded-2xl border border-dashed border-line-strong bg-surface/50 px-6 py-7">
+                      <div className={`mt-6 px-6 py-7 ${glass ? 'lab-glass rounded-[18px]' : 'rounded-2xl border border-dashed border-line-strong bg-surface/50'}`}>
                         <div className="flex items-center gap-3">
                           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-acc/30 bg-acc/10 text-acc">
                             <PencilRuler size={15} strokeWidth={1.75} />

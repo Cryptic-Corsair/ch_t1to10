@@ -158,7 +158,7 @@ function TopicsSection({
 
 /* ============================================================
    STUDY TOOLS — homepage entry points to the spec index and
-   the revision notes it feeds. Same card language as the
+   the custom notes it feeds. Same card language as the
    topic rows, two cells, no extra chrome.
    ============================================================ */
 
@@ -215,7 +215,7 @@ function ToolsSection({
         <ToolsCard
           mode={mode}
           icon={<NotebookPen size={17} strokeWidth={1.75} />}
-          title="Revision notes"
+          title="Custom notes"
           desc="The full notes behind your ticked points, assembled in syllabus order — read, print or copy the set."
           meta={pickCount > 0 ? `${pickCount} point${pickCount === 1 ? '' : 's'} selected` : 'nothing selected yet'}
           onClick={() => go('/notes')}

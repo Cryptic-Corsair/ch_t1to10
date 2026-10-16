@@ -3,8 +3,8 @@
 /*
  * SPEC INDEX — every assessment statement, worded exactly as the
  * specification words it, grouped by topic. Tick the points you want,
- * save the selection as a named set, and the same ticks drive the custom
- * revision notes at #/notes. Search narrows by code or wording; the chip
+ * save the selection as a named set, and the same ticks drive the
+ * custom notes at #/notes. Search narrows by code or wording; the chip
  * tray keeps the whole selection visible and one click removable.
  */
 
@@ -93,7 +93,7 @@ export function SpecIndex({
         as a named set for later, and the full notes behind every ticked point are pulled together
         in{' '}
         <button onClick={() => go('/notes')} className="text-acc underline decoration-acc/40 underline-offset-2 t-fast hover:decoration-acc">
-          revision notes
+          custom notes
         </button>
         .
       </p>
@@ -117,11 +117,11 @@ export function SpecIndex({
             )}
             <BtnSolid
               onClick={() => go('/notes')}
-              ariaLabel="Open the revision notes built from the selected points"
+              ariaLabel="Open the custom notes built from the selected points"
               className={picks.length === 0 ? 'pointer-events-none opacity-40' : ''}
             >
               <NotebookPen size={14} />
-              Revision notes{picks.length > 0 ? ` · ${picks.length}` : ''}
+              Custom notes{picks.length > 0 ? ` · ${picks.length}` : ''}
             </BtnSolid>
           </div>
         </div>

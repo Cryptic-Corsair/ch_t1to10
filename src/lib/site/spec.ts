@@ -1,5 +1,5 @@
 // Specification index — the assessment statements, worded exactly as the
-// specification words them, plus the machinery behind the revision notes page.
+// specification words them, plus the machinery behind the custom notes page.
 //
 // Every topic ships a "specification-map" section holding a two-column table
 // (Spec | Assessment statement) lifted verbatim from the Edexcel 2018 spec.
@@ -89,7 +89,7 @@ export function buildSpecIndex(topics: TopicData[]): SpecPoint[] {
   return out
 }
 
-// ---------- revision notes (sections behind picked points) ----------
+// ---------- custom notes (sections behind picked points) ----------
 
 export interface CustomSection {
   topic: TopicData
