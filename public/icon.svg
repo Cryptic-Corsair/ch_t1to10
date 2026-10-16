@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Static variant of the site mark (public/logo.svg) for favicons — animation stripped. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
-  <path fill="#2D2D2D" stroke="#FFFFFF" stroke-width="0.6317" stroke-miterlimit="10" d="M24.51,28.51H5.49c-2.21,0-4-1.79-4-4V5.49c0-2.21,1.79-4,4-4h19.03c2.21,0,4,1.79,4,4v19.03C28.51,26.72,26.72,28.51,24.51,28.51z"/>
-  <g fill="#FFFFFF">
-    <path d="M15.47,7.1l-1.3,1.85c-0.2,0.29-0.54,0.47-0.9,0.47h-7.1V7.09C6.16,7.1,15.47,7.1,15.47,7.1z"/>
-    <polygon points="24.3,7.1 13.14,22.91 5.7,22.91 16.86,7.1"/>
-    <path d="M14.53,22.91l1.31-1.86c0.2-0.29,0.54-0.47,0.9-0.47h7.09v2.33H14.53z"/>
-  </g>
+<path fill="#2D2D2D" stroke="#FFFFFF" stroke-width="0.6317" stroke-miterlimit="10" d="M24.51,28.51H5.49c-2.21,0-4-1.79-4-4V5.49c0-2.21,1.79-4,4-4h19.03c2.21,0,4,1.79,4,4v19.03C28.51,26.72,26.72,28.51,24.51,28.51z"/>
+<g>
+<path d="M8.25 19 H21.75 L23.8 24.25 Q24.5 25.75 23.1 25.75 H6.9 Q5.5 25.75 6.2 24.25 Z" fill="#F5654A"/>
+<circle cx="15" cy="14.9" r="1.4" fill="#F5654A"/>
+<circle cx="17.3" cy="12.5" r="0.85" fill="#F5654A"/>
+<path d="M12.25 3.75 H17.75 V10.6 L24.5 24.75 Q25.25 26.75 23.1 26.75 H6.9 Q4.75 26.75 5.5 24.75 L12.25 10.6 Z" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linejoin="round"/>
+</g>
 </svg>

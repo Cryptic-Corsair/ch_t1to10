@@ -101,12 +101,15 @@ function useSlideIndicator(ref: React.RefObject<HTMLElement | null>, activeKey: 
 }
 
 /* ============================================================
-   BRAND — benzene hexagon mark + wordmark.
-   One name everywhere: IAL CHEM. Typography follows the
-   active interface; the name never changes.
+   BRAND — Erlenmeyer flask mark + wordmark.
+   One name everywhere: IAL CHEM. The flask carries the active
+   accent as its liquid, so the mark tints itself to the theme.
+   (Replaces the old benzene hexagon, which read as a certain
+   other AI company's logo.) The favicon set in public/icons is
+   generated from the same geometry by scripts/gen-icons.mjs.
    ============================================================ */
 
-function HexMark({ lab = false, size = 20, hover = false }: { lab?: boolean; size?: number; hover?: boolean }) {
+function FlaskMark({ lab = false, size = 20, hover = false }: { lab?: boolean; size?: number; hover?: boolean }) {
   return (
     <svg
       width={size}
@@ -114,11 +117,18 @@ function HexMark({ lab = false, size = 20, hover = false }: { lab?: boolean; siz
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden
-      className={hover ? 'shrink-0 transition-transform duration-500 ease-out group-hover:rotate-[120deg]' : 'shrink-0'}
+      className={hover ? 'shrink-0 transition-transform duration-500 ease-out group-hover:-rotate-[8deg]' : 'shrink-0'}
       style={lab ? { filter: 'drop-shadow(0 0 7px color-mix(in srgb, var(--acc) 55%, transparent))' } : undefined}
     >
-      <path d="M12 2.7 20 7.35v9.3L12 21.3 4 16.65v-9.3L12 2.7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <circle cx="12" cy="12" r="3.1" fill="var(--acc)" />
+      <path d="M6.6 15.2 H17.4 L19.05 19.4 Q19.6 20.6 18.3 20.6 H5.7 Q4.4 20.6 4.95 19.4 Z" fill="var(--acc)" />
+      <circle cx="12" cy="12.2" r="1.15" fill="var(--acc)" />
+      <circle cx="14.1" cy="9.9" r="0.7" fill="var(--acc)" />
+      <path
+        d="M9.8 3 H14.2 V8.5 L19.6 19.8 Q20.2 21.4 18.5 21.4 H5.5 Q3.8 21.4 4.4 19.8 L9.8 8.5 Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
     </svg>
   )
 }
@@ -127,7 +137,7 @@ function Brand({ mode }: { mode: string }) {
   const glass = mode !== 'terminal'
   return (
     <span className="nav-brand flex items-center gap-2.5 text-[13px] text-fg">
-      <HexMark lab={glass} size={20} hover />
+      <FlaskMark lab={glass} size={20} hover />
       <span
         className={`font-semibold ${glass ? 'tracking-[0.04em]' : 'mono text-[13px] tracking-[0.08em]'}`}
         style={glass ? { fontFamily: 'var(--font-grotesk), sans-serif' } : undefined}
