@@ -1,10 +1,11 @@
 'use client'
 
-import React, { useEffect } from 'react'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import React, { useEffect, useMemo } from 'react'
+import { ArrowRight, ArrowUpRight, ListChecks, NotebookPen } from 'lucide-react'
 import type { TopicData } from '@/lib/site/types'
+import { buildSpecIndex } from '@/lib/site/spec'
 import { BtnGhost, gridShell, cardCell, hoverCell, eyebrowText } from './ui-bits'
-import { useProgress, useSettings, type UiMode } from '@/lib/site/stores'
+import { useProgress, useSettings, useSpecPicks, type UiMode } from '@/lib/site/stores'
 import { DoodleField, TOPIC_DOODLES } from './doodles'
 
 interface HomeProps {
@@ -156,6 +157,75 @@ function TopicsSection({
 }
 
 /* ============================================================
+   STUDY TOOLS — homepage entry points to the spec index and
+   the revision notes it feeds. Same card language as the
+   topic rows, two cells, no extra chrome.
+   ============================================================ */
+
+function ToolsCard({
+  icon, title, desc, meta, onClick, mode,
+}: {
+  icon: React.ReactNode; title: string; desc: string; meta: string
+  onClick: () => void; mode: UiMode
+}) {
+  return (
+    <button
+      onClick={onClick}
+      title={title}
+      className={`group relative flex min-h-[104px] items-center gap-5 p-5 text-left focus-visible:outline-acc ${cardCell(mode)} ${hoverCell(mode)}`}
+    >
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-acc/30 bg-acc/10 text-acc">
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-[15px] font-semibold tracking-tight text-fg">{title}</span>
+        <span className="mt-1 block text-[13px] leading-relaxed text-muted">{desc}</span>
+        <span className="mono mt-1.5 block text-[10px] uppercase tracking-[0.12em] text-faint">{meta}</span>
+      </span>
+      <ArrowUpRight
+        size={15}
+        aria-hidden
+        className="shrink-0 text-faint opacity-0 t-fast group-hover:translate-x-0.5 group-hover:text-acc group-hover:opacity-100"
+      />
+    </button>
+  )
+}
+
+function ToolsSection({
+  topics, go, hydrated, mode,
+}: {
+  topics: TopicData[]; go: (to: string) => void; hydrated: boolean; mode: UiMode
+}) {
+  const picks = useSpecPicks((s) => s.picks)
+  const pickCount = hydrated ? picks.length : 0
+  const pointCount = useMemo(() => buildSpecIndex(topics).length, [topics])
+
+  return (
+    <section className="relative mx-auto max-w-[1200px] px-6 pb-16 sm:pb-24" data-reveal>
+      <p className="eyebrow mb-4">{eyebrowText(mode, 'Study tools')}</p>
+      <div className={gridShell(mode, 'sm:grid-cols-2')}>
+        <ToolsCard
+          mode={mode}
+          icon={<ListChecks size={17} strokeWidth={1.75} />}
+          title="Spec index"
+          desc="Every assessment statement from the 2018 specification, quoted verbatim — search it and tick the points you are covering."
+          meta={`all ${pointCount} points · WCH11 + WCH12`}
+          onClick={() => go('/spec')}
+        />
+        <ToolsCard
+          mode={mode}
+          icon={<NotebookPen size={17} strokeWidth={1.75} />}
+          title="Revision notes"
+          desc="The full notes behind your ticked points, assembled in syllabus order — read, print or copy the set."
+          meta={pickCount > 0 ? `${pickCount} point${pickCount === 1 ? '' : 's'} selected` : 'nothing selected yet'}
+          onClick={() => go('/notes')}
+        />
+      </div>
+    </section>
+  )
+}
+
+/* ============================================================
    HOME — the topics, on a doodled margin. Footer lives in the shell.
    ============================================================ */
 
@@ -171,6 +241,7 @@ export function Home({ topics, go, hydrated }: HomeProps) {
       {/* faint notebook-doodle tile across the entire homepage */}
       <div className="doodle-tile" aria-hidden />
       <TopicsSection topics={topics} go={go} readMap={readMap} hydrated={hydrated} mode={mode} />
+      <ToolsSection topics={topics} go={go} hydrated={hydrated} mode={mode} />
     </div>
   )
 }
